@@ -1,0 +1,6 @@
+docs/**
+Poses/resources/**
+Poses/sdks/**
+PosesTests/**
+PosesUITests/**
+Pods/**

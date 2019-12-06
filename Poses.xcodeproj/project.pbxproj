@@ -42,6 +42,8 @@
 		8C7AAF32239A119E0065F035 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		8C7AAF33239A119E0065F035 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		8C7AAF36239A53600065F035 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
+		8C7AAF37239A55010065F035 /* .codebeatsettings */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatsettings; sourceTree = "<group>"; };
+		8C7AAF38239A55010065F035 /* .codebeatignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .codebeatignore; sourceTree = "<group>"; };
 		FA8B53742398F2B9009E8E1F /* Poses Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poses Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B53772398F2B9009E8E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,8 @@
 		8C7AAF2E239A0FCA0065F035 /* metadata */ = {
 			isa = PBXGroup;
 			children = (
+				8C7AAF38239A55010065F035 /* .codebeatignore */,
+				8C7AAF37239A55010065F035 /* .codebeatsettings */,
 				8C7AAF30239A11820065F035 /* .github */,
 				8C7AAF32239A119E0065F035 /* CHANGELOG.md */,
 				8C7AAF36239A53600065F035 /* codecov.yml */,
