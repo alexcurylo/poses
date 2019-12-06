@@ -1,15 +1,15 @@
 //
-//  posesTests.swift
-//  posesTests
+//  PosesTests.swift
+//  PosesTests
 //
 //  Created by Alex Curylo on 12/5/19.
 //  Copyright © 2019 Trollwerks Inc. All rights reserved.
 //
 
 import XCTest
-@testable import poses
+@testable import Poses_Pro
 
-class posesTests: XCTestCase {
+final class PosesTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

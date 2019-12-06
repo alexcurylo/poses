@@ -3,19 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FA8B53782398F2B9009E8E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53772398F2B9009E8E1F /* AppDelegate.swift */; };
 		FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */; };
-		FA8B537D2398F2B9009E8E1F /* poses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537B2398F2B9009E8E1F /* poses.xcdatamodeld */; };
+		FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */; };
 		FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537E2398F2B9009E8E1F /* ContentView.swift */; };
 		FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53802398F2BA009E8E1F /* Assets.xcassets */; };
 		FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
-		FA8B53922398F2BA009E8E1F /* posesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53912398F2BA009E8E1F /* posesTests.swift */; };
-		FA8B539D2398F2BA009E8E1F /* posesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* posesUITests.swift */; };
+		FA8B53922398F2BA009E8E1F /* PosesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53912398F2BA009E8E1F /* PosesTests.swift */; };
+		FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +36,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA8B53742398F2B9009E8E1F /* poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8B53742398F2B9009E8E1F /* Poses Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poses Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B53772398F2B9009E8E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA8B537C2398F2B9009E8E1F /* poses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = poses.xcdatamodel; sourceTree = "<group>"; };
+		FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poses.xcdatamodel; sourceTree = "<group>"; };
 		FA8B537E2398F2B9009E8E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA8B53802398F2BA009E8E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA8B53862398F2BA009E8E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8B53882398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA8B538D2398F2BA009E8E1F /* posesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = posesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA8B53912398F2BA009E8E1F /* posesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posesTests.swift; sourceTree = "<group>"; };
+		FA8B538D2398F2BA009E8E1F /* PosesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8B53912398F2BA009E8E1F /* PosesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTests.swift; sourceTree = "<group>"; };
 		FA8B53932398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA8B53982398F2BA009E8E1F /* posesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = posesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA8B539C2398F2BA009E8E1F /* posesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posesUITests.swift; sourceTree = "<group>"; };
+		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,12 +78,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C7AAF2C2399F2730065F035 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B53772398F2B9009E8E1F /* AppDelegate.swift */,
+				FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */,
+				FA8B537E2398F2B9009E8E1F /* ContentView.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		8C7AAF2D2399F2840065F035 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B53802398F2BA009E8E1F /* Assets.xcassets */,
+				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
+				FA8B53882398F2BA009E8E1F /* Info.plist */,
+				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
+				FA8B53822398F2BA009E8E1F /* Preview Content */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		FA8B536B2398F2B9009E8E1F = {
 			isa = PBXGroup;
 			children = (
-				FA8B53762398F2B9009E8E1F /* poses */,
-				FA8B53902398F2BA009E8E1F /* posesTests */,
-				FA8B539B2398F2BA009E8E1F /* posesUITests */,
+				FA8B53762398F2B9009E8E1F /* Poses */,
+				FA8B53902398F2BA009E8E1F /* PosesTests */,
+				FA8B539B2398F2BA009E8E1F /* PosesUITests */,
 				FA8B53752398F2B9009E8E1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,26 +113,20 @@
 		FA8B53752398F2B9009E8E1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA8B53742398F2B9009E8E1F /* poses.app */,
-				FA8B538D2398F2BA009E8E1F /* posesTests.xctest */,
-				FA8B53982398F2BA009E8E1F /* posesUITests.xctest */,
+				FA8B53742398F2B9009E8E1F /* Poses Pro.app */,
+				FA8B538D2398F2BA009E8E1F /* PosesTests.xctest */,
+				FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA8B53762398F2B9009E8E1F /* poses */ = {
+		FA8B53762398F2B9009E8E1F /* Poses */ = {
 			isa = PBXGroup;
 			children = (
-				FA8B53772398F2B9009E8E1F /* AppDelegate.swift */,
-				FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */,
-				FA8B537E2398F2B9009E8E1F /* ContentView.swift */,
-				FA8B53802398F2BA009E8E1F /* Assets.xcassets */,
-				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
-				FA8B53882398F2BA009E8E1F /* Info.plist */,
-				FA8B537B2398F2B9009E8E1F /* poses.xcdatamodeld */,
-				FA8B53822398F2BA009E8E1F /* Preview Content */,
+				8C7AAF2C2399F2730065F035 /* application */,
+				8C7AAF2D2399F2840065F035 /* resources */,
 			);
-			path = poses;
+			path = Poses;
 			sourceTree = "<group>";
 		};
 		FA8B53822398F2BA009E8E1F /* Preview Content */ = {
@@ -121,30 +137,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FA8B53902398F2BA009E8E1F /* posesTests */ = {
+		FA8B53902398F2BA009E8E1F /* PosesTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA8B53912398F2BA009E8E1F /* posesTests.swift */,
+				FA8B53912398F2BA009E8E1F /* PosesTests.swift */,
 				FA8B53932398F2BA009E8E1F /* Info.plist */,
 			);
-			path = posesTests;
+			path = PosesTests;
 			sourceTree = "<group>";
 		};
-		FA8B539B2398F2BA009E8E1F /* posesUITests */ = {
+		FA8B539B2398F2BA009E8E1F /* PosesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FA8B539C2398F2BA009E8E1F /* posesUITests.swift */,
+				FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */,
 				FA8B539E2398F2BA009E8E1F /* Info.plist */,
 			);
-			path = posesUITests;
+			path = PosesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA8B53732398F2B9009E8E1F /* poses */ = {
+		FA8B53732398F2B9009E8E1F /* Poses */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "poses" */;
+			buildConfigurationList = FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "Poses" */;
 			buildPhases = (
 				FA8B53702398F2B9009E8E1F /* Sources */,
 				FA8B53712398F2B9009E8E1F /* Frameworks */,
@@ -154,14 +170,14 @@
 			);
 			dependencies = (
 			);
-			name = poses;
+			name = Poses;
 			productName = poses;
-			productReference = FA8B53742398F2B9009E8E1F /* poses.app */;
+			productReference = FA8B53742398F2B9009E8E1F /* Poses Pro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA8B538C2398F2BA009E8E1F /* posesTests */ = {
+		FA8B538C2398F2BA009E8E1F /* PosesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA8B53A42398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "posesTests" */;
+			buildConfigurationList = FA8B53A42398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "PosesTests" */;
 			buildPhases = (
 				FA8B53892398F2BA009E8E1F /* Sources */,
 				FA8B538A2398F2BA009E8E1F /* Frameworks */,
@@ -172,14 +188,14 @@
 			dependencies = (
 				FA8B538F2398F2BA009E8E1F /* PBXTargetDependency */,
 			);
-			name = posesTests;
+			name = PosesTests;
 			productName = posesTests;
-			productReference = FA8B538D2398F2BA009E8E1F /* posesTests.xctest */;
+			productReference = FA8B538D2398F2BA009E8E1F /* PosesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA8B53972398F2BA009E8E1F /* posesUITests */ = {
+		FA8B53972398F2BA009E8E1F /* PosesUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA8B53A72398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "posesUITests" */;
+			buildConfigurationList = FA8B53A72398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "PosesUITests" */;
 			buildPhases = (
 				FA8B53942398F2BA009E8E1F /* Sources */,
 				FA8B53952398F2BA009E8E1F /* Frameworks */,
@@ -190,9 +206,9 @@
 			dependencies = (
 				FA8B539A2398F2BA009E8E1F /* PBXTargetDependency */,
 			);
-			name = posesUITests;
+			name = PosesUITests;
 			productName = posesUITests;
-			productReference = FA8B53982398F2BA009E8E1F /* posesUITests.xctest */;
+			productReference = FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,8 +234,8 @@
 					};
 				};
 			};
-			buildConfigurationList = FA8B536F2398F2B9009E8E1F /* Build configuration list for PBXProject "poses" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = FA8B536F2398F2B9009E8E1F /* Build configuration list for PBXProject "Poses" */;
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -231,9 +247,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA8B53732398F2B9009E8E1F /* poses */,
-				FA8B538C2398F2BA009E8E1F /* posesTests */,
-				FA8B53972398F2BA009E8E1F /* posesUITests */,
+				FA8B53732398F2B9009E8E1F /* Poses */,
+				FA8B538C2398F2BA009E8E1F /* PosesTests */,
+				FA8B53972398F2BA009E8E1F /* PosesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,7 +289,7 @@
 				FA8B53782398F2B9009E8E1F /* AppDelegate.swift in Sources */,
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
-				FA8B537D2398F2B9009E8E1F /* poses.xcdatamodeld in Sources */,
+				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8B53922398F2BA009E8E1F /* posesTests.swift in Sources */,
+				FA8B53922398F2BA009E8E1F /* PosesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8B539D2398F2BA009E8E1F /* posesUITests.swift in Sources */,
+				FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,12 +314,12 @@
 /* Begin PBXTargetDependency section */
 		FA8B538F2398F2BA009E8E1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA8B53732398F2B9009E8E1F /* poses */;
+			target = FA8B53732398F2B9009E8E1F /* Poses */;
 			targetProxy = FA8B538E2398F2BA009E8E1F /* PBXContainerItemProxy */;
 		};
 		FA8B539A2398F2BA009E8E1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA8B53732398F2B9009E8E1F /* poses */;
+			target = FA8B53732398F2B9009E8E1F /* Poses */;
 			targetProxy = FA8B53992398F2BA009E8E1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -370,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,16 +455,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"poses/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 65;
+				DEVELOPMENT_ASSET_PATHS = "\"Poses/resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 556343DW3U;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = poses/Info.plist;
+				INFOPLIST_FILE = Poses/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.poses;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.posespro;
+				PRODUCT_NAME = "Poses Pro";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,16 +477,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"poses/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 65;
+				DEVELOPMENT_ASSET_PATHS = "\"Poses/resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 556343DW3U;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = poses/Info.plist;
+				INFOPLIST_FILE = Poses/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.poses;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.posespro;
+				PRODUCT_NAME = "Poses Pro";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,8 +501,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = posesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = PosesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poses.app/poses";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poses Pro.app/Poses Pro";
 			};
 			name = Debug;
 		};
@@ -503,8 +522,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = posesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = PosesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +532,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poses.app/poses";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poses Pro.app/Poses Pro";
 			};
 			name = Release;
 		};
@@ -524,7 +542,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = posesUITests/Info.plist;
+				INFOPLIST_FILE = PosesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,7 +552,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = poses;
+				TEST_TARGET_NAME = Poses;
 			};
 			name = Debug;
 		};
@@ -544,7 +562,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = posesUITests/Info.plist;
+				INFOPLIST_FILE = PosesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,14 +572,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = poses;
+				TEST_TARGET_NAME = Poses;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA8B536F2398F2B9009E8E1F /* Build configuration list for PBXProject "poses" */ = {
+		FA8B536F2398F2B9009E8E1F /* Build configuration list for PBXProject "Poses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA8B539F2398F2BA009E8E1F /* Debug */,
@@ -570,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "poses" */ = {
+		FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "Poses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA8B53A22398F2BA009E8E1F /* Debug */,
@@ -579,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA8B53A42398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "posesTests" */ = {
+		FA8B53A42398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "PosesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA8B53A52398F2BA009E8E1F /* Debug */,
@@ -588,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA8B53A72398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "posesUITests" */ = {
+		FA8B53A72398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "PosesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA8B53A82398F2BA009E8E1F /* Debug */,
@@ -600,13 +618,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FA8B537B2398F2B9009E8E1F /* poses.xcdatamodeld */ = {
+		FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FA8B537C2398F2B9009E8E1F /* poses.xcdatamodel */,
+				FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */,
 			);
-			currentVersion = FA8B537C2398F2B9009E8E1F /* poses.xcdatamodel */;
-			path = poses.xcdatamodeld;
+			currentVersion = FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */;
+			path = Poses.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

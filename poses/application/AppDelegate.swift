@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  poses
+//  Poses
 //
 //  Created by Alex Curylo on 12/5/19.
 //  Copyright © 2019 Trollwerks Inc. All rights reserved.
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentCloudKitContainer(name: "poses")
+        let container = NSPersistentCloudKitContainer(name: "Poses")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
