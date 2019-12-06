@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Poses_Pro  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Poses_Pro  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Poses_Pro 3.0 Docs
+        </a>
+         (11% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/alexcurylo/poses">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Poses_Pro Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Poses_Pro  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ContentView.html">ContentView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ContentView_Previews.html">ContentView_Previews</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='a-href-https-github-com-alexcurylo-poses-poses-a' class='heading'><a href="https://github.com/alexcurylo/poses">poses</a></h1>
+
+<p><a href="https://github.com/alexcurylo/poses/actions?workflow=CI"><img src="https://github.com/alexcurylo/poses/workflows/CI/badge.svg" alt="CI"></a>
+<a href="https://codecov.io/gh/alexcurylo/poses"><img src="https://codecov.io/gh/alexcurylo/poses/branch/develop/graphs/badge.svg" alt="coverage"></a>
+<a href="https://codebeat.co/projects/github-com-alexcurylo-poses-develop"><img src="https://codebeat.co/badges/f01be6f5-7a79-4d58-94ce-08ce7a4948a7" alt="codebeat"></a>
+<a href="https://github.com/alexcurylo/poses/issues"><img src="https://img.shields.io/github/issues/alexcurylo/poses.svg" alt="issues"></a>
+<a href="https://alexcurylo.github.io/poses"><img src="https://alexcurylo.github.io/poses/badge.svg" alt="docs"></a>
+<a href="https://gitter.im/alexcurylo/poses"><img src="https://badges.gitter.im/alexcurylo/poses.svg" alt="chat"></a> </p>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
+
+<ol>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#author">Author</a></li>
+<li><a href="#license">License</a></li>
+</ol>
+<h2 id='purpose' class='heading'>Purpose</h2>
+
+<p>SwiftUI pose image catalog app engine for <a href="https://apps.apple.com/app/id357099619">Poses Professional 3.0</a>.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>Xcode 11.2.1 or later</li>
+<li>iOS 13.0 or later</li>
+</ul>
+<h3 id='tools' class='heading'>Tools:</h3>
+
+<ul>
+<li><a href="https://bundler.io/">Bundler</a> for Ruby dependency management</li>
+<li><a href="">Codebeat</a> for automated code review</li>
+<li><a href="https://codecov.io/gh/alexcurylo/poses">Codecov</a> for test coverage statistics</li>
+<li><a href="https://github.com/alexcurylo/poses/actions?workflow=CI">Github Actions</a> for CI testing</li>
+<li><a href="https://gitter.im/alexcurylo/poses?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">Gitter</a> for chat</li>
+<li><a href="https://github.com/realm/jazzy">Jazzy</a> for generating documentation</li>
+<li><a href="https://github.com/yonaskolb/mint">Mint</a> for tool dependency management</li>
+<li><a href="https://github.com/realm/SwiftLint">SwiftLint</a> for opinionated coding style enforcement</li>
+<li><a href="https://github.com/seanhenry/SwiftMockGeneratorForXcode">SwiftMockGeneratorForXcode</a> for generating mocks</li>
+<li><a href="https://github.com/SwiftyBeaver/SwiftyBeaver">SwiftyBeaver</a> for logging</li>
+</ul>
+<h3 id='libraries' class='heading'>Libraries:</h3>
+
+<ul>
+<li><a href="https://github.com/mac-cain13/R.swift/">R.swift</a> for typed resource identifiers</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<ul>
+<li>Install Ruby + Bundler + Mint as system tools, <a href="https://brew.sh">Homebrew</a> is a good start</li>
+<li><code>bundle install</code> to install the versioned tools in <code>Gemfile</code></li>
+<li><code>mint bootstrap</code> to install the versioned tools in <code>Mintfile</code></li>
+<li>Build the app with the &lsquo;Poses&rsquo; target.</li>
+</ul>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Read the <a href="http://alexcurylo.github.io/poses/">docs</a>. Generated with <a href="https://github.com/realm/jazzy">jazzy</a>. Hosted by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+
+<p>Generate for local branch with  <code>bundle exec jazzy</code> and open with <code>open ./docs/index.html</code></p>
+<h2 id='roadmap' class='heading'>Roadmap</h2>
+
+<p><a href="https://github.com/alexcurylo/poses/issues/new">Open an issue</a> if there&rsquo;s something in particular you&rsquo;d like to see here.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p><a href="http://trollwerks.com"><img src="http://img.shields.io/badge/web-www.trollwerks.com-blue.svg" alt="web: trollwerks.com"></a> 
+<a href="https://twitter.com/trollwerks"><img src="http://img.shields.io/badge/twitter-%40trollwerks-blue.svg" alt="twitter: @trollwerks"></a> 
+<a href="mailto:alex@trollwerks.com"><img src="http://img.shields.io/badge/email-alex%40trollwerks.com-blue.svg" alt="email: alex@trollwerks.com"></a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>The <a href="http://opensource.org/licenses/MIT">MIT License</a>. See the <a href="LICENSE.md">LICENSE.md</a> file for details.</p>
+
+<p><em>Copyright &copy;2008-2020 Trollwerks Inc.</em></p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2008-2020 <a class="link" href="http://trollwerks.com/" target="_blank" rel="external">Trollwerks Inc.</a> under <a class="link" href="https://github.com/alexcurylo/poses/blob/master/LICENSE.md" target="_blank" rel="external">MIT license</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
