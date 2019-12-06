@@ -1,0 +1,29 @@
+module: Poses_Pro
+module_version: 3.0
+
+author: Alex Curylo
+author_url: http://everywhs.com
+github_url: https://github.com/alexcurylo/poses
+github_file_prefix: https://github.com/alexcurylo/poses/tree/master
+
+theme: fullwidth
+clean: true
+
+readme: README.md
+copyright: '© 2008-2020 [Trollwerks Inc.](http://trollwerks.com/) under [MIT license](https://github.com/alexcurylo/poses/blob/master/LICENSE.md).'
+
+skip_undocumented: false
+hide_documentation_coverage: false
+min_acl: internal
+exclude:
+  - "**/*resources*/*.*"
+
+swift_version: 5.1.2
+sdk: iphonesimulator
+xcodebuild_arguments:
+  - -project
+  - Poses.xcodeproj
+  - -scheme
+  - Poses
+
+output: docs/
