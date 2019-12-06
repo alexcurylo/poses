@@ -1,10 +1,4 @@
-//
-//  PosesTests.swift
-//  PosesTests
-//
-//  Created by Alex Curylo on 12/5/19.
-//  Copyright © 2019 Trollwerks Inc. All rights reserved.
-//
+// @copyright Trollwerks Inc.
 
 import XCTest
 @testable import Poses_Pro
