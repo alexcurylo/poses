@@ -16,6 +16,9 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B53922398F2BA009E8E1F /* PosesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53912398F2BA009E8E1F /* PosesTests.swift */; };
 		FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */; };
+		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
+		FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
+		FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Launch.swift"; sourceTree = "<group>"; };
+		FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Launch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,7 @@
 			children = (
 				8C7AAF2C2399F2730065F035 /* application */,
 				8C7AAF2D2399F2840065F035 /* resources */,
+				FAD49967239BA7CF0030CB8E /* testing */,
 			);
 			path = Poses;
 			sourceTree = "<group>";
@@ -177,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8B53912398F2BA009E8E1F /* PosesTests.swift */,
-				FA8B53932398F2BA009E8E1F /* Info.plist */,
+				FAD4996F239BAA0F0030CB8E /* support */,
 			);
 			path = PosesTests;
 			sourceTree = "<group>";
@@ -186,9 +192,34 @@
 			isa = PBXGroup;
 			children = (
 				FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */,
-				FA8B539E2398F2BA009E8E1F /* Info.plist */,
+				FAD4996B239BA8F40030CB8E /* support */,
 			);
 			path = PosesUITests;
+			sourceTree = "<group>";
+		};
+		FAD49967239BA7CF0030CB8E /* testing */ = {
+			isa = PBXGroup;
+			children = (
+				FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */,
+			);
+			path = testing;
+			sourceTree = "<group>";
+		};
+		FAD4996B239BA8F40030CB8E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */,
+				FA8B539E2398F2BA009E8E1F /* Info.plist */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		FAD4996F239BAA0F0030CB8E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B53932398F2BA009E8E1F /* Info.plist */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +377,7 @@
 			files = (
 				FA8B53782398F2B9009E8E1F /* AppDelegate.swift in Sources */,
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
+				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
 				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
 			);
@@ -363,6 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
+				FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */,
 				FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +593,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = PosesTests/Info.plist;
+				INFOPLIST_FILE = PosesTests/support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +614,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = PosesTests/Info.plist;
+				INFOPLIST_FILE = PosesTests/support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +634,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = PosesUITests/Info.plist;
+				INFOPLIST_FILE = PosesUITests/support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +654,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 556343DW3U;
-				INFOPLIST_FILE = PosesUITests/Info.plist;
+				INFOPLIST_FILE = PosesUITests/support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
