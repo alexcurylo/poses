@@ -1,16 +1,23 @@
 // @copyright Trollwerks Inc.
 
 import CoreData
+import SwiftyBeaver
 import UIKit
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    /// didFinishLaunchingWithOptions
+    /// - Parameters:
+    ///   - application: Application
+    ///   - launchOptions: Launch options
+    /// - Returns: Success
     func application(
         _ application: UIApplication,
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        configureLogging()
 
         return true
     }
@@ -76,6 +83,33 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+}
+
+// MARK: - SwiftyBeaver
+// https://docs.swiftybeaver.com
+
+private extension AppDelegate {
+
+    func configureLogging() {
+        let swiftyBeaver = SwiftyBeaver.self
+        let console = ConsoleDestination()
+        swiftyBeaver.addDestination(console)
+
+        let file = FileDestination()
+        if UIApplication.isSimulator {
+            // tail -f /tmp/swiftybeaver.log
+            file.logFileURL = URL(fileURLWithPath: "/tmp/swiftybeaver.log")
+        }
+        swiftyBeaver.addDestination(file)
+
+        if UIApplication.isProduction {
+            let platform = SBPlatformDestination(
+                appID: "E9QBr2",
+                appSecret: "djbdgmnlni0Lvlw8tzn7iPtetjq9lpO3",
+                encryptionKey: "hgJcqazafbGnlyoc3bwfxJeb6mavvu5L")
+            swiftyBeaver.addDestination(platform)
         }
     }
 }

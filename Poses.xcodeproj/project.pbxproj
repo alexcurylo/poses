@@ -16,6 +16,8 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B53922398F2BA009E8E1F /* PosesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53912398F2BA009E8E1F /* PosesTests.swift */; };
 		FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */; };
+		FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FAD49962239BA4340030CB8E /* SwiftyBeaver */; };
+		FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */; };
 		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
 		FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
 		FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */; };
@@ -68,6 +70,7 @@
 		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Environment.swift"; sourceTree = "<group>"; };
 		FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Launch.swift"; sourceTree = "<group>"; };
 		FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Launch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +170,7 @@
 			children = (
 				8C7AAF2C2399F2730065F035 /* application */,
 				8C7AAF2D2399F2840065F035 /* resources */,
+				FAD49964239BA6910030CB8E /* support */,
 				FAD49967239BA7CF0030CB8E /* testing */,
 			);
 			path = Poses;
@@ -195,6 +200,14 @@
 				FAD4996B239BA8F40030CB8E /* support */,
 			);
 			path = PosesUITests;
+			sourceTree = "<group>";
+		};
+		FAD49964239BA6910030CB8E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 		FAD49967239BA7CF0030CB8E /* testing */ = {
@@ -239,6 +252,9 @@
 			dependencies = (
 			);
 			name = Poses;
+			packageProductDependencies = (
+				FAD49962239BA4340030CB8E /* SwiftyBeaver */,
+			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses Pro.app */;
 			productType = "com.apple.product-type.application";
@@ -311,6 +327,9 @@
 				Base,
 			);
 			mainGroup = FA8B536B2398F2B9009E8E1F;
+			packageReferences = (
+				FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,6 +398,7 @@
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
+				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +728,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAD49962239BA4340030CB8E /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */ = {
