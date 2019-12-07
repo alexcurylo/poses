@@ -1,0 +1,8 @@
+// @copyright Trollwerks Inc.
+
+INFOPLIST_FILE = PosesUITests/support/Info.plist
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.posesUITests
+PRODUCT_NAME = $(TARGET_NAME)
+TARGETED_DEVICE_FAMILY = 1,2
+TEST_TARGET_NAME = Poses
