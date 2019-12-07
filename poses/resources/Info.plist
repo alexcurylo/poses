@@ -66,5 +66,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>By giving Poses access to your camera, you can take pictures with reference images for posing your subject.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>By giving Poses access to your photo library, you can save photos taken with the app to your library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>By giving Poses access to your photo library, you can select from photos previously taken with the app.</string>
 </dict>
 </plist>
