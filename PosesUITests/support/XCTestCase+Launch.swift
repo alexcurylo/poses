@@ -54,8 +54,7 @@ extension LaunchArgument {
     func apply(to app: XCUIApplication) {
         switch self {
         case .takingScreenshots:
-            //Snapshot.setupSnapshot(app)
-            break
+            Snapshot.setupSnapshot(app)
         case .disableAnimations,
              .disableWaitIdle,
              .uiTesting:

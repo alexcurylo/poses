@@ -25,6 +25,8 @@
 		FAECA217239CF07A0028AE3A /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = FAECA216239CF07A0028AE3A /* Rswift */; };
 		FAECA21A239CF1900028AE3A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA219239CF1900028AE3A /* R.generated.swift */; };
 		FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21D239CF8F80028AE3A /* String+Formatting.swift */; };
+		FAECA220239CFD8A0028AE3A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */; };
+		FAECA222239D004E0028AE3A /* AppStoreSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA221239D004E0028AE3A /* AppStoreSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		FAECA213239CEF340028AE3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAECA219239CF1900028AE3A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		FAECA21D239CF8F80028AE3A /* String+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
+		FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		FAECA221239D004E0028AE3A /* AppStoreSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotTests.swift; sourceTree = "<group>"; };
+		FAECA223239D01BA0028AE3A /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 				8C7AAF3B239A5B600065F035 /* .swiftlint.yml */,
 				8C7AAF32239A119E0065F035 /* CHANGELOG.md */,
 				8C7AAF36239A53600065F035 /* codecov.yml */,
+				FAECA223239D01BA0028AE3A /* fastlane */,
 				8C7AAF3D239A608E0065F035 /* Gemfile */,
 				8C7AAF3E239A60BA0065F035 /* Gemfile.lock */,
 				8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */,
@@ -219,6 +225,7 @@
 		FA8B539B2398F2BA009E8E1F /* PosesUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FAECA221239D004E0028AE3A /* AppStoreSnapshotTests.swift */,
 				FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */,
 				FAD4996B239BA8F40030CB8E /* support */,
 			);
@@ -245,6 +252,7 @@
 		FAD4996B239BA8F40030CB8E /* support */ = {
 			isa = PBXGroup;
 			children = (
+				FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */,
 				FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */,
 				FA8B539E2398F2BA009E8E1F /* Info.plist */,
 			);
@@ -487,6 +495,8 @@
 				FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */,
 				FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */,
+				FAECA220239CFD8A0028AE3A /* SnapshotHelper.swift in Sources */,
+				FAECA222239D004E0028AE3A /* AppStoreSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

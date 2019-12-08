@@ -1,0 +1,8 @@
+app_identifier("com.trollwerks.posespro") # The bundle identifier of your app
+apple_id("alex@alexcurylo.com") # Your Apple email address
+
+itc_team_id("11385") # App Store Connect Team ID
+team_id("556343DW3U") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

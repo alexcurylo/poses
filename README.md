@@ -34,6 +34,7 @@ Requirements
 - [Bundler](https://bundler.io/) for Ruby dependency management
 - [Codebeat]() for automated code review
 - [Codecov](https://codecov.io/gh/alexcurylo/poses) for test coverage statistics
+- [Fastlane](https://fastlane.tools) for release management
 - [Github Actions](https://github.com/alexcurylo/poses/actions?workflow=CI) for CI testing
 - [Gitter](https://gitter.im/alexcurylo/poses?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) for chat
 - [Jazzy](https://github.com/realm/jazzy) for generating documentation
