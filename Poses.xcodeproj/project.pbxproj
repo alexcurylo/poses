@@ -21,6 +21,10 @@
 		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
 		FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
 		FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */; };
+		FAECA214239CEF340028AE3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAECA212239CEF340028AE3A /* Localizable.strings */; };
+		FAECA217239CF07A0028AE3A /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = FAECA216239CF07A0028AE3A /* Rswift */; };
+		FAECA21A239CF1900028AE3A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA219239CF1900028AE3A /* R.generated.swift */; };
+		FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21D239CF8F80028AE3A /* String+Formatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,9 @@
 		FAD4997C239C4B070030CB8E /* PosesUITests-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "PosesUITests-Release.xcconfig"; sourceTree = "<group>"; };
 		FAD4997D239C4B070030CB8E /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
 		FAD4997E239C4B070030CB8E /* PosesTests-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "PosesTests-Shared.xcconfig"; sourceTree = "<group>"; };
+		FAECA213239CEF340028AE3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAECA219239CF1900028AE3A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FAECA21D239CF8F80028AE3A /* String+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
+				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,10 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				FA8B53802398F2BA009E8E1F /* Assets.xcassets */,
-				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
 				FA8B53882398F2BA009E8E1F /* Info.plist */,
+				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
+				FAECA212239CEF340028AE3A /* Localizable.strings */,
 				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
 				FA8B53822398F2BA009E8E1F /* Preview Content */,
+				FAECA219239CF1900028AE3A /* R.generated.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 		FAD49964239BA6910030CB8E /* support */ = {
 			isa = PBXGroup;
 			children = (
+				FAECA21D239CF8F80028AE3A /* String+Formatting.swift */,
 				FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */,
 			);
 			path = support;
@@ -274,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "Poses" */;
 			buildPhases = (
+				FAECA218239CF09E0028AE3A /* Generate R.generated.swift */,
 				FA8B53702398F2B9009E8E1F /* Sources */,
 				FA8B53712398F2B9009E8E1F /* Frameworks */,
 				8C7AAF3C239A5C1A0065F035 /* SwiftLint */,
@@ -286,6 +298,7 @@
 			name = Poses;
 			packageProductDependencies = (
 				FAD49962239BA4340030CB8E /* SwiftyBeaver */,
+				FAECA216239CF07A0028AE3A /* Rswift */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses Pro.app */;
@@ -361,6 +374,7 @@
 			mainGroup = FA8B536B2398F2B9009E8E1F;
 			packageReferences = (
 				FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -379,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */,
+				FAECA214239CEF340028AE3A /* Localizable.strings in Resources */,
 				FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */,
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
 			);
@@ -419,6 +434,26 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ -x \"$(command -v mint)\" ]; then\n  mint run swiftlint\nelse\n  echo \"error: SwiftLint not installed; 'mint install realm/SwiftLint' to install globally\"\n  return -1\nfi\n\n";
 		};
+		FAECA218239CF09E0028AE3A /* Generate R.generated.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Generate R.generated.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/Poses/resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if mint list | grep -q 'R.swift'; then\n  mint run R.swift rswift generate \"${SRCROOT}/Poses/resources/R.generated.swift\"\nelse\n  echo \"error: R.swift not installed; 'mint bootstrap' to install\"\n  return -1\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -427,11 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8B53782398F2B9009E8E1F /* AppDelegate.swift in Sources */,
+				FAECA21A239CF1900028AE3A /* R.generated.swift in Sources */,
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
+				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +512,14 @@
 				FA8B53862398F2BA009E8E1F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAECA212239CEF340028AE3A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAECA213239CEF340028AE3A /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -590,6 +635,14 @@
 				minimumVersion = 1.8.4;
 			};
 		};
+		FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -597,6 +650,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
+		};
+		FAECA216239CF07A0028AE3A /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
