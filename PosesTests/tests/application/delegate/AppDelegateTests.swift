@@ -20,7 +20,7 @@ final class AppDelegateTests: XCTestCase {
     func testProductionHandlerList() {
         // given
         let expected = [
-            //String(describing: ServiceHandler.self),
+            String(describing: ServiceHandler.self),
             String(describing: LaunchHandler.self)
         ]
 
@@ -35,7 +35,7 @@ final class AppDelegateTests: XCTestCase {
     func testUITestingHandlerList() {
         // given
         let expected = [
-            //String(describing: ServiceHandlerStub.self),
+            String(describing: ServiceHandlerStub.self),
             String(describing: LaunchHandler.self)
         ]
 

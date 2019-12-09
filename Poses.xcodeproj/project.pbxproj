@@ -39,6 +39,9 @@
 		FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21D239CF8F80028AE3A /* String+Formatting.swift */; };
 		FAECA220239CFD8A0028AE3A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */; };
 		FAECA222239D004E0028AE3A /* AppStoreSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA221239D004E0028AE3A /* AppStoreSnapshotTests.swift */; };
+		FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A5239F05E4004D314D /* ServiceHandler.swift */; };
+		FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A7239F05F8004D314D /* ServiceProvider.swift */; };
+		FAFB16AA239F06BD004D314D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A9239F06BD004D314D /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		FAECA221239D004E0028AE3A /* AppStoreSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreSnapshotTests.swift; sourceTree = "<group>"; };
 		FAECA223239D01BA0028AE3A /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
+		FAFB16A5239F05E4004D314D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
+		FAFB16A7239F05F8004D314D /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		FAFB16A9239F06BD004D314D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,7 @@
 			children = (
 				8CA9CBAC239DD62300213558 /* AppDelegate.swift */,
 				8CA9CDB5239DE19100213558 /* LaunchHandler.swift */,
+				FAFB16A5239F05E4004D314D /* ServiceHandler.swift */,
 			);
 			path = delegate;
 			sourceTree = "<group>";
@@ -248,7 +255,9 @@
 		8CA9CDBA239DE46F00213558 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				FAFB16A9239F06BD004D314D /* DataService.swift */,
 				8CA9CDBB239DE47E00213558 /* LoggingService.swift */,
+				FAFB16A7239F05F8004D314D /* ServiceProvider.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -564,11 +573,14 @@
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
+				FAFB16AA239F06BD004D314D /* DataService.swift in Sources */,
 				8CA9CDBF239DE58400213558 /* Date+Formatting.swift in Sources */,
+				FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
+				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
