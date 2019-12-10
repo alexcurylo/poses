@@ -2,10 +2,12 @@
 
 import SwiftUI
 
+/// SwiftUI content view
 struct ContentView: View {
 
     @State private var selection = 0
 
+    /// View body
     var body: some View {
         TabView(selection: $selection) {
             Text("First View")
@@ -30,8 +32,10 @@ struct ContentView: View {
     }
 }
 
+/// SwiftUI content view previews
 struct ContentView_Previews: PreviewProvider {
 
+    /// SwiftUI content view previews
     static var previews: some View {
         ContentView()
     }

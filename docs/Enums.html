@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Enumerations  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Section/Enumerations" class="dashAnchor"></a>
 
-    <a title="Classes  Reference"></a>
+    <a title="Enumerations  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">Poses_Pro Reference</a>
       <img class="carat" src="img/carat.png" />
-      Classes  Reference
+      Enumerations  Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,8 +251,8 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Enumerations</h1>
+            <p>The following enumerations are available globally.</p>
 
           </div>
         </section>
@@ -264,9 +264,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Poses_Pro@objc(cs)SceneDelegate"></a>
-                    <a name="//apple_ref/swift/Class/SceneDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Poses_Pro@objc(cs)SceneDelegate">SceneDelegate</a>
+                    <a name="/s:9Poses_Pro12LoggingLevelO"></a>
+                    <a name="//apple_ref/swift/Enum/LoggingLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro12LoggingLevelO">LoggingLevel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -274,20 +274,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>SceneDelegate declared in Info.plist</p>
+                        <p>Type of log statement</p>
 
-                        <a href="Classes/SceneDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/LoggingLevel.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">SceneDelegate</span> <span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIWindowSceneDelegate</span><span class="p">,</span> <span class="kt"><a href="Protocols/ServiceProvider.html">ServiceProvider</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">LoggingLevel</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/SceneDelegate.swift#L7-L75">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/LoggingService.swift#L6-L22">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,9 +295,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Poses_Pro@objc(cs)AppDelegate"></a>
-                    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Poses_Pro@objc(cs)AppDelegate">AppDelegate</a>
+                    <a name="/s:9Poses_Pro24ServiceProviderInstancesO"></a>
+                    <a name="//apple_ref/swift/Enum/ServiceProviderInstances" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro24ServiceProviderInstancesO">ServiceProviderInstances</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -305,21 +305,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Our routing application delegate</p>
+                        <p>To be set up at application startup time</p>
 
-                        <a href="Classes/AppDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/ServiceProviderInstances.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">ServiceProviderInstances</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L6-L59">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/ServiceProvider.swift#L31-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -327,9 +326,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro15DataServiceImplC"></a>
-                    <a name="//apple_ref/swift/Class/DataServiceImpl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro15DataServiceImplC">DataServiceImpl</a>
+                    <a name="/s:9Poses_Pro7SecretsO"></a>
+                    <a name="//apple_ref/swift/Enum/Secrets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro7SecretsO">Secrets</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -337,19 +336,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Production implementation of DataService</p>
+                        <p>Retrieves secrets from externally populated Secrets.plist</p>
 
+                        <a href="Enums/Secrets.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">DataServiceImpl</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DataService.html">DataService</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Secrets</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/DataService.swift#L17-L57">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/Secrets.swift#L6-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -357,9 +357,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Poses_Pro@objc(cs)RoutingAppDelegate"></a>
-                    <a name="//apple_ref/swift/Class/RoutingAppDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Poses_Pro@objc(cs)RoutingAppDelegate">RoutingAppDelegate</a>
+                    <a name="/s:9Poses_Pro14LaunchArgumentO"></a>
+                    <a name="//apple_ref/swift/Enum/LaunchArgument" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro14LaunchArgumentO">LaunchArgument</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -367,20 +367,82 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Override <code>RoutingAppDelegate</code> to return app&rsquo;s list of <code>handlers</code></p>
+                        <p>Arguments that UI tests can pass on launch</p>
 
-                        <a href="Classes/RoutingAppDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/LaunchArgument.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">RoutingAppDelegate</span> <span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">LaunchArgument</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L306-L331">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/ProcessInfo+Launch.swift#L6-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro16LaunchSettingKeyO"></a>
+                    <a name="//apple_ref/swift/Enum/LaunchSettingKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro16LaunchSettingKeyO">LaunchSettingKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setting keys that UI tests can pass on launch</p>
+
+                        <a href="Enums/LaunchSettingKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">LaunchSettingKey</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/ProcessInfo+Launch.swift#L19-L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro13LaunchSettingO"></a>
+                    <a name="//apple_ref/swift/Enum/LaunchSetting" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro13LaunchSettingO">LaunchSetting</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Settings that UI tests can pass on launch</p>
+
+                        <a href="Enums/LaunchSetting.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">LaunchSetting</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/ProcessInfo+Launch.swift#L26-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

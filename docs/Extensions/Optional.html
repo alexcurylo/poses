@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppDelegate Class Reference</title>
+    <title>Optional Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Optional" class="dashAnchor"></a>
 
-    <a title="AppDelegate Class Reference"></a>
+    <a title="Optional Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses_Pro Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppDelegate Class Reference
+      Optional Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,29 +251,36 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppDelegate</h1>
+            <h1>Optional</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Optional</span> <span class="k">where</span> <span class="kt">Wrapped</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Withable.html">Withable</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Our routing application delegate</p>
-
+            
           </div>
         </section>
 
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Wrapped%60:%20%60Withable%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Wrapped`: `Withable`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Wrapped%60:%20%60Withable%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Wrapped</code>: <code><a href="../Protocols/Withable.html">Withable</a></code></p>
+</h3>
+                </div>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC7RuntimeO"></a>
-                    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC7RuntimeO">Runtime</a>
+                    <a name="/s:Sq9Poses_ProAA8WithableRzlE4withyxyxzXEF"></a>
+                    <a name="//apple_ref/swift/Method/with(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sq9Poses_ProAA8WithableRzlE4withyxyxzXEF">with(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,75 +288,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runtime environments our app delegate recognizes</p>
-
-                        <a href="../Classes/AppDelegate/Runtime.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L9-L16">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/handlers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp">handlers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for the active environment</p>
+                        <p>Construct a copy or original and configure</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">handlers</span><span class="p">:</span> <span class="kt">Handlers</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/runtimeHandlers(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ">runtimeHandlers(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for environment</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">runtimeHandlers</span><span class="p">(</span><span class="k">for</span> <span class="nv">runtime</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppDelegate/Runtime.html">Runtime</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Handlers</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">with</span><span class="p">(</span><span class="n">_</span> <span class="nv">configure</span><span class="p">:</span> <span class="p">(</span><span class="k">inout</span> <span class="kt">Wrapped</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Wrapped</span></code></pre>
 
                         </div>
                       </div>
@@ -360,12 +306,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>runtime</em>
+                                <em>configure</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Environment descriptor</p>
+                                  <p>configuration closure/function</p>
                                 </div>
                               </td>
                             </tr>
@@ -374,10 +320,10 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Appropriate handler collection</p>
+                        <p>configured object</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L38-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/Withable.swift#L37-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

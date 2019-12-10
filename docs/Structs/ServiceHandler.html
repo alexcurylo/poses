@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppDelegate Class Reference</title>
+    <title>ServiceHandler Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/ServiceHandler" class="dashAnchor"></a>
 
-    <a title="AppDelegate Class Reference"></a>
+    <a title="ServiceHandler Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses_Pro Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppDelegate Class Reference
+      ServiceHandler Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,15 +251,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppDelegate</h1>
+            <h1>ServiceHandler</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ServiceHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ServiceHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AppLaunchHandler.html">AppLaunchHandler</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Our routing application delegate</p>
+            <p>Stub for startup construction</p>
 
           </div>
         </section>
@@ -271,9 +271,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC7RuntimeO"></a>
-                    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC7RuntimeO">Runtime</a>
+                    <a name="/s:9Poses_Pro14ServiceHandlerV11application_30willFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/application(_:willFinishLaunchingWithOptions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro14ServiceHandlerV11application_30willFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF">application(_:willFinishLaunchingWithOptions:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,75 +281,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runtime environments our app delegate recognizes</p>
-
-                        <a href="../Classes/AppDelegate/Runtime.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L9-L16">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/handlers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp">handlers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for the active environment</p>
+                        <p>willFinishLaunchingWithOptions handler</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">handlers</span><span class="p">:</span> <span class="kt">Handlers</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/runtimeHandlers(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ">runtimeHandlers(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for environment</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">runtimeHandlers</span><span class="p">(</span><span class="k">for</span> <span class="nv">runtime</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppDelegate/Runtime.html">Runtime</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Handlers</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
+    <span class="c1">// swiftlint:disable:next discouraged_optional_collection</span>
+    <span class="n">willFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -360,12 +303,24 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>runtime</em>
+                                <em>application</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Environment descriptor</p>
+                                  <p>UIApplication</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>launchOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options</p>
                                 </div>
                               </td>
                             </tr>
@@ -374,10 +329,79 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Appropriate handler collection</p>
+                        <p>Success</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L38-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/ServiceHandler.swift#L15-L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro14ServiceHandlerV11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF"></a>
+                    <a name="//apple_ref/swift/Method/application(_:didFinishLaunchingWithOptions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro14ServiceHandlerV11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF">application(_:didFinishLaunchingWithOptions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>didFinishLaunching handler</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
+    <span class="c1">// swiftlint:disable:next discouraged_optional_collection</span>
+    <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>application</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIApplication</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>launchOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Success</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/ServiceHandler.swift#L33-L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

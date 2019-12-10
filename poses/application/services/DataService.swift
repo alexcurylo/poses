@@ -6,16 +6,20 @@ import SwiftUI
 /// Provides stored data functionality
 protocol DataService {
 
+    /// viewContext
     var viewContext: NSManagedObjectContext { get }
 
+    /// Write viewContext
     func save()
 }
 
 /// Production implementation of DataService
 final class DataServiceImpl: DataService {
 
+    /// :nodoc:
     var viewContext: NSManagedObjectContext { persistentContainer.viewContext }
 
+    /// :nodoc:
     func save() {
         // Save changes in the application's managed object context when the application transitions to the background.
         saveContext()

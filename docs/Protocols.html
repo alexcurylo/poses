@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+
+    <a title="Protocols  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Poses_Pro 3.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/alexcurylo/poses">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Poses_Pro Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Protocols  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AppDelegate/Runtime.html">– Runtime</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:9Poses_Pro15DataServiceImplC">DataServiceImpl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/RoutingAppDelegate.html">RoutingAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LaunchArgument.html">LaunchArgument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LaunchSetting.html">LaunchSetting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LaunchSettingKey.html">LaunchSettingKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LoggingLevel.html">LoggingLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Secrets.html">Secrets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ServiceProviderInstances.html">ServiceProviderInstances</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions.html#/c:objc(cs)NSObject">NSObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ProcessInfo.html">ProcessInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Set.html">Set</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/StringProtocol.html">StringProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppBackgroundFetchHandler.html">AppBackgroundFetchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppBackgroundURLSessionHandler.html">AppBackgroundURLSessionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppCloudKitHandler.html">AppCloudKitHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppContentHandler.html">AppContentHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppContinuityHandler.html">AppContinuityHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppExtensionHandler.html">AppExtensionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppHealthHandler.html">AppHealthHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppLaunchHandler.html">AppLaunchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppMemoryHandler.html">AppMemoryHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppNotificationsHandler.html">AppNotificationsHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppOpenURLHandler.html">AppOpenURLHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppRestorationHandler.html">AppRestorationHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppShortcutHandler.html">AppShortcutHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppSiriHandler.html">AppSiriHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppStateHandler.html">AppStateHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppStatusBarHandler.html">AppStatusBarHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppTimeChangeHandler.html">AppTimeChangeHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AppWatchHandler.html">AppWatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DataService.html">DataService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/LoggingService.html">LoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ServiceProvider.html">ServiceProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Withable.html">Withable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ConsoleLoggingService.html">ConsoleLoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ContentView.html">ContentView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ContentView_Previews.html">ContentView_Previews</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DataServiceStub.html">DataServiceStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/LaunchHandler.html">LaunchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ServiceHandler.html">ServiceHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs.html#/s:9Poses_Pro8ServicesV">Services</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/StringKey.html">StringKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SwiftyBeaverLoggingService.html">SwiftyBeaverLoggingService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:9Poses_Pro1La">L</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro11DataServiceP"></a>
+                    <a name="//apple_ref/swift/Protocol/DataService" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro11DataServiceP">DataService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides stored data functionality</p>
+
+                        <a href="Protocols/DataService.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">DataService</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/DataService.swift#L7-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro14LoggingServiceP"></a>
+                    <a name="//apple_ref/swift/Protocol/LoggingService" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro14LoggingServiceP">LoggingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps a single logging statement implmentation</p>
+
+                        <a href="Protocols/LoggingService.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">LoggingService</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/LoggingService.swift#L25-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro15ServiceProviderP"></a>
+                    <a name="//apple_ref/swift/Protocol/ServiceProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro15ServiceProviderP">ServiceProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provider of application-wide services</p>
+
+                        <a href="Protocols/ServiceProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ServiceProvider</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/ServiceProvider.swift#L6-L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro10AppHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro10AppHandlerP">AppHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to be constructed at app startup</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro16AppLaunchHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppLaunchHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro16AppLaunchHandlerP">AppLaunchHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have launch notifications routed</p>
+
+                        <a href="Protocols/AppLaunchHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppLaunchHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L13-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro15AppStateHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppStateHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro15AppStateHandlerP">AppStateHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have state notifications routed</p>
+
+                        <a href="Protocols/AppStateHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppStateHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L33-L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro17AppOpenURLHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppOpenURLHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro17AppOpenURLHandlerP">AppOpenURLHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have open URL notifications routed</p>
+
+                        <a href="Protocols/AppOpenURLHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppOpenURLHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L52-L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro16AppMemoryHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppMemoryHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro16AppMemoryHandlerP">AppMemoryHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have memory warning notifications routed</p>
+
+                        <a href="Protocols/AppMemoryHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppMemoryHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L65-L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro20AppTimeChangeHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppTimeChangeHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro20AppTimeChangeHandlerP">AppTimeChangeHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have time change notifications routed</p>
+
+                        <a href="Protocols/AppTimeChangeHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppTimeChangeHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L72-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro19AppStatusBarHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppStatusBarHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro19AppStatusBarHandlerP">AppStatusBarHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have status bar notifications routed</p>
+
+                        <a href="Protocols/AppStatusBarHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppStatusBarHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L79-L106">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro23AppNotificationsHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppNotificationsHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro23AppNotificationsHandlerP">AppNotificationsHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have remote notifications routed</p>
+
+                        <a href="Protocols/AppNotificationsHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppNotificationsHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L109-L130">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro25AppBackgroundFetchHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppBackgroundFetchHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro25AppBackgroundFetchHandlerP">AppBackgroundFetchHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have background fetch notifications routed</p>
+
+                        <a href="Protocols/AppBackgroundFetchHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppBackgroundFetchHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L133-L140">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro30AppBackgroundURLSessionHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppBackgroundURLSessionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro30AppBackgroundURLSessionHandlerP">AppBackgroundURLSessionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have background URL session notifications routed</p>
+
+                        <a href="Protocols/AppBackgroundURLSessionHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppBackgroundURLSessionHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L143-L152">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro18AppShortcutHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppShortcutHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro18AppShortcutHandlerP">AppShortcutHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have shortcut notifications routed</p>
+
+                        <a href="Protocols/AppShortcutHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppShortcutHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L155-L164">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro15AppWatchHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppWatchHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro15AppWatchHandlerP">AppWatchHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have watch notifications routed</p>
+
+                        <a href="Protocols/AppWatchHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppWatchHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L167-L178">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro16AppHealthHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppHealthHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro16AppHealthHandlerP">AppHealthHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have health notifications routed</p>
+
+                        <a href="Protocols/AppHealthHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppHealthHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L181-L185">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro14AppSiriHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppSiriHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro14AppSiriHandlerP">AppSiriHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have Siri notifications routed</p>
+
+                        <a href="Protocols/AppSiriHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppSiriHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L188-L197">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro17AppContentHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppContentHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro17AppContentHandlerP">AppContentHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have data notifications routed</p>
+
+                        <a href="Protocols/AppContentHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppContentHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L200-L207">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro19AppExtensionHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppExtensionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro19AppExtensionHandlerP">AppExtensionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have extension notifications routed</p>
+
+                        <a href="Protocols/AppExtensionHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppExtensionHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L210-L219">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro21AppRestorationHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppRestorationHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro21AppRestorationHandlerP">AppRestorationHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have restoration notifications routed</p>
+
+                        <a href="Protocols/AppRestorationHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppRestorationHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L222-L258">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro20AppContinuityHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppContinuityHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro20AppContinuityHandlerP">AppContinuityHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have continuity notifications routed</p>
+
+                        <a href="Protocols/AppContinuityHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppContinuityHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L261-L293">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro18AppCloudKitHandlerP"></a>
+                    <a name="//apple_ref/swift/Protocol/AppCloudKitHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro18AppCloudKitHandlerP">AppCloudKitHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adopt to have CloudKit notifications routed</p>
+
+                        <a href="Protocols/AppCloudKitHandler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppCloudKitHandler</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L296-L303">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro8WithableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Withable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro8WithableP">Withable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Streamline configuration closures/functions</p>
+
+                        <a href="Protocols/Withable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Withable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/Withable.swift#L6-L10">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2008-2020 <a class="link" href="http://trollwerks.com/" target="_blank" rel="external">Trollwerks Inc.</a> under <a class="link" href="https://github.com/alexcurylo/poses/blob/master/LICENSE.md" target="_blank" rel="external">MIT license</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

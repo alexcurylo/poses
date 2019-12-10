@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppDelegate Class Reference</title>
+    <title>String Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/String" class="dashAnchor"></a>
 
-    <a title="AppDelegate Class Reference"></a>
+    <a title="String Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses_Pro Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppDelegate Class Reference
+      String Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,16 +251,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppDelegate</h1>
+            <h1>String</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">String</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">String</span><span class="p">:</span> <span class="kt">LocalizedError</span></code></pre>
 
                 </div>
               </div>
-            <p>Our routing application delegate</p>
-
+            
           </div>
         </section>
 
@@ -271,9 +270,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC7RuntimeO"></a>
-                    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC7RuntimeO">Runtime</a>
+                    <a name="/s:SS9Poses_ProE4fileSSvp"></a>
+                    <a name="//apple_ref/swift/Property/file" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9Poses_ProE4fileSSvp">file</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,20 +280,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runtime environments our app delegate recognizes</p>
+                        <p>Return filename from a path</p>
 
-                        <a href="../Classes/AppDelegate/Runtime.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L9-L16">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L12-L14">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -302,9 +300,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/handlers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp">handlers</a>
+                    <a name="/s:SS9Poses_ProE8truncate6length8trailingSSSi_SStF"></a>
+                    <a name="//apple_ref/swift/Method/truncate(length:trailing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9Poses_ProE8truncate6length8trailingSSSi_SStF">truncate(length:trailing:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -312,44 +310,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Handlers for the active environment</p>
+                        <p>Truncates the string to the specified length number of characters
+and appends an optional trailing string if longer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">handlers</span><span class="p">:</span> <span class="kt">Handlers</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/runtimeHandlers(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ">runtimeHandlers(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for environment</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">runtimeHandlers</span><span class="p">(</span><span class="k">for</span> <span class="nv">runtime</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppDelegate/Runtime.html">Runtime</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Handlers</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">truncate</span><span class="p">(</span><span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+              <span class="nv">trailing</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"…"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -360,12 +330,24 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>runtime</em>
+                                <em>length</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Environment descriptor</p>
+                                  <p>Desired maximum length of a string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trailing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A &lsquo;String&rsquo; that will be appended after the truncation</p>
                                 </div>
                               </td>
                             </tr>
@@ -374,10 +356,89 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Appropriate handler collection</p>
+                        <p>Truncated String</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L38-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L22-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9Poses_ProEySSs12StaticStringVcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9Poses_ProEySSs12StaticStringVcfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize with StaticString such as <code>#file</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">staticString</span><span class="p">:</span> <span class="kt">StaticString</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>staticString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Compile time string</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L29-L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SS9Poses_ProE16errorDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SS9Poses_ProE16errorDescriptionSSSgvp">errorDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Treat a String as self documenting Error</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

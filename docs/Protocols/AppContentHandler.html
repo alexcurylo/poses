@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppDelegate Class Reference</title>
+    <title>AppContentHandler Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/AppContentHandler" class="dashAnchor"></a>
 
-    <a title="AppDelegate Class Reference"></a>
+    <a title="AppContentHandler Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses_Pro Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppDelegate Class Reference
+      AppContentHandler Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,15 +251,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppDelegate</h1>
+            <h1>AppContentHandler</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppContentHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:9Poses_Pro10AppHandlerP">AppHandler</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Our routing application delegate</p>
+            <p>Adopt to have data notifications routed</p>
 
           </div>
         </section>
@@ -271,9 +270,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC7RuntimeO"></a>
-                    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC7RuntimeO">Runtime</a>
+                    <a name="/s:9Poses_Pro17AppContentHandlerP45applicationProtectedDataWillBecomeUnavailableyySo13UIApplicationCF"></a>
+                    <a name="//apple_ref/swift/Method/applicationProtectedDataWillBecomeUnavailable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro17AppContentHandlerP45applicationProtectedDataWillBecomeUnavailableyySo13UIApplicationCF">applicationProtectedDataWillBecomeUnavailable(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,75 +280,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runtime environments our app delegate recognizes</p>
-
-                        <a href="../Classes/AppDelegate/Runtime.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L9-L16">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/handlers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp">handlers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for the active environment</p>
+                        <p>applicationProtectedDataWillBecomeUnavailable</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">handlers</span><span class="p">:</span> <span class="kt">Handlers</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/runtimeHandlers(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ">runtimeHandlers(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for environment</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">runtimeHandlers</span><span class="p">(</span><span class="k">for</span> <span class="nv">runtime</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppDelegate/Runtime.html">Runtime</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Handlers</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applicationProtectedDataWillBecomeUnavailable</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -360,24 +298,69 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>runtime</em>
+                                <em>application</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Environment descriptor</p>
+                                  <p>Application</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L203">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Poses_Pro17AppContentHandlerP42applicationProtectedDataDidBecomeAvailableyySo13UIApplicationCF"></a>
+                    <a name="//apple_ref/swift/Method/applicationProtectedDataDidBecomeAvailable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Poses_Pro17AppContentHandlerP42applicationProtectedDataDidBecomeAvailableyySo13UIApplicationCF">applicationProtectedDataDidBecomeAvailable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>applicationProtectedDataDidBecomeAvailable</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applicationProtectedDataDidBecomeAvailable</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>Appropriate handler collection</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>application</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Application</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L38-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L206">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppDelegate Class Reference</title>
+    <title>StringProtocol Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/AppDelegate" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/StringProtocol" class="dashAnchor"></a>
 
-    <a title="AppDelegate Class Reference"></a>
+    <a title="StringProtocol Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses_Pro Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppDelegate Class Reference
+      StringProtocol Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -251,16 +251,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppDelegate</h1>
+            <h1>StringProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@UIApplicationMain</span>
-<span class="kd">final</span> <span class="kd">class</span> <span class="kt">AppDelegate</span> <span class="p">:</span> <span class="kt"><a href="../Classes/RoutingAppDelegate.html">RoutingAppDelegate</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">StringProtocol</span></code></pre>
 
                 </div>
               </div>
-            <p>Our routing application delegate</p>
-
+            
           </div>
         </section>
 
@@ -271,9 +269,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC7RuntimeO"></a>
-                    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC7RuntimeO">Runtime</a>
+                    <a name="/s:Sy9Poses_ProEy11SubSequenceQzSNySiGcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy9Poses_ProEy11SubSequenceQzSNySiGcip">subscript(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,75 +279,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Runtime environments our app delegate recognizes</p>
-
-                        <a href="../Classes/AppDelegate/Runtime.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L9-L16">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp"></a>
-                    <a name="//apple_ref/swift/Property/handlers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC8handlersSayAA0C7Handler_pGvp">handlers</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for the active environment</p>
+                        <p>Allow string subscripting by Int closed range</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">handlers</span><span class="p">:</span> <span class="kt">Handlers</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/runtimeHandlers(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Poses_Pro11AppDelegateC15runtimeHandlers3forSayAA0C7Handler_pGAC7RuntimeO_tFZ">runtimeHandlers(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Handlers for environment</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">runtimeHandlers</span><span class="p">(</span><span class="k">for</span> <span class="nv">runtime</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppDelegate/Runtime.html">Runtime</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Handlers</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="kt">CountableClosedRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubSequence</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -360,24 +297,69 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>runtime</em>
+                                <em>bounds</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Environment descriptor</p>
+                                  <p>Range to subscript</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L46-L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy9Poses_ProEy11SubSequenceQzSnySiGcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy9Poses_ProEy11SubSequenceQzSnySiGcip">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allow string subscripting by Int range</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">subscript</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="kt">CountableRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubSequence</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>Appropriate handler collection</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bounds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Range to subscript</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L38-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/String+Formatting.swift#L54-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -3,10 +3,13 @@
 import SwiftUI
 import UIKit
 
+/// SceneDelegate declared in Info.plist
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
 
+    /// UIWindowSceneDelegate conformance
     var window: UIWindow?
 
+    /// :nodoc:
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -34,6 +37,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         window.makeKeyAndVisible()
     }
 
+    /// :nodoc:
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -42,21 +46,25 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         // (see `application:didDiscardSceneSessions` instead).
     }
 
+    /// :nodoc:
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
+    /// :nodoc:
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
 
+    /// :nodoc:
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
     }
 
+    /// :nodoc:
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
