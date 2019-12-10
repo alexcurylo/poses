@@ -3,7 +3,7 @@
 @testable import Poses_Pro
 import XCTest
 
-final class ArrayTests: XCTestCase {
+final class ArrayTests: TestCase {
 
     func testTypeRefining() {
         let numbers = [ 1, 2, 3 ]

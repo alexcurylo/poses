@@ -3,7 +3,7 @@
 @testable import Poses_Pro
 import XCTest
 
-final class AppDelegateTests: XCTestCase {
+final class AppDelegateTests: TestCase {
 
     func testUnitTestingHandlerList() throws {
         // given

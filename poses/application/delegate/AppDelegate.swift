@@ -42,14 +42,17 @@ import UIKit
                 ServiceHandler(),
                 LaunchHandler()
             ]
-        #if DEBUG
         case .uiTesting:
+            #if DEBUG
             return [
                 ServiceHandlerStub(),
                 LaunchHandler()
             ]
-        #endif
-        default:
+            #else
+            return []
+            #endif
+        case .unitTesting:
+            // Spies set up in TestCase.setUp()
             return []
         }
     }

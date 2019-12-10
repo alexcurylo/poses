@@ -3,7 +3,7 @@
 @testable import Poses_Pro
 import XCTest
 
-final class UserDefaultsTests: XCTestCase {
+final class UserDefaultsTests: TestCase {
 
     func testInfoDictionary() throws {
         // given

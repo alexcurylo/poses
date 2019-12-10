@@ -3,7 +3,7 @@
 @testable import Poses_Pro
 import XCTest
 
-final class WithableTests: XCTestCase {
+final class WithableTests: TestCase {
 
     func testWithable() {
         let expected = UIView()

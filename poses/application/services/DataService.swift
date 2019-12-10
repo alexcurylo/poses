@@ -6,22 +6,15 @@ import SwiftUI
 /// Provides stored data functionality
 protocol DataService {
 
-    func add(context content: ContentView) -> ContentView
+    var viewContext: NSManagedObjectContext { get }
+
     func save()
 }
 
 /// Production implementation of DataService
 final class DataServiceImpl: DataService {
 
-    func add(context content: ContentView) -> ContentView {
-        // Get the managed object context from the shared persistent container.
-        let context = persistentContainer.viewContext
-        // set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-
-        // swiftlint:disable:next force_cast
-        return content.environment(\.managedObjectContext, context) as! ContentView
-    }
+    var viewContext: NSManagedObjectContext { persistentContainer.viewContext }
 
     func save() {
         // Save changes in the application's managed object context when the application transitions to the background.
@@ -86,7 +79,8 @@ private extension DataServiceImpl {
 /// Stub for testing
 struct DataServiceStub: DataService {
 
-    func add(context content: ContentView) -> ContentView { content }
+    let viewContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+
     func save() { }
 }
 

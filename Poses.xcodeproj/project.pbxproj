@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E5239F219F00C4FBEC /* TestCase.swift */; };
+		8C1B45EA239F222A00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E9239F222A00C4FBEC /* LoggingServiceSpy.swift */; };
+		8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */; };
 		8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */; };
 		8CA9CBAE239DD70200213558 /* Array+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAD239DD70200213558 /* Array+Type.swift */; };
 		8CA9CBB0239DDE5700213558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAC239DD62300213558 /* AppDelegate.swift */; };
@@ -62,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C1B45E5239F219F00C4FBEC /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceSpy.swift; sourceTree = "<group>"; };
+		8C1B45E9239F222A00C4FBEC /* LoggingServiceSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggingServiceSpy.swift; path = "../../../../MTP/github~mtp/MTPTests/spies/LoggingServiceSpy.swift"; sourceTree = "<group>"; };
 		8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = IDETemplateMacros.plist; path = Poses.xcodeproj/xcshareddata/IDETemplateMacros.plist; sourceTree = "<group>"; };
 		8C7AAF30239A11820065F035 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		8C7AAF31239A119E0065F035 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -157,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1B45E7239F221000C4FBEC /* spies */ = {
+			isa = PBXGroup;
+			children = (
+				8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */,
+				8C1B45E9239F222A00C4FBEC /* LoggingServiceSpy.swift */,
+			);
+			path = spies;
+			sourceTree = "<group>";
+		};
 		8C7AAF2C2399F2730065F035 /* application */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBA8239DD58100213558 /* tests */,
+				8C1B45E7239F221000C4FBEC /* spies */,
 				FAD4996F239BAA0F0030CB8E /* support */,
 			);
 			path = PosesTests;
@@ -357,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8B53932398F2BA009E8E1F /* Info.plist */,
+				8C1B45E5239F219F00C4FBEC /* TestCase.swift */,
 				8CA9CDCA239DEC3700213558 /* String+Assert.swift */,
 			);
 			path = support;
@@ -590,10 +607,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA9CDCB239DEC4600213558 /* String+Assert.swift in Sources */,
+				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
 				8CA9CBB1239DDE6500213558 /* RoutingAppDelegateTests.swift in Sources */,
 				8CA9CDBD239DE4B700213558 /* AppDelegateTests.swift in Sources */,
+				8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */,
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
+				8C1B45EA239F222A00C4FBEC /* LoggingServiceSpy.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

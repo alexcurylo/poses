@@ -6,7 +6,7 @@ import CloudKit
 @testable import Poses_Pro
 import XCTest
 
-final class RoutingAppDelegateTests: XCTestCase {
+final class RoutingAppDelegateTests: TestCase {
 
     private let liveApp = UIApplication.shared
 
