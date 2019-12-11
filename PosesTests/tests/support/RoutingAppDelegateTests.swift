@@ -3,7 +3,7 @@
 // swiftlint:disable file_length
 
 import CloudKit
-@testable import Poses_Pro
+@testable import Poses
 import XCTest
 
 final class RoutingAppDelegateTests: TestCase {

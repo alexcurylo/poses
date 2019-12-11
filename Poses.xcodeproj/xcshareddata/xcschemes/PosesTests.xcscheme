@@ -17,7 +17,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA8B53732398F2B9009E8E1F"
-            BuildableName = "Poses Pro.app"
+            BuildableName = "Poses.app"
             BlueprintName = "Poses"
             ReferencedContainer = "container:Poses.xcodeproj">
          </BuildableReference>

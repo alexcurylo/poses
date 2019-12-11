@@ -99,7 +99,7 @@
 		8CA9CDC6239DE6BA00213558 /* UserDefaults+TypeSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+TypeSafety.swift"; sourceTree = "<group>"; };
 		8CA9CDC8239DE6C400213558 /* UserDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTests.swift; sourceTree = "<group>"; };
 		8CA9CDCA239DEC3700213558 /* String+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Assert.swift"; sourceTree = "<group>"; };
-		FA8B53742398F2B9009E8E1F /* Poses Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poses Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8B53742398F2B9009E8E1F /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poses.xcdatamodel; sourceTree = "<group>"; };
 		FA8B537E2398F2B9009E8E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 		FA8B53752398F2B9009E8E1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA8B53742398F2B9009E8E1F /* Poses Pro.app */,
+				FA8B53742398F2B9009E8E1F /* Poses.app */,
 				FA8B538D2398F2BA009E8E1F /* PosesTests.xctest */,
 				FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */,
 			);
@@ -425,7 +425,7 @@
 				FAECA216239CF07A0028AE3A /* Rswift */,
 			);
 			productName = poses;
-			productReference = FA8B53742398F2B9009E8E1F /* Poses Pro.app */;
+			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA8B538C2398F2BA009E8E1F /* PosesTests */ = {

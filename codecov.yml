@@ -1,4 +1,5 @@
 # Docs: https://docs.codecov.io/docs/codecov-yaml
+# NB: Product (app) name and target name must match
 
 ignore:
   - docs/.*

@@ -1,6 +1,6 @@
 // @copyright Trollwerks Inc.
 
-@testable import Poses_Pro
+@testable import Poses
 import XCTest
 
 class TestCase: XCTestCase {

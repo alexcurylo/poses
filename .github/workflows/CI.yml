@@ -21,6 +21,6 @@ jobs:
           SCHEME: Poses
       - name: Coverage
         run: |
-          bash <(curl -s https://codecov.io/bash) -J '^PosesPro$'
+          bash <(curl -s https://codecov.io/bash) -J '^Poses$'
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

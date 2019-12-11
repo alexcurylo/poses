@@ -21,6 +21,7 @@ final class PosesUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    #if TEST_LAUNCH_PERFORMANCE
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
@@ -29,4 +30,5 @@ final class PosesUITests: XCTestCase {
             }
         }
     }
+    #endif
 }
