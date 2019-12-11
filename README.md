@@ -26,7 +26,7 @@ SwiftUI pose image catalog app engine for [Poses Professional 3.0](https://apps.
 Requirements
 ------------
 
-- Xcode 11.2.1 or later
+- Xcode 11.3 or later
 - iOS 13.0 or later
 
 ### Tools:
