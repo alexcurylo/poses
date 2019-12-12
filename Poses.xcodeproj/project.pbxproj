@@ -11,6 +11,7 @@
 		8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */; };
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
 		8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */; };
+		8C75384223A24F2E004B236E /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75384123A24F2E004B236E /* StringTests.swift */; };
 		8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */; };
 		8CA9CBAE239DD70200213558 /* Array+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAD239DD70200213558 /* Array+Type.swift */; };
 		8CA9CBB0239DDE5700213558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAC239DD62300213558 /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		8C1B47F4239F3A2200C4FBEC /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../secrets/poses/posespro/Secrets.plist; sourceTree = "<group>"; };
 		8C1B47F6239F3BB600C4FBEC /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingServiceSpy.swift; sourceTree = "<group>"; };
+		8C75384123A24F2E004B236E /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = IDETemplateMacros.plist; path = Poses.xcodeproj/xcshareddata/IDETemplateMacros.plist; sourceTree = "<group>"; };
 		8C7AAF30239A11820065F035 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		8C7AAF31239A119E0065F035 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				8CA9CBAF239DD70800213558 /* ArrayTests.swift */,
 				8CA9CBAA239DD5A300213558 /* RoutingAppDelegateTests.swift */,
+				8C75384123A24F2E004B236E /* StringTests.swift */,
 				8CA9CDC8239DE6C400213558 /* UserDefaultsTests.swift */,
 				8CA9CDC4239DE60000213558 /* WithableTests.swift */,
 			);
@@ -635,6 +638,7 @@
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
 				8CA9CBB1239DDE6500213558 /* RoutingAppDelegateTests.swift in Sources */,
 				8CA9CDBD239DE4B700213558 /* AppDelegateTests.swift in Sources */,
+				8C75384223A24F2E004B236E /* StringTests.swift in Sources */,
 				8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */,
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,

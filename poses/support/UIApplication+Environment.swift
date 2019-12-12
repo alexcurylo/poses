@@ -47,3 +47,18 @@ extension UIApplication {
         return NSClassFromString("XCTestCase") != nil
     }
 }
+
+// MARK: - Private
+
+private extension UIApplication {
+
+    #if DEBUG
+    func clearLaunchScreenCache() {
+        do {
+            try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
+        } catch {
+            print("Failed to delete launch screen cache: \(error)")
+        }
+    }
+    #endif
+}

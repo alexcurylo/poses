@@ -6,7 +6,6 @@ final class PosesUITests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-
         continueAfterFailure = false
     }
 
@@ -17,8 +16,29 @@ final class PosesUITests: XCTestCase {
     func testExample() {
         launch(settings: [.fullAccess(false)])
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let tabBarsQuery = app.tabBars
+        let secondButton = tabBarsQuery.buttons["Second"]
+        secondButton.tap()
+        let firstButton = tabBarsQuery.buttons["First"]
+        firstButton.tap()
+
+        let element = app
+                      .children(matching: .window)
+                      .element(boundBy: 0)
+                      .children(matching: .other)
+                      .element.children(matching: .other)
+                      .element.children(matching: .other)
+                      .element.children(matching: .other)
+                      .element.children(matching: .other)
+                      .element.children(matching: .other)
+                      .element.children(matching: .other)
+                      .element
+        element.swipeLeft()
+        element.swipeRight()
+
+        secondButton.tap()
+        firstButton.tap()
     }
 
     #if TEST_LAUNCH_PERFORMANCE
