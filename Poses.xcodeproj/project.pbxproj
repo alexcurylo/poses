@@ -12,6 +12,7 @@
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
 		8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */; };
 		8C75384223A24F2E004B236E /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75384123A24F2E004B236E /* StringTests.swift */; };
+		8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */; };
 		8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */; };
 		8CA9CBAE239DD70200213558 /* Array+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAD239DD70200213558 /* Array+Type.swift */; };
 		8CA9CBB0239DDE5700213558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAC239DD62300213558 /* AppDelegate.swift */; };
@@ -87,6 +88,8 @@
 		8C7AAF3D239A608E0065F035 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		8C7AAF3E239A60BA0065F035 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		8C7AAF3F239A61F10065F035 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
+		8CA57FF023A3115100A3B6B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8CA581F623A321C600A3B6B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAppDelegate.swift; sourceTree = "<group>"; };
 		8CA9CBAA239DD5A300213558 /* RoutingAppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAppDelegateTests.swift; sourceTree = "<group>"; };
 		8CA9CBAC239DD62300213558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 			children = (
 				FA8B53802398F2BA009E8E1F /* Assets.xcassets */,
 				FA8B53882398F2BA009E8E1F /* Info.plist */,
+				8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */,
 				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
 				FAECA212239CEF340028AE3A /* Localizable.strings */,
 				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
@@ -523,6 +527,7 @@
 				FAECA214239CEF340028AE3A /* Localizable.strings in Resources */,
 				FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */,
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
+				8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +678,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CA57FF023A3115100A3B6B4 /* Base */,
+				8CA581F623A321C600A3B6B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
