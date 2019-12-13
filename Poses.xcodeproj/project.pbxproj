@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C11B98D23A3248D00AFE1AE /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11B98C23A3248D00AFE1AE /* DateTests.swift */; };
+		8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11B98E23A328BF00AFE1AE /* SecretsTests.swift */; };
+		8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */; };
+		8C11B99423A345BA00AFE1AE /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */; };
 		8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E5239F219F00C4FBEC /* TestCase.swift */; };
 		8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */; };
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
@@ -68,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C11B98C23A3248D00AFE1AE /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		8C11B98E23A328BF00AFE1AE /* SecretsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsTests.swift; sourceTree = "<group>"; };
+		8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingServiceTests.swift; sourceTree = "<group>"; };
+		8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		8C1B45E5239F219F00C4FBEC /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceSpy.swift; sourceTree = "<group>"; };
 		8C1B47F4239F3A2200C4FBEC /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../secrets/poses/posespro/Secrets.plist; sourceTree = "<group>"; };
@@ -170,6 +178,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C11B99023A3358C00AFE1AE /* services */ = {
+			isa = PBXGroup;
+			children = (
+				8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */,
+				8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		8C1B45E7239F221000C4FBEC /* spies */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBAF239DD70800213558 /* ArrayTests.swift */,
+				8C11B98C23A3248D00AFE1AE /* DateTests.swift */,
 				8CA9CBAA239DD5A300213558 /* RoutingAppDelegateTests.swift */,
+				8C11B98E23A328BF00AFE1AE /* SecretsTests.swift */,
 				8C75384123A24F2E004B236E /* StringTests.swift */,
 				8CA9CDC8239DE6C400213558 /* UserDefaultsTests.swift */,
 				8CA9CDC4239DE60000213558 /* WithableTests.swift */,
@@ -264,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CDB8239DE1E600213558 /* delegate */,
+				8C11B99023A3358C00AFE1AE /* services */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -639,10 +659,14 @@
 			files = (
 				8CA9CDCB239DEC4600213558 /* String+Assert.swift in Sources */,
 				8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */,
+				8C11B98D23A3248D00AFE1AE /* DateTests.swift in Sources */,
 				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
+				8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */,
+				8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */,
 				8CA9CBB1239DDE6500213558 /* RoutingAppDelegateTests.swift in Sources */,
 				8CA9CDBD239DE4B700213558 /* AppDelegateTests.swift in Sources */,
+				8C11B99423A345BA00AFE1AE /* DataServiceTests.swift in Sources */,
 				8C75384223A24F2E004B236E /* StringTests.swift in Sources */,
 				8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */,
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
