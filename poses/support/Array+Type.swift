@@ -15,9 +15,6 @@ extension Array {
     func firstOf<T>(type: T.Type) -> T? {
         return lazy.compactMap { $0 as? T }.first
     }
-}
-
-extension Array {
 
     /// Sorting helper
     /// - Parameter element: Array element

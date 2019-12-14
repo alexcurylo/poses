@@ -1,4 +1,5 @@
 docs/**
+fastlane/**
 Poses/resources/**
 Poses/sdks/**
 PosesTests/**

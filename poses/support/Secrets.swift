@@ -32,6 +32,8 @@ enum Secrets: String {
         }
     }
 
+    /// Inject secrets file location
+    /// - Parameter secrets: URL of possible secrets
     static func inject(secrets: URL?) {
         Self.file = load(secrets: secrets)
     }

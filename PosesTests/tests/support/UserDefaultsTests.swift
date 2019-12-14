@@ -27,6 +27,7 @@ final class UserDefaultsTests: TestCase {
 
     func testRegisterDefaults() throws {
         // given
+        let sut = UserDefaults()
         let stringKey = StringKey("test.string")
         let expectedString = "expected"
         let colorKey = StringKey("test.color")
@@ -35,18 +36,18 @@ final class UserDefaultsTests: TestCase {
                         colorKey: expectedColor] as [StringKey: Any]
 
         // when
-        UserDefaults.standard.register(defaults: defaults)
+        sut.register(defaults: defaults)
 
         // then
         let string = try XCTUnwrap(stringKey.string)
         string.assert(equal: expectedString)
-        let color: UIColor = try XCTUnwrap(UserDefaults.standard[colorKey])
+        let color: UIColor = try XCTUnwrap(sut[colorKey])
         XCTAssertEqual(color, expectedColor)
     }
 
     func testSubscripts() {
         // given
-        let defaults = UserDefaults()
+        let sut = UserDefaults()
         let boolKey = StringKey(rawValue: "bool")
         let boolValue = true
         let intKey: StringKey = "int"
@@ -68,26 +69,48 @@ final class UserDefaultsTests: TestCase {
         let noColor: UIColor? = nil
 
         // when
-        defaults[boolKey] = boolValue
-        defaults[intKey] = intValue
-        defaults[doubleKey] = doubleValue
-        defaults[floatKey] = floatValue
-        defaults[cgFloatKey] = cgFloatValue
-        defaults[urlKey] = urlValue
-        defaults[dateKey] = dateValue
-        defaults[stringKey] = stringValue
-        defaults[colorKey] = noColor
-        defaults[colorKey] = colorValue
+        sut[boolKey] = boolValue
+        sut[intKey] = intValue
+        sut[doubleKey] = doubleValue
+        sut[floatKey] = floatValue
+        sut[cgFloatKey] = cgFloatValue
+        sut[urlKey] = urlValue
+        sut[dateKey] = dateValue
+        sut[stringKey] = stringValue
+        sut[colorKey] = noColor
+        sut[colorKey] = colorValue
 
         // then
-        XCTAssertEqual(boolValue, defaults[boolKey])
-        XCTAssertEqual(intValue, defaults[intKey])
-        XCTAssertEqual(doubleValue, defaults[doubleKey])
-        XCTAssertEqual(floatValue, defaults[floatKey])
-        XCTAssertEqual(cgFloatValue, defaults[cgFloatKey])
-        XCTAssertEqual(urlValue, defaults[urlKey])
-        XCTAssertEqual(dateValue, defaults[dateKey])
-        XCTAssertEqual(stringValue, defaults[stringKey])
-        XCTAssertEqual(colorValue, defaults[colorKey])
+        XCTAssertEqual(boolValue, sut[boolKey])
+        XCTAssertEqual(intValue, sut[intKey])
+        XCTAssertEqual(doubleValue, sut[doubleKey])
+        XCTAssertEqual(floatValue, sut[floatKey])
+        XCTAssertEqual(cgFloatValue, sut[cgFloatKey])
+        XCTAssertEqual(urlValue, sut[urlKey])
+        XCTAssertEqual(dateValue, sut[dateKey])
+        XCTAssertEqual(stringValue, sut[stringKey])
+        XCTAssertEqual(colorValue, sut[colorKey])
+    }
+
+    func testCodable() throws {
+        // given
+        struct Test: Codable, Equatable {
+            let a: Int
+            let b: String
+        }
+        let test = Test(a: 1, b: "test")
+        let sut = UserDefaults()
+
+        // when
+        try sut.set(object: test,
+                    forKey: #function)
+        let actual = try sut.get(objectType: Test.self,
+                                 forKey: #function)
+        let missing = try? sut.get(objectType: Test.self,
+                                   forKey: "missing")
+
+        // then
+        XCTAssertEqual(test, actual)
+        XCTAssertNil(missing)
     }
 }

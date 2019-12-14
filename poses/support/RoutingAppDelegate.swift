@@ -311,22 +311,20 @@ class RoutingAppDelegate: UIResponder, UIApplicationDelegate {
     /// Typed access to global delegate
     @objc static var shared: RoutingAppDelegate = {
         // swiftlint:disable:next force_cast
-        return UIApplication.shared.delegate as! RoutingAppDelegate
+        UIApplication.shared.delegate as! RoutingAppDelegate
     }()
 
     /// Application's window
     var window: UIWindow?
 
     /// Override point to produce app handlers
-    var handlers: Handlers {
-        return []
-    }
+    var handlers: Handlers { [] }
 
     /// Typed access to unique handler
     /// - Parameter type: Handler type
     /// - Returns: First instance of type if found
     static func handler<T>(type: T.Type) -> T? {
-        return RoutingAppDelegate.shared.handlers.firstOf(type: T.self)
+        RoutingAppDelegate.shared.handlers.firstOf(type: T.self)
     }
 }
 
@@ -342,11 +340,11 @@ extension RoutingAppDelegate {
     func application(_ application: UIApplication,
                      // swiftlint:disable:next discouraged_optional_collection line_length
                      willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        return handlers.of(type: AppLaunchHandler.self)
-                       .map { $0.application(application,
-                                             willFinishLaunchingWithOptions: launchOptions)
-                       }
-                       .allSatisfy { $0 }
+        handlers.of(type: AppLaunchHandler.self)
+                .map { $0.application(application,
+                                      willFinishLaunchingWithOptions: launchOptions)
+                }
+                .allSatisfy { $0 }
     }
 
     /// didFinishLaunchingWithOptions
@@ -357,11 +355,11 @@ extension RoutingAppDelegate {
     func application(_ application: UIApplication,
                      // swiftlint:disable:next discouraged_optional_collection line_length
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        return handlers.of(type: AppLaunchHandler.self)
-                       .map { $0.application(application,
-                                             didFinishLaunchingWithOptions: launchOptions)
-                       }
-                       .allSatisfy { $0 }
+        handlers.of(type: AppLaunchHandler.self)
+                .map { $0.application(application,
+                                      didFinishLaunchingWithOptions: launchOptions)
+                }
+                .allSatisfy { $0 }
     }
 
     /// Enter foreground handler
@@ -408,12 +406,12 @@ extension RoutingAppDelegate {
     func application(_ app: UIApplication,
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-     return handlers.of(type: AppOpenURLHandler.self)
-                    .map { $0.application(app,
-                                          open: url,
-                                          options: options)
-                    }
-                    .contains { $0 }
+     handlers.of(type: AppOpenURLHandler.self)
+             .map { $0.application(app,
+                                   open: url,
+                                   options: options)
+             }
+             .contains { $0 }
     }
 
     /// Memory warning handler
@@ -623,11 +621,11 @@ extension RoutingAppDelegate {
     func application(_ application: UIApplication,
                      // swiftlint:disable:next line_length
                      shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool {
-        return handlers.of(type: AppExtensionHandler.self)
-                       .map { $0.application(application,
-                                             shouldAllowExtensionPointIdentifier: extensionPointIdentifier)
-                       }
-                       .allSatisfy { $0 }
+        handlers.of(type: AppExtensionHandler.self)
+                .map { $0.application(application,
+                                      shouldAllowExtensionPointIdentifier: extensionPointIdentifier)
+                }
+                .allSatisfy { $0 }
     }
 
     /// viewControllerWithRestorationIdentifierPath
@@ -639,7 +637,7 @@ extension RoutingAppDelegate {
     func application(_ application: UIApplication,
                      viewControllerWithRestorationIdentifierPath identifierComponents: [Any],
                      coder: NSCoder) -> UIViewController? {
-        return handlers
+        handlers
             .of(type: AppRestorationHandler.self)
             .compactMap { $0.application(application,
                                          viewControllerWithRestorationIdentifierPath: identifierComponents,
@@ -655,11 +653,11 @@ extension RoutingAppDelegate {
     /// - Returns: Permission
     func application(_ application: UIApplication,
                      shouldSaveApplicationState coder: NSCoder) -> Bool {
-        return handlers.of(type: AppRestorationHandler.self)
-                       .map { $0.application(application,
-                                             shouldSaveApplicationState: coder)
-                       }
-                       .contains { $0 }
+        handlers.of(type: AppRestorationHandler.self)
+                .map { $0.application(application,
+                                      shouldSaveApplicationState: coder)
+                }
+                .contains { $0 }
     }
 
     /// shouldRestoreApplicationState
@@ -669,11 +667,11 @@ extension RoutingAppDelegate {
     /// - Returns: Permission
     func application(_ application: UIApplication,
                      shouldRestoreApplicationState coder: NSCoder) -> Bool {
-        return handlers.of(type: AppRestorationHandler.self)
-                       .map { $0.application(application,
-                                             shouldRestoreApplicationState: coder)
-                       }
-                       .contains { $0 }
+        handlers.of(type: AppRestorationHandler.self)
+                .map { $0.application(application,
+                                      shouldRestoreApplicationState: coder)
+                }
+                .contains { $0 }
     }
 
     /// willEncodeRestorableStateWith
@@ -707,11 +705,11 @@ extension RoutingAppDelegate {
     /// - Returns: Permission
     func application(_ application: UIApplication,
                      willContinueUserActivityWithType userActivityType: String) -> Bool {
-        return handlers.of(type: AppContinuityHandler.self)
-                       .map { $0.application(application,
-                                             willContinueUserActivityWithType: userActivityType)
-                       }
-                       .contains { $0 }
+        handlers.of(type: AppContinuityHandler.self)
+                .map { $0.application(application,
+                                      willContinueUserActivityWithType: userActivityType)
+                }
+                .contains { $0 }
     }
 
     /// continue userActivity
@@ -724,12 +722,12 @@ extension RoutingAppDelegate {
                      continue userActivity: NSUserActivity,
                      // swiftlint:disable:next discouraged_optional_collection
                      restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        return handlers.of(type: AppContinuityHandler.self)
-                       .map { $0.application(application,
-                                             continue: userActivity,
-                                             restorationHandler: restorationHandler)
-                       }
-                       .contains { $0 }
+        handlers.of(type: AppContinuityHandler.self)
+                .map { $0.application(application,
+                                      continue: userActivity,
+                                      restorationHandler: restorationHandler)
+                }
+                .contains { $0 }
     }
 
     /// didFailToContinueUserActivityWithType

@@ -20,6 +20,8 @@ enum LaunchSettingKey: String {
 
     /// Whether to allow full access
     case fullAccess
+    /// User name placeholder
+    case userName
 }
 
 /// Settings that UI tests can pass on launch
@@ -27,12 +29,16 @@ enum LaunchSetting {
 
     /// Whether to allow full access
     case fullAccess(Bool)
+    /// User name placeholder
+    case userName(String)
 
     /// Conventionally a LaunchSettingKey case
     var key: String {
         switch self {
         case .fullAccess:
             return LaunchSettingKey.fullAccess.rawValue
+        case .userName:
+            return LaunchSettingKey.userName.rawValue
         }
     }
 
@@ -41,6 +47,8 @@ enum LaunchSetting {
         switch self {
         case .fullAccess(let fullAccess):
             return "\(fullAccess)"
+        case .userName(let userName):
+            return userName
         }
     }
 
@@ -80,18 +88,19 @@ extension ProcessInfo {
         if arguments(contain: .disableAnimations) {
             UIView.setAnimationsEnabled(false)
         }
-        if arguments(contain: .disableWaitIdle) {
-            _dispatchOnceSwizzleWaitIdle
-        }
+        //if arguments(contain: .disableWaitIdle) { _dispatchOnceSwizzleWaitIdle }
+
+        _ = ProcessInfo.setting(bool: .fullAccess)
+        _ = ProcessInfo.setting(string: .userName)
     }
 
     /// for swizzling out waitForQuiescenceIncludingAnimationsIdle
-    @objc fileprivate static func doNothing() { return }
+    //@objc fileprivate static func doNothing() { return }
 }
 
+/* does not appear to find XCUIApplicationProcess in Xcode 11
 private let _dispatchOnceSwizzleWaitIdle: Void = {
     let waitMethod = Selector(("waitForQuiescenceIncludingAnimationsIdle:"))
-    // does not appear to find XCUIApplicationProcess in Xcode 11
     guard let uiTestRunner = objc_getClass("XCUIApplicationProcess") as? AnyClass,
           let original = class_getInstanceMethod(uiTestRunner,
                                                  waitMethod),
@@ -101,3 +110,4 @@ private let _dispatchOnceSwizzleWaitIdle: Void = {
     }
     method_exchangeImplementations(original, replaced)
 }()
+*/

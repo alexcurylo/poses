@@ -3,6 +3,7 @@
 // swiftlint:disable file_length
 
 import CloudKit
+import Intents
 @testable import Poses
 import XCTest
 
@@ -17,8 +18,10 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppLaunchHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         let willFinish = mock.application(liveApp,
                                           willFinishLaunchingWithOptions: nil)
         XCTAssertTrue(willFinish)
@@ -26,24 +29,26 @@ final class RoutingAppDelegateTests: TestCase {
                                          didFinishLaunchingWithOptions: nil)
         XCTAssertTrue(didFinish)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 2)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppLaunchHandler.self))
         XCTAssertEqual(handler.callCountWillFinish, 1)
         XCTAssertEqual(handler.callCountDidFinish, 1)
     }
 
     func testAppStateHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.applicationWillEnterForeground(liveApp)
         mock.applicationDidBecomeActive(liveApp)
         mock.applicationWillResignActive(liveApp)
         mock.applicationDidEnterBackground(liveApp)
         mock.applicationWillTerminate(liveApp)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 5)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppStateHandler.self))
         XCTAssertEqual(handler.callCountWillEnterForeground, 1)
         XCTAssertEqual(handler.callCountDidBecomeActive, 1)
@@ -53,44 +58,52 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppOpenURLHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         let didOpen = mock.application(liveApp,
                                        open: try XCTUnwrap(URL(string: "test.com")),
                                        options: [:])
 
+        // then
         XCTAssertTrue(didOpen)
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppOpenURLHandler.self))
         XCTAssertEqual(handler.callCountOpen, 1)
     }
 
     func testAppMemoryHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.applicationDidReceiveMemoryWarning(liveApp)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppMemoryHandler.self))
         XCTAssertEqual(handler.callCountDidReceiveMemoryWarning, 1)
     }
 
     func testAppTimeChangeHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.applicationSignificantTimeChange(liveApp)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppTimeChangeHandler.self))
         XCTAssertEqual(handler.callCountSignificantTimeChange, 1)
     }
 
     func testAppStatusBarHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          willChangeStatusBarOrientation: .portrait,
                          duration: 1)
@@ -101,8 +114,8 @@ final class RoutingAppDelegateTests: TestCase {
         mock.application(liveApp,
                          didChangeStatusBarFrame: .zero)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 4)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppStatusBarHandler.self))
         XCTAssertEqual(handler.callCountWillChangeStatusBarOrientation, 1)
         XCTAssertEqual(handler.callCountDidChangeStatusBarOrientation, 1)
@@ -111,8 +124,10 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppNotificationsHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          didRegisterForRemoteNotificationsWithDeviceToken: Data())
         mock.application(liveApp,
@@ -120,8 +135,8 @@ final class RoutingAppDelegateTests: TestCase {
         mock.application(liveApp,
                          didReceiveRemoteNotification: [:]) { _ in }
 
+        // then
         XCTAssertEqual(mock.totalCalls, 3)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppNotificationsHandler.self))
         XCTAssertEqual(handler.callCountDidRegisterForRemoteNotificationsWithDeviceToken, 1)
         XCTAssertEqual(handler.callCountDidFailToRegisterForRemoteNotificationsWithError, 1)
@@ -129,64 +144,92 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppBackgroundFetchHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp) { _ in }
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppBackgroundFetchHandler.self))
         XCTAssertEqual(handler.callCountPerformFetchWithCompletionHandler, 1)
     }
 
     func testAppBackgroundURLSessionHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          handleEventsForBackgroundURLSession: "identifier") {}
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppBackgroundURLSessionHandler.self))
         XCTAssertEqual(handler.callCountHandleEventsForBackgroundURLSession, 1)
     }
 
     func testAppShortcutHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          performActionFor: UIApplicationShortcutItem(type: "test", localizedTitle: "test")) { _ in }
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppShortcutHandler.self))
         XCTAssertEqual(handler.callCountPerformAction, 1)
     }
 
     func testAppWatchHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          handleWatchKitExtensionRequest: [:]) { _ in }
 
+        // then
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppWatchHandler.self))
         XCTAssertEqual(handler.callCountHandleRequest, 1)
     }
 
     func testAppHealthHandlerManagement() throws {
+        // given
         let mock = MockActualDelegate()
 
+        // when
         mock.applicationShouldRequestHealthAuthorization(liveApp)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppHealthHandler.self))
         XCTAssertEqual(handler.callCountShouldRequest, 1)
     }
 
+    func testAppSiriHandlerManagement() throws {
+        // given
+        let mock = MockActualDelegate()
+        let intent = INPauseWorkoutIntent(workoutName: nil)
+
+        // when
+        mock.application(liveApp, handle: intent) { _ in }
+
+        // then
+        XCTAssertEqual(mock.totalCalls, 1)
+        let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppSiriHandler.self))
+        XCTAssertEqual(handler.callCountShouldHandle, 1)
+    }
+
     func testAppContentHandlerManagement() throws {
+        // given
+        // then
         let mock = MockActualDelegate()
 
+        // when
         mock.applicationProtectedDataWillBecomeUnavailable(liveApp)
         mock.applicationProtectedDataDidBecomeAvailable(liveApp)
 
@@ -198,8 +241,11 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppExtensionHandlerManagement() throws {
+        // given
+        // then
         let mock = MockActualDelegate()
 
+        // when
         let shouldAllow = mock.application(liveApp,
                                            shouldAllowExtensionPointIdentifier: .keyboard)
         XCTAssertTrue(shouldAllow)
@@ -211,8 +257,11 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppRestorationHandlerManagement() throws {
+        // given
+        // then
         let mock = MockActualDelegate()
 
+        // when
         let controller = mock.application(liveApp,
                                           viewControllerWithRestorationIdentifierPath: [],
                                           coder: NSCoder())
@@ -239,8 +288,11 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppContinuityHandlerManagement() throws {
+        // given
+        // then
         let mock = MockActualDelegate()
 
+        // when
         let willContinue = mock.application(liveApp,
                                             willContinueUserActivityWithType: "type")
         XCTAssertTrue(willContinue)
@@ -264,8 +316,11 @@ final class RoutingAppDelegateTests: TestCase {
     }
 
     func testAppCloudKitHandlerManagement() throws {
+        // given
+        // then
         let mock = MockActualDelegate()
 
+        // when
         mock.application(liveApp,
                          userDidAcceptCloudKitShareWith: CKShare.Metadata())
 
@@ -293,6 +348,7 @@ private class MockActualDelegate: RoutingAppDelegate {
         MockAppShortcutHandler(),
         MockAppWatchHandler(),
         MockAppHealthHandler(),
+        MockAppSiriHandler(),
         MockAppContentHandler(),
         MockAppExtensionHandler(),
         MockAppRestorationHandler(),
@@ -518,6 +574,18 @@ private class MockAppHealthHandler: MockAppHandler, AppHealthHandler {
     }
 }
 
+private class MockAppSiriHandler: MockAppHandler, AppSiriHandler {
+
+    var callCountShouldHandle: Int = 0
+
+    func application(_ application: UIApplication,
+                     handle intent: INIntent,
+                     completionHandler: @escaping (INIntentResponse) -> Void) {
+        callCount += 1
+        callCountShouldHandle += 1
+    }
+}
+
 private class MockAppContentHandler: MockAppHandler, AppContentHandler {
 
     var callCountWillBecomeUnavailable: Int = 0
@@ -537,9 +605,10 @@ private class MockAppExtensionHandler: MockAppHandler, AppExtensionHandler {
 
     var callCountShouldAllow: Int = 0
 
-    func application(_ application: UIApplication,
-                     // swiftlint:disable:next line_length
-                     shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool {
+    func application(
+        _ application: UIApplication,
+        shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplication.ExtensionPointIdentifier
+    ) -> Bool {
         callCount += 1
         callCountShouldAllow += 1
         return true

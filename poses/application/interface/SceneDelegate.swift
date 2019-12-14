@@ -9,13 +9,23 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
     /// UIWindowSceneDelegate conformance
     var window: UIWindow?
 
+    #if DEBUG
+    /// Unit testing reference
+    static var hostScene: UIScene?
+    #endif
+
     /// :nodoc:
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard !UIApplication.isUnitTesting else { return }
+        guard !UIApplication.isUnitTesting else {
+            #if DEBUG
+            Self.hostScene = scene
+            #endif
+            return
+        }
 
         // Use to optionally configure and attach the UIWindow `window` to provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -29,12 +39,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         let contentView = ContentView().environment(\.managedObjectContext, data.viewContext)
 
         // Use a UIHostingController as window root view controller.
-        guard let windowScene = scene as? UIWindowScene else { return }
-
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UIHostingController(rootView: contentView)
-        self.window = window
-        window.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     /// :nodoc:
@@ -72,4 +82,17 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
 
         data.save()
     }
+
+    // UIWindowSceneDelegate
+    //func windowScene(didUpdate previousCoordinateSpace...)
+    // func windowScene(performActionFor shortcutItem...)
+    // func windowScene(userDidAcceptCloudKitShareWith...)
+
+    // UISceneDelegate
+    // func scene(openURLContexts...>)
+    // func stateRestorationActivity(for scene...)
+    // func scene(willContinueUserActivityWithType...)
+    // func scene(continue userActivity: NSUserActivity)
+    // func scene(didFailToContinueUserActivityWithType...)
+    // func scene(didUpdate userActivity: NSUserActivity)
 }

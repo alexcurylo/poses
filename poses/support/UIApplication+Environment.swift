@@ -48,17 +48,16 @@ extension UIApplication {
     }
 }
 
-// MARK: - Private
+// MARK: - Development
 
-private extension UIApplication {
+extension UIApplication {
 
     #if DEBUG
-    func clearLaunchScreenCache() {
-        do {
-            try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Library/SplashBoard")
-        } catch {
-            print("Failed to delete launch screen cache: \(error)")
-        }
+    /// Development aid for clearing device cache
+    static func clearLaunchScreenCache() {
+        let cache = NSHomeDirectory()+"/Library/SplashBoard"
+        // swiftlint:disable:next force_try
+        try! FileManager.default.removeItem(atPath: cache)
     }
     #endif
 }

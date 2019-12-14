@@ -12,4 +12,9 @@ class TestCase: XCTestCase {
         ServiceProviderInstances.dataServiceInstance = DataServiceSpy()
         ServiceProviderInstances.logServiceInstance = LoggingServiceSpy()
     }
+
+    func wait(for seconds: TimeInterval) {
+        let wait = XCTestExpectation(description: "wait")
+        _ = XCTWaiter.wait(for: [wait], timeout: seconds)
+    }
 }

@@ -8,7 +8,7 @@ struct LaunchHandler: AppHandler { }
 
 // MARK: - AppLaunchHandler
 
-extension LaunchHandler: AppLaunchHandler {
+extension LaunchHandler: AppLaunchHandler, ServiceProvider {
 
     /// willFinishLaunchingWithOptions
     /// - Parameters:
@@ -35,8 +35,9 @@ extension LaunchHandler: AppLaunchHandler {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        configureLogging()
+        configure(logging: UIApplication.isProduction)
         configureSettingsDisplay()
+        log.verbose("Launched build \(String(describing: StringKey.appBuild.infoString))(/())")
 
         return true
     }
@@ -73,7 +74,7 @@ struct SwiftyBeaverLoggingService: LoggingService {
                 function: String,
                 line: Int,
                 context: Any?) {
-        let sbLevel = SwiftyBeaver.Level(rawValue: level.rawValue) ?? .verbose
+        let sbLevel = SwiftyBeaver.Level(from: level)
         swiftyBeaver.custom(level: sbLevel,
                             message: message(),
                             file: file,
@@ -83,9 +84,24 @@ struct SwiftyBeaverLoggingService: LoggingService {
     }
 }
 
-private extension LaunchHandler {
+private extension SwiftyBeaver.Level {
 
-    func configureLogging() {
+    init(from: LoggingLevel) {
+        switch from {
+        case .verbose: self = .verbose
+        case .debug: self = .debug
+        case .info: self = .info
+        case .warning: self = .warning
+        case .error: self = .error
+        }
+    }
+}
+
+extension LaunchHandler {
+
+    /// Configure logging
+    /// - Parameter production: Is this production environment?
+    func configure(logging production: Bool) {
         let console = ConsoleDestination()
         swiftyBeaver.addDestination(console)
 
@@ -96,7 +112,7 @@ private extension LaunchHandler {
         }
         swiftyBeaver.addDestination(file)
 
-        if UIApplication.isProduction {
+        if production {
             let platform = SBPlatformDestination(
                 appID: Secrets.sbAppID.secret,
                 appSecret: Secrets.sbAppSecret.secret,

@@ -3,7 +3,13 @@
 import UIKit
 
 /// Stub for startup construction
-struct ServiceHandler: AppHandler { }
+struct ServiceHandler: AppHandler {
+
+    /// Global accessor
+    static var services: ServiceHandler? {
+        RoutingAppDelegate.handler(type: Self.self)
+    }
+}
 
 extension ServiceHandler: AppLaunchHandler {
 

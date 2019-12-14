@@ -95,5 +95,10 @@ final class AppDelegateTests: TestCase {
 
     func testResources() throws {
         try R.validate()
+        XCTAssertEqual(L.tabFirst(), "First")
+        XCTAssertEqual(L.tabSecond(), "Second")
+
+        XCTAssertEqual(L.tabFirst(preferredLanguages: ["th"]), "tabFirst")
+        XCTAssertEqual(L.tabSecond(preferredLanguages: ["th"]), "tabSecond")
     }
 }
