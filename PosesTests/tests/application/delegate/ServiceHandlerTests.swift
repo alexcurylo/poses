@@ -9,7 +9,7 @@ final class ServiceHandlerTests: TestCase {
         XCTAssertNil(ServiceHandler.services)
     }
 
-    func testProduction() throws {
+    func testProductionHandler() throws {
         // given
         let sut = ServiceHandler()
 

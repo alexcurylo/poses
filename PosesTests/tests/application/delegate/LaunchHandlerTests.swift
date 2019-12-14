@@ -5,7 +5,7 @@ import XCTest
 
 final class LaunchHandlerTests: TestCase {
 
-    func testProduction() throws {
+    func testProductionHandler() throws {
         // given
         let sut = LaunchHandler()
 

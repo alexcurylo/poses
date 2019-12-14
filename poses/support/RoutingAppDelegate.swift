@@ -75,36 +75,6 @@ protocol AppTimeChangeHandler: AppHandler {
     func applicationSignificantTimeChange(_ application: UIApplication)
 }
 
-/// Adopt to have status bar notifications routed
-protocol AppStatusBarHandler: AppHandler {
-    /// willChangeStatusBarOrientation
-    /// - Parameters:
-    ///   - application: Application
-    ///   - newStatusBarOrientation: Orientation
-    ///   - duration: Duration
-    func application(_ application: UIApplication,
-                     willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation,
-                     duration: TimeInterval)
-    /// didChangeStatusBarOrientation
-    /// - Parameters:
-    ///   - application: Application
-    ///   - oldStatusBarOrientation: Orientation
-    func application(_ application: UIApplication,
-                     didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation)
-    /// willChangeStatusBarFrame
-    /// - Parameters:
-    ///   - application: Application
-    ///   - newStatusBarFrame: Frame
-    func application(_ application: UIApplication,
-                     willChangeStatusBarFrame newStatusBarFrame: CGRect)
-    /// didChangeStatusBarFrame
-    /// - Parameters:
-    ///   - application: Application
-    ///   - oldStatusBarFrame: Frame
-    func application(_ application: UIApplication,
-                     didChangeStatusBarFrame oldStatusBarFrame: CGRect)
-}
-
 /// Adopt to have remote notifications routed
 protocol AppNotificationsHandler: AppHandler {
     /// didRegisterForRemoteNotificationsWithDeviceToken
@@ -127,16 +97,6 @@ protocol AppNotificationsHandler: AppHandler {
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
-}
-
-/// Adopt to have background fetch notifications routed
-protocol AppBackgroundFetchHandler: AppHandler {
-    /// performFetchWithCompletionHandler
-    /// - Parameters:
-    ///   - application: Application
-    ///   - completionHandler: Callback
-    func application(_ application: UIApplication,
-                     performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
 }
 
 /// Adopt to have background URL session notifications routed
@@ -236,6 +196,13 @@ protocol AppRestorationHandler: AppHandler {
     /// - Returns: Permission
     func application(_ application: UIApplication,
                      shouldSaveApplicationState coder: NSCoder) -> Bool
+    /// shouldSaveSecureApplicationState
+    /// - Parameters:
+    ///   - application: Application
+    ///   - coder: Coder
+    /// - Returns: Permission
+    func application(_ application: UIApplication,
+                     shouldSaveSecureApplicationState coder: NSCoder) -> Bool
     /// shouldRestoreApplicationState
     /// - Parameters:
     ///   - application: Application
@@ -243,6 +210,13 @@ protocol AppRestorationHandler: AppHandler {
     /// - Returns: Permission
     func application(_ application: UIApplication,
                      shouldRestoreApplicationState coder: NSCoder) -> Bool
+    /// shouldRestoreSecureApplicationState
+    /// - Parameters:
+    ///   - application: Application
+    ///   - coder: Coder
+    /// - Returns: Permission
+    func application(_ application: UIApplication,
+                     shouldRestoreSecureApplicationState coder: NSCoder) -> Bool
     /// willEncodeRestorableStateWith
     /// - Parameters:
     ///   - application: Application
@@ -300,6 +274,25 @@ protocol AppCloudKitHandler: AppHandler {
     ///   - cloudKitShareMetadata: Metadata
     func application(_ application: UIApplication,
                      userDidAcceptCloudKitShareWith cloudKitShareMetadata: CKShare.Metadata)
+}
+
+/// Adopt to have UISceneSession notifications routed
+protocol AppSceneSessionHandler: AppHandler {
+    /// configurationForConnecting
+    /// - Parameters:
+    ///   - application: Application
+    ///   - connectingSceneSession: Session
+    ///   - options: Options
+    /// - Returns: Configuration
+    func application(_ application: UIApplication,
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration
+    /// didDiscardSceneSessions
+    /// - Parameters:
+    ///   - application: Application
+    ///   - sceneSessions: Sessions
+    func application(_ application: UIApplication,
+                     didDiscardSceneSessions sceneSessions: Set<UISceneSession>)
 }
 
 /// Override `RoutingAppDelegate` to return app's list of `handlers`
@@ -428,57 +421,6 @@ extension RoutingAppDelegate {
                 .forEach { $0.applicationSignificantTimeChange(application) }
     }
 
-    /// willChangeStatusBarOrientation
-    /// - Parameters:
-    ///   - application: Application
-    ///   - newStatusBarOrientation: Orientation
-    ///   - duration: Duration
-    func application(_ application: UIApplication,
-                     willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation,
-                     duration: TimeInterval) {
-        handlers.of(type: AppStatusBarHandler.self)
-                .forEach { $0.application(application,
-                                          willChangeStatusBarOrientation: newStatusBarOrientation,
-                                          duration: duration)
-                }
-    }
-
-    /// didChangeStatusBarOrientation
-    /// - Parameters:
-    ///   - application: Application
-    ///   - oldStatusBarOrientation: Orientation
-    func application(_ application: UIApplication,
-                     didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
-        handlers.of(type: AppStatusBarHandler.self)
-                 .forEach { $0.application(application,
-                                           didChangeStatusBarOrientation: oldStatusBarOrientation)
-                 }
-    }
-
-    /// willChangeStatusBarFrame
-    /// - Parameters:
-    ///   - application: Application
-    ///   - newStatusBarFrame: Frame
-    func application(_ application: UIApplication,
-                     willChangeStatusBarFrame newStatusBarFrame: CGRect) {
-        handlers.of(type: AppStatusBarHandler.self)
-                 .forEach { $0.application(application,
-                                           willChangeStatusBarFrame: newStatusBarFrame)
-                 }
-    }
-
-    /// didChangeStatusBarFrame
-    /// - Parameters:
-    ///   - application: Application
-    ///   - oldStatusBarFrame: Frame
-    func application(_ application: UIApplication,
-                     didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
-        handlers.of(type: AppStatusBarHandler.self)
-                .forEach { $0.application(application,
-                                          didChangeStatusBarFrame: oldStatusBarFrame)
-                }
-    }
-
     /// didRegisterForRemoteNotificationsWithDeviceToken
     /// - Parameters:
     ///   - application: Application
@@ -516,18 +458,6 @@ extension RoutingAppDelegate {
                                            didReceiveRemoteNotification: userInfo,
                                            fetchCompletionHandler: completionHandler)
                  }
-    }
-
-    /// performFetchWithCompletionHandler
-    /// - Parameters:
-    ///   - application: Application
-    ///   - completionHandler: Callback
-    func application(_ application: UIApplication,
-                     performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        handlers.of(type: AppBackgroundFetchHandler.self)
-                .forEach { $0.application(application,
-                                          performFetchWithCompletionHandler: completionHandler)
-                }
     }
 
     /// handleEventsForBackgroundURLSession
@@ -646,7 +576,7 @@ extension RoutingAppDelegate {
             .first
     }
 
-    /// shouldSaveApplicationState
+    /// shouldSaveApplicationState -- deprecated in 13.2
     /// - Parameters:
     ///   - application: Application
     ///   - coder: Coder
@@ -660,7 +590,21 @@ extension RoutingAppDelegate {
                 .contains { $0 }
     }
 
-    /// shouldRestoreApplicationState
+    /// shouldSaveSecureApplicationState
+    /// - Parameters:
+    ///   - application: Application
+    ///   - coder: Coder
+    /// - Returns: Permission
+    func application(_ application: UIApplication,
+                     shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
+        handlers.of(type: AppRestorationHandler.self)
+                .map { $0.application(application,
+                                      shouldSaveSecureApplicationState: coder)
+                }
+                .contains { $0 }
+    }
+
+    /// shouldRestoreApplicationState -- deprecated in 13.2
     /// - Parameters:
     ///   - application: Application
     ///   - coder: Coder
@@ -670,6 +614,20 @@ extension RoutingAppDelegate {
         handlers.of(type: AppRestorationHandler.self)
                 .map { $0.application(application,
                                       shouldRestoreApplicationState: coder)
+                }
+                .contains { $0 }
+    }
+
+    /// shouldRestoreSecureApplicationState
+    /// - Parameters:
+    ///   - application: Application
+    ///   - coder: Coder
+    /// - Returns: Permission
+    func application(_ application: UIApplication,
+                     shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
+        handlers.of(type: AppRestorationHandler.self)
+                .map { $0.application(application,
+                                      shouldRestoreSecureApplicationState: coder)
                 }
                 .contains { $0 }
     }
@@ -766,6 +724,37 @@ extension RoutingAppDelegate {
         handlers.of(type: AppCloudKitHandler.self)
                 .forEach { $0.application(application,
                                           userDidAcceptCloudKitShareWith: cloudKitShareMetadata)
+                }
+    }
+
+    /// configurationForConnecting
+    /// - Parameters:
+    ///   - application: Application
+    ///   - connectingSceneSession: Session
+    ///   - options: Options
+    /// - Returns: Configuration
+    func application(_ application: UIApplication,
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        handlers
+            .of(type: AppSceneSessionHandler.self)
+            .compactMap { $0.application(application,
+                                         configurationForConnecting: connectingSceneSession,
+                                         options: options)
+            }
+            // swiftlint:disable:next force_unwrapping
+            .first!
+    }
+
+    /// didDiscardSceneSessions
+    /// - Parameters:
+    ///   - application: Application
+    ///   - sceneSessions: Sessions
+    func application(_ application: UIApplication,
+                     didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        handlers.of(type: AppSceneSessionHandler.self)
+                .forEach { $0.application(application,
+                                          didDiscardSceneSessions: sceneSessions)
                 }
     }
 }

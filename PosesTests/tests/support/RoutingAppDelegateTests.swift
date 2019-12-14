@@ -99,30 +99,6 @@ final class RoutingAppDelegateTests: TestCase {
         XCTAssertEqual(handler.callCountSignificantTimeChange, 1)
     }
 
-    func testAppStatusBarHandlerManagement() throws {
-        // given
-        let mock = MockActualDelegate()
-
-        // when
-        mock.application(liveApp,
-                         willChangeStatusBarOrientation: .portrait,
-                         duration: 1)
-        mock.application(liveApp,
-                         didChangeStatusBarOrientation: .portrait)
-        mock.application(liveApp,
-                         willChangeStatusBarFrame: .zero)
-        mock.application(liveApp,
-                         didChangeStatusBarFrame: .zero)
-
-        // then
-        XCTAssertEqual(mock.totalCalls, 4)
-        let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppStatusBarHandler.self))
-        XCTAssertEqual(handler.callCountWillChangeStatusBarOrientation, 1)
-        XCTAssertEqual(handler.callCountDidChangeStatusBarOrientation, 1)
-        XCTAssertEqual(handler.callCountWillChangeStatusBarFrame, 1)
-        XCTAssertEqual(handler.callCountDidChangeStatusBarFrame, 1)
-    }
-
     func testAppNotificationsHandlerManagement() throws {
         // given
         let mock = MockActualDelegate()
@@ -141,19 +117,6 @@ final class RoutingAppDelegateTests: TestCase {
         XCTAssertEqual(handler.callCountDidRegisterForRemoteNotificationsWithDeviceToken, 1)
         XCTAssertEqual(handler.callCountDidFailToRegisterForRemoteNotificationsWithError, 1)
         XCTAssertEqual(handler.callCountDidReceiveRemoteNotificationWithFetch, 1)
-    }
-
-    func testAppBackgroundFetchHandlerManagement() throws {
-        // given
-        let mock = MockActualDelegate()
-
-        // when
-        mock.application(liveApp) { _ in }
-
-        // then
-        XCTAssertEqual(mock.totalCalls, 1)
-        let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppBackgroundFetchHandler.self))
-        XCTAssertEqual(handler.callCountPerformFetchWithCompletionHandler, 1)
     }
 
     func testAppBackgroundURLSessionHandlerManagement() throws {
@@ -226,15 +189,14 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppContentHandlerManagement() throws {
         // given
-        // then
         let mock = MockActualDelegate()
 
         // when
         mock.applicationProtectedDataWillBecomeUnavailable(liveApp)
         mock.applicationProtectedDataDidBecomeAvailable(liveApp)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 2)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppContentHandler.self))
         XCTAssertEqual(handler.callCountWillBecomeUnavailable, 1)
         XCTAssertEqual(handler.callCountDidBecomeAvailable, 1)
@@ -242,7 +204,6 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppExtensionHandlerManagement() throws {
         // given
-        // then
         let mock = MockActualDelegate()
 
         // when
@@ -250,15 +211,14 @@ final class RoutingAppDelegateTests: TestCase {
                                            shouldAllowExtensionPointIdentifier: .keyboard)
         XCTAssertTrue(shouldAllow)
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppExtensionHandler.self))
         XCTAssertEqual(handler.callCountShouldAllow, 1)
     }
 
     func testAppRestorationHandlerManagement() throws {
         // given
-        // then
         let mock = MockActualDelegate()
 
         // when
@@ -269,16 +229,22 @@ final class RoutingAppDelegateTests: TestCase {
         let shouldSave = mock.application(liveApp,
                                           shouldSaveApplicationState: NSCoder())
         XCTAssertTrue(shouldSave)
+        let shouldSecureSave = mock.application(liveApp,
+                                                shouldSaveSecureApplicationState: NSCoder())
+        XCTAssertTrue(shouldSecureSave)
         let shouldRestore = mock.application(liveApp,
                                              shouldRestoreApplicationState: NSCoder())
         XCTAssertTrue(shouldRestore)
+        let shouldSecureRestore = mock.application(liveApp,
+                                                   shouldRestoreSecureApplicationState: NSCoder())
+        XCTAssertTrue(shouldSecureRestore)
         mock.application(liveApp,
                          willEncodeRestorableStateWith: NSCoder())
         mock.application(liveApp,
                          didDecodeRestorableStateWith: NSCoder())
 
-        XCTAssertEqual(mock.totalCalls, 5)
-
+        // then
+        XCTAssertEqual(mock.totalCalls, 7)
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppRestorationHandler.self))
         XCTAssertEqual(handler.callCountViewController, 1)
         XCTAssertEqual(handler.callCountShouldSave, 1)
@@ -289,7 +255,6 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppContinuityHandlerManagement() throws {
         // given
-        // then
         let mock = MockActualDelegate()
 
         // when
@@ -306,8 +271,8 @@ final class RoutingAppDelegateTests: TestCase {
         mock.application(liveApp,
                          didUpdate: NSUserActivity(activityType: "type"))
 
+        // then
         XCTAssertEqual(mock.totalCalls, 4)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppContinuityHandler.self))
         XCTAssertEqual(handler.callCountWillContinue, 1)
         XCTAssertEqual(handler.callCountContinue, 1)
@@ -317,17 +282,38 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppCloudKitHandlerManagement() throws {
         // given
-        // then
         let mock = MockActualDelegate()
 
         // when
         mock.application(liveApp,
                          userDidAcceptCloudKitShareWith: CKShare.Metadata())
 
+        // then
         XCTAssertEqual(mock.totalCalls, 1)
-
         let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppCloudKitHandler.self))
         XCTAssertEqual(handler.callCountDidAccept, 1)
+    }
+
+    func testSceneSessionHandlerManagement() throws {
+        // given
+        let mock = MockActualDelegate()
+        // swiftlint:disable:next force_unwrapping
+        let session = SceneDelegate.hostSession!
+        // swiftlint:disable:next force_unwrapping
+        let options = SceneDelegate.hostOptions!
+
+        // when
+        _ = mock.application(liveApp,
+                             configurationForConnecting: session,
+                             options: options)
+        mock.application(liveApp,
+                         didDiscardSceneSessions: [])
+
+        // then
+        XCTAssertEqual(mock.totalCalls, 2)
+        let handler = try XCTUnwrap(mock.handlers.firstOf(type: MockAppSceneSessionHandler.self))
+        XCTAssertEqual(handler.callCountConfig, 1)
+        XCTAssertEqual(handler.callCountDiscard, 1)
     }
 }
 
@@ -341,9 +327,7 @@ private class MockActualDelegate: RoutingAppDelegate {
         MockAppOpenURLHandler(),
         MockAppMemoryHandler(),
         MockAppTimeChangeHandler(),
-        MockAppStatusBarHandler(),
         MockAppNotificationsHandler(),
-        MockAppBackgroundFetchHandler(),
         MockAppBackgroundURLSessionHandler(),
         MockAppShortcutHandler(),
         MockAppWatchHandler(),
@@ -353,7 +337,8 @@ private class MockActualDelegate: RoutingAppDelegate {
         MockAppExtensionHandler(),
         MockAppRestorationHandler(),
         MockAppContinuityHandler(),
-        MockAppCloudKitHandler()
+        MockAppCloudKitHandler(),
+        MockAppSceneSessionHandler()
     ]
 
     override var handlers: RoutingAppDelegate.Handlers {
@@ -458,36 +443,6 @@ private class MockAppTimeChangeHandler: MockAppHandler, AppTimeChangeHandler {
     }
 }
 
-private class MockAppStatusBarHandler: MockAppHandler, AppStatusBarHandler {
-
-    var callCountWillChangeStatusBarOrientation: Int = 0
-    var callCountDidChangeStatusBarOrientation: Int = 0
-    var callCountWillChangeStatusBarFrame: Int = 0
-    var callCountDidChangeStatusBarFrame: Int = 0
-
-    func application(_ application: UIApplication,
-                     willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation,
-                     duration: TimeInterval) {
-        callCount += 1
-        callCountWillChangeStatusBarOrientation += 1
-    }
-    func application(_ application: UIApplication,
-                     didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
-        callCount += 1
-        callCountDidChangeStatusBarOrientation += 1
-    }
-    func application(_ application: UIApplication,
-                     willChangeStatusBarFrame newStatusBarFrame: CGRect) {
-        callCount += 1
-        callCountWillChangeStatusBarFrame += 1
-    }
-    func application(_ application: UIApplication,
-                     didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
-        callCount += 1
-        callCountDidChangeStatusBarFrame += 1
-    }
-}
-
 private class MockAppNotificationsHandler: MockAppHandler, AppNotificationsHandler {
 
     var callCountDidRegisterForRemoteNotificationsWithDeviceToken: Int = 0
@@ -511,18 +466,6 @@ private class MockAppNotificationsHandler: MockAppHandler, AppNotificationsHandl
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {
         callCount += 1
         callCountDidReceiveRemoteNotificationWithFetch += 1
-    }
-}
-
-private class MockAppBackgroundFetchHandler: MockAppHandler, AppBackgroundFetchHandler {
-
-    var callCountPerformFetchWithCompletionHandler: Int = 0
-
-    func application(_ application: UIApplication,
-                     // swiftlint:disable:next line_length
-                     performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Swift.Void) {
-        callCount += 1
-        callCountPerformFetchWithCompletionHandler += 1
     }
 }
 
@@ -619,7 +562,9 @@ private class MockAppRestorationHandler: MockAppHandler, AppRestorationHandler {
 
     var callCountViewController: Int = 0
     var callCountShouldSave: Int = 0
+    var callCountShouldSecureSave: Int = 0
     var callCountShouldRestore: Int = 0
+    var callCountShouldSecureRestore: Int = 0
     var callCountWillEncode: Int = 0
     var callCountDidDecode: Int = 0
 
@@ -637,9 +582,21 @@ private class MockAppRestorationHandler: MockAppHandler, AppRestorationHandler {
         return true
     }
     func application(_ application: UIApplication,
+                     shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
+        callCount += 1
+        callCountShouldSecureSave += 1
+        return true
+    }
+    func application(_ application: UIApplication,
                      shouldRestoreApplicationState coder: NSCoder) -> Bool {
         callCount += 1
         callCountShouldRestore += 1
+        return true
+    }
+    func application(_ application: UIApplication,
+                     shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
+        callCount += 1
+        callCountShouldSecureRestore += 1
         return true
     }
     func application(_ application: UIApplication,
@@ -696,5 +653,25 @@ private class MockAppCloudKitHandler: MockAppHandler, AppCloudKitHandler {
                      userDidAcceptCloudKitShareWith cloudKitShareMetadata: CKShare.Metadata) {
         callCount += 1
         callCountDidAccept += 1
+    }
+}
+
+private class MockAppSceneSessionHandler: MockAppHandler, AppSceneSessionHandler {
+
+    var callCountConfig: Int = 0
+    var callCountDiscard: Int = 0
+
+    func application(_ application: UIApplication,
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        callCount += 1
+        callCountConfig += 1
+        return UISceneConfiguration()
+    }
+
+    func application(_ application: UIApplication,
+                     didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        callCount += 1
+        callCountDiscard += 1
     }
 }

@@ -12,6 +12,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
     #if DEBUG
     /// Unit testing reference
     static var hostScene: UIScene?
+    /// Unit testing reference
+    static var hostSession: UISceneSession?
+    /// Unit testing reference
+    static var hostOptions: UIScene.ConnectionOptions?
     #endif
 
     /// :nodoc:
@@ -23,6 +27,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         guard !UIApplication.isUnitTesting else {
             #if DEBUG
             Self.hostScene = scene
+            Self.hostSession = session
+            Self.hostOptions = connectionOptions
             #endif
             return
         }

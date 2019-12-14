@@ -17,13 +17,21 @@ final class SecretsTests: TestCase {
         super.tearDown()
     }
 
-    func testProduction() throws {
+    func testFixtureInjection() throws {
+        // given
+        let fixture = Bundle.main.url(forResource: "TestSecrets",
+                                      withExtension: "plist")
+
+        // when
+        Secrets.inject(secrets: fixture)
+
+        // then
         XCTAssertNotEqual(Secrets.sbAppID.secret, "MISSING")
         XCTAssertNotEqual(Secrets.sbAppSecret.secret, "MISSING")
         XCTAssertNotEqual(Secrets.sbEncryptionKey.secret, "MISSING")
     }
 
-    func testInjection() throws {
+    func testNilInjection() throws {
         // when
         Secrets.inject(secrets: nil)
 
