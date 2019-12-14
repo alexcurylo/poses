@@ -736,14 +736,13 @@ extension RoutingAppDelegate {
     func application(_ application: UIApplication,
                      configurationForConnecting connectingSceneSession: UISceneSession,
                      options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        handlers
+        let configs = handlers
             .of(type: AppSceneSessionHandler.self)
             .compactMap { $0.application(application,
                                          configurationForConnecting: connectingSceneSession,
                                          options: options)
             }
-            // swiftlint:disable:next force_unwrapping
-            .first!
+        return configs.first ?? connectingSceneSession.configuration
     }
 
     /// didDiscardSceneSessions

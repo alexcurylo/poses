@@ -19,7 +19,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppLaunchHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         let willFinish = mock.application(liveApp,
@@ -38,7 +38,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppStateHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.applicationWillEnterForeground(liveApp)
@@ -59,7 +59,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppOpenURLHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         let didOpen = mock.application(liveApp,
@@ -75,7 +75,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppMemoryHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.applicationDidReceiveMemoryWarning(liveApp)
@@ -88,7 +88,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppTimeChangeHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.applicationSignificantTimeChange(liveApp)
@@ -101,7 +101,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppNotificationsHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.application(liveApp,
@@ -121,7 +121,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppBackgroundURLSessionHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.application(liveApp,
@@ -135,7 +135,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppShortcutHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.application(liveApp,
@@ -149,7 +149,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppWatchHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.application(liveApp,
@@ -162,7 +162,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppHealthHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.applicationShouldRequestHealthAuthorization(liveApp)
@@ -175,7 +175,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppSiriHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
         let intent = INPauseWorkoutIntent(workoutName: nil)
 
         // when
@@ -189,7 +189,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppContentHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.applicationProtectedDataWillBecomeUnavailable(liveApp)
@@ -204,7 +204,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppExtensionHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         let shouldAllow = mock.application(liveApp,
@@ -219,7 +219,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppRestorationHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         let controller = mock.application(liveApp,
@@ -255,7 +255,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppContinuityHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         let willContinue = mock.application(liveApp,
@@ -282,7 +282,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testAppCloudKitHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
 
         // when
         mock.application(liveApp,
@@ -296,7 +296,7 @@ final class RoutingAppDelegateTests: TestCase {
 
     func testSceneSessionHandlerManagement() throws {
         // given
-        let mock = MockActualDelegate()
+        let mock = MockRoutingAppDelegate()
         // swiftlint:disable:next force_unwrapping
         let session = SceneDelegate.hostSession!
         // swiftlint:disable:next force_unwrapping
@@ -315,11 +315,27 @@ final class RoutingAppDelegateTests: TestCase {
         XCTAssertEqual(handler.callCountConfig, 1)
         XCTAssertEqual(handler.callCountDiscard, 1)
     }
+
+    func testEmptySceneSessionHandlerManagement() throws {
+        // given
+        let mock = MockRoutingAppDelegate(empty: true)
+        // swiftlint:disable:next force_unwrapping
+        let session = SceneDelegate.hostSession!
+        // swiftlint:disable:next force_unwrapping
+        let options = SceneDelegate.hostOptions!
+
+        // when
+        _ = mock.application(liveApp,
+                             configurationForConnecting: session,
+                             options: options)
+    }
 }
 
 // MARK: - Mock of RoutingAppDelegate-required subclass
 
-private class MockActualDelegate: RoutingAppDelegate {
+private class MockRoutingAppDelegate: RoutingAppDelegate {
+
+    private let empty: Bool
 
     private let allHandlerTypes: [MockAppHandler] = [
         MockAppLaunchHandler(),
@@ -342,11 +358,21 @@ private class MockActualDelegate: RoutingAppDelegate {
     ]
 
     override var handlers: RoutingAppDelegate.Handlers {
-        return allHandlerTypes
+        return empty ? [] : allHandlerTypes
     }
 
     var totalCalls: Int {
-        return allHandlerTypes.map { $0.callCount }.reduce(0, +)
+        return empty ? 0 : allHandlerTypes.map { $0.callCount }.reduce(0, +)
+    }
+
+    override init() {
+        self.empty = false
+        super.init()
+    }
+
+    init(empty: Bool) {
+        self.empty = empty
+        super.init()
     }
 }
 
