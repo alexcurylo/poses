@@ -14,7 +14,7 @@ jobs:
           mint bootstrap
       - name: Test
         run: |
-          xcodebuild test -quiet -project $PROJECT -scheme $SCHEME -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO ARCHS=x86_64 VALID_ARCHS=x86_64
+          xcodebuild test -project $PROJECT -scheme $SCHEME -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug -enableCodeCoverage YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO ARCHS=x86_64 VALID_ARCHS=x86_64
         env:
           DEVELOPER_DIR: /Applications/Xcode_11.3.app/Contents/Developer
           PROJECT: Poses.xcodeproj
