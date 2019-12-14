@@ -20,4 +20,19 @@ final class LaunchHandlerTests: TestCase {
         XCTAssertTrue(will)
         XCTAssertTrue(did)
     }
+
+    func testLaunchSetting() throws {
+        // given
+        let settings: [LaunchSetting] = [
+            .fullAccess(true),
+            .userName("test")
+        ]
+
+        // then
+        settings.forEach {
+            XCTAssertFalse($0.key.isEmpty)
+            XCTAssertFalse($0.value.isEmpty)
+            XCTAssertFalse($0.setting.isEmpty)
+        }
+    }
 }
