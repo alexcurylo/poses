@@ -50,6 +50,8 @@
 		FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257C23A6261D00BF3749 /* ReportingService.swift */; };
 		FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */; };
 		FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */; };
+		FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = FAC2258323A6E18F00BF3749 /* Nuke */; };
+		FAC2258623A6E3A200BF3749 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAC2258523A6E3A200BF3749 /* Settings.bundle */; };
 		FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FAD49962239BA4340030CB8E /* SwiftyBeaver */; };
 		FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */; };
 		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
@@ -155,6 +157,8 @@
 		FAC2257C23A6261D00BF3749 /* ReportingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingService.swift; sourceTree = "<group>"; };
 		FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceSpy.swift; sourceTree = "<group>"; };
 		FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceTests.swift; sourceTree = "<group>"; };
+		FAC2258523A6E3A200BF3749 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		FAC2258823A6FCB000BF3749 /* license_plist.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = license_plist.yml; sourceTree = "<group>"; };
 		FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Environment.swift"; sourceTree = "<group>"; };
 		FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Launch.swift"; sourceTree = "<group>"; };
 		FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Launch.swift"; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */,
 				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
 				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
+				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
@@ -252,6 +257,7 @@
 				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
 				FA8B53822398F2BA009E8E1F /* Preview Content */,
 				FAECA219239CF1900028AE3A /* R.generated.swift */,
+				FAC2258523A6E3A200BF3749 /* Settings.bundle */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				8C7AAF3E239A60BA0065F035 /* Gemfile.lock */,
 				8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */,
 				8C7AAF33239A119E0065F035 /* LICENSE.md */,
+				FAC2258823A6FCB000BF3749 /* license_plist.yml */,
 				8C7AAF39239A58100065F035 /* Mintfile */,
 				8C7AAF31239A119E0065F035 /* README.md */,
 				8C1B47F4239F3A2200C4FBEC /* Secrets.plist */,
@@ -548,6 +555,7 @@
 				8C7AAF3C239A5C1A0065F035 /* SwiftLint */,
 				FA8B53722398F2B9009E8E1F /* Resources */,
 				8C1B47FA239F431B00C4FBEC /* Copy Secrets */,
+				FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */,
 			);
 			buildRules = (
 			);
@@ -557,6 +565,7 @@
 			packageProductDependencies = (
 				FAD49962239BA4340030CB8E /* SwiftyBeaver */,
 				FAECA216239CF07A0028AE3A /* Rswift */,
+				FAC2258323A6E18F00BF3749 /* Nuke */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
@@ -633,6 +642,7 @@
 			packageReferences = (
 				FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */,
+				FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -656,6 +666,7 @@
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
 				FA7CD1D923A51D1900A1EFAF /* TestSecrets.plist in Resources */,
 				8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */,
+				FAC2258623A6E3A200BF3749 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +722,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ -x \"$(command -v mint)\" ]; then\n  mint run swiftlint\nelse\n  echo \"error: SwiftLint not installed; 'mint install realm/SwiftLint' to install globally\"\n  return -1\nfi\n\n";
+		};
+		FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Acknowledgements";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    mint run LicensePlist license-plist --add-version-numbers --output-path $PRODUCT_NAME/resources/Settings.bundle\nfi\n";
 		};
 		FAECA218239CF09E0028AE3A /* Generate R.generated.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -948,6 +977,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
 		FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -967,6 +1004,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FAC2258323A6E18F00BF3749 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		FAD49962239BA4340030CB8E /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
