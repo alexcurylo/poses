@@ -26,7 +26,8 @@ final class SecretsTests: TestCase {
         Secrets.inject(secrets: fixture)
 
         // then
-        XCTAssertNotEqual(Secrets.sbAppID.secret, "MISSING")
+        XCTAssertNotEqual(Secrets.flurryApiKey.secret, "MISSING")
+        XCTAssertNotEqual(Secrets.sbAppId.secret, "MISSING")
         XCTAssertNotEqual(Secrets.sbAppSecret.secret, "MISSING")
         XCTAssertNotEqual(Secrets.sbEncryptionKey.secret, "MISSING")
     }
@@ -36,7 +37,8 @@ final class SecretsTests: TestCase {
         Secrets.inject(secrets: nil)
 
         // then
-        XCTAssertEqual(Secrets.sbAppID.secret, "MISSING")
+        XCTAssertEqual(Secrets.flurryApiKey.secret, "MISSING")
+        XCTAssertEqual(Secrets.sbAppId.secret, "MISSING")
         XCTAssertEqual(Secrets.sbAppSecret.secret, "MISSING")
         XCTAssertEqual(Secrets.sbEncryptionKey.secret, "MISSING")
     }

@@ -47,6 +47,9 @@
 		FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257223A60E1500BF3749 /* libFlurry.a */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
 		FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257A23A6139D00BF3749 /* Security.framework */; };
+		FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257C23A6261D00BF3749 /* ReportingService.swift */; };
+		FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */; };
+		FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */; };
 		FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FAD49962239BA4340030CB8E /* SwiftyBeaver */; };
 		FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */; };
 		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
@@ -149,6 +152,9 @@
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAC2257823A612B200BF3749 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAC2257A23A6139D00BF3749 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAC2257C23A6261D00BF3749 /* ReportingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingService.swift; sourceTree = "<group>"; };
+		FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceSpy.swift; sourceTree = "<group>"; };
+		FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceTests.swift; sourceTree = "<group>"; };
 		FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Environment.swift"; sourceTree = "<group>"; };
 		FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Launch.swift"; sourceTree = "<group>"; };
 		FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Launch.swift"; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 			children = (
 				8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */,
 				8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */,
+				FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 			children = (
 				8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */,
 				8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */,
+				FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */,
 			);
 			path = spies;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 			children = (
 				FAFB16A9239F06BD004D314D /* DataService.swift */,
 				8CA9CDBB239DE47E00213558 /* LoggingService.swift */,
+				FAC2257C23A6261D00BF3749 /* ReportingService.swift */,
 				FAFB16A7239F05F8004D314D /* ServiceProvider.swift */,
 			);
 			path = services;
@@ -738,6 +747,7 @@
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				8CA9CDBC239DE4B300213558 /* LoggingService.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
+				FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */,
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
 				FAFB16AA239F06BD004D314D /* DataService.swift in Sources */,
@@ -762,6 +772,7 @@
 				FA7CD1CA23A4611B00A1EFAF /* ContentViewTests.swift in Sources */,
 				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
+				FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */,
 				8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */,
 				8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */,
 				FA7CD1D023A49B5F00A1EFAF /* UIApplicationTests.swift in Sources */,
@@ -775,6 +786,7 @@
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
 				FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */,
+				FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
