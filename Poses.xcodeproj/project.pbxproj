@@ -269,7 +269,6 @@
 		8CA9CBA9239DD58E00213558 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */,
 				8CA9CBAF239DD70800213558 /* ArrayTests.swift */,
 				8C11B98C23A3248D00AFE1AE /* DateTests.swift */,
 				8CA9CBAA239DD5A300213558 /* RoutingAppDelegateTests.swift */,
@@ -343,6 +342,7 @@
 		FA7CD1D523A4DF1E00A1EFAF /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */,
 			);
 			path = fixtures;
 			sourceTree = "<group>";
@@ -796,7 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD4997A239C4B070030CB8E /* Poses-Debug.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				MARKETING_VERSION = 3.0;
 			};
 			name = Debug;
@@ -805,7 +805,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD4997B239C4B070030CB8E /* Poses-Release.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				MARKETING_VERSION = 3.0;
 			};
 			name = Release;

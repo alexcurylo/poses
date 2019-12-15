@@ -5,6 +5,28 @@ import XCTest
 
 final class UserDefaultsTests: TestCase {
 
+    func testCodable() throws {
+        // given
+        struct Test: Codable, Equatable {
+            let a: Int
+            let b: String
+        }
+        let expected = Test(a: 1, b: "test")
+        let sut = UserDefaults()
+
+        // when
+        try sut.set(object: expected,
+                    forKey: #function)
+        let actual = try sut.get(objectType: Test.self,
+                                 forKey: #function)
+        let missing = try? sut.get(objectType: Test.self,
+                                   forKey: "missing")
+
+        // then
+        XCTAssertEqual(expected, actual)
+        XCTAssertNil(missing)
+    }
+
     func testInfoDictionary() throws {
         // given
         let plist = try XCTUnwrap(Bundle.main.infoDictionary)
@@ -90,27 +112,5 @@ final class UserDefaultsTests: TestCase {
         XCTAssertEqual(dateValue, sut[dateKey])
         XCTAssertEqual(stringValue, sut[stringKey])
         XCTAssertEqual(colorValue, sut[colorKey])
-    }
-
-    func testCodable() throws {
-        // given
-        struct Test: Codable, Equatable {
-            let a: Int
-            let b: String
-        }
-        let test = Test(a: 1, b: "test")
-        let sut = UserDefaults()
-
-        // when
-        try sut.set(object: test,
-                    forKey: #function)
-        let actual = try sut.get(objectType: Test.self,
-                                 forKey: #function)
-        let missing = try? sut.get(objectType: Test.self,
-                                   forKey: "missing")
-
-        // then
-        XCTAssertEqual(test, actual)
-        XCTAssertNil(missing)
     }
 }
