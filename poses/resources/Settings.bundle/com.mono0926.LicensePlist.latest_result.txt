@@ -1,0 +1,13 @@
+name: flurry-ios-sdk, nameSpecified: , owner: flurry, version: 10.1.0
+
+name: flurry-ios-sdk, nameSpecified: , owner: flurry, version: 10.1.0
+
+name: Nuke, nameSpecified: , owner: kean, version: 8.4.0
+
+name: R.swift.Library, nameSpecified: , owner: mac-cain13, version: 5.1.0
+
+name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.8.4
+
+add-version-numbers: true
+
+LicensePlist Version: 2.9.0

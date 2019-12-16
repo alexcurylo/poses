@@ -9,6 +9,8 @@ protocol ServiceProvider {
     var data: DataService { get }
     /// LoggingService
     var log: LoggingService { get }
+    /// ReportingService
+    var report: ReportingService { get }
 }
 
 extension ServiceProvider {
@@ -25,6 +27,11 @@ extension ServiceProvider {
     var log: LoggingService {
         return ServiceProviderInstances.logServiceInstance
     }
+
+    /// ReportingService
+    var report: ReportingService {
+        return ServiceProviderInstances.reportServiceInstance
+    }
 }
 
 /// To be set up at application startup time
@@ -36,6 +43,8 @@ enum ServiceProviderInstances {
     static var dataServiceInstance: DataService!
     /// LoggingService
     static var logServiceInstance: LoggingService!
+    /// ReportingService
+    static var reportServiceInstance: ReportingService!
 }
 
 /// Convenience for service injection, in-constructor operaionts, etc.

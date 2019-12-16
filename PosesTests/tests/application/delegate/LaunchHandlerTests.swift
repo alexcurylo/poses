@@ -15,6 +15,8 @@ final class LaunchHandlerTests: TestCase {
         let did = sut.application(UIApplication.shared,
                                   didFinishLaunchingWithOptions: [:])
         sut.configure(logging: true)
+        sut.configure(analytics: true,
+                      launchOptions: [:])
 
         // then
         XCTAssertTrue(will)

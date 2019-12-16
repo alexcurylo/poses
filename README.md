@@ -38,6 +38,7 @@ Requirements
 - [Github Actions](https://github.com/alexcurylo/poses/actions?workflow=CI) for CI testing
 - [Gitter](https://gitter.im/alexcurylo/poses?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) for chat
 - [Jazzy](https://github.com/realm/jazzy) for generating documentation
+- [LicensePlist](https://github.com/mono0926/LicensePlist) for generating acknowledgements
 - [Mint](https://github.com/yonaskolb/mint) for tool dependency management
 - [SwiftLint](https://github.com/realm/SwiftLint) for opinionated coding style enforcement
 - [SwiftMockGeneratorForXcode](https://github.com/seanhenry/SwiftMockGeneratorForXcode) for generating mocks

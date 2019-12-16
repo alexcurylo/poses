@@ -35,9 +35,16 @@ extension LaunchHandler: AppLaunchHandler, ServiceProvider {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        configure(logging: UIApplication.isProduction)
+        let isProduction = UIApplication.isProduction
+        configure(logging: isProduction)
+        configure(analytics: isProduction,
+                  launchOptions: launchOptions)
         configureSettingsDisplay()
-        log.verbose("Launched build \(String(describing: StringKey.appBuild.infoString))(/())")
+
+        if !isProduction {
+            log.verbose("Launched build \(String(describing: StringKey.appBuild.infoString))(/())")
+            report.breadcrumb("launch")
+        }
 
         return true
     }
@@ -114,10 +121,38 @@ extension LaunchHandler {
 
         if production {
             let platform = SBPlatformDestination(
-                appID: Secrets.sbAppID.secret,
+                appID: Secrets.sbAppId.secret,
                 appSecret: Secrets.sbAppSecret.secret,
                 encryptionKey: Secrets.sbEncryptionKey.secret)
             swiftyBeaver.addDestination(platform)
         }
+    }
+}
+
+// MARK: - Flurry
+
+extension LaunchHandler {
+
+    // https://www.lordcodes.com/posts/a-modular-analytics-layer-in-swift
+    // https://developer.yahoo.com/flurry/docs/analytics/gettingstarted/events/ios/
+
+    /// Configure analytics
+    /// - Parameter production: Is this production environment?
+    func configure(
+        analytics production: Bool,
+        // swiftlint:disable:next discouraged_optional_collection
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) {
+        guard production else { return }
+
+        let builder = FlurrySessionBuilder()
+            .withAppVersion(StringKey.appVersion.string)
+            .withLogLevel(FlurryLogLevelAll)
+            .withShowError(inLog: true)
+            .withCrashReporting(true)
+            .withSessionContinueSeconds(30)
+        Flurry.startSession(Secrets.flurryApiKey.secret,
+                            withOptions: launchOptions,
+                            with: builder)
     }
 }

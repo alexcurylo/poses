@@ -5,8 +5,10 @@ import Foundation
 /// Retrieves secrets from externally populated Secrets.plist
 enum Secrets: String {
 
+    /// Flurry API Key
+    case flurryApiKey
     /// SwiftyBeaver App ID
-    case sbAppID
+    case sbAppId
     /// SwiftyBeaver App Secret
     case sbAppSecret
     /// SwiftyBeaver Encryption Key
@@ -23,8 +25,10 @@ enum Secrets: String {
             return "MISSING"
         }
         switch self {
-        case .sbAppID:
-            return file.sbAppID
+        case .flurryApiKey:
+            return file.flurryApiKey
+        case .sbAppId:
+            return file.sbAppId
         case .sbAppSecret:
             return file.sbAppSecret
         case .sbEncryptionKey:
@@ -47,8 +51,10 @@ enum Secrets: String {
 
 private struct SecretsFile: Decodable {
 
+    /// Flurry API Key
+    let flurryApiKey: String
     /// SwiftyBeaver App ID
-    let sbAppID: String
+    let sbAppId: String
     /// SwiftyBeaver App Secret
     let sbAppSecret: String
     /// SwiftyBeaver Encryption Key

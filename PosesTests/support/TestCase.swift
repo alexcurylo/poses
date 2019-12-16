@@ -11,6 +11,7 @@ class TestCase: XCTestCase {
 
         ServiceProviderInstances.dataServiceInstance = DataServiceSpy()
         ServiceProviderInstances.logServiceInstance = LoggingServiceSpy()
+        ServiceProviderInstances.reportServiceInstance = ReportingServiceSpy()
     }
 
     func wait(for seconds: TimeInterval) {

@@ -27,6 +27,7 @@ extension ServiceHandler: AppLaunchHandler {
         ServiceProviderInstances.logServiceInstance = SwiftyBeaverLoggingService()
 
         ServiceProviderInstances.dataServiceInstance = DataServiceImpl()
+        ServiceProviderInstances.reportServiceInstance = FlurryReportingService()
 
         return true
     }
@@ -62,6 +63,7 @@ struct ServiceHandlerStub: AppLaunchHandler {
         ServiceProviderInstances.logServiceInstance = ConsoleLoggingService()
 
         ServiceProviderInstances.dataServiceInstance = DataServiceStub()
+        ServiceProviderInstances.reportServiceInstance = ReportingServiceStub()
 
         return true
     }

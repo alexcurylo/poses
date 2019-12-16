@@ -9,6 +9,8 @@ struct StringKey: Hashable, RawRepresentable, ExpressibleByStringLiteral {
     static let appVersion: StringKey = "CFBundleShortVersionString"
     /// Info.plist application build
     static let appBuild: StringKey = "CFBundleVersion"
+    /// Info.plist copyright
+    static let copyright: StringKey = "NSHumanReadableCopyright"
 
     /// Text value
     var rawValue: String
@@ -33,7 +35,8 @@ struct StringKey: Hashable, RawRepresentable, ExpressibleByStringLiteral {
     /// Settings keys we expect to find in Info.plist
     static var infoDictionarySettingsKeys: [StringKey] {
         [.appVersion,
-         .appBuild]
+         .appBuild,
+         .copyright]
     }
 
     /// Settings key value from Info.plist

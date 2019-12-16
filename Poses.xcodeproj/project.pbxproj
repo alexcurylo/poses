@@ -44,6 +44,14 @@
 		FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* PosesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */; };
+		FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257223A60E1500BF3749 /* libFlurry.a */; };
+		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
+		FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257A23A6139D00BF3749 /* Security.framework */; };
+		FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257C23A6261D00BF3749 /* ReportingService.swift */; };
+		FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */; };
+		FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */; };
+		FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = FAC2258323A6E18F00BF3749 /* Nuke */; };
+		FAC2258623A6E3A200BF3749 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAC2258523A6E3A200BF3749 /* Settings.bundle */; };
 		FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FAD49962239BA4340030CB8E /* SwiftyBeaver */; };
 		FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */; };
 		FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
@@ -137,6 +145,20 @@
 		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B539C2398F2BA009E8E1F /* PosesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		FAC2256E23A60DBA00BF3749 /* Flurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		FAC2256F23A60DE900BF3749 /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurrySessionBuilder.h; sourceTree = "<group>"; };
+		FAC2257223A60E1500BF3749 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		FAC2257423A60E9000BF3749 /* FlurryCCPA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurryCCPA.h; sourceTree = "<group>"; };
+		FAC2257523A60E9000BF3749 /* FlurryConsent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurryConsent.h; sourceTree = "<group>"; };
+		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAC2257823A612B200BF3749 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAC2257A23A6139D00BF3749 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAC2257C23A6261D00BF3749 /* ReportingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingService.swift; sourceTree = "<group>"; };
+		FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceSpy.swift; sourceTree = "<group>"; };
+		FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportingServiceTests.swift; sourceTree = "<group>"; };
+		FAC2258523A6E3A200BF3749 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		FAC2258823A6FCB000BF3749 /* license_plist.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = license_plist.yml; sourceTree = "<group>"; };
 		FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Environment.swift"; sourceTree = "<group>"; };
 		FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Launch.swift"; sourceTree = "<group>"; };
 		FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Launch.swift"; sourceTree = "<group>"; };
@@ -168,6 +190,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */,
+				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
+				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
+				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
@@ -195,6 +221,7 @@
 			children = (
 				8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */,
 				8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */,
+				FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -204,6 +231,7 @@
 			children = (
 				8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */,
 				8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */,
+				FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */,
 			);
 			path = spies;
 			sourceTree = "<group>";
@@ -229,6 +257,7 @@
 				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
 				FA8B53822398F2BA009E8E1F /* Preview Content */,
 				FAECA219239CF1900028AE3A /* R.generated.swift */,
+				FAC2258523A6E3A200BF3749 /* Settings.bundle */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -249,6 +278,7 @@
 				8C7AAF3E239A60BA0065F035 /* Gemfile.lock */,
 				8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */,
 				8C7AAF33239A119E0065F035 /* LICENSE.md */,
+				FAC2258823A6FCB000BF3749 /* license_plist.yml */,
 				8C7AAF39239A58100065F035 /* Mintfile */,
 				8C7AAF31239A119E0065F035 /* README.md */,
 				8C1B47F4239F3A2200C4FBEC /* Secrets.plist */,
@@ -269,7 +299,6 @@
 		8CA9CBA9239DD58E00213558 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */,
 				8CA9CBAF239DD70800213558 /* ArrayTests.swift */,
 				8C11B98C23A3248D00AFE1AE /* DateTests.swift */,
 				8CA9CBAA239DD5A300213558 /* RoutingAppDelegateTests.swift */,
@@ -317,6 +346,7 @@
 			children = (
 				FAFB16A9239F06BD004D314D /* DataService.swift */,
 				8CA9CDBB239DE47E00213558 /* LoggingService.swift */,
+				FAC2257C23A6261D00BF3749 /* ReportingService.swift */,
 				FAFB16A7239F05F8004D314D /* ServiceProvider.swift */,
 			);
 			path = services;
@@ -343,6 +373,7 @@
 		FA7CD1D523A4DF1E00A1EFAF /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */,
 			);
 			path = fixtures;
 			sourceTree = "<group>";
@@ -355,6 +386,7 @@
 				FA8B53902398F2BA009E8E1F /* PosesTests */,
 				FA8B539B2398F2BA009E8E1F /* PosesUITests */,
 				FA8B53752398F2B9009E8E1F /* Products */,
+				FAC2257723A612B100BF3749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -373,6 +405,7 @@
 			children = (
 				8C7AAF2C2399F2730065F035 /* application */,
 				8C7AAF2D2399F2840065F035 /* resources */,
+				FAC2256A23A60BBD00BF3749 /* sdks */,
 				FAD49964239BA6910030CB8E /* support */,
 				FAD49967239BA7CF0030CB8E /* testing */,
 			);
@@ -406,6 +439,45 @@
 				FAD4996B239BA8F40030CB8E /* support */,
 			);
 			path = PosesUITests;
+			sourceTree = "<group>";
+		};
+		FAC2256A23A60BBD00BF3749 /* sdks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2256B23A60CFA00BF3749 /* flurry */,
+				FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */,
+			);
+			path = sdks;
+			sourceTree = "<group>";
+		};
+		FAC2256B23A60CFA00BF3749 /* flurry */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2256C23A60D1600BF3749 /* CHANGELOG.md */,
+				FAC2256D23A60D9D00BF3749 /* Flurry */,
+			);
+			path = flurry;
+			sourceTree = "<group>";
+		};
+		FAC2256D23A60D9D00BF3749 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2256E23A60DBA00BF3749 /* Flurry.h */,
+				FAC2257423A60E9000BF3749 /* FlurryCCPA.h */,
+				FAC2257523A60E9000BF3749 /* FlurryConsent.h */,
+				FAC2256F23A60DE900BF3749 /* FlurrySessionBuilder.h */,
+				FAC2257223A60E1500BF3749 /* libFlurry.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
+		FAC2257723A612B100BF3749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2257A23A6139D00BF3749 /* Security.framework */,
+				FAC2257823A612B200BF3749 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FAD49964239BA6910030CB8E /* support */ = {
@@ -483,6 +555,7 @@
 				8C7AAF3C239A5C1A0065F035 /* SwiftLint */,
 				FA8B53722398F2B9009E8E1F /* Resources */,
 				8C1B47FA239F431B00C4FBEC /* Copy Secrets */,
+				FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */,
 			);
 			buildRules = (
 			);
@@ -492,6 +565,7 @@
 			packageProductDependencies = (
 				FAD49962239BA4340030CB8E /* SwiftyBeaver */,
 				FAECA216239CF07A0028AE3A /* Rswift */,
+				FAC2258323A6E18F00BF3749 /* Nuke */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
@@ -568,6 +642,7 @@
 			packageReferences = (
 				FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */,
+				FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -591,6 +666,7 @@
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
 				FA7CD1D923A51D1900A1EFAF /* TestSecrets.plist in Resources */,
 				8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */,
+				FAC2258623A6E3A200BF3749 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +723,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ -x \"$(command -v mint)\" ]; then\n  mint run swiftlint\nelse\n  echo \"error: SwiftLint not installed; 'mint install realm/SwiftLint' to install globally\"\n  return -1\nfi\n\n";
 		};
+		FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Acknowledgements";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    mint run LicensePlist license-plist --add-version-numbers --output-path $PRODUCT_NAME/resources/Settings.bundle\nfi\n";
+		};
 		FAECA218239CF09E0028AE3A /* Generate R.generated.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,6 +776,7 @@
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				8CA9CDBC239DE4B300213558 /* LoggingService.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
+				FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */,
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
 				FAFB16AA239F06BD004D314D /* DataService.swift in Sources */,
@@ -706,6 +801,7 @@
 				FA7CD1CA23A4611B00A1EFAF /* ContentViewTests.swift in Sources */,
 				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
+				FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */,
 				8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */,
 				8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */,
 				FA7CD1D023A49B5F00A1EFAF /* UIApplicationTests.swift in Sources */,
@@ -719,6 +815,7 @@
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
 				FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */,
+				FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,7 +893,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD4997A239C4B070030CB8E /* Poses-Debug.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				MARKETING_VERSION = 3.0;
 			};
 			name = Debug;
@@ -805,7 +902,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD4997B239C4B070030CB8E /* Poses-Release.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 67;
 				MARKETING_VERSION = 3.0;
 			};
 			name = Release;
@@ -880,6 +977,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
 		FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
@@ -899,6 +1004,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FAC2258323A6E18F00BF3749 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		FAD49962239BA4340030CB8E /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;

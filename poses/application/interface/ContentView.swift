@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI content view
-struct ContentView: View {
+struct ContentView: View, ServiceProvider {
 
     @State private var selection = 0
 
@@ -18,6 +18,9 @@ struct ContentView: View {
                         Text(L.tabFirst())
                     }
                 }
+                .onAppear {
+                    //self.report.screen("First View")
+                }
                 .tag(0)
             Text("Second View")
                 .font(.title)
@@ -26,6 +29,9 @@ struct ContentView: View {
                         Image("second")
                         Text(L.tabSecond())
                     }
+                }
+                .onAppear {
+                    //self.report.screen("Second View")
                 }
                 .tag(1)
         }

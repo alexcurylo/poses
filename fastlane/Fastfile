@@ -21,6 +21,9 @@ ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
 
 platform :ios do
 
+  ENV['FLURRY_AUTH_TOKEN'] = '<Put-Token-Here>'
+  ENV['FLURRY_API_KEY'] = '<Put-API-Key-Here>'
+
   before_all do
     # ensure_git_status_clean
     # git_pull
@@ -49,6 +52,7 @@ platform :ios do
                          demo_account_required: true)
 
     stamp_changelog(section_identifier: "Version #{version_number}, Build #{build_number}")
+    upload_symbols
     clean_build_artifacts
     commit_version_bump(message: "Version #{version_number} beta #{build_number}", include: "CHANGELOG.md")
     push_to_git_remote
@@ -73,9 +77,18 @@ platform :ios do
                         force: true)
 
     stamp_changelog(section_identifier: "Version #{version_number}, Build #{build_number}")
+    upload_symbols
     clean_build_artifacts
     commit_version_bump(message: "Version #{version_number} release #{build_number}", include: "CHANGELOG.md")
     push_to_git_remote
+    
+  end
+
+  desc "Upload dSYMs for bitcode enabled apps"
+  lane :upload_symbols do
+    download_dsyms
+    flurry_upload_dsym
+    clean_build_artifacts
   end
 
   desc "Generate new localized screenshots"
