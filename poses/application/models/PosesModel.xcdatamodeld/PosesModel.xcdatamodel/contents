@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="POSModelCategory" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="categories" inverseEntity="Pose"/>
+    </entity>
+    <entity name="Group" representedClassName="POSModelGroup" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="groups" inverseEntity="Pose"/>
+    </entity>
+    <entity name="Pack" representedClassName="POSModelPack" syncable="YES">
+        <attribute name="embedded" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="purchased" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="packs" inverseEntity="Pose"/>
+    </entity>
+    <entity name="Pose" representedClassName="POSModelPose" syncable="YES">
+        <attribute name="cached" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="embedded" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="thumbnailed" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
+        <attribute name="trashed" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="poses" inverseEntity="Category"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="poses" inverseEntity="Group"/>
+        <relationship name="packs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pack" inverseName="poses" inverseEntity="Pack"/>
+    </entity>
+    <fetchRequest name="Categories" entity="Category"/>
+    <fetchRequest name="Category" entity="Category" predicateString="key == $keyed"/>
+    <fetchRequest name="Group" entity="Group" predicateString="name == $named"/>
+    <fetchRequest name="Groups" entity="Group"/>
+    <fetchRequest name="Pack" entity="Pack" predicateString="key == $keyed"/>
+    <fetchRequest name="Packs" entity="Pack"/>
+    <fetchRequest name="Pose" entity="Pose" predicateString="number == $numbered"/>
+    <fetchRequest name="Poses" entity="Pose"/>
+    <fetchRequest name="PosesInGroup" entity="Pose" predicateString="ANY groups.name == $named"/>
+    <fetchRequest name="VisiblePoses" entity="Pose" predicateString="visible == 1"/>
+    <fetchRequest name="VisiblePosesInCategory" entity="Pose" predicateString="visible == 1 AND ANY categories.key == $keyed"/>
+    <fetchRequest name="VisiblePosesInGroup" entity="Pose" predicateString="visible == 1 AND ANY groups.name == $named"/>
+    <elements>
+        <element name="Category" positionX="0" positionY="0" width="128" height="88"/>
+        <element name="Group" positionX="0" positionY="0" width="128" height="103"/>
+        <element name="Pack" positionX="0" positionY="0" width="128" height="118"/>
+        <element name="Pose" positionX="0" positionY="0" width="128" height="193"/>
+    </elements>
+</model>

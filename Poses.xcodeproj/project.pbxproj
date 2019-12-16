@@ -16,6 +16,10 @@
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
 		8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */; };
 		8C75384223A24F2E004B236E /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75384123A24F2E004B236E /* StringTests.swift */; };
+		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
+		8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */; };
+		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
+		8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11523A7197C001714C5 /* CloudKit.framework */; };
 		8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */; };
 		8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */; };
 		8CA9CBAE239DD70200213558 /* Array+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAD239DD70200213558 /* Array+Type.swift */; };
@@ -38,7 +42,6 @@
 		FA7CD1D423A4BB3400A1EFAF /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1D323A4BB3400A1EFAF /* SceneDelegateTests.swift */; };
 		FA7CD1D923A51D1900A1EFAF /* TestSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */; };
 		FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */; };
-		FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */; };
 		FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537E2398F2B9009E8E1F /* ContentView.swift */; };
 		FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53802398F2BA009E8E1F /* Assets.xcassets */; };
 		FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
@@ -110,6 +113,11 @@
 		8C7AAF3D239A608E0065F035 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		8C7AAF3E239A60BA0065F035 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		8C7AAF3F239A61F10065F035 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
+		8C92C10D23A714AE001714C5 /* PosesModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PosesModel.sqlite; sourceTree = "<group>"; };
+		8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
+		8C92C11223A718CA001714C5 /* Poses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poses.entitlements; sourceTree = "<group>"; };
+		8C92C11323A7194D001714C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8C92C11523A7197C001714C5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		8CA57FF023A3115100A3B6B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CA581F623A321C600A3B6B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAppDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +142,6 @@
 		FA7CD1D823A51D1900A1EFAF /* TestSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestSecrets.plist; sourceTree = "<group>"; };
 		FA8B53742398F2B9009E8E1F /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poses.xcdatamodel; sourceTree = "<group>"; };
 		FA8B537E2398F2B9009E8E1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA8B53802398F2BA009E8E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -191,9 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */,
+				8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */,
 				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
 				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
 				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
+				8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
@@ -240,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBAB239DD60A00213558 /* delegate */,
+				8C92C10C23A7141A001714C5 /* models */,
 				FA7CD1C723A460ED00A1EFAF /* interface */,
 				8CA9CDBA239DE46F00213558 /* services */,
 			);
@@ -254,7 +264,7 @@
 				8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */,
 				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
 				FAECA212239CEF340028AE3A /* Localizable.strings */,
-				FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */,
+				8C92C10D23A714AE001714C5 /* PosesModel.sqlite */,
 				FA8B53822398F2BA009E8E1F /* Preview Content */,
 				FAECA219239CF1900028AE3A /* R.generated.swift */,
 				FAC2258523A6E3A200BF3749 /* Settings.bundle */,
@@ -280,11 +290,20 @@
 				8C7AAF33239A119E0065F035 /* LICENSE.md */,
 				FAC2258823A6FCB000BF3749 /* license_plist.yml */,
 				8C7AAF39239A58100065F035 /* Mintfile */,
+				8C92C11223A718CA001714C5 /* Poses.entitlements */,
 				8C7AAF31239A119E0065F035 /* README.md */,
 				8C1B47F4239F3A2200C4FBEC /* Secrets.plist */,
 				FAD49972239C4B070030CB8E /* xcconfig */,
 			);
 			name = metadata;
+			sourceTree = "<group>";
+		};
+		8C92C10C23A7141A001714C5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		8CA9CBA8239DD58100213558 /* tests */ = {
@@ -474,6 +493,8 @@
 		FAC2257723A612B100BF3749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C92C11523A7197C001714C5 /* CloudKit.framework */,
+				8C92C11323A7194D001714C5 /* StoreKit.framework */,
 				FAC2257A23A6139D00BF3749 /* Security.framework */,
 				FAC2257823A612B200BF3749 /* SystemConfiguration.framework */,
 			);
@@ -664,6 +685,7 @@
 				FAECA214239CEF340028AE3A /* Localizable.strings in Resources */,
 				FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */,
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
+				8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */,
 				FA7CD1D923A51D1900A1EFAF /* TestSecrets.plist in Resources */,
 				8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */,
 				FAC2258623A6E3A200BF3749 /* Settings.bundle in Resources */,
@@ -782,9 +804,9 @@
 				FAFB16AA239F06BD004D314D /* DataService.swift in Sources */,
 				8CA9CDBF239DE58400213558 /* Date+Formatting.swift in Sources */,
 				FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */,
+				8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */,
 				FA8B537F2398F2B9009E8E1F /* ContentView.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
-				FA8B537D2398F2B9009E8E1F /* Poses.xcdatamodeld in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
@@ -1022,13 +1044,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		FA8B537B2398F2B9009E8E1F /* Poses.xcdatamodeld */ = {
+		8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */,
+				8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */,
 			);
-			currentVersion = FA8B537C2398F2B9009E8E1F /* Poses.xcdatamodel */;
-			path = Poses.xcdatamodeld;
+			currentVersion = 8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */;
+			path = PosesModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
