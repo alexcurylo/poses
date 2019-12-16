@@ -147,8 +147,8 @@ extension LaunchHandler {
 
         let builder = FlurrySessionBuilder()
             .withAppVersion(StringKey.appVersion.string)
-            .withLogLevel(FlurryLogLevelAll)
-            .withShowError(inLog: true)
+            //.withLogLevel(FlurryLogLevelAll)
+            //.withShowError(inLog: true)
             .withCrashReporting(true)
             .withSessionContinueSeconds(30)
         Flurry.startSession(Secrets.flurryApiKey.secret,
