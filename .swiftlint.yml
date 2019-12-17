@@ -68,8 +68,8 @@ opt_in_rules:
 #- nimble_operator
 #- no_extension_access_modifier
 #- no_grouping_extension
-  - nslocalizedstring_key
-  - nslocalizedstring_require_bundle
+#- nslocalizedstring_key
+#- nslocalizedstring_require_bundle
   - number_separator
 #- object_literal
   - operator_usage_whitespace
@@ -121,6 +121,7 @@ included:
 excluded:
   - Carthage
   - fastlane
+  - Poses/application/models/*CoreDataProperties.swift
   - Poses/resources
   - Pods
 

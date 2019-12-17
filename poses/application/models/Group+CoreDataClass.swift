@@ -1,10 +1,13 @@
 // @copyright Trollwerks Inc.
-//
 
-import Foundation
 import CoreData
 
+/// PosesModel entity
+public final class Group: NSManagedObject {
 
-public class Group: NSManagedObject {
+    /// Whether is special trash group
+    var isTrash: Bool { name == NSLocalizedString("TRASH", comment: "") }
 
+    /// Display count
+    var visible: String { "TODO" }
 }

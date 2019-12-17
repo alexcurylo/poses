@@ -16,6 +16,10 @@
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
 		8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */; };
 		8C75384223A24F2E004B236E /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75384123A24F2E004B236E /* StringTests.swift */; };
+		8C81398E23A8762F00871457 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81398D23A8762F00871457 /* CategoryTests.swift */; };
+		8C81399123A8764800871457 /* GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399023A8764800871457 /* GroupTests.swift */; };
+		8C81399323A8765A00871457 /* PackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399223A8765A00871457 /* PackTests.swift */; };
+		8C81399523A8766600871457 /* PoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399423A8766600871457 /* PoseTests.swift */; };
 		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
 		8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */; };
 		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
@@ -121,6 +125,10 @@
 		8C7AAF3D239A608E0065F035 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		8C7AAF3E239A60BA0065F035 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		8C7AAF3F239A61F10065F035 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
+		8C81398D23A8762F00871457 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
+		8C81399023A8764800871457 /* GroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTests.swift; sourceTree = "<group>"; };
+		8C81399223A8765A00871457 /* PackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTests.swift; sourceTree = "<group>"; };
+		8C81399423A8766600871457 /* PoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseTests.swift; sourceTree = "<group>"; };
 		8C92C10D23A714AE001714C5 /* PosesModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PosesModel.sqlite; sourceTree = "<group>"; };
 		8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
 		8C92C11223A718CA001714C5 /* Poses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poses.entitlements; sourceTree = "<group>"; };
@@ -265,8 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBAB239DD60A00213558 /* delegate */,
-				8C92C10C23A7141A001714C5 /* models */,
 				FA7CD1C723A460ED00A1EFAF /* interface */,
+				8C92C10C23A7141A001714C5 /* models */,
 				8CA9CDBA239DE46F00213558 /* services */,
 			);
 			path = application;
@@ -312,6 +320,17 @@
 				FAD49972239C4B070030CB8E /* xcconfig */,
 			);
 			name = metadata;
+			sourceTree = "<group>";
+		};
+		8C81398C23A8760D00871457 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8C81398D23A8762F00871457 /* CategoryTests.swift */,
+				8C81399023A8764800871457 /* GroupTests.swift */,
+				8C81399223A8765A00871457 /* PackTests.swift */,
+				8C81399423A8766600871457 /* PoseTests.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		8C92C10C23A7141A001714C5 /* models */ = {
@@ -369,6 +388,7 @@
 			children = (
 				8CA9CDB8239DE1E600213558 /* delegate */,
 				FA7CD1C823A4610A00A1EFAF /* interface */,
+				8C81398C23A8760D00871457 /* models */,
 				8C11B99023A3358C00AFE1AE /* services */,
 			);
 			path = application;
@@ -852,9 +872,12 @@
 				8CA9CDCB239DEC4600213558 /* String+Assert.swift in Sources */,
 				8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */,
 				8C11B98D23A3248D00AFE1AE /* DateTests.swift in Sources */,
+				8C81398E23A8762F00871457 /* CategoryTests.swift in Sources */,
 				FA7CD1CA23A4611B00A1EFAF /* ContentViewTests.swift in Sources */,
+				8C81399123A8764800871457 /* GroupTests.swift in Sources */,
 				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
+				8C81399523A8766600871457 /* PoseTests.swift in Sources */,
 				FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */,
 				8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */,
 				8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */,
@@ -867,6 +890,7 @@
 				8C75384223A24F2E004B236E /* StringTests.swift in Sources */,
 				8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */,
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
+				8C81399323A8765A00871457 /* PackTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
 				FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */,
 				FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */,

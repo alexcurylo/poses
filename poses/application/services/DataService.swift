@@ -26,13 +26,13 @@ final class DataServiceImpl: DataService, ServiceProvider {
 
     // MARK: - Core Data stack
 
+    /// :nodoc:
+    var loaded: ((NSPersistentStoreDescription, Error?) -> Void)?
+
     private lazy var persistentContainer: NSPersistentCloudKitContainer = {
         let container = NSPersistentCloudKitContainer(name: "PosesModel")
         container.loadPersistentStores { storeDescription, error in
-            self.log.verbose("Loaded CKC: \(storeDescription)")
-            if let error = error {
-                self.log.error("Load error: \(String(describing: error))")
-            }
+            self.loaded?(storeDescription, error)
         }
         return container
     }()

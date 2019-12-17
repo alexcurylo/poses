@@ -1,10 +1,6 @@
 // @copyright Trollwerks Inc.
-//
 
-import Foundation
 import CoreData
 
-
-public class Pack: NSManagedObject {
-
-}
+/// PosesModel entity
+public final class Pack: NSManagedObject { }
