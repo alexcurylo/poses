@@ -15,6 +15,8 @@
 		8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */; };
 		8C1B47F7239F3BB600C4FBEC /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
 		8C1B47F9239F42AA00C4FBEC /* LoggingServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */; };
+		8C6E408723A9A94C00C5C73A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408623A9A94C00C5C73A /* Tab.swift */; };
+		8C6E408A23A9CEF700C5C73A /* TabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408923A9CEF700C5C73A /* TabTests.swift */; };
 		8C75384223A24F2E004B236E /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75384123A24F2E004B236E /* StringTests.swift */; };
 		8C81398E23A8762F00871457 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81398D23A8762F00871457 /* CategoryTests.swift */; };
 		8C81399123A8764800871457 /* GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399023A8764800871457 /* GroupTests.swift */; };
@@ -110,6 +112,8 @@
 		8C1B47F4239F3A2200C4FBEC /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../secrets/poses/posespro/Secrets.plist; sourceTree = "<group>"; };
 		8C1B47F6239F3BB600C4FBEC /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingServiceSpy.swift; sourceTree = "<group>"; };
+		8C6E408623A9A94C00C5C73A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		8C6E408923A9CEF700C5C73A /* TabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTests.swift; sourceTree = "<group>"; };
 		8C75384123A24F2E004B236E /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		8C7AAF2F239A10520065F035 /* IDETemplateMacros.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = IDETemplateMacros.plist; path = Poses.xcodeproj/xcshareddata/IDETemplateMacros.plist; sourceTree = "<group>"; };
 		8C7AAF30239A11820065F035 /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
@@ -420,6 +424,7 @@
 			children = (
 				FA8B537E2398F2B9009E8E1F /* ContentView.swift */,
 				FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */,
+				8C6E408623A9A94C00C5C73A /* Tab.swift */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 			children = (
 				FA7CD1C923A4611B00A1EFAF /* ContentViewTests.swift */,
 				FA7CD1D323A4BB3400A1EFAF /* SceneDelegateTests.swift */,
+				8C6E408923A9CEF700C5C73A /* TabTests.swift */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -843,6 +849,7 @@
 				8CA9CDB6239DE19100213558 /* LaunchHandler.swift in Sources */,
 				FAECA21A239CF1900028AE3A /* R.generated.swift in Sources */,
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
+				8C6E408723A9A94C00C5C73A /* Tab.swift in Sources */,
 				8CA9CDBC239DE4B300213558 /* LoggingService.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */,
@@ -892,6 +899,7 @@
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
 				8C81399323A8765A00871457 /* PackTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
+				8C6E408A23A9CEF700C5C73A /* TabTests.swift in Sources */,
 				FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */,
 				FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */,
 			);

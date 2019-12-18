@@ -95,10 +95,13 @@ final class AppDelegateTests: TestCase {
 
     func testResources() throws {
         try R.validate()
-        XCTAssertEqual(L.tabFirst(), "First")
-        XCTAssertEqual(L.tabSecond(), "Second")
+        XCTAssertEqual(L.tabGallery(), "Gallery")
+        XCTAssertEqual(L.tabCategories(), "Categories")
+        XCTAssertEqual(L.tabFavorites(), "Favorites")
+        XCTAssertEqual(L.tabFitPose(), "Fit Pose")
+        XCTAssertEqual(L.tabExtras(), "Extras")
 
-        XCTAssertEqual(L.tabFirst(preferredLanguages: ["th"]), "tabFirst")
-        XCTAssertEqual(L.tabSecond(preferredLanguages: ["th"]), "tabSecond")
+        XCTAssertEqual(L.tabGallery(preferredLanguages: ["th"]), "tabGallery")
+        XCTAssertEqual(L.tabCategories(preferredLanguages: ["th"]), "tabCategories")
     }
 }

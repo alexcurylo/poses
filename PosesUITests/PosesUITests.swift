@@ -18,9 +18,9 @@ final class PosesUITests: XCTestCase {
 
         let app = XCUIApplication()
         let tabBarsQuery = app.tabBars
-        let secondButton = tabBarsQuery.buttons["Second"]
+        let secondButton = tabBarsQuery.buttons["Categories"]
         secondButton.tap()
-        let firstButton = tabBarsQuery.buttons["First"]
+        let firstButton = tabBarsQuery.buttons["Gallery"]
         firstButton.tap()
 
         let element = app
@@ -39,6 +39,9 @@ final class PosesUITests: XCTestCase {
 
         secondButton.tap()
         firstButton.tap()
+        tabBarsQuery.buttons["Favorites"].tap()
+        tabBarsQuery.buttons["Fit Pose"].tap()
+        tabBarsQuery.buttons["Extras"].tap()
     }
 
     #if TEST_LAUNCH_PERFORMANCE

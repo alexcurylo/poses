@@ -9,13 +9,14 @@ struct ContentView: View, ServiceProvider {
 
     /// View body
     var body: some View {
+        // swiftlint:disable:next closure_body_length
         TabView(selection: $selection) {
             Text("First View")
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("first")
-                        Text(L.tabFirst())
+                        Text(String(Tab.gallery))
                     }
                 }
                 .onAppear {
@@ -27,13 +28,49 @@ struct ContentView: View, ServiceProvider {
                 .tabItem {
                     VStack {
                         Image("second")
-                        Text(L.tabSecond())
+                        Text(String(Tab.categories))
                     }
                 }
                 .onAppear {
                     //self.report.screen("Second View")
                 }
                 .tag(1)
+            Text("Third View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image("second")
+                        Text(String(Tab.favorites))
+                    }
+                }
+                .onAppear {
+                    //self.report.screen("Third View")
+                }
+                .tag(2)
+            Text("Fourth View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image("second")
+                        Text(String(Tab.fitPose))
+                    }
+                }
+                .onAppear {
+                    //self.report.screen("Second View")
+                }
+                .tag(3)
+            Text("Fifth View")
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image("second")
+                        Text(String(Tab.extras))
+                    }
+                }
+                .onAppear {
+                    //self.report.screen("Second View")
+                }
+                .tag(4)
         }
     }
 }

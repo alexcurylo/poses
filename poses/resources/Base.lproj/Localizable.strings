@@ -2,5 +2,8 @@
 
 // tabs
 
-"tabFirst" = "First";
-"tabSecond" = "Second";
+"tabGallery" = "Gallery";
+"tabCategories" = "Categories";
+"tabFavorites" = "Favorites";
+"tabFitPose" = "Fit Pose";
+"tabExtras" = "Extras";
