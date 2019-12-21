@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI favorites tab
-struct FavoritesView: View {
+struct FavoritesView: View, ServiceProvider {
 
     /// :nodoc:
     var body: some View {
@@ -11,6 +11,9 @@ struct FavoritesView: View {
             Color.orange
             Text(String(Tab.favorites))
                 .font(.title)
+        }
+        .onAppear {
+            self.report.screen(String(Tab.favorites))
         }
     }
 }

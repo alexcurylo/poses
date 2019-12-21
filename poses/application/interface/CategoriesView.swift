@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI categories tab
-struct CategoriesView: View {
+struct CategoriesView: View, ServiceProvider {
 
     /// :nodoc:
     var body: some View {
@@ -11,6 +11,9 @@ struct CategoriesView: View {
             Color.green
             Text(String(Tab.categories))
                 .font(.title)
+        }
+        .onAppear {
+            self.report.screen(String(Tab.categories))
         }
     }
 }

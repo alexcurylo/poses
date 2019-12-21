@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI gallery tab
-struct GalleryView: View {
+struct GalleryView: View, ServiceProvider {
 
     /// :nodoc:
     var body: some View {
@@ -11,6 +11,9 @@ struct GalleryView: View {
             Color.red
             Text(String(Tab.gallery))
                 .font(.title)
+        }
+        .onAppear {
+            self.report.screen(String(Tab.gallery))
         }
     }
 }

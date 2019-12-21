@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI extras tab
-struct ExtrasView: View {
+struct ExtrasView: View, ServiceProvider {
 
     /// :nodoc:
     var body: some View {
@@ -11,6 +11,9 @@ struct ExtrasView: View {
             Color.blue
             Text(String(Tab.extras))
                 .font(.title)
+        }
+        .onAppear {
+            self.report.screen(String(Tab.extras))
         }
     }
 }

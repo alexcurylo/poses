@@ -3,7 +3,7 @@
 import SwiftUI
 
 /// SwiftUI fit pose tab
-struct FitPoseView: View {
+struct FitPoseView: View, ServiceProvider {
 
     /// :nodoc:
     var body: some View {
@@ -11,6 +11,9 @@ struct FitPoseView: View {
             Color.yellow
             Text(String(Tab.fitPose))
                 .font(.title)
+        }
+        .onAppear {
+            self.report.screen(String(Tab.fitPose))
         }
     }
 }

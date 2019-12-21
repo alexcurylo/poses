@@ -4,7 +4,7 @@ import SFSafeSymbols
 import SwiftUI
 
 /// SwiftUI application tab controller
-struct AppView: View, ServiceProvider {
+struct AppView: View {
 
     @State private var selection = 0
 
@@ -19,7 +19,6 @@ struct AppView: View, ServiceProvider {
                         Text(String(Tab.gallery))
                     }
                 }
-                .onAppear { self.report.screen(String(Tab.gallery)) }
                 .tag(Tab.gallery.tag)
             CategoriesView()
                 .tabItem {
@@ -28,7 +27,6 @@ struct AppView: View, ServiceProvider {
                         Text(String(Tab.categories))
                     }
                 }
-                .onAppear { self.report.screen(String(Tab.categories)) }
                 .tag(Tab.categories.tag)
             FavoritesView()
                 .tabItem {
@@ -37,7 +35,6 @@ struct AppView: View, ServiceProvider {
                         Text(String(Tab.favorites))
                     }
                 }
-                .onAppear { self.report.screen(String(Tab.favorites)) }
                 .tag(Tab.favorites.tag)
             FitPoseView()
                 .tabItem {
@@ -46,7 +43,6 @@ struct AppView: View, ServiceProvider {
                         Text(String(Tab.fitPose))
                     }
                 }
-                .onAppear { self.report.screen(String(Tab.fitPose)) }
                 .tag(Tab.fitPose.tag)
             ExtrasView()
                 .tabItem {
@@ -55,7 +51,6 @@ struct AppView: View, ServiceProvider {
                         Text(String(Tab.extras))
                     }
                 }
-                .onAppear { self.report.screen(String(Tab.extras)) }
                 .tag(Tab.extras.tag)
         }
     }
