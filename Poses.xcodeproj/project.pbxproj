@@ -57,6 +57,7 @@
 		FA42499223AE2CAA0091A85B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408623A9A94C00C5C73A /* Tab.swift */; };
 		FA42499523AE2ED20091A85B /* Tab+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499423AE2ED20091A85B /* Tab+Strings.swift */; };
 		FA42499723AE2F2D0091A85B /* Tab+UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499623AE2F2D0091A85B /* Tab+UITest.swift */; };
+		FA4249A223AEC0000091A85B /* Flurry.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA42499A23AEBC940091A85B /* Flurry.xcframework */; };
 		FA7CD1CA23A4611B00A1EFAF /* AppViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */; };
 		FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */; };
 		FA7CD1CE23A4668A00A1EFAF /* ServiceHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */; };
@@ -70,7 +71,6 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
-		FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257223A60E1500BF3749 /* libFlurry.a */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
 		FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257A23A6139D00BF3749 /* Security.framework */; };
 		FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257C23A6261D00BF3749 /* ReportingService.swift */; };
@@ -177,6 +177,7 @@
 		FA42498D23AE19360091A85B /* ExtrasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasView.swift; sourceTree = "<group>"; };
 		FA42499423AE2ED20091A85B /* Tab+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+Strings.swift"; sourceTree = "<group>"; };
 		FA42499623AE2F2D0091A85B /* Tab+UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+UITest.swift"; sourceTree = "<group>"; };
+		FA42499A23AEBC940091A85B /* Flurry.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Flurry.xcframework; sourceTree = "<group>"; };
 		FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewTests.swift; sourceTree = "<group>"; };
 		FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandlerTests.swift; sourceTree = "<group>"; };
 		FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandlerTests.swift; sourceTree = "<group>"; };
@@ -197,11 +198,6 @@
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABCAF1723ADBE65005526BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		FAC2256E23A60DBA00BF3749 /* Flurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		FAC2256F23A60DE900BF3749 /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurrySessionBuilder.h; sourceTree = "<group>"; };
-		FAC2257223A60E1500BF3749 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
-		FAC2257423A60E9000BF3749 /* FlurryCCPA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurryCCPA.h; sourceTree = "<group>"; };
-		FAC2257523A60E9000BF3749 /* FlurryConsent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlurryConsent.h; sourceTree = "<group>"; };
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAC2257823A612B200BF3749 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAC2257A23A6139D00BF3749 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -241,7 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC2257323A60E1500BF3749 /* libFlurry.a in Frameworks */,
+				FA4249A223AEC0000091A85B /* Flurry.xcframework in Frameworks */,
 				8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */,
 				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
 				FA42499123AE1AFF0091A85B /* SFSafeSymbols in Frameworks */,
@@ -546,21 +542,9 @@
 			isa = PBXGroup;
 			children = (
 				FAC2256C23A60D1600BF3749 /* CHANGELOG.md */,
-				FAC2256D23A60D9D00BF3749 /* Flurry */,
+				FA42499A23AEBC940091A85B /* Flurry.xcframework */,
 			);
 			path = flurry;
-			sourceTree = "<group>";
-		};
-		FAC2256D23A60D9D00BF3749 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				FAC2256E23A60DBA00BF3749 /* Flurry.h */,
-				FAC2257423A60E9000BF3749 /* FlurryCCPA.h */,
-				FAC2257523A60E9000BF3749 /* FlurryConsent.h */,
-				FAC2256F23A60DE900BF3749 /* FlurrySessionBuilder.h */,
-				FAC2257223A60E1500BF3749 /* libFlurry.a */,
-			);
-			path = Flurry;
 			sourceTree = "<group>";
 		};
 		FAC2257723A612B100BF3749 /* Frameworks */ = {
@@ -715,6 +699,7 @@
 				TargetAttributes = {
 					FA8B53732398F2B9009E8E1F = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1130;
 					};
 					FA8B538C2398F2BA009E8E1F = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -801,7 +786,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SECRETS=\"${SRCROOT}/../../secrets/poses/posespro/Secrets.plist\"\nAPP=\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/Secrets.plist\"\nif [ -f \"$SECRETS\" ]; then\n    cp -f \"$SECRETS\" \"$APP\"\n    echo \"copied Secrets.plist: $APP\"\nelse\n    echo \"Secrets.plist not found at $SECRETS, all secrets will be 'MISSING'\"\nfi\n";
+			shellScript = "SECRETS=\"${SRCROOT}/../../secrets/poses/posespro/Secrets.plist\"\nAPP=\"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Secrets.plist\"\nif [ -f \"$SECRETS\" ]; then\n    cp -f \"$SECRETS\" \"$APP\"\n    echo \"copied Secrets.plist: $APP\"\nelse\n    echo \"Secrets.plist not found at $SECRETS, all secrets will be 'MISSING'\"\nfi\n";
 		};
 		8C7AAF3C239A5C1A0065F035 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

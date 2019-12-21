@@ -119,11 +119,16 @@ extension LaunchHandler {
         }
         swiftyBeaver.addDestination(file)
 
+        let secrets = (
+            id: Secrets.sbAppId.secret,
+            secret: Secrets.sbAppSecret.secret,
+            key: Secrets.sbEncryptionKey.secret
+        )
         if production {
             let platform = SBPlatformDestination(
-                appID: Secrets.sbAppId.secret,
-                appSecret: Secrets.sbAppSecret.secret,
-                encryptionKey: Secrets.sbEncryptionKey.secret)
+                appID: secrets.id,
+                appSecret: secrets.secret,
+                encryptionKey: secrets.key)
             swiftyBeaver.addDestination(platform)
         }
     }
@@ -145,13 +150,14 @@ extension LaunchHandler {
     ) {
         guard production else { return }
 
+        let apiKey = Secrets.flurryApiKey.secret
         let builder = FlurrySessionBuilder()
             .withAppVersion(StringKey.appVersion.string)
             //.withLogLevel(FlurryLogLevelAll)
             //.withShowError(inLog: true)
             .withCrashReporting(true)
             .withSessionContinueSeconds(30)
-        Flurry.startSession(Secrets.flurryApiKey.secret,
+        Flurry.startSession(apiKey,
                             withOptions: launchOptions,
                             with: builder)
     }
