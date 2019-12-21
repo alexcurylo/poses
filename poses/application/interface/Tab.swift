@@ -13,6 +13,9 @@ enum Tab: Int, CaseIterable {
     case fitPose
     /// Extras
     case extras
+
+    /// SwiftUI view tag
+    var tag: Int { return rawValue }
 }
 
 extension Tab: LosslessStringConvertible {

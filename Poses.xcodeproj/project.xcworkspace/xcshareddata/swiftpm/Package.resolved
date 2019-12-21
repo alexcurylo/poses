@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "SFSafeSymbols",
+        "repositoryURL": "https://github.com/piknotech/SFSafeSymbols",
+        "state": {
+          "branch": null,
+          "revision": "42429a0f807f57d6b72c27f5841b8c0b4a68ffc1",
+          "version": "1.1.0"
+        }
+      },
+      {
         "package": "SwiftyBeaver",
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
         "state": {
