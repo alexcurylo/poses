@@ -27,7 +27,7 @@ Requirements
 ------------
 
 - Xcode 11.3 or later
-- iOS 13.0 or later
+- iOS 13.0, tvOS 13.0, macOS 15.0, or later
 
 ### Tools:
 
