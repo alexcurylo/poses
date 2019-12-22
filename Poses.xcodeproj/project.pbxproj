@@ -92,6 +92,57 @@
 		FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A5239F05E4004D314D /* ServiceHandler.swift */; };
 		FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A7239F05F8004D314D /* ServiceProvider.swift */; };
 		FAFB16AA239F06BD004D314D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A9239F06BD004D314D /* DataService.swift */; };
+		FAFC5AD523AED7A40064B97A /* Flurry.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA42499A23AEBC940091A85B /* Flurry.xcframework */; };
+		FAFC5AD723AEE17A0064B97A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */; };
+		FAFC5AD823AEE1890064B97A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAECA212239CEF340028AE3A /* Localizable.strings */; };
+		FAFC5AD923AEE18E0064B97A /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
+		FAFC5ADA23AEE3160064B97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA3225A23AED4C400749385 /* LaunchScreen.storyboard */; };
+		FAFC5ADB23AEF70F0064B97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53802398F2BA009E8E1F /* Assets.xcassets */; };
+		FAFC5ADC23AEF7870064B97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAC239DD62300213558 /* AppDelegate.swift */; };
+		FAFC5ADD23AEF7A40064B97A /* RoutingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */; };
+		FAFC5ADE23AEF8DC0064B97A /* Array+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CBAD239DD70200213558 /* Array+Type.swift */; };
+		FAFC5ADF23AEF8E70064B97A /* UIApplication+Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */; };
+		FAFC5AE023AEF93C0064B97A /* ProcessInfo+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */; };
+		FAFC5AE123AEF9480064B97A /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A5239F05E4004D314D /* ServiceHandler.swift */; };
+		FAFC5AE223AEF94A0064B97A /* LaunchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDB5239DE19100213558 /* LaunchHandler.swift */; };
+		FAFC5AE423AEF9BD0064B97A /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = FAFC5AE323AEF9BD0064B97A /* SwiftyBeaver */; };
+		FAFC5AE623AEF9C10064B97A /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = FAFC5AE523AEF9C10064B97A /* Rswift */; };
+		FAFC5AE823AEF9C50064B97A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = FAFC5AE723AEF9C50064B97A /* Nuke */; };
+		FAFC5AEA23AEF9C90064B97A /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = FAFC5AE923AEF9C90064B97A /* SFSafeSymbols */; };
+		FAFC5AEC23AEF9EE0064B97A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC5AEB23AEF9ED0064B97A /* StoreKit.framework */; };
+		FAFC5AEE23AEF9F50064B97A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC5AED23AEF9F50064B97A /* Security.framework */; };
+		FAFC5AF023AEFA130064B97A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC5AEF23AEFA130064B97A /* CloudKit.framework */; };
+		FAFC5AF223AEFA380064B97A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFC5AF123AEFA380064B97A /* SystemConfiguration.framework */; };
+		FAFC5AF323AEFA6C0064B97A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A9239F06BD004D314D /* DataService.swift */; };
+		FAFC5AF423AEFA6C0064B97A /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDBB239DE47E00213558 /* LoggingService.swift */; };
+		FAFC5AF523AEFA6C0064B97A /* ReportingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2257C23A6261D00BF3749 /* ReportingService.swift */; };
+		FAFC5AF623AEFA6C0064B97A /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB16A7239F05F8004D314D /* ServiceProvider.swift */; };
+		FAFC5AF723AEFA830064B97A /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDBE239DE58400213558 /* Date+Formatting.swift */; };
+		FAFC5AF823AEFA830064B97A /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA21D239CF8F80028AE3A /* String+Formatting.swift */; };
+		FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDC6239DE6BA00213558 /* UserDefaults+TypeSafety.swift */; };
+		FAFC5AFA23AEFA830064B97A /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDC2239DE5F900213558 /* Withable.swift */; };
+		FAFC5AFB23AEFA830064B97A /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B47F6239F3BB600C4FBEC /* Secrets.swift */; };
+		FAFC5AFC23AEFABD0064B97A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAECA219239CF1900028AE3A /* R.generated.swift */; };
+		FAFC5AFD23AEFAE00064B97A /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B537E2398F2B9009E8E1F /* AppView.swift */; };
+		FAFC5AFE23AEFAE00064B97A /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498723AE18860091A85B /* CategoriesView.swift */; };
+		FAFC5AFF23AEFAE00064B97A /* ExtrasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498D23AE19360091A85B /* ExtrasView.swift */; };
+		FAFC5B0023AEFAE00064B97A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498923AE19160091A85B /* FavoritesView.swift */; };
+		FAFC5B0123AEFAE00064B97A /* FitPoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498B23AE19240091A85B /* FitPoseView.swift */; };
+		FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
+		FAFC5B0323AEFAE00064B97A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */; };
+		FAFC5B0423AEFAE00064B97A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408623A9A94C00C5C73A /* Tab.swift */; };
+		FAFC5B0523AEFAE00064B97A /* Tab+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499423AE2ED20091A85B /* Tab+Strings.swift */; };
+		FAFC5B0623AEFB340064B97A /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */; };
+		FAFC5B0723AEFB390064B97A /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD223A84ACD00938BAB /* Category+CoreDataClass.swift */; };
+		FAFC5B0823AEFB390064B97A /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD323A84ACD00938BAB /* Category+CoreDataProperties.swift */; };
+		FAFC5B0923AEFB390064B97A /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD423A84ACD00938BAB /* Group+CoreDataClass.swift */; };
+		FAFC5B0A23AEFB390064B97A /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD523A84ACD00938BAB /* Group+CoreDataProperties.swift */; };
+		FAFC5B0B23AEFB390064B97A /* Pack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFCE23A84ACD00938BAB /* Pack+CoreDataClass.swift */; };
+		FAFC5B0C23AEFB390064B97A /* Pack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFCF23A84ACD00938BAB /* Pack+CoreDataProperties.swift */; };
+		FAFC5B0D23AEFB390064B97A /* Pose+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD023A84ACD00938BAB /* Pose+CoreDataClass.swift */; };
+		FAFC5B0E23AEFB3A0064B97A /* Pose+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD123A84ACD00938BAB /* Pose+CoreDataProperties.swift */; };
+		FAFC5B0F23AEFC5F0064B97A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
+		FAFC5B3323AF06690064B97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFC5B3223AF06690064B97A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +247,9 @@
 		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABCAF1723ADBE65005526BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -230,6 +284,15 @@
 		FAFB16A5239F05E4004D314D /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
 		FAFB16A7239F05F8004D314D /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		FAFB16A9239F06BD004D314D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		FAFC5AEB23AEF9ED0064B97A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAFC5AED23AEF9F50064B97A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		FAFC5AEF23AEFA130064B97A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAFC5AF123AEFA380064B97A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FAFC5B1023AEFDC80064B97A /* PosesTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosesTV.entitlements; sourceTree = "<group>"; };
+		FAFC5B3223AF06690064B97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAFC5B3423AF16D80064B97A /* PosesTV-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "PosesTV-Release.xcconfig"; sourceTree = "<group>"; };
+		FAFC5B3523AF16D80064B97A /* PosesTV-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "PosesTV-Shared.xcconfig"; sourceTree = "<group>"; };
+		FAFC5B3623AF16D80064B97A /* PosesTV-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "PosesTV-Debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,12 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4249A223AEC0000091A85B /* Flurry.xcframework in Frameworks */,
-				8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */,
-				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
-				FA42499123AE1AFF0091A85B /* SFSafeSymbols in Frameworks */,
-				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
-				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */,
+				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
+				8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */,
+				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
+				FA42499123AE1AFF0091A85B /* SFSafeSymbols in Frameworks */,
+				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
@@ -260,6 +323,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA3224C23AED4C300749385 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC5AD523AED7A40064B97A /* Flurry.xcframework in Frameworks */,
+				FAFC5AF023AEFA130064B97A /* CloudKit.framework in Frameworks */,
+				FAFC5AEE23AEF9F50064B97A /* Security.framework in Frameworks */,
+				FAFC5AEC23AEF9EE0064B97A /* StoreKit.framework in Frameworks */,
+				FAFC5AF223AEFA380064B97A /* SystemConfiguration.framework in Frameworks */,
+				FAFC5AEA23AEF9C90064B97A /* SFSafeSymbols in Frameworks */,
+				FAFC5AE623AEF9C10064B97A /* Rswift in Frameworks */,
+				FAFC5AE423AEF9BD0064B97A /* SwiftyBeaver in Frameworks */,
+				FAFC5AE823AEF9C50064B97A /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +552,7 @@
 				8C7AAF2E239A0FCA0065F035 /* metadata */,
 				FA8B53902398F2BA009E8E1F /* PosesTests */,
 				FA8B539B2398F2BA009E8E1F /* PosesUITests */,
+				FAA3225023AED4C300749385 /* PosesTV */,
 				FA8B53752398F2B9009E8E1F /* Products */,
 				FAC2257723A612B100BF3749 /* Frameworks */,
 			);
@@ -484,6 +564,7 @@
 				FA8B53742398F2B9009E8E1F /* Poses.app */,
 				FA8B538D2398F2BA009E8E1F /* PosesTests.xctest */,
 				FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */,
+				FAA3224F23AED4C300749385 /* Poses.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -529,6 +610,17 @@
 			path = PosesUITests;
 			sourceTree = "<group>";
 		};
+		FAA3225023AED4C300749385 /* PosesTV */ = {
+			isa = PBXGroup;
+			children = (
+				FAFC5B3223AF06690064B97A /* Assets.xcassets */,
+				FAFC5B1023AEFDC80064B97A /* PosesTV.entitlements */,
+				FAA3225A23AED4C400749385 /* LaunchScreen.storyboard */,
+				FAA3225D23AED4C400749385 /* Info.plist */,
+			);
+			path = PosesTV;
+			sourceTree = "<group>";
+		};
 		FAC2256A23A60BBD00BF3749 /* sdks */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +642,10 @@
 		FAC2257723A612B100BF3749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAFC5AF123AEFA380064B97A /* SystemConfiguration.framework */,
+				FAFC5AEF23AEFA130064B97A /* CloudKit.framework */,
+				FAFC5AED23AEF9F50064B97A /* Security.framework */,
+				FAFC5AEB23AEF9ED0064B97A /* StoreKit.framework */,
 				8C92C11523A7197C001714C5 /* CloudKit.framework */,
 				8C92C11323A7194D001714C5 /* StoreKit.framework */,
 				FAC2257A23A6139D00BF3749 /* Security.framework */,
@@ -611,6 +707,9 @@
 				FAD49976239C4B070030CB8E /* Poses-Shared.xcconfig */,
 				FAD4997A239C4B070030CB8E /* Poses-Debug.xcconfig */,
 				FAD4997B239C4B070030CB8E /* Poses-Release.xcconfig */,
+				FAFC5B3523AF16D80064B97A /* PosesTV-Shared.xcconfig */,
+				FAFC5B3623AF16D80064B97A /* PosesTV-Debug.xcconfig */,
+				FAFC5B3423AF16D80064B97A /* PosesTV-Release.xcconfig */,
 				FAD49978239C4B070030CB8E /* PosesTests-Debug.xcconfig */,
 				FAD49979239C4B070030CB8E /* PosesTests-Release.xcconfig */,
 				FAD4997E239C4B070030CB8E /* PosesTests-Shared.xcconfig */,
@@ -687,13 +786,39 @@
 			productReference = FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FAA3224E23AED4C300749385 /* PosesTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA3226023AED4C400749385 /* Build configuration list for PBXNativeTarget "PosesTV" */;
+			buildPhases = (
+				FAFC5B1123AEFE960064B97A /* Generate R.generated.swift */,
+				FAA3224B23AED4C300749385 /* Sources */,
+				FAA3224C23AED4C300749385 /* Frameworks */,
+				FAA3224D23AED4C300749385 /* Resources */,
+				FAFC5B1223AEFED80064B97A /* SwiftLint */,
+				FAFC5B1323AEFEF80064B97A /* Copy Secrets */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PosesTV;
+			packageProductDependencies = (
+				FAFC5AE323AEF9BD0064B97A /* SwiftyBeaver */,
+				FAFC5AE523AEF9C10064B97A /* Rswift */,
+				FAFC5AE723AEF9C50064B97A /* Nuke */,
+				FAFC5AE923AEF9C90064B97A /* SFSafeSymbols */,
+			);
+			productName = PosesTV;
+			productReference = FAA3224F23AED4C300749385 /* Poses.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FA8B536C2398F2B9009E8E1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Trollwerks Inc.";
 				TargetAttributes = {
@@ -708,6 +833,9 @@
 					FA8B53972398F2BA009E8E1F = {
 						CreatedOnToolsVersion = 11.2.1;
 						TestTargetID = FA8B53732398F2B9009E8E1F;
+					};
+					FAA3224E23AED4C300749385 = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
@@ -733,6 +861,7 @@
 				FA8B53732398F2B9009E8E1F /* Poses */,
 				FA8B538C2398F2BA009E8E1F /* PosesTests */,
 				FA8B53972398F2BA009E8E1F /* PosesUITests */,
+				FAA3224E23AED4C300749385 /* PosesTV */,
 			);
 		};
 /* End PBXProject section */
@@ -764,6 +893,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA3224D23AED4C300749385 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC5AD823AEE1890064B97A /* Localizable.strings in Resources */,
+				FAFC5AD723AEE17A0064B97A /* InfoPlist.strings in Resources */,
+				FAFC5B0F23AEFC5F0064B97A /* Preview Assets.xcassets in Resources */,
+				FAFC5ADA23AEE3160064B97A /* LaunchScreen.storyboard in Resources */,
+				FAFC5B3323AF06690064B97A /* Assets.xcassets in Resources */,
+				FAFC5ADB23AEF70F0064B97A /* Assets.xcassets in Resources */,
+				FAFC5AD923AEE18E0064B97A /* PosesModel.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +986,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if mint list | grep -q 'R.swift'; then\n  mint run R.swift rswift generate \"${SRCROOT}/Poses/resources/R.generated.swift\"\nelse\n  echo \"error: R.swift not installed; 'mint bootstrap' to install\"\n  return -1\nfi\n";
+		};
+		FAFC5B1123AEFE960064B97A /* Generate R.generated.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Generate R.generated.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/Poses/resources/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if mint list | grep -q 'R.swift'; then\n  mint run R.swift rswift generate \"${SRCROOT}/Poses/resources/R.generated.swift\"\nelse\n  echo \"error: R.swift not installed; 'mint bootstrap' to install\"\n  return -1\nfi\n";
+		};
+		FAFC5B1223AEFED80064B97A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -x \"$(command -v mint)\" ]; then\n  mint run swiftlint\nelse\n  echo \"error: SwiftLint not installed; 'mint install realm/SwiftLint' to install globally\"\n  return -1\nfi\n\n";
+		};
+		FAFC5B1323AEFEF80064B97A /* Copy Secrets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Secrets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SECRETS=\"${SRCROOT}/../../secrets/poses/posespro/Secrets.plist\"\nAPP=\"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Secrets.plist\"\nif [ -f \"$SECRETS\" ]; then\n    cp -f \"$SECRETS\" \"$APP\"\n    echo \"copied Secrets.plist: $APP\"\nelse\n    echo \"Secrets.plist not found at $SECRETS, all secrets will be 'MISSING'\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -936,6 +1135,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAA3224B23AED4C300749385 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFC5B0A23AEFB390064B97A /* Group+CoreDataProperties.swift in Sources */,
+				FAFC5AE023AEF93C0064B97A /* ProcessInfo+Launch.swift in Sources */,
+				FAFC5AFB23AEFA830064B97A /* Secrets.swift in Sources */,
+				FAFC5AFD23AEFAE00064B97A /* AppView.swift in Sources */,
+				FAFC5AE223AEF94A0064B97A /* LaunchHandler.swift in Sources */,
+				FAFC5ADF23AEF8E70064B97A /* UIApplication+Environment.swift in Sources */,
+				FAFC5ADE23AEF8DC0064B97A /* Array+Type.swift in Sources */,
+				FAFC5ADC23AEF7870064B97A /* AppDelegate.swift in Sources */,
+				FAFC5B0423AEFAE00064B97A /* Tab.swift in Sources */,
+				FAFC5AFE23AEFAE00064B97A /* CategoriesView.swift in Sources */,
+				FAFC5B0723AEFB390064B97A /* Category+CoreDataClass.swift in Sources */,
+				FAFC5AF423AEFA6C0064B97A /* LoggingService.swift in Sources */,
+				FAFC5B0123AEFAE00064B97A /* FitPoseView.swift in Sources */,
+				FAFC5AE123AEF9480064B97A /* ServiceHandler.swift in Sources */,
+				FAFC5AFC23AEFABD0064B97A /* R.generated.swift in Sources */,
+				FAFC5B0023AEFAE00064B97A /* FavoritesView.swift in Sources */,
+				FAFC5B0E23AEFB3A0064B97A /* Pose+CoreDataProperties.swift in Sources */,
+				FAFC5ADD23AEF7A40064B97A /* RoutingAppDelegate.swift in Sources */,
+				FAFC5AFA23AEFA830064B97A /* Withable.swift in Sources */,
+				FAFC5B0523AEFAE00064B97A /* Tab+Strings.swift in Sources */,
+				FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */,
+				FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */,
+				FAFC5AF723AEFA830064B97A /* Date+Formatting.swift in Sources */,
+				FAFC5B0B23AEFB390064B97A /* Pack+CoreDataClass.swift in Sources */,
+				FAFC5AF823AEFA830064B97A /* String+Formatting.swift in Sources */,
+				FAFC5B0D23AEFB390064B97A /* Pose+CoreDataClass.swift in Sources */,
+				FAFC5AF523AEFA6C0064B97A /* ReportingService.swift in Sources */,
+				FAFC5B0C23AEFB390064B97A /* Pack+CoreDataProperties.swift in Sources */,
+				FAFC5B0623AEFB340064B97A /* PosesModel.xcdatamodeld in Sources */,
+				FAFC5B0823AEFB390064B97A /* Category+CoreDataProperties.swift in Sources */,
+				FAFC5B0923AEFB390064B97A /* Group+CoreDataClass.swift in Sources */,
+				FAFC5AFF23AEFAE00064B97A /* ExtrasView.swift in Sources */,
+				FAFC5AF623AEFA6C0064B97A /* ServiceProvider.swift in Sources */,
+				FAFC5AF323AEFA6C0064B97A /* DataService.swift in Sources */,
+				FAFC5B0323AEFAE00064B97A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -965,6 +1206,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA8B53862398F2BA009E8E1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA3225A23AED4C400749385 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA3225B23AED4C400749385 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1040,6 +1289,24 @@
 			};
 			name = Release;
 		};
+		FAA3225E23AED4C400749385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFC5B3623AF16D80064B97A /* PosesTV-Debug.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 67;
+				MARKETING_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FAA3225F23AED4C400749385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFC5B3423AF16D80064B97A /* PosesTV-Release.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 67;
+				MARKETING_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1075,6 +1342,15 @@
 			buildConfigurations = (
 				FA8B53A82398F2BA009E8E1F /* Debug */,
 				FA8B53A92398F2BA009E8E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA3226023AED4C400749385 /* Build configuration list for PBXNativeTarget "PosesTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA3225E23AED4C400749385 /* Debug */,
+				FAA3225F23AED4C400749385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1136,6 +1412,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
+		};
+		FAFC5AE323AEF9BD0064B97A /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAD49961239BA4340030CB8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+		FAFC5AE523AEF9C10064B97A /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+		FAFC5AE723AEF9C50064B97A /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		FAFC5AE923AEF9C90064B97A /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
 		};
 /* End XCSwiftPackageProductDependency section */
 

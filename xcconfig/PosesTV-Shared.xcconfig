@@ -1,0 +1,16 @@
+// @copyright Trollwerks Inc.
+
+ASSETCATALOG_COMPILER_APPICON_NAME = App Icon & Top Shelf Image
+CODE_SIGN_ENTITLEMENTS = PosesTV/PosesTV.entitlements
+CODE_SIGN_STYLE = Automatic
+DEVELOPMENT_ASSET_PATHS = "Poses/resources/Preview Content"
+ENABLE_PREVIEWS = YES
+INFOPLIST_FILE = PosesTV/Info.plist
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
+LIBRARY_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Poses/sdks/flurry
+PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.posespro
+PRODUCT_NAME = Poses
+SDKROOT = appletvos
+TARGETED_DEVICE_FAMILY = 3
+TVOS_DEPLOYMENT_TARGET = 13.0
+VERSIONING_SYSTEM = apple-generic

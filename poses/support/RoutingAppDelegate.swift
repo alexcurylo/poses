@@ -1,7 +1,9 @@
 // @copyright Trollwerks Inc.
 
 import CloudKit
+#if os(iOS)
 import Intents
+#endif
 import UIKit
 
 // swiftlint:disable file_length
@@ -111,6 +113,7 @@ protocol AppBackgroundURLSessionHandler: AppHandler {
                      completionHandler: @escaping () -> Void)
 }
 
+#if os(iOS)
 /// Adopt to have shortcut notifications routed
 protocol AppShortcutHandler: AppHandler {
     /// performActionFor shortcutItem
@@ -122,6 +125,7 @@ protocol AppShortcutHandler: AppHandler {
                      performActionFor shortcutItem: UIApplicationShortcutItem,
                      completionHandler: @escaping (Bool) -> Void)
 }
+#endif
 
 /// Adopt to have watch notifications routed
 protocol AppWatchHandler: AppHandler {
@@ -144,6 +148,7 @@ protocol AppHealthHandler: AppHandler {
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication)
 }
 
+#if os(iOS)
 /// Adopt to have Siri notifications routed
 protocol AppSiriHandler: AppHandler {
     /// handle intent
@@ -155,6 +160,7 @@ protocol AppSiriHandler: AppHandler {
                      handle intent: INIntent,
                      completionHandler: @escaping (INIntentResponse) -> Void)
 }
+#endif
 
 /// Adopt to have data notifications routed
 protocol AppContentHandler: AppHandler {
@@ -475,6 +481,7 @@ extension RoutingAppDelegate {
                 }
     }
 
+    #if os(iOS)
     /// performActionFor shortcutItem
     /// - Parameters:
     ///   - application: Application
@@ -489,6 +496,7 @@ extension RoutingAppDelegate {
                                           completionHandler: completionHandler)
                 }
     }
+    #endif
 
     /// handleWatchKitExtensionRequest
     /// - Parameters:
@@ -514,6 +522,7 @@ extension RoutingAppDelegate {
                 .forEach { $0.applicationShouldRequestHealthAuthorization(application) }
     }
 
+    #if os(iOS)
     /// handle intent
     /// - Parameters:
     ///   - application: Application
@@ -528,6 +537,7 @@ extension RoutingAppDelegate {
                                       completionHandler: completionHandler)
             }
     }
+    #endif
 
     /// applicationProtectedDataWillBecomeUnavailable
     /// - Parameter application: Application
