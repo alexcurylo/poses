@@ -33,13 +33,29 @@ protocol ReportingService: AnyObject {
 /// Reportable events
 enum AnalyticsEvent {
 
+    /// Post Review
+    case postReview
+    /// Restore Purchases
+    case restorePurchases
     /// Screen appearance
     case screen(name: String)
+    /// Send Feedback
+    case sendFeedback
+    /// Show Release Notes
+    case showReleaseNotes
+    /// Visit PhotographyTips
+    case visitPhotographyTips
 
     fileprivate var parameters: [Parameter: Any] {
         switch self {
         case .screen(let name):
             return [ .name: name ]
+        case .postReview,
+             .restorePurchases,
+             .sendFeedback,
+             .showReleaseNotes,
+             .visitPhotographyTips:
+            return [:]
         }
     }
 
@@ -104,8 +120,18 @@ private struct AnalyticsEventMapper {
 
     func eventName(for event: AnalyticsEvent) -> String {
         switch event {
+        case .postReview:
+            return "PostReview"
+        case .restorePurchases:
+            return "RestorePurchases"
+        case .sendFeedback:
+            return "SendFeedback"
+        case .showReleaseNotes:
+            return "ShowReleaseNotes"
         case .screen:
             return "Screen"
+        case .visitPhotographyTips:
+            return "VisitPhotographyTips"
         }
     }
 

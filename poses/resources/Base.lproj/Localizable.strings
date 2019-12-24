@@ -7,3 +7,19 @@
 "tabFavorites" = "Favorites";
 "tabFitPose" = "Fit Pose";
 "tabExtras" = "Extras";
+
+// Extras
+
+"subscription" = "Library Subscription";
+"subscribe" = "Subscribe to 1500+ poses!";
+"subscribed" = "Subscription active!";
+"upgrades" = "Available Upgrades";
+"noUpgrades" = "No upgrades available";
+"packs" = "Purchaseable Pose Packs";
+"noPacks" = "All poses are purchased!";
+"support" = "Support";
+"feedback" = "Send Feedback";
+"review" = "Post A Review";
+"restore" = "Restore Purchases";
+"notes" = "Release Notes";
+"visit" = "Visit PhotographyTips.com";
