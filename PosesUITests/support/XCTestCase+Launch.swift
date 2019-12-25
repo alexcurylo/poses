@@ -6,9 +6,11 @@ extension XCTestCase {
 
     var app: XCUIApplication { return XCUIApplication() }
 
-    func printHierarchy() {
-        app.printHierarchy()
+    func printHierarchy() { app.printHierarchy() }
+    func rebound(from bundle: String = "com.apple.mobilesafari") {
+        app.rebound(from: bundle)
     }
+    func swipeUp() { app.swipeUp() }
 
     // disable wait for idle
     // https://stackoverflow.com/questions/41277026/disabling-waiting-for-idle-state-in-ui-testing-of-ios-apps
@@ -46,6 +48,12 @@ extension XCUIApplication {
 
     func printHierarchy() {
         print("hierarchy: \(description)\n\(debugDescription)")
+    }
+
+    func rebound(from bundle: String) {
+        let otherApp = XCUIApplication(bundleIdentifier: bundle)
+        _ = otherApp.wait(for: .runningForeground, timeout: 30)
+        activate()
     }
 }
 

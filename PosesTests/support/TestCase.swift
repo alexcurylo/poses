@@ -7,8 +7,9 @@ class TestCase: XCTestCase {
 
     override class func setUp() {
         super.setUp()
-        guard ServiceProviderInstances.dataServiceInstance == nil else { return }
+        guard ServiceProviderInstances.appServiceInstance == nil else { return }
 
+        ServiceProviderInstances.appServiceInstance = ApplicationServiceSpy()
         ServiceProviderInstances.dataServiceInstance = DataServiceSpy()
         ServiceProviderInstances.logServiceInstance = LoggingServiceSpy()
         ServiceProviderInstances.reportServiceInstance = ReportingServiceSpy()

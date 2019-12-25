@@ -41,6 +41,20 @@
 		8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDC6239DE6BA00213558 /* UserDefaults+TypeSafety.swift */; };
 		8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDC8239DE6C400213558 /* UserDefaultsTests.swift */; };
 		8CA9CDCB239DEC4600213558 /* String+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9CDCA239DEC3700213558 /* String+Assert.swift */; };
+		FA2F49C823B2BA7D00EAABC5 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49C723B2BA7D00EAABC5 /* ApplicationService.swift */; };
+		FA2F49CA23B2BA9200EAABC5 /* ApplicationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49C923B2BA9200EAABC5 /* ApplicationServiceTests.swift */; };
+		FA2F49CC23B2BAD100EAABC5 /* ApplicationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49CB23B2BAD100EAABC5 /* ApplicationServiceSpy.swift */; };
+		FA2F49CD23B2D46E00EAABC5 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49C723B2BA7D00EAABC5 /* ApplicationService.swift */; };
+		FA2F49CF23B2E34100EAABC5 /* ExtrasViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49CE23B2E34100EAABC5 /* ExtrasViewTests.swift */; };
+		FA2F49D123B357F200EAABC5 /* Exposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D023B357F200EAABC5 /* Exposable.swift */; };
+		FA2F49D223B357F200EAABC5 /* Exposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D023B357F200EAABC5 /* Exposable.swift */; };
+		FA2F49D323B357F200EAABC5 /* Exposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D023B357F200EAABC5 /* Exposable.swift */; };
+		FA2F49D623B3583600EAABC5 /* UIExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D523B3583600EAABC5 /* UIExtras.swift */; };
+		FA2F49D723B3583600EAABC5 /* UIExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D523B3583600EAABC5 /* UIExtras.swift */; };
+		FA2F49D823B3583600EAABC5 /* UIExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D523B3583600EAABC5 /* UIExtras.swift */; };
+		FA2F49DB23B35B5900EAABC5 /* UIExtras+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49D923B35B5900EAABC5 /* UIExtras+Test.swift */; };
+		FA2F49DF23B35B8B00EAABC5 /* Elemental.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49DE23B35B8B00EAABC5 /* Elemental.swift */; };
+		FA2F49E123B35E7E00EAABC5 /* XCUIElementTypeQueryProvider+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F49E023B35E7E00EAABC5 /* XCUIElementTypeQueryProvider+Query.swift */; };
 		FA3BFFD623A84ACD00938BAB /* Pack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFCE23A84ACD00938BAB /* Pack+CoreDataClass.swift */; };
 		FA3BFFD723A84ACD00938BAB /* Pack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFCF23A84ACD00938BAB /* Pack+CoreDataProperties.swift */; };
 		FA3BFFD823A84ACD00938BAB /* Pose+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD023A84ACD00938BAB /* Pose+CoreDataClass.swift */; };
@@ -214,6 +228,15 @@
 		8CA9CDC6239DE6BA00213558 /* UserDefaults+TypeSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+TypeSafety.swift"; sourceTree = "<group>"; };
 		8CA9CDC8239DE6C400213558 /* UserDefaultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTests.swift; sourceTree = "<group>"; };
 		8CA9CDCA239DEC3700213558 /* String+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Assert.swift"; sourceTree = "<group>"; };
+		FA2F49C723B2BA7D00EAABC5 /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		FA2F49C923B2BA9200EAABC5 /* ApplicationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceTests.swift; sourceTree = "<group>"; };
+		FA2F49CB23B2BAD100EAABC5 /* ApplicationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServiceSpy.swift; sourceTree = "<group>"; };
+		FA2F49CE23B2E34100EAABC5 /* ExtrasViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasViewTests.swift; sourceTree = "<group>"; };
+		FA2F49D023B357F200EAABC5 /* Exposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposable.swift; sourceTree = "<group>"; };
+		FA2F49D523B3583600EAABC5 /* UIExtras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtras.swift; sourceTree = "<group>"; };
+		FA2F49D923B35B5900EAABC5 /* UIExtras+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIExtras+Test.swift"; sourceTree = "<group>"; };
+		FA2F49DE23B35B8B00EAABC5 /* Elemental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elemental.swift; sourceTree = "<group>"; };
+		FA2F49E023B35E7E00EAABC5 /* XCUIElementTypeQueryProvider+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElementTypeQueryProvider+Query.swift"; sourceTree = "<group>"; };
 		FA3BFFCE23A84ACD00938BAB /* Pack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA3BFFCF23A84ACD00938BAB /* Pack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA3BFFD023A84ACD00938BAB /* Pose+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -348,6 +371,7 @@
 		8C11B99023A3358C00AFE1AE /* services */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F49C923B2BA9200EAABC5 /* ApplicationServiceTests.swift */,
 				8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */,
 				8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */,
 				FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */,
@@ -358,6 +382,7 @@
 		8C1B45E7239F221000C4FBEC /* spies */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F49CB23B2BAD100EAABC5 /* ApplicationServiceSpy.swift */,
 				8C1B45E8239F221C00C4FBEC /* DataServiceSpy.swift */,
 				8C1B47F8239F42AA00C4FBEC /* LoggingServiceSpy.swift */,
 				FAC2257E23A6271B00BF3749 /* ReportingServiceSpy.swift */,
@@ -503,12 +528,29 @@
 		8CA9CDBA239DE46F00213558 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F49C723B2BA7D00EAABC5 /* ApplicationService.swift */,
 				FAFB16A9239F06BD004D314D /* DataService.swift */,
 				8CA9CDBB239DE47E00213558 /* LoggingService.swift */,
 				FAC2257C23A6261D00BF3749 /* ReportingService.swift */,
 				FAFB16A7239F05F8004D314D /* ServiceProvider.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		FA2F49D423B3580700EAABC5 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA2F49D523B3583600EAABC5 /* UIExtras.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		FA2F49DD23B35B6000EAABC5 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA2F49D923B35B5900EAABC5 /* UIExtras+Test.swift */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 		FA7CD1C723A460ED00A1EFAF /* interface */ = {
@@ -531,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */,
+				FA2F49CE23B2E34100EAABC5 /* ExtrasViewTests.swift */,
 				FA7CD1D323A4BB3400A1EFAF /* SceneDelegateTests.swift */,
 				8C6E408923A9CEF700C5C73A /* TabTests.swift */,
 			);
@@ -672,6 +715,8 @@
 		FAD49967239BA7CF0030CB8E /* testing */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F49D423B3580700EAABC5 /* screens */,
+				FA2F49D023B357F200EAABC5 /* Exposable.swift */,
 				FAD49968239BA8000030CB8E /* ProcessInfo+Launch.swift */,
 			);
 			path = testing;
@@ -680,9 +725,12 @@
 		FAD4996B239BA8F40030CB8E /* support */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F49DD23B35B6000EAABC5 /* screens */,
+				FA2F49DE23B35B8B00EAABC5 /* Elemental.swift */,
 				FAECA21F239CFD8A0028AE3A /* SnapshotHelper.swift */,
 				FA42499623AE2F2D0091A85B /* Tab+UITest.swift */,
 				FAD4996C239BA90A0030CB8E /* XCTestCase+Launch.swift */,
+				FA2F49E023B35E7E00EAABC5 /* XCUIElementTypeQueryProvider+Query.swift */,
 				FA8B539E2398F2BA009E8E1F /* Info.plist */,
 			);
 			path = support;
@@ -1066,6 +1114,7 @@
 				FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */,
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				FA3BFFDD23A84ACD00938BAB /* Group+CoreDataProperties.swift in Sources */,
+				FA2F49D123B357F200EAABC5 /* Exposable.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
 				FA3BFFD823A84ACD00938BAB /* Pose+CoreDataClass.swift in Sources */,
 				FA42498823AE18860091A85B /* CategoriesView.swift in Sources */,
@@ -1073,11 +1122,13 @@
 				8CA9CDBF239DE58400213558 /* Date+Formatting.swift in Sources */,
 				FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */,
 				FA3BFFD723A84ACD00938BAB /* Pack+CoreDataProperties.swift in Sources */,
+				FA2F49D623B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */,
 				FA42498E23AE19360091A85B /* ExtrasView.swift in Sources */,
 				8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */,
 				FA3BFFD923A84ACD00938BAB /* Pose+CoreDataProperties.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* AppView.swift in Sources */,
+				FA2F49C823B2BA7D00EAABC5 /* ApplicationService.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FA42498A23AE19160091A85B /* FavoritesView.swift in Sources */,
@@ -1103,6 +1154,7 @@
 				8C81399523A8766600871457 /* PoseTests.swift in Sources */,
 				FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */,
 				8C11B99223A335D000AFE1AE /* LoggingServiceTests.swift in Sources */,
+				FA2F49CC23B2BAD100EAABC5 /* ApplicationServiceSpy.swift in Sources */,
 				8C11B98F23A328BF00AFE1AE /* SecretsTests.swift in Sources */,
 				FA7CD1D023A49B5F00A1EFAF /* UIApplicationTests.swift in Sources */,
 				8CA9CBB1239DDE6500213558 /* RoutingAppDelegateTests.swift in Sources */,
@@ -1113,10 +1165,12 @@
 				8C75384223A24F2E004B236E /* StringTests.swift in Sources */,
 				8C1B45EB239F222E00C4FBEC /* DataServiceSpy.swift in Sources */,
 				8CA9CBB2239DDE6800213558 /* ArrayTests.swift in Sources */,
+				FA2F49CA23B2BA9200EAABC5 /* ApplicationServiceTests.swift in Sources */,
 				8C81399323A8765A00871457 /* PackTests.swift in Sources */,
 				8CA9CDC5239DE60000213558 /* WithableTests.swift in Sources */,
 				8C6E408A23A9CEF700C5C73A /* TabTests.swift in Sources */,
 				FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */,
+				FA2F49CF23B2E34100EAABC5 /* ExtrasViewTests.swift in Sources */,
 				FAC2257F23A6271B00BF3749 /* ReportingServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1127,10 +1181,15 @@
 			files = (
 				FAD4996A239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
 				FAD4996D239BA90A0030CB8E /* XCTestCase+Launch.swift in Sources */,
+				FA2F49DF23B35B8B00EAABC5 /* Elemental.swift in Sources */,
+				FA2F49D723B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FA42499723AE2F2D0091A85B /* Tab+UITest.swift in Sources */,
+				FA2F49DB23B35B5900EAABC5 /* UIExtras+Test.swift in Sources */,
 				FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */,
 				FA42499223AE2CAA0091A85B /* Tab.swift in Sources */,
+				FA2F49D323B357F200EAABC5 /* Exposable.swift in Sources */,
 				FAECA220239CFD8A0028AE3A /* SnapshotHelper.swift in Sources */,
+				FA2F49E123B35E7E00EAABC5 /* XCUIElementTypeQueryProvider+Query.swift in Sources */,
 				FAECA222239D004E0028AE3A /* AppStoreSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1155,6 +1214,7 @@
 				FAFC5AE123AEF9480064B97A /* ServiceHandler.swift in Sources */,
 				FAFC5AFC23AEFABD0064B97A /* R.generated.swift in Sources */,
 				FAFC5B0023AEFAE00064B97A /* FavoritesView.swift in Sources */,
+				FA2F49D223B357F200EAABC5 /* Exposable.swift in Sources */,
 				FAFC5B0E23AEFB3A0064B97A /* Pose+CoreDataProperties.swift in Sources */,
 				FAFC5ADD23AEF7A40064B97A /* RoutingAppDelegate.swift in Sources */,
 				FAFC5AFA23AEFA830064B97A /* Withable.swift in Sources */,
@@ -1162,11 +1222,13 @@
 				FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */,
 				FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */,
 				FAFC5AF723AEFA830064B97A /* Date+Formatting.swift in Sources */,
+				FA2F49D823B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFC5B0B23AEFB390064B97A /* Pack+CoreDataClass.swift in Sources */,
 				FAFC5AF823AEFA830064B97A /* String+Formatting.swift in Sources */,
 				FAFC5B0D23AEFB390064B97A /* Pose+CoreDataClass.swift in Sources */,
 				FAFC5AF523AEFA6C0064B97A /* ReportingService.swift in Sources */,
 				FAFC5B0C23AEFB390064B97A /* Pack+CoreDataProperties.swift in Sources */,
+				FA2F49CD23B2D46E00EAABC5 /* ApplicationService.swift in Sources */,
 				FAFC5B0623AEFB340064B97A /* PosesModel.xcdatamodeld in Sources */,
 				FAFC5B0823AEFB390064B97A /* Category+CoreDataProperties.swift in Sources */,
 				FAFC5B0923AEFB390064B97A /* Group+CoreDataClass.swift in Sources */,

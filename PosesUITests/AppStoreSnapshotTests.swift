@@ -21,7 +21,7 @@ final class AppStoreSnapshotTests: XCTestCase {
         launch(arguments: [.disableAnimations,
                            .disableWaitIdle,
                            .takingScreenshots],
-               settings: [.fullAccess(true),
+               settings: [.subscribed(true),
                           .userName("Snapshots")])
 
         snapshot("01Gallery")

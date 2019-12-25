@@ -26,6 +26,7 @@ extension ServiceHandler: AppLaunchHandler {
         // other services may log
         ServiceProviderInstances.logServiceInstance = SwiftyBeaverLoggingService()
 
+        ServiceProviderInstances.appServiceInstance = UIApplication.shared
         ServiceProviderInstances.dataServiceInstance = DataServiceImpl()
         ServiceProviderInstances.reportServiceInstance = FlurryReportingService()
 
@@ -62,6 +63,7 @@ struct ServiceHandlerStub: AppLaunchHandler {
         // other services may log
         ServiceProviderInstances.logServiceInstance = ConsoleLoggingService()
 
+        ServiceProviderInstances.appServiceInstance = UIApplication.shared
         ServiceProviderInstances.dataServiceInstance = DataServiceStub()
         ServiceProviderInstances.reportServiceInstance = ReportingServiceStub()
 

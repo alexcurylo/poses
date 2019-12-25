@@ -14,13 +14,24 @@ final class AppUITests: XCTestCase {
     }
 
     func testTabNavigation() {
-        launch(settings: [.fullAccess(false)])
-        //printHierarchy()
+        launch(settings: [.subscribed(false)])
 
         Tab.categories.tap()
+
         Tab.favorites.tap()
+
         Tab.fitPose.tap()
+
         Tab.extras.tap()
+        UIExtras.feedback.tap()
+        UIExtras.review.tap()
+        swipeUp()
+        UIExtras.restore.tap()
+        UIExtras.notes.tap()
+        UIExtras.visit.tap()
+
+        rebound()
+
         Tab.gallery.tap()
     }
 

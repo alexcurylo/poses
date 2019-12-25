@@ -28,7 +28,7 @@ final class UIApplicationTests: TestCase {
     }
 
     func testSettings() {
-        XCTAssertNil(ProcessInfo.setting(bool: .fullAccess))
+        XCTAssertNil(ProcessInfo.setting(bool: .subscribed))
         XCTAssertNil(ProcessInfo.setting(string: .userName))
     }
 }

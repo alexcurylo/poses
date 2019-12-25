@@ -1,5 +1,11 @@
 // @copyright Trollwerks Inc.
 
+// globals
+
+"appStore" = "https://apps.apple.com/app/id357099619";
+"appVersion" = "Poses Professional %1$@(%2$@)";
+"photographyTips" = "https://www.photographytips.com/";
+
 // tabs
 
 "tabGallery" = "Gallery";

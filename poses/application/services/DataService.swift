@@ -13,6 +13,19 @@ protocol DataService {
     func save()
 }
 
+extension DataService {
+
+    /// Is the user subscribed?
+    var isSubscribed: Bool {
+        #if DEBUG
+        if let subscribed = ProcessInfo.setting(bool: .subscribed) {
+            return subscribed
+        }
+        #endif
+        return false
+    }
+}
+
 /// Production implementation of DataService
 final class DataServiceImpl: DataService, ServiceProvider {
 

@@ -26,7 +26,7 @@ final class LaunchHandlerTests: TestCase {
     func testLaunchSetting() throws {
         // given
         let settings: [LaunchSetting] = [
-            .fullAccess(true),
+            .subscribed(true),
             .userName("test")
         ]
 
