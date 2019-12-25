@@ -43,24 +43,36 @@ enum AnalyticsEvent {
     case sendFeedback
     /// Show Release Notes
     case showReleaseNotes
+    /// Subscribe
+    case subscribe
+    /// Purchase
+    case purchase(pack: String)
+    /// Upgrade
+    case upgrade(pack: String)
     /// Visit PhotographyTips
     case visitPhotographyTips
 
     fileprivate var parameters: [Parameter: Any] {
         switch self {
+        case .purchase(let pack),
+             .upgrade(let pack):
+            return [ .pack: pack ]
         case .screen(let name):
             return [ .name: name ]
         case .postReview,
              .restorePurchases,
              .sendFeedback,
              .showReleaseNotes,
+             .subscribe,
              .visitPhotographyTips:
             return [:]
         }
     }
 
     fileprivate enum Parameter: String {
+
         case name
+        case pack
     }
 }
 
@@ -122,6 +134,8 @@ private struct AnalyticsEventMapper {
         switch event {
         case .postReview:
             return "PostReview"
+        case .purchase:
+            return "Purchase"
         case .restorePurchases:
             return "RestorePurchases"
         case .sendFeedback:
@@ -130,6 +144,10 @@ private struct AnalyticsEventMapper {
             return "ShowReleaseNotes"
         case .screen:
             return "Screen"
+        case .subscribe:
+            return "Subscribe"
+        case .upgrade:
+            return "Upgrade"
         case .visitPhotographyTips:
             return "VisitPhotographyTips"
         }
@@ -141,7 +159,8 @@ private struct AnalyticsEventMapper {
 
     func parameterName(for parameter: AnalyticsEvent.Parameter) -> String {
         switch parameter {
-        case .name:
+        case .name,
+             .pack:
             return parameter.rawValue
         }
     }

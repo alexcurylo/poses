@@ -31,7 +31,11 @@ struct ExtrasView: View, ServiceProvider {
                     if subscribed {
                         Text(L.subscribed())
                     } else {
-                        Text(L.subscribe())
+                        Button(action: {
+                            self.report.event(.subscribe)
+                        }, label: {
+                            Text(L.subscribe())
+                        })
                         .accessibility(identifier: UIExtras.subscribe.identifier)
                     }
                 }
@@ -40,7 +44,11 @@ struct ExtrasView: View, ServiceProvider {
                         Text(L.noUpgrades())
                     } else {
                         ForEach(upgrades, id: \.self) { pack in
-                            Text(pack)
+                            Button(action: {
+                                self.report.event(.upgrade(pack: pack))
+                            }, label: {
+                                Text(pack)
+                            })
                             .accessibility(identifier: UIExtras.upgrade(pack: pack).identifier)
                         }
                     }
@@ -50,7 +58,11 @@ struct ExtrasView: View, ServiceProvider {
                         Text(L.noPacks())
                     } else {
                         ForEach(packs, id: \.self) { pack in
-                            Text(pack)
+                            Button(action: {
+                                self.report.event(.purchase(pack: pack))
+                            }, label: {
+                                Text(pack)
+                            })
                             .accessibility(identifier: UIExtras.purchase(pack: pack).identifier)
                         }
                     }
