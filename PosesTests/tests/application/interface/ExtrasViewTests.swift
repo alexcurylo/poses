@@ -10,9 +10,10 @@ final class ExtrasViewTests: TestCase {
         let sut = ExtrasView()
 
         // when
+        sut.postReview()
         sut.visitPhotographyTips()
 
         // then
-        XCTAssertTrue(true)
+        XCTAssertEqual(appSpy.invokedLaunchCount, 2)
     }
 }

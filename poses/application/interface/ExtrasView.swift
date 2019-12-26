@@ -75,7 +75,7 @@ struct ExtrasView: View, ServiceProvider {
                     })
                     .accessibility(identifier: UIExtras.feedback.identifier)
                     Button(action: {
-                        self.report.event(.postReview)
+                        self.postReview()
                     }, label: {
                         Text(L.review())
                     })
@@ -106,6 +106,19 @@ struct ExtrasView: View, ServiceProvider {
         }
         .onAppear {
             self.report.screen(String(Tab.extras))
+        }
+    }
+
+    func postReview() {
+        if let url = URL(string: L.appStore()),
+           var components = URLComponents(url: url,
+                                          resolvingAgainstBaseURL: false) {
+            components.queryItems = [ URLQueryItem(name: "action", value: "write-review") ]
+            if let writeReviewURL = components.url {
+                report.event(.postReview)
+
+                app.launch(url: writeReviewURL)
+            }
         }
     }
 

@@ -23,16 +23,25 @@ final class AppUITests: XCTestCase {
         Tab.fitPose.tap()
 
         Tab.extras.tap()
-        UIExtras.subscribe.tap()
-        UIExtras.upgrade(pack: "female001free").tap()
-        UIExtras.purchase(pack: "female001paid").tap()
-        UIExtras.feedback.tap()
-        UIExtras.review.tap()
-        swipeUp()
-        UIExtras.restore.tap()
-        UIExtras.notes.tap()
-        UIExtras.visit.tap()
 
+        UIExtras.subscribe.tap()
+
+        UIExtras.upgrade(pack: "female001free").tap()
+
+        swipeUp()
+
+        UIExtras.purchase(pack: "female001paid").tap()
+
+        UIExtras.feedback.tap()
+
+        UIExtras.review.tap()
+        rebound()
+
+        UIExtras.restore.tap()
+
+        UIExtras.notes.tap()
+
+        UIExtras.visit.tap()
         rebound()
 
         Tab.gallery.tap()
