@@ -84,6 +84,7 @@
 		FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
+		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
 		FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257A23A6139D00BF3749 /* Security.framework */; };
@@ -273,6 +274,7 @@
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAB6A2723B54E4D0021666B /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		FABCAF1723ADBE65005526BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 			children = (
 				8CA9CBAD239DD70200213558 /* Array+Type.swift */,
 				8CA9CDBE239DE58400213558 /* Date+Formatting.swift */,
+				FAAB6A2723B54E4D0021666B /* MailView.swift */,
 				8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */,
 				FAECA21D239CF8F80028AE3A /* String+Formatting.swift */,
 				FAD49965239BA7640030CB8E /* UIApplication+Environment.swift */,
@@ -1135,6 +1138,7 @@
 				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				FA3BFFDA23A84ACD00938BAB /* Category+CoreDataClass.swift in Sources */,
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
+				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

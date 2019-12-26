@@ -29,3 +29,8 @@
 "restore" = "Restore Purchases";
 "notes" = "Release Notes";
 "visit" = "Visit PhotographyTips.com";
+
+// Mail
+
+"mailAddress" = "iphonesupport@photographytips.com";
+"mailSubject" = "%@ Feedback";

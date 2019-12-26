@@ -1,5 +1,8 @@
 // @copyright Trollwerks Inc.
 
+#if canImport(MessageUI)
+import MessageUI
+#endif
 import SwiftUI
 
 // swiftlint:disable closure_body_length
@@ -11,6 +14,12 @@ struct ExtrasView: View, ServiceProvider {
     @State private var upgrades: [String]
     @State private var packs: [String]
 
+    #if canImport(MessageUI)
+    @State private var mailed: Result<MFMailComposeResult, Error>?
+    @State private var isShowingMailView = false
+    #endif
+
+    /// :nodoc:
     init() {
         if Services().data.isSubscribed {
             _subscribed = State(initialValue: true)
@@ -68,12 +77,18 @@ struct ExtrasView: View, ServiceProvider {
                     }
                 }
                 Section(header: Text(L.support())) {
+                    #if canImport(MessageUI)
                     Button(action: {
-                        self.report.event(.sendFeedback)
+                        self.sendFeedback()
                     }, label: {
                         Text(L.feedback())
                     })
                     .accessibility(identifier: UIExtras.feedback.identifier)
+                    .disabled(!MFMailComposeViewController.canSendMail())
+                    .sheet(isPresented: $isShowingMailView) {
+                        MailView(result: self.$mailed)
+                    }
+                    #endif
                     Button(action: {
                         self.postReview()
                     }, label: {
@@ -109,6 +124,15 @@ struct ExtrasView: View, ServiceProvider {
         }
     }
 
+    #if canImport(MessageUI)
+    /// Send Feedback action
+    func sendFeedback() {
+        report.event(.sendFeedback)
+        isShowingMailView.toggle()
+    }
+    #endif
+
+    /// Post Review action
     func postReview() {
         if let url = URL(string: L.appStore()),
            var components = URLComponents(url: url,
@@ -122,6 +146,7 @@ struct ExtrasView: View, ServiceProvider {
         }
     }
 
+    /// Visit Photography Tips action
     func visitPhotographyTips() {
         if let url = URL(string: L.photographyTips()) {
             report.event(.visitPhotographyTips)

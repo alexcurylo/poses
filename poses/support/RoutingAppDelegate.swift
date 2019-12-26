@@ -1,7 +1,7 @@
 // @copyright Trollwerks Inc.
 
 import CloudKit
-#if os(iOS)
+#if canImport(Intents)
 import Intents
 #endif
 import UIKit
@@ -148,7 +148,7 @@ protocol AppHealthHandler: AppHandler {
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication)
 }
 
-#if os(iOS)
+#if canImport(Intents)
 /// Adopt to have Siri notifications routed
 protocol AppSiriHandler: AppHandler {
     /// handle intent
@@ -522,7 +522,7 @@ extension RoutingAppDelegate {
                 .forEach { $0.applicationShouldRequestHealthAuthorization(application) }
     }
 
-    #if os(iOS)
+    #if canImport(Intents)
     /// handle intent
     /// - Parameters:
     ///   - application: Application

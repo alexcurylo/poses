@@ -10,6 +10,7 @@ final class ExtrasViewTests: TestCase {
         let sut = ExtrasView()
 
         // when
+        sut.sendFeedback()
         sut.postReview()
         sut.visitPhotographyTips()
 
