@@ -22,22 +22,22 @@ extension ServiceProvider {
 
     /// ApplicationService
     var app: ApplicationService {
-        return ServiceProviderInstances.appServiceInstance
+        ServiceProviderInstances.appServiceInstance
     }
 
     /// DataService
     var data: DataService {
-        return ServiceProviderInstances.dataServiceInstance
+        ServiceProviderInstances.dataServiceInstance
     }
 
     /// LoggingService
     var log: LoggingService {
-        return ServiceProviderInstances.logServiceInstance
+        ServiceProviderInstances.logServiceInstance
     }
 
     /// ReportingService
     var report: ReportingService {
-        return ServiceProviderInstances.reportServiceInstance
+        ServiceProviderInstances.reportServiceInstance
     }
 }
 

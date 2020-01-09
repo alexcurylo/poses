@@ -4,7 +4,7 @@ import XCTest
 
 extension XCTestCase {
 
-    var app: XCUIApplication { return XCUIApplication() }
+    var app: XCUIApplication { XCUIApplication() }
 
     func printHierarchy() { app.printHierarchy() }
     func rebound(from bundle: String = "com.apple.mobilesafari") {
@@ -35,8 +35,8 @@ extension XCTestCase {
     }
 
     func delete(_ count: Int) -> String {
-        return String(repeating: XCUIKeyboardKey.delete.rawValue,
-                      count: count)
+        String(repeating: XCUIKeyboardKey.delete.rawValue,
+               count: count)
     }
 }
 

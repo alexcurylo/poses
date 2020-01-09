@@ -18,5 +18,5 @@ extension String {
 extension String: LocalizedError {
 
     /// Treat a String as self documenting Error
-    public var errorDescription: String? { return self }
+    public var errorDescription: String? { self }
 }

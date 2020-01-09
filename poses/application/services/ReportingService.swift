@@ -154,7 +154,7 @@ private struct AnalyticsEventMapper {
     }
 
     func parameters(for event: AnalyticsEvent) -> [String: Any] {
-        return event.parameters.mapKeys { parameterName(for: $0) }
+        event.parameters.mapKeys { parameterName(for: $0) }
     }
 
     func parameterName(for parameter: AnalyticsEvent.Parameter) -> String {

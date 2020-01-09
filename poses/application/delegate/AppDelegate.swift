@@ -17,7 +17,7 @@ import UIKit
 
     /// Handlers for the active environment
     override var handlers: Handlers {
-        return super.handlers + runtimeHandlers
+        super.handlers + runtimeHandlers
     }
 
     private var runtimeHandlers: Handlers = {

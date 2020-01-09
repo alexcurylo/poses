@@ -15,5 +15,5 @@ enum Tab: Int, CaseIterable {
     case extras
 
     /// SwiftUI view tag
-    var tag: Int { return rawValue }
+    var tag: Int { rawValue }
 }

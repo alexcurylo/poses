@@ -54,7 +54,7 @@ enum LaunchSetting {
 
     /// Construct setting for launch dictionary
     var setting: [String: String] {
-        return [key: value]
+        [key: value]
     }
 }
 
@@ -64,14 +64,14 @@ extension ProcessInfo {
     /// - Parameter argument: argument to look for
     /// - Returns: Whether found
     static func arguments(contain argument: LaunchArgument) -> Bool {
-        return processInfo.arguments.contains(argument.rawValue)
+        processInfo.arguments.contains(argument.rawValue)
     }
 
     /// String-extracting convenience
     /// - Parameter key: Key to look for
     /// - Returns: String value if found
     static func setting(string key: LaunchSettingKey) -> String? {
-        return processInfo.environment[key.rawValue]
+        processInfo.environment[key.rawValue]
     }
 
     /// Bool-extracting convenience

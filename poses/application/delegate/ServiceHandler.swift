@@ -43,7 +43,7 @@ extension ServiceHandler: AppLaunchHandler {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        return true
+        true
     }
 }
 
@@ -76,7 +76,7 @@ struct ServiceHandlerStub: AppLaunchHandler {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        return true
+        true
     }
 }
 #endif
