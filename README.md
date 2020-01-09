@@ -46,7 +46,10 @@ Requirements
 
 ### Libraries:
 
+- [Nuke](https://github.com/kean/Nuke) for networked image loading
 - [R.swift](https://github.com/mac-cain13/R.swift/) for typed resource identifiers
+- [SFSafeSymbols](https://github.com/piknotech/SFSafeSymbols) for statically typed SF Symbols 
+- [Siren](https://github.com/ArtSabintsev/Siren) for update notifications
 
 Usage
 -----

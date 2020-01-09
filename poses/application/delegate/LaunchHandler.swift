@@ -1,5 +1,6 @@
 // @copyright Trollwerks Inc.
 
+import Siren
 import SwiftyBeaver
 import UIKit
 
@@ -40,6 +41,7 @@ extension LaunchHandler: AppLaunchHandler, ServiceProvider {
         configure(analytics: isProduction,
                   launchOptions: launchOptions)
         configureSettingsDisplay()
+        configureUpgrades()
 
         if !isProduction {
             log.verbose("Launched build \(String(describing: StringKey.appBuild.infoString))(/())")
@@ -56,6 +58,18 @@ private extension LaunchHandler {
 
     func configureSettingsDisplay() {
         StringKey.configureSettingsDisplay()
+    }
+
+    func configureUpgrades(force: Bool = false) {
+        let siren = Siren.shared
+        if force {
+            siren.rulesManager = RulesManager(
+                globalRules: .critical,
+                showAlertAfterCurrentVersionHasBeenReleasedForDays: 0)
+        } else {
+            siren.rulesManager = RulesManager(globalRules: .annoying)
+        }
+        siren.wail()
     }
 }
 

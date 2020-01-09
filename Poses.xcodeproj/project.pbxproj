@@ -85,6 +85,7 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
+		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
 		FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257A23A6139D00BF3749 /* Security.framework */; };
@@ -333,6 +334,7 @@
 				FA42499123AE1AFF0091A85B /* SFSafeSymbols in Frameworks */,
 				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
+				FAB8E15C23C7DBF60053451A /* Siren in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +798,7 @@
 				FAECA216239CF07A0028AE3A /* Rswift */,
 				FAC2258323A6E18F00BF3749 /* Nuke */,
 				FA42499023AE1AFF0091A85B /* SFSafeSymbols */,
+				FAB8E15B23C7DBF60053451A /* Siren */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
@@ -904,6 +907,7 @@
 				FAECA215239CF07A0028AE3A /* XCRemoteSwiftPackageReference "R.swift" */,
 				FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */,
 				FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -1432,6 +1436,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArtSabintsev/Siren";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.3;
+			};
+		};
 		FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke";
@@ -1463,6 +1475,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		FAB8E15B23C7DBF60053451A /* Siren */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */;
+			productName = Siren;
 		};
 		FAC2258323A6E18F00BF3749 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
