@@ -40,11 +40,9 @@ struct ExtrasView: View, ServiceProvider {
                     if subscribed {
                         Text(L.subscribed())
                     } else {
-                        Button(action: {
-                            self.report.event(.subscribe)
-                        }, label: {
+                        Button(action: subscribe) {
                             Text(L.subscribe())
-                        })
+                        }
                         .accessibility(identifier: UIExtras.subscribe.identifier)
                     }
                 }
@@ -78,42 +76,36 @@ struct ExtrasView: View, ServiceProvider {
                 }
                 Section(header: Text(L.support())) {
                     #if canImport(MessageUI)
-                    Button(action: {
-                        self.sendFeedback()
-                    }, label: {
+                    Button(action: sendFeedback) {
                         Text(L.feedback())
-                    })
+                    }
                     .accessibility(identifier: UIExtras.feedback.identifier)
                     .disabled(!MFMailComposeViewController.canSendMail())
                     .sheet(isPresented: $isShowingMailView) {
                         MailView(result: self.$mailed)
                     }
                     #endif
-                    Button(action: {
-                        self.postReview()
-                    }, label: {
+                    Button(action: postReview) {
                         Text(L.review())
-                    })
+                    }
                     .accessibility(identifier: UIExtras.review.identifier)
-                    Button(action: {
-                        self.report.event(.restorePurchases)
-                    }, label: {
+                    Button(action: restorePurchases) {
                         Text(L.restore())
-                    })
+                    }
                     .accessibility(identifier: UIExtras.restore.identifier)
-                    Button(action: {
-                        self.report.event(.showReleaseNotes)
-                    }, label: {
+                    Button(action: showReleaseNotes) {
                         Text(L.notes())
-                    })
+                    }
                     .accessibility(identifier: UIExtras.notes.identifier)
                     #if os(iOS)
-                    Button(action: {
-                        self.visitPhotographyTips()
-                    }, label: {
-                        Text(L.visit())
-                    })
-                    .accessibility(identifier: UIExtras.visit.identifier)
+                    Button(action: visitPhotographyTips) {
+                        Text(L.visitPhotographyTips())
+                    }
+                    .accessibility(identifier: UIExtras.visitPhotographyTips.identifier)
+                    Button(action: visitGithub) {
+                        Text(L.visitGithub())
+                    }
+                    .accessibility(identifier: UIExtras.visitGithub.identifier)
                     #endif
                 }
             }
@@ -131,6 +123,21 @@ struct ExtrasView: View, ServiceProvider {
         isShowingMailView.toggle()
     }
     #endif
+
+    /// unimplemented
+    func subscribe() {
+        self.report.event(.subscribe)
+    }
+
+    /// unimplemented
+    func restorePurchases() {
+        self.report.event(.restorePurchases)
+    }
+
+    /// unimplemented
+    func showReleaseNotes() {
+        self.report.event(.showReleaseNotes)
+    }
 
     /// Post Review action
     func postReview() {
@@ -153,4 +160,24 @@ struct ExtrasView: View, ServiceProvider {
             app.launch(url: url)
         }
     }
+
+    /// Visit Github project action
+    func visitGithub() {
+        if let url = URL(string: L.github()) {
+            report.event(.visitGithub)
+            app.launch(url: url)
+        }
+    }
+}
+
+/// :nodoc:
+struct ExtrasView_Previews: PreviewProvider {
+
+    /// :nodoc:
+    static var previews: some View {
+        ExtrasView()
+    }
+
+    /// :nodoc:
+    static var platform: PreviewPlatform? { .iOS }
 }

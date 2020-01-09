@@ -49,6 +49,8 @@ enum AnalyticsEvent {
     case purchase(pack: String)
     /// Upgrade
     case upgrade(pack: String)
+    /// Visit Github
+    case visitGithub
     /// Visit PhotographyTips
     case visitPhotographyTips
 
@@ -64,6 +66,7 @@ enum AnalyticsEvent {
              .sendFeedback,
              .showReleaseNotes,
              .subscribe,
+             .visitGithub,
              .visitPhotographyTips:
             return [:]
         }
@@ -148,6 +151,8 @@ private struct AnalyticsEventMapper {
             return "Subscribe"
         case .upgrade:
             return "Upgrade"
+        case .visitGithub:
+            return "VisitGithub"
         case .visitPhotographyTips:
             return "VisitPhotographyTips"
         }

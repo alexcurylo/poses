@@ -17,3 +17,15 @@ struct FavoritesView: View, ServiceProvider {
         }
     }
 }
+
+/// :nodoc:
+struct FavoritesView_Previews: PreviewProvider {
+
+    /// :nodoc:
+    static var previews: some View {
+        FavoritesView()
+    }
+
+    /// :nodoc:
+    static var platform: PreviewPlatform? { .iOS }
+}

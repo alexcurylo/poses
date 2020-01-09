@@ -18,6 +18,8 @@ enum UIExtras: Exposable {
     case restore
     /// Notes button
     case notes
-    /// Visit button
-    case visit
+    /// Visit PhotographyTips button
+    case visitPhotographyTips
+    /// Visit Github button
+    case visitGithub
 }

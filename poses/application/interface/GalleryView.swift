@@ -17,3 +17,15 @@ struct GalleryView: View, ServiceProvider {
         }
     }
 }
+
+/// :nodoc:
+struct GalleryView_Previews: PreviewProvider {
+
+    /// :nodoc:
+    static var previews: some View {
+        GalleryView()
+    }
+
+    /// :nodoc:
+    static var platform: PreviewPlatform? { .iOS }
+}

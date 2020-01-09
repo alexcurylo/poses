@@ -17,3 +17,15 @@ struct FitPoseView: View, ServiceProvider {
         }
     }
 }
+
+/// :nodoc:
+struct FitPoseView_Previews: PreviewProvider {
+
+    /// :nodoc:
+    static var previews: some View {
+        FitPoseView()
+    }
+
+    /// :nodoc:
+    static var platform: PreviewPlatform? { .iOS }
+}

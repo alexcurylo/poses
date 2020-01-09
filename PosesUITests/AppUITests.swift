@@ -41,7 +41,10 @@ final class AppUITests: XCTestCase {
 
         UIExtras.notes.tap()
 
-        UIExtras.visit.tap()
+        UIExtras.visitPhotographyTips.tap()
+        rebound()
+
+        UIExtras.visitGithub.tap()
         rebound()
 
         Tab.gallery.tap()

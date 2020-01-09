@@ -5,6 +5,7 @@
 "appStore" = "https://apps.apple.com/app/id357099619";
 "appVersion" = "Poses Professional %1$@(%2$@)";
 "photographyTips" = "https://www.photographytips.com/";
+"github" = "https://github.com/alexcurylo/poses";
 
 // tabs
 
@@ -28,7 +29,8 @@
 "review" = "Post A Review";
 "restore" = "Restore Purchases";
 "notes" = "Release Notes";
-"visit" = "Visit PhotographyTips.com";
+"visitPhotographyTips" = "Visit PhotographyTips.com";
+"visitGithub" = "Visit Github project";
 
 // Mail
 

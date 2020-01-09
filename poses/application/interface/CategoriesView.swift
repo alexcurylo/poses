@@ -17,3 +17,15 @@ struct CategoriesView: View, ServiceProvider {
         }
     }
 }
+
+/// :nodoc:
+struct CategoriesView_Previews: PreviewProvider {
+
+    /// :nodoc:
+    static var previews: some View {
+        CategoriesView()
+    }
+
+    /// :nodoc:
+    static var platform: PreviewPlatform? { .iOS }
+}

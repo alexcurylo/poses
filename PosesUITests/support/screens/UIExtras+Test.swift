@@ -13,7 +13,8 @@ extension UIExtras: Elemental {
              .review,
              .restore,
              .notes,
-             .visit:
+             .visitGithub,
+             .visitPhotographyTips:
             return .button
         }
     }
