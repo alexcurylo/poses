@@ -1,7 +1,7 @@
 # https://github.com/yonaskolb/Mint/releases
 
 # mint install realm/SwiftLint (global)
-realm/SwiftLint@0.38.0
+realm/SwiftLint@0.38.2
 # https://github.com/realm/SwiftLint/releases
 
 # mint bootstrap (not global)
@@ -9,5 +9,5 @@ realm/SwiftLint@0.38.0
 https://github.com/mac-cain13/R.swift.git@v5.1.0
 # https://github.com/mac-cain13/R.swift/releases
 
-mono0926/LicensePlist@2.10.0
-# https://github.com/mono0926/LicensePlist
+mono0926/LicensePlist@2.11.2
+# https://github.com/mono0926/LicensePlist/releases

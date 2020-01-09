@@ -1,9 +1,9 @@
 # references:
 # https://github.com/realm/SwiftLint#configuration
 #
-# `swiftlint rules` last updated version 0.38.0
+# `swiftlint rules` last updated version 0.38.2
 #
-# Disable an individual warning with [next|previous]:
+# Disable an individual warning with [next|previous|this]:
 # // swiftlint:disable:previous line_length
 
 disabled_rules:
@@ -30,6 +30,7 @@ opt_in_rules:
   - empty_count
   - empty_string
   - empty_xctest_method
+  - enum_case_associated_value_count
   - expiring_todo
 #- explicit_acl
 #- explicit_enum_raw_value
@@ -50,6 +51,7 @@ opt_in_rules:
   - identical_operands
   - implicit_return
   - implicitly_unwrapped_optional
+#- indentation_width
   - joined_default_parameter
   - last_where
   - legacy_multiple
@@ -73,9 +75,11 @@ opt_in_rules:
   - number_separator
 #- object_literal
   - operator_usage_whitespace
+  - optional_enum_case_matching
   - overridden_super_call
   - override_in_extension
   - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
 #- prefixed_toplevel_constant
   - private_action
   - private_outlet

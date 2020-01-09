@@ -12,7 +12,7 @@
 # update metadata: fastlane deliver download_metadata
 #
 
-fastlane_version "2.137.0"
+fastlane_version "2.140.0"
 #update_fastlane
 default_platform(:ios)
 
