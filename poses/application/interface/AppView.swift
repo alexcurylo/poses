@@ -56,6 +56,7 @@ struct AppView: View {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct AppView_Previews: PreviewProvider {
 
@@ -70,3 +71,4 @@ struct AppView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif

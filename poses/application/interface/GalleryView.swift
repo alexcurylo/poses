@@ -18,6 +18,7 @@ struct GalleryView: View, ServiceProvider {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct GalleryView_Previews: PreviewProvider {
 
@@ -29,3 +30,4 @@ struct GalleryView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif

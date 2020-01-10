@@ -18,6 +18,7 @@ struct FitPoseView: View, ServiceProvider {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct FitPoseView_Previews: PreviewProvider {
 
@@ -29,3 +30,4 @@ struct FitPoseView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif

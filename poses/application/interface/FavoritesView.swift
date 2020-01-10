@@ -18,6 +18,7 @@ struct FavoritesView: View, ServiceProvider {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct FavoritesView_Previews: PreviewProvider {
 
@@ -29,3 +30,4 @@ struct FavoritesView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif

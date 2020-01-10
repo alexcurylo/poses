@@ -18,6 +18,7 @@ struct CategoriesView: View, ServiceProvider {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct CategoriesView_Previews: PreviewProvider {
 
@@ -29,3 +30,4 @@ struct CategoriesView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif

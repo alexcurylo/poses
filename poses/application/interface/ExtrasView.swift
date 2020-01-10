@@ -170,6 +170,7 @@ struct ExtrasView: View, ServiceProvider {
     }
 }
 
+#if DEBUG
 /// :nodoc:
 struct ExtrasView_Previews: PreviewProvider {
 
@@ -181,3 +182,4 @@ struct ExtrasView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
+#endif
