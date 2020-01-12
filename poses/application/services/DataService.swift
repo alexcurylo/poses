@@ -42,10 +42,14 @@ final class DataServiceImpl: DataService, ServiceProvider {
     /// :nodoc:
     var loaded: ((NSPersistentStoreDescription, Error?) -> Void)?
 
-    private lazy var persistentContainer: NSPersistentCloudKitContainer = {
+    private lazy var persistentContainer: NSPersistentContainer = {
         seed()
-        let container = NSPersistentCloudKitContainer(name: "PosesModel")
+        //let container = NSPersistentCloudKitContainer(name: "PosesCKModel")
+        let container = NSPersistentContainer(name: "PosesModel")
         container.loadPersistentStores { storeDescription, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
             self.loaded?(storeDescription, error)
         }
         return container

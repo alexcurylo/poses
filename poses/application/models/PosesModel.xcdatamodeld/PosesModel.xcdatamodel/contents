@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Category" representedClassName=".Category" syncable="YES">
-        <attribute name="key" optional="YES" attributeType="String"/>
-        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="categories" inverseEntity="Pose"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Category" representedClassName="POSModelCategory" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="categories" inverseEntity="Pose" syncable="YES"/>
     </entity>
-    <entity name="Group" representedClassName=".Group" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="groups" inverseEntity="Pose"/>
+    <entity name="Group" representedClassName="POSModelGroup" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pose" inverseName="groups" inverseEntity="Pose" syncable="YES"/>
     </entity>
-    <entity name="Pack" representedClassName=".Pack" syncable="YES">
-        <attribute name="embedded" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
-        <attribute name="key" optional="YES" attributeType="String"/>
-        <attribute name="purchased" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
-        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pose" inverseName="packs" inverseEntity="Pose"/>
+    <entity name="Pack" representedClassName="POSModelPack" syncable="YES">
+        <attribute name="embedded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purchased" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="poses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pose" inverseName="packs" inverseEntity="Pose" syncable="YES"/>
     </entity>
-    <entity name="Pose" representedClassName=".Pose" syncable="YES">
-        <attribute name="cached" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
-        <attribute name="embedded" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
-        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO"/>
-        <attribute name="thumbnailed" optional="YES" attributeType="Boolean" usesScalarValueType="NO"/>
-        <attribute name="trashed" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
-        <attribute name="visible" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="NO"/>
-        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="poses" inverseEntity="Category"/>
-        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="poses" inverseEntity="Group"/>
-        <relationship name="packs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pack" inverseName="poses" inverseEntity="Pack"/>
+    <entity name="Pose" representedClassName="POSModelPose" syncable="YES">
+        <attribute name="cached" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="embedded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnailed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="trashed" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="poses" inverseEntity="Category" syncable="YES"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Group" inverseName="poses" inverseEntity="Group" syncable="YES"/>
+        <relationship name="packs" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pack" inverseName="poses" inverseEntity="Pack" syncable="YES"/>
     </entity>
     <fetchRequest name="Categories" entity="Category"/>
     <fetchRequest name="Category" entity="Category" predicateString="key == $keyed"/>
@@ -43,9 +43,9 @@
     <fetchRequest name="VisiblePosesInCategory" entity="Pose" predicateString="visible == 1 AND ANY categories.key == $keyed"/>
     <fetchRequest name="VisiblePosesInGroup" entity="Pose" predicateString="visible == 1 AND ANY groups.name == $named"/>
     <elements>
-        <element name="Category" positionX="0" positionY="0" width="128" height="88"/>
-        <element name="Group" positionX="0" positionY="0" width="128" height="103"/>
-        <element name="Pack" positionX="0" positionY="0" width="128" height="118"/>
-        <element name="Pose" positionX="0" positionY="0" width="128" height="193"/>
+        <element name="Category" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Group" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Pack" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Pose" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

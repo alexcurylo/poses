@@ -23,7 +23,6 @@
 		8C81399323A8765A00871457 /* PackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399223A8765A00871457 /* PackTests.swift */; };
 		8C81399523A8766600871457 /* PoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399423A8766600871457 /* PoseTests.swift */; };
 		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
-		8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */; };
 		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
 		8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11523A7197C001714C5 /* CloudKit.framework */; };
 		8CA57FF123A3115100A3B6B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */; };
@@ -85,6 +84,10 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
 		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
+		FAA0137223CB584F0089EA76 /* PosesCKModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137023CB584F0089EA76 /* PosesCKModel.xcdatamodeld */; };
+		FAA0137323CB584F0089EA76 /* PosesCKModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137023CB584F0089EA76 /* PosesCKModel.xcdatamodeld */; };
+		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
+		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
@@ -149,7 +152,6 @@
 		FAFC5B0323AEFAE00064B97A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */; };
 		FAFC5B0423AEFAE00064B97A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408623A9A94C00C5C73A /* Tab.swift */; };
 		FAFC5B0523AEFAE00064B97A /* Tab+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499423AE2ED20091A85B /* Tab+Strings.swift */; };
-		FAFC5B0623AEFB340064B97A /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */; };
 		FAFC5B0723AEFB390064B97A /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD223A84ACD00938BAB /* Category+CoreDataClass.swift */; };
 		FAFC5B0823AEFB390064B97A /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD323A84ACD00938BAB /* Category+CoreDataProperties.swift */; };
 		FAFC5B0923AEFB390064B97A /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BFFD423A84ACD00938BAB /* Group+CoreDataClass.swift */; };
@@ -211,7 +213,6 @@
 		8C81399223A8765A00871457 /* PackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackTests.swift; sourceTree = "<group>"; };
 		8C81399423A8766600871457 /* PoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseTests.swift; sourceTree = "<group>"; };
 		8C92C10D23A714AE001714C5 /* PosesModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PosesModel.sqlite; sourceTree = "<group>"; };
-		8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
 		8C92C11223A718CA001714C5 /* Poses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poses.entitlements; sourceTree = "<group>"; };
 		8C92C11323A7194D001714C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8C92C11523A7197C001714C5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -274,6 +275,8 @@
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA0136523CB47750089EA76 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
+		FAA0137123CB584F0089EA76 /* PosesCKModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesCKModel.xcdatamodel; sourceTree = "<group>"; };
+		FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -463,7 +466,8 @@
 		8C92C10C23A7141A001714C5 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */,
+				FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */,
+				FAA0137023CB584F0089EA76 /* PosesCKModel.xcdatamodeld */,
 				FA3BFFD223A84ACD00938BAB /* Category+CoreDataClass.swift */,
 				FA3BFFD323A84ACD00938BAB /* Category+CoreDataProperties.swift */,
 				FA3BFFD423A84ACD00938BAB /* Group+CoreDataClass.swift */,
@@ -1116,8 +1120,10 @@
 				FA3BFFD623A84ACD00938BAB /* Pack+CoreDataClass.swift in Sources */,
 				8CA9CDB6239DE19100213558 /* LaunchHandler.swift in Sources */,
 				FAECA21A239CF1900028AE3A /* R.generated.swift in Sources */,
+				FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */,
 				FA8B537A2398F2B9009E8E1F /* SceneDelegate.swift in Sources */,
 				8C6E408723A9A94C00C5C73A /* Tab.swift in Sources */,
+				FAA0137223CB584F0089EA76 /* PosesCKModel.xcdatamodeld in Sources */,
 				FA42499523AE2ED20091A85B /* Tab+Strings.swift in Sources */,
 				8CA9CDBC239DE4B300213558 /* LoggingService.swift in Sources */,
 				FAD49969239BA8000030CB8E /* ProcessInfo+Launch.swift in Sources */,
@@ -1135,7 +1141,6 @@
 				FA2F49D623B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */,
 				FA42498E23AE19360091A85B /* ExtrasView.swift in Sources */,
-				8C92C11123A714E7001714C5 /* PosesModel.xcdatamodeld in Sources */,
 				FA3BFFD923A84ACD00938BAB /* Pose+CoreDataProperties.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* AppView.swift in Sources */,
 				FA2F49C823B2BA7D00EAABC5 /* ApplicationService.swift in Sources */,
@@ -1234,14 +1239,15 @@
 				FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */,
 				FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */,
 				FAFC5AF723AEFA830064B97A /* Date+Formatting.swift in Sources */,
+				FAA0137323CB584F0089EA76 /* PosesCKModel.xcdatamodeld in Sources */,
 				FA2F49D823B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFC5B0B23AEFB390064B97A /* Pack+CoreDataClass.swift in Sources */,
 				FAFC5AF823AEFA830064B97A /* String+Formatting.swift in Sources */,
+				FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */,
 				FAFC5B0D23AEFB390064B97A /* Pose+CoreDataClass.swift in Sources */,
 				FAFC5AF523AEFA6C0064B97A /* ReportingService.swift in Sources */,
 				FAFC5B0C23AEFB390064B97A /* Pack+CoreDataProperties.swift in Sources */,
 				FA2F49CD23B2D46E00EAABC5 /* ApplicationService.swift in Sources */,
-				FAFC5B0623AEFB340064B97A /* PosesModel.xcdatamodeld in Sources */,
 				FAFC5B0823AEFB390064B97A /* Category+CoreDataProperties.swift in Sources */,
 				FAFC5B0923AEFB390064B97A /* Group+CoreDataClass.swift in Sources */,
 				FAFC5AFF23AEFAE00064B97A /* ExtrasView.swift in Sources */,
@@ -1523,12 +1529,22 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		8C92C10F23A714E7001714C5 /* PosesModel.xcdatamodeld */ = {
+		FAA0137023CB584F0089EA76 /* PosesCKModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */,
+				FAA0137123CB584F0089EA76 /* PosesCKModel.xcdatamodel */,
 			);
-			currentVersion = 8C92C11023A714E7001714C5 /* PosesModel.xcdatamodel */;
+			currentVersion = FAA0137123CB584F0089EA76 /* PosesCKModel.xcdatamodel */;
+			path = PosesCKModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */,
+			);
+			currentVersion = FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */;
 			path = PosesModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
