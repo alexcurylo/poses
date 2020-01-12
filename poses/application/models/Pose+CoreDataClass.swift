@@ -3,7 +3,10 @@
 import CoreData
 
 /// PosesModel entity
-public final class Pose: NSManagedObject {
+public final class Pose: NSManagedObject, EntityModel {
+
+    /// EntityModel conformance
+    typealias Entity = Pose
 
     /// Cache folder
     static var poseCacheFolder: String { "TODO" }

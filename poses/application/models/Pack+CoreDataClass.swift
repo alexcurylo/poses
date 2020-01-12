@@ -3,4 +3,8 @@
 import CoreData
 
 /// PosesModel entity
-public final class Pack: NSManagedObject { }
+public final class Pack: NSManagedObject, EntityModel {
+
+    /// EntityModel conformance
+    typealias Entity = Pack
+}

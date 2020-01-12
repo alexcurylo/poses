@@ -3,7 +3,10 @@
 import CoreData
 
 /// PosesModel entity
-public final class Category: NSManagedObject {
+public final class Category: NSManagedObject, EntityModel {
+
+    /// EntityModel conformance
+    typealias Entity = Category
 
     /// Display title
     var title: String { NSLocalizedString(key!, comment: "") }

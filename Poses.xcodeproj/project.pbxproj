@@ -84,6 +84,7 @@
 		FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53832398F2BA009E8E1F /* Preview Assets.xcassets */; };
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
+		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
@@ -272,6 +273,7 @@
 		FA8B53982398F2BA009E8E1F /* PosesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA0136523CB47750089EA76 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBAD239DD70200213558 /* Array+Type.swift */,
+				FAA0136523CB47750089EA76 /* EntityModel.swift */,
 				8CA9CDBE239DE58400213558 /* Date+Formatting.swift */,
 				FAAB6A2723B54E4D0021666B /* MailView.swift */,
 				8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */,
@@ -1136,6 +1139,7 @@
 				FA3BFFD923A84ACD00938BAB /* Pose+CoreDataProperties.swift in Sources */,
 				FA8B537F2398F2B9009E8E1F /* AppView.swift in Sources */,
 				FA2F49C823B2BA7D00EAABC5 /* ApplicationService.swift in Sources */,
+				FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FA42498A23AE19160091A85B /* FavoritesView.swift in Sources */,
