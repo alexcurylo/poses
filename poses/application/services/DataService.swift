@@ -43,6 +43,7 @@ final class DataServiceImpl: DataService, ServiceProvider {
     var loaded: ((NSPersistentStoreDescription, Error?) -> Void)?
 
     private lazy var persistentContainer: NSPersistentCloudKitContainer = {
+        seed()
         let container = NSPersistentCloudKitContainer(name: "PosesModel")
         container.loadPersistentStores { storeDescription, error in
             self.loaded?(storeDescription, error)
@@ -54,6 +55,29 @@ final class DataServiceImpl: DataService, ServiceProvider {
 // MARK: - Private
 
 private extension DataServiceImpl {
+
+    var fileUrl: URL {
+        docsDirectory.appendingPathComponent("PosesModel.sqlite")
+    }
+
+    var docsDirectory: URL {
+        let paths = FileManager.default.urls(for: .documentDirectory,
+                                             in: .userDomainMask)
+        return paths[0]
+    }
+
+    func seed() {
+        let url = fileUrl
+        guard !FileManager.default.fileExists(atPath: url.path),
+              let seed = R.file.posesModelSqlite() else { return }
+
+        do {
+            try FileManager.default.copyItem(at: seed, to: url)
+            log.info("seeded model: \(url)")
+        } catch {
+            log.error("seeding model: \(error)")
+        }
+    }
 
     func saveContext() throws {
         let context = persistentContainer.viewContext
