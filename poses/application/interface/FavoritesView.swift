@@ -15,6 +15,7 @@ struct FavoritesView: View, ServiceProvider {
         .onAppear {
             self.report.screen(String(Tab.favorites))
         }
+        .animation(.default)
     }
 }
 

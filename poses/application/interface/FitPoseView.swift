@@ -15,6 +15,7 @@ struct FitPoseView: View, ServiceProvider {
         .onAppear {
             self.report.screen(String(Tab.fitPose))
         }
+        .animation(.default)
     }
 }
 

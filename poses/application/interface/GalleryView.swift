@@ -15,6 +15,7 @@ struct GalleryView: View, ServiceProvider {
         .onAppear {
             self.report.screen(String(Tab.gallery))
         }
+        .animation(.default)
     }
 }
 

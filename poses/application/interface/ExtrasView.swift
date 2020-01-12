@@ -114,6 +114,7 @@ struct ExtrasView: View, ServiceProvider {
         .onAppear {
             self.report.screen(String(Tab.extras))
         }
+        .animation(.default)
     }
 
     #if canImport(MessageUI)

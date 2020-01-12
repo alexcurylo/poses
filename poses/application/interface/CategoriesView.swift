@@ -15,6 +15,7 @@ struct CategoriesView: View, ServiceProvider {
         .onAppear {
             self.report.screen(String(Tab.categories))
         }
+        .animation(.default)
     }
 }
 

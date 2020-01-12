@@ -53,6 +53,7 @@ struct AppView: View {
                 }
                 .tag(Tab.extras.tag)
         }
+        .animation(.default)
     }
 }
 
