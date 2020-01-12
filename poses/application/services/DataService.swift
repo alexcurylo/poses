@@ -39,18 +39,32 @@ final class DataServiceImpl: DataService, ServiceProvider {
 
     // MARK: - Core Data stack
 
+    private let modelName = "PosesModel"
+
     /// :nodoc:
     var loaded: ((NSPersistentStoreDescription, Error?) -> Void)?
 
-    private lazy var persistentContainer: NSPersistentContainer = {
-        seed()
+    lazy var persistentContainer: NSPersistentContainer = {
         //let container = NSPersistentCloudKitContainer(name: "PosesCKModel")
-        let container = NSPersistentContainer(name: "PosesModel")
+        let container = NSPersistentContainer(name: modelName)
+
+        seed()
+        let psd = NSPersistentStoreDescription(url: storeURL)
+        psd.type = NSSQLiteStoreType
+        psd.shouldInferMappingModelAutomatically = true
+        psd.shouldMigrateStoreAutomatically = true
+        container.persistentStoreDescriptions.append(psd)
+
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-            self.loaded?(storeDescription, error)
+
+            if let loaded = self.loaded {
+                DispatchQueue.main.async {
+                    loaded(storeDescription, error)
+                }
+            }
         }
         return container
     }()
@@ -60,34 +74,59 @@ final class DataServiceImpl: DataService, ServiceProvider {
 
 private extension DataServiceImpl {
 
-    var fileUrl: URL {
-        docsDirectory.appendingPathComponent("PosesModel.sqlite")
+    var newBackgroundContext: NSManagedObjectContext {
+        persistentContainer.newBackgroundContext()
     }
 
-    var docsDirectory: URL {
-        let paths = FileManager.default.urls(for: .documentDirectory,
-                                             in: .userDomainMask)
-        return paths[0]
+    func performForeground(task: @escaping (NSManagedObjectContext) -> Void) {
+        viewContext.perform { task(self.viewContext) }
+     }
+
+     func performBackground(task: @escaping (NSManagedObjectContext) -> Void) {
+         persistentContainer.performBackgroundTask(task)
+     }
+
+    var storeURL: URL {
+        storeDirectory.appendingPathComponent("\(modelName).sqlite")
+    }
+
+    var storeDirectory: URL {
+        // NSPersistentContainer.defaultDirectoryURL() // /Library/Application Support
+        // PosesPro2 seeded to /Documents
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     }
 
     func seed() {
-        let url = fileUrl
+        let url = storeURL
         guard !FileManager.default.fileExists(atPath: url.path),
-              let seed = R.file.posesModelSqlite() else { return }
+              let seed = R.file.posesModelSqlite() else {
+            log.verbose("no seeding needed: \(url)")
+            return
+        }
 
         do {
             try FileManager.default.copyItem(at: seed, to: url)
-            log.info("seeded model: \(url)")
+            log.verbose("seeded model: \(url)")
         } catch {
             log.error("seeding model: \(error)")
         }
+
+        // "remember to specify the rollback journaling mode..."
+        // Technical Note TN2350 Working with Default Data in Core Data Apps
+        // https://developer.apple.com/library/archive/technotes/tn2350/
+        // Notes for migrating to CloudKit+SwiftUI friendly revision
+        // swiftlint:disable line_length
+        // https://github.com/riywo/PreloadedPersistentContainer
+        // https://williamboles.me/progressive-core-data-migration/
+        // https://www.raywenderlich.com/7585-lightweight-migrations-in-core-data-tutorial
+        // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/Introduction.html
     }
 
-    func saveContext() throws {
-        let context = persistentContainer.viewContext
-        //if context.hasChanges {
+    func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {
+        let context = backgroundContext ?? persistentContainer.viewContext
+        if context.hasChanges {
             try context.save()
-        //}
+        }
     }
 }
 

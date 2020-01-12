@@ -37,17 +37,41 @@ final class DataServiceTests: TestCase {
     func testSeed() throws {
         // given
         let sut = DataServiceImpl()
-        let loaded = expectation(description: "loaded")
-        sut.loaded = { _, _ in loaded.fulfill() }
+        let loadedLibrary = expectation(description: "loadedLibrary")
+        let loadedDocs = expectation(description: "loadedDocs")
+        sut.loaded = { storeDescription, error in
+            if let error = error {
+                XCTFail("loading error: \(error)")
+            }
+            let path = "\(storeDescription.debugDescription)"
+            if path.contains("Documents") {
+                loadedDocs.fulfill()
+            } else if path.contains("Library/Application%20Support") {
+                loadedLibrary.fulfill()
+            } else {
+                XCTFail("unexpected store: \(path)")
+            }
+        }
 
         // when
         let moc = sut.viewContext
-        let result = XCTWaiter.wait(for: [loaded], timeout: 5)
+        let result = XCTWaiter.wait(for: [loadedLibrary, loadedDocs], timeout: 5)
         XCTAssertEqual(result, .completed)
-        let categories = try moc.fetch(Category.request)
-        let groups = try moc.fetch(Group.request)
-        let poses = try moc.fetch(Pack.request)
-        let packs = try moc.fetch(Pose.request)
+
+        let mom = sut.persistentContainer.managedObjectModel
+        let entities = mom.entitiesByName
+        let names = Set<String>(entities.keys)
+        let expected = Set<String>(["Category", "Group", "Pack", "Pose"])
+        XCTAssertEqual(names, expected)
+
+        let categoryRequest = NSFetchRequest<POSModelCategory>(entityName: "Category")
+        let categories = try moc.fetch(categoryRequest)
+        let groupRequest = NSFetchRequest<POSModelGroup>(entityName: "Group")
+        let groups = try moc.fetch(groupRequest)
+        let packRequest = NSFetchRequest<POSModelPack>(entityName: "Pack")
+        let packs = try moc.fetch(packRequest)
+        let poseRequest = NSFetchRequest<POSModelPose>(entityName: "Pose")
+        let poses = try moc.fetch(poseRequest)
 
         // then
         XCTAssertEqual(categories.count, 24)
