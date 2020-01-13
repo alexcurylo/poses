@@ -27,7 +27,7 @@ extension DataService {
 }
 
 /// Production implementation of DataService
-final class DataServiceImpl: DataService, ServiceProvider {
+class DataServiceImpl: DataService, ServiceProvider {
 
     /// :nodoc:
     var viewContext: NSManagedObjectContext { persistentContainer.viewContext }
@@ -135,11 +135,10 @@ private extension DataServiceImpl {
 #if DEBUG
 
 /// Stub for testing
-struct DataServiceStub: DataService {
+final class DataServiceStub: DataServiceImpl {
 
-    let viewContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-
-    func save() { }
+    // for now, let UI tests run on production data store -
+    // ought to always be freshly seeded on CI
 }
 
 #endif

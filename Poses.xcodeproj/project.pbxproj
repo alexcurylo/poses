@@ -94,6 +94,7 @@
 		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
 		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
+		FAA0139723CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
@@ -274,6 +275,7 @@
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA0136523CB47750089EA76 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
+		FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "POSModelCategory+CoreDataProperties.swift"; path = "Poses/application/models/POSModelCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 		FA8B536B2398F2B9009E8E1F = {
 			isa = PBXGroup;
 			children = (
+				FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */,
 				FA8B53762398F2B9009E8E1F /* Poses */,
 				8C7AAF2E239A0FCA0065F035 /* metadata */,
 				FA8B53902398F2BA009E8E1F /* PosesTests */,
@@ -1147,6 +1150,7 @@
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
+				FAA0139723CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				8C13EFFB23CC110A00449E3D /* POSModelCategory+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

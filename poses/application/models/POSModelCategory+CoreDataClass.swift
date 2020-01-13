@@ -2,6 +2,34 @@
 
 import CoreData
 
+enum CategoryKey: String, CaseIterable {
+
+    case athletic = "ATHLETIC" // 56 poses
+    case closeup = "CLOSEUP" // 37 poses
+    case crawl = "CRAWL" // 55 poses
+    case crouch = "CROUCH" // 27 poses
+    case dance = "DANCE" // 49 poses
+    case kneelObject = "KNEELANOBJ" // 13 poses
+    case kneelBench = "KNEELBENCH" // 25 poses
+    case kneelBoth = "KNEELBOTH" // 166 poses
+    case kneelOne = "KNEELONE" // 30 poses
+    case reclineAir = "RECLINEAIR" // 72 poses
+    case reclineBench = "RECLINEBENCH" // 20 poses
+    case reclineBack = "RECLINEBK" // 103 poses
+    case reclineFront = "RECLINEFT" // 70 poses
+    case reclineSide = "RECLINESIDE" // 65 poses
+    case seatedBench = "SEATBENCH" // 106 poses
+    case seatedChair = "SEATCHAIR" // 79 poses
+    case seatedFloor = "SEATFLOOR" // 170 poses
+    case seatedLegs = "SEATLEGS" // 115 poses
+    case seatedStool = "SEATSTOOL" // 123 poses
+    case standBack = "STANDBACK" // 46 poses
+    case standFront = "STANDFRONT" // 112 poses
+    case standOjbect = "STANDOBJECT" // 12 poses
+    case standSide = "STANDSIDE" // 167 poses
+    case standProps = "WITHPROPS" // 257 poses
+}
+
 /// PosesModel entity
 @objc(POSModelCategory) public final class POSModelCategory: NSManagedObject, EntityModel {
 
@@ -17,9 +45,12 @@ import CoreData
 }
 
 extension POSModelCategory: Identifiable {
-    // TaskList put id: UUID in the attributes and declared Identifiable
-    // Core Data Test declared Identifiable without attribute
-    // ShoppingList did `ForEach(items, id: \.objectID) and didn't declare Identifiable
-    // BlogIdeaList declared Identifiable without attribute, has updating "ForEach(self.blogIdeas, id: \.ideaTitle)," note
-    // https://stackoverflow.com/questions/57405435/how-to-transform-array-of-core-data-managed-objects-into-an-identifiable-list
+
+    public var id: String {
+        // best: define id: UUID property in schema
+        // could use objectID.uriRepresentation().absoluteString,
+        // but it's mutable on first save/non-lightweight migration
+        // swiftlint:disable:next force_unwrapping
+        return key!
+    }
 }

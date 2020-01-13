@@ -65,8 +65,6 @@ final class DataServiceTests: TestCase {
         let expected = Set<String>(["Category", "Group", "Pack", "Pose"])
         XCTAssertEqual(names, expected)
 
-        let categoryRequest = NSFetchRequest<POSModelCategory>(entityName: "Category")
-        let categories = try moc.fetch(categoryRequest)
         let groupRequest = NSFetchRequest<POSModelGroup>(entityName: "Group")
         let groups = try moc.fetch(groupRequest)
         let packRequest = NSFetchRequest<POSModelPack>(entityName: "Pack")
@@ -75,39 +73,11 @@ final class DataServiceTests: TestCase {
         let poses = try moc.fetch(poseRequest)
 
         // then
-        XCTAssertEqual(categories.count, 24)
         XCTAssertEqual(groups.count, 0)
         XCTAssertEqual(packs.count, 30)
         XCTAssertEqual(poses.count, 99 * 12 + 191) // = 1379
     }
 }
-    /* categories
-    > RECLINEAIR: 72 poses
-    > CROUCH: 27 poses
-    > KNEELBENCH: 25 poses
-    > RECLINESIDE: 65 poses
-    > KNEELONE: 30 poses
-    > CLOSEUP: 37 poses
-    > STANDOBJECT: 12 poses
-    > ATHLETIC: 56 poses
-    > WITHPROPS: 257 poses
-    > KNEELBOTH: 166 poses
-    > STANDSIDE: 167 poses
-    > SEATBENCH: 106 poses
-    > SEATCHAIR: 79 poses
-    > SEATFLOOR: 170 poses
-    > STANDFRONT: 112 poses
-    > RECLINEBENCH: 20 poses
-    > DANCE: 49 poses
-    > RECLINEFT: 70 poses
-    > RECLINEBK: 103 poses
-    > CRAWL: 55 poses
-    > SEATLEGS: 115 poses
-    > KNEELANOBJ: 13 poses
-    > SEATSTOOL: 123 poses
-    > STANDBACK: 46 poses
-    (visible: 190 poses)
-    */
 
 /* packs
     twassert([self pack:kOldFemaleVol1].poses.count == 368);
