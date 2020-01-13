@@ -3,10 +3,10 @@
 import CoreData
 
 /// PosesModel entity
-public final class Category: NSManagedObject, EntityModel {
+@objc(POSModelCategory) public final class POSModelCategory: NSManagedObject, EntityModel {
 
     /// EntityModel conformance
-    typealias Entity = Category
+    typealias Entity = POSModelCategory
 
     /// Display title
     var title: String { NSLocalizedString(key!, comment: "") }
@@ -16,7 +16,7 @@ public final class Category: NSManagedObject, EntityModel {
     var visible: String { "TODO" }
 }
 
-extension Category: Identifiable {
+extension POSModelCategory: Identifiable {
     // TaskList put id: UUID in the attributes and declared Identifiable
     // Core Data Test declared Identifiable without attribute
     // ShoppingList did `ForEach(items, id: \.objectID) and didn't declare Identifiable

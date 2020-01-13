@@ -10,6 +10,7 @@ final class DataServiceTests: TestCase {
         // given
         let sut = DataServiceImpl()
         let loaded = expectation(description: "loaded")
+        loaded.expectedFulfillmentCount = 2
         sut.loaded = { _, _ in loaded.fulfill() }
 
         // when

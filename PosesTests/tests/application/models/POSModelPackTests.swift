@@ -4,15 +4,15 @@ import CoreData
 @testable import Poses
 import XCTest
 
-final class PackTests: TestCase {
+final class POSModelPackTests: TestCase {
 
     func testConstruction() throws {
         // given
         let service = DataServiceImpl()
-        _ = Pack(context: service.viewContext)
+        _ = POSModelPack(context: service.viewContext)
 
         // when
-        let fetch: NSFetchRequest = Pack.fetchRequest()
+        let fetch: NSFetchRequest = POSModelPack.fetchRequest()
 
         // then
         XCTAssertNotNil(fetch)

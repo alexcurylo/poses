@@ -3,10 +3,10 @@
 import CoreData
 
 /// PosesModel entity
-public final class Group: NSManagedObject, EntityModel {
+@objc(POSModelGroup) public final class POSModelGroup: NSManagedObject, EntityModel {
 
     /// EntityModel conformance
-    typealias Entity = Group
+    typealias Entity = POSModelGroup
 
     /// Whether is special trash group
     var isTrash: Bool { name == NSLocalizedString("TRASH", comment: "") }

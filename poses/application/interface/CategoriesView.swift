@@ -6,7 +6,7 @@ import SwiftUI
 /// Categories row
  struct CategoryRow: View {
 
-    var category: Category
+    var category: POSModelCategory
 
     var body: some View {
         Text(category.title)
@@ -16,14 +16,14 @@ import SwiftUI
 /// SwiftUI categories tab
 struct CategoriesView: View, ServiceProvider {
 
-    @Environment(\.managedObjectContext) private var context
+    //@Environment(\.managedObjectContext) private var context
 
     @FetchRequest(
-        entity: Category.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Category.key,
+        entity: POSModelCategory.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \POSModelCategory.key,
                                            ascending: true)],
         animation: .default
-    ) private var categories: FetchedResults<Category>
+    ) private var categories: FetchedResults<POSModelCategory>
     // swiftlint:disable:previous let_var_whitespace
 
     /// :nodoc:

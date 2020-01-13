@@ -4,20 +4,20 @@ import CoreData
 @testable import Poses
 import XCTest
 
-final class CategoryTests: TestCase {
+final class POSModelGroupTests: TestCase {
 
     func testConstruction() throws {
         // given
         let service = DataServiceImpl()
-        let sut = Category(context: service.viewContext)
-        sut.key = "test"
+        let sut = POSModelGroup(context: service.viewContext)
+        sut.name = "not Trash"
 
         // when
-        let fetch: NSFetchRequest = Category.fetchRequest()
+        let fetch: NSFetchRequest = POSModelGroup.fetchRequest()
 
         // then
         XCTAssertNotNil(fetch)
-        XCTAssertEqual(sut.title, "test")
+        XCTAssertFalse(sut.isTrash)
         XCTAssertEqual(sut.visible, "TODO")
     }
 }

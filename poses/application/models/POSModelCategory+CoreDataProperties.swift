@@ -5,28 +5,26 @@ import Foundation
 import CoreData
 
 
-extension Pack {
+extension POSModelCategory {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Pack> {
-        return NSFetchRequest<Pack>(entityName: "Pack")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<POSModelCategory> {
+        return NSFetchRequest<POSModelCategory>(entityName: "Category")
     }
 
-    @NSManaged public var embedded: NSNumber?
     @NSManaged public var key: String?
-    @NSManaged public var purchased: NSNumber?
-    @NSManaged public var rating: NSNumber?
+    @NSManaged public var rating: Int32
     @NSManaged public var poses: NSSet?
 
 }
 
 // MARK: Generated accessors for poses
-extension Pack {
+extension POSModelCategory {
 
     @objc(addPosesObject:)
-    @NSManaged public func addToPoses(_ value: Pose)
+    @NSManaged public func addToPoses(_ value: POSModelPose)
 
     @objc(removePosesObject:)
-    @NSManaged public func removeFromPoses(_ value: Pose)
+    @NSManaged public func removeFromPoses(_ value: POSModelPose)
 
     @objc(addPoses:)
     @NSManaged public func addToPoses(_ values: NSSet)

@@ -3,10 +3,10 @@
 import CoreData
 
 /// PosesModel entity
-public final class Pose: NSManagedObject, EntityModel {
+@objc(POSModelPose) public final class POSModelPose: NSManagedObject, EntityModel {
 
     /// EntityModel conformance
-    typealias Entity = Pose
+    typealias Entity = POSModelPose
 
     /// Cache folder
     static var poseCacheFolder: String { "TODO" }
@@ -29,7 +29,7 @@ public final class Pose: NSManagedObject, EntityModel {
     func fetchVisiblePoseObjects(
         moc: NSManagedObjectContext,
         sort: NSSortDescriptor
-    ) -> Result<[Pose], Error> {
+    ) -> Result<[POSModelPose], Error> {
         .failure("TODO")
     }
 }
