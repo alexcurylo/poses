@@ -94,7 +94,6 @@
 		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
 		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
-		FAA0139723CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
@@ -879,7 +878,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Trollwerks Inc.";
 				TargetAttributes = {
 					FA8B53732398F2B9009E8E1F = {
@@ -1150,7 +1149,6 @@
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
-				FAA0139723CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				8C13EFFB23CC110A00449E3D /* POSModelCategory+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
