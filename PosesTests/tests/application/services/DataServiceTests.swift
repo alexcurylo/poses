@@ -37,6 +37,12 @@ final class DataServiceTests: TestCase {
 
     func testSeed() throws {
         // given
+        let expected = Set<String>([
+            POSModelCategory.entityName,
+            POSModelGroup.entityName,
+            POSModelPack.entityName,
+            POSModelPose.entityName
+        ])
         let sut = DataServiceImpl()
         let loadedLibrary = expectation(description: "loadedLibrary")
         let loadedDocs = expectation(description: "loadedDocs")
@@ -62,52 +68,13 @@ final class DataServiceTests: TestCase {
         let mom = sut.persistentContainer.managedObjectModel
         let entities = mom.entitiesByName
         let names = Set<String>(entities.keys)
-        let expected = Set<String>(["Category", "Group", "Pack", "Pose"])
         XCTAssertEqual(names, expected)
 
-        let groupRequest = NSFetchRequest<POSModelGroup>(entityName: "Group")
-        let groups = try moc.fetch(groupRequest)
-        let packRequest = NSFetchRequest<POSModelPack>(entityName: "Pack")
-        let packs = try moc.fetch(packRequest)
-        let poseRequest = NSFetchRequest<POSModelPose>(entityName: "Pose")
-        let poses = try moc.fetch(poseRequest)
+        let groups = try moc.fetch(POSModelGroup.request)
+        let poses = try moc.fetch(POSModelPose.request)
 
         // then
         XCTAssertEqual(groups.count, 0)
-        XCTAssertEqual(packs.count, 30)
         XCTAssertEqual(poses.count, 99 * 12 + 191) // = 1379
     }
 }
-
-/* packs
-    twassert([self pack:kOldFemaleVol1].poses.count == 368);
-    twassert([self pack:kOldFemaleVol2].poses.count == 368);
-    twassert([self pack:kOldFemaleVol3].poses.count == 368);
-    twassert([self pack:kOldPro10].poses.count == 275);
-    twassert([self pack:@"sample"].poses.count == 24);
-    twassert([self pack:@"pro2"].poses.count == 191);
-    twassert([self pack:@"female001paid"].poses.count == 99);
-    twassert([self pack:@"female002paid"].poses.count == 99);
-    twassert([self pack:@"female003paid"].poses.count == 99);
-    twassert([self pack:@"female004paid"].poses.count == 99);
-    twassert([self pack:@"female005paid"].poses.count == 99);
-    twassert([self pack:@"female006paid"].poses.count == 99);
-    twassert([self pack:@"female007paid"].poses.count == 99);
-    twassert([self pack:@"female008paid"].poses.count == 99);
-    twassert([self pack:@"female009paid"].poses.count == 99);
-    twassert([self pack:@"female010paid"].poses.count == 99);
-    twassert([self pack:@"female011paid"].poses.count == 99);
-    twassert([self pack:@"female012paid"].poses.count == 99);
-    twassert([self pack:@"female001free"].poses.count == 99);
-    twassert([self pack:@"female002free"].poses.count == 99);
-    twassert([self pack:@"female003free"].poses.count == 99);
-    twassert([self pack:@"female004free"].poses.count == 99);
-    twassert([self pack:@"female005free"].poses.count == 99);
-    twassert([self pack:@"female006free"].poses.count == 99);
-    twassert([self pack:@"female007free"].poses.count == 99);
-    twassert([self pack:@"female008free"].poses.count == 99);
-    twassert([self pack:@"female009free"].poses.count == 99);
-    twassert([self pack:@"female010free"].poses.count == 99);
-    twassert([self pack:@"female011free"].poses.count == 99);
-    twassert([self pack:@"female012free"].poses.count == 99);
-*/

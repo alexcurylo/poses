@@ -32,7 +32,7 @@ Requirements
 ### Tools:
 
 - [Bundler](https://bundler.io/) for Ruby dependency management
-- [Codebeat]() for automated code review
+- [Codebeat](https://codebeat.co/projects/github-com-alexcurylo-poses-develop) for automated code review
 - [Codecov](https://codecov.io/gh/alexcurylo/poses) for test coverage statistics
 - [Fastlane](https://fastlane.tools) for release management
 - [Github Actions](https://github.com/alexcurylo/poses/actions?workflow=CI) for CI testing

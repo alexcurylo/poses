@@ -41,9 +41,10 @@ class DataServiceImpl: DataService, ServiceProvider {
 
     private let modelName = "PosesModel"
 
-    /// :nodoc:
+    /// Setup completion handler
     var loaded: ((NSPersistentStoreDescription, Error?) -> Void)?
 
+    /// Core Data store 
     lazy var persistentContainer: NSPersistentContainer = {
         //let container = NSPersistentCloudKitContainer(name: "PosesCKModel")
         let container = NSPersistentContainer(name: modelName)

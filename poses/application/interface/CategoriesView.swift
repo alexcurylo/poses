@@ -6,6 +6,7 @@ import SwiftUI
 /// Categories row
  struct CategoryRow: View {
 
+    /// Category being displayed
     var category: POSModelCategory
 
     var body: some View {

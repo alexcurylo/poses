@@ -3,10 +3,7 @@
 import CoreData
 
 /// PosesModel entity
-@objc(POSModelPose) public final class POSModelPose: NSManagedObject, EntityModel {
-
-    /// EntityModel conformance
-    typealias Entity = POSModelPose
+@objc(POSModelPose) public final class POSModelPose: NSManagedObject {
 
     /// Cache folder
     static var poseCacheFolder: String { "TODO" }
@@ -32,4 +29,13 @@ import CoreData
     ) -> Result<[POSModelPose], Error> {
         .failure("TODO")
     }
+}
+
+extension POSModelPose: EntityModel {
+
+    /// EntityModel conformance
+    typealias Entity = POSModelPose
+
+    /// name of entity in store
+    static var entityName = "Pose"
 }

@@ -8,16 +8,20 @@ protocol EntityModel {
 
     /// The entity this is extending
     associatedtype Entity: NSManagedObject
+
+    /// name of entity in store
+    static var entityName: String { get }
 }
 
 extension EntityModel {
 
-    private static var name: String {
+    /// default name of entity in store, matching class
+    static var entityName: String {
         String(describing: Entity.self)
     }
 
-    /// Apply required disambiguation
+    /// Xcode-generated `fetchRequest()` is ambiguous
     static var request: NSFetchRequest<Entity> {
-        NSFetchRequest<Entity>(entityName: name)
+        NSFetchRequest<Entity>(entityName: entityName)
     }
 }
