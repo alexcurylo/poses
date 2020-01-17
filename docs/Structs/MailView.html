@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppBackgroundURLSessionHandler Protocol Reference</title>
+    <title>MailView Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/AppBackgroundURLSessionHandler" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/MailView" class="dashAnchor"></a>
 
-    <a title="AppBackgroundURLSessionHandler Protocol Reference"></a>
+    <a title="MailView Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppBackgroundURLSessionHandler Protocol Reference
+      MailView Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -323,14 +323,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppBackgroundURLSessionHandler</h1>
+            <h1>MailView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppBackgroundURLSessionHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:5Poses10AppHandlerP">AppHandler</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">MailView</span> <span class="p">:</span> <span class="kt">UIViewControllerRepresentable</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ServiceProvider.html">ServiceProvider</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Adopt to have background URL session notifications routed</p>
+            <p>SwiftUI wrapper for MFMailComposeViewController</p>
 
           </div>
         </section>
@@ -342,9 +342,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF"></a>
-                    <a name="//apple_ref/swift/Method/application(_:handleEventsForBackgroundURLSession:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF">application(_:handleEventsForBackgroundURLSession:completionHandler:)</a>
+                    <a name="/s:5Poses8MailViewV12presentation7SwiftUI7BindingVyAE16PresentationModeVGvp"></a>
+                    <a name="//apple_ref/swift/Property/presentation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8MailViewV12presentation7SwiftUI7BindingVyAE16PresentationModeVGvp">presentation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,62 +352,81 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>handleEventsForBackgroundURLSession</p>
+                        <p>Provided to created Coordinator</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">handleEventsForBackgroundURLSession</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@Environment</span>
+<span class="k">var</span> <span class="nv">presentation</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">PresentationMode</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>application</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Application</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>identifier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Callback</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/MailView.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8MailViewV6results6ResultOySo013MFMailComposeE0Vs5Error_pGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8MailViewV6results6ResultOySo013MFMailComposeE0Vs5Error_pGSgvp">result</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bound to containing State</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@Binding</span>
+<span class="k">var</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">MFMailComposeResult</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L111">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/MailView.swift#L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8MailViewV11CoordinatorC"></a>
+                    <a name="//apple_ref/swift/Class/Coordinator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8MailViewV11CoordinatorC">Coordinator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>UIViewControllerRepresentable associated type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">Coordinator</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">MFMailComposeViewControllerDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/MailView.swift#L17-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

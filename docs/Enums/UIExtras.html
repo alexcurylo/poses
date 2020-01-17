@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppBackgroundURLSessionHandler Protocol Reference</title>
+    <title>UIExtras Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/AppBackgroundURLSessionHandler" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/UIExtras" class="dashAnchor"></a>
 
-    <a title="AppBackgroundURLSessionHandler Protocol Reference"></a>
+    <a title="UIExtras Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppBackgroundURLSessionHandler Protocol Reference
+      UIExtras Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -323,14 +323,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppBackgroundURLSessionHandler</h1>
+            <h1>UIExtras</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppBackgroundURLSessionHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:5Poses10AppHandlerP">AppHandler</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">UIExtras</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Exposable.html">Exposable</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Adopt to have background URL session notifications routed</p>
+            <p>ExtrasView exposed items</p>
 
           </div>
         </section>
@@ -342,9 +342,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF"></a>
-                    <a name="//apple_ref/swift/Method/application(_:handleEventsForBackgroundURLSession:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF">application(_:handleEventsForBackgroundURLSession:completionHandler:)</a>
+                    <a name="/s:5Poses8UIExtrasO9subscribeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/subscribe" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO9subscribeyA2CmF">subscribe</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,62 +352,259 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>handleEventsForBackgroundURLSession</p>
+                        <p>Subscribe button</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">handleEventsForBackgroundURLSession</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">subscribe</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>application</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Application</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>identifier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Identifier</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Callback</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L7">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO7upgradeyACSS_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/upgrade(pack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO7upgradeyACSS_tcACmF">upgrade(pack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Upgrade buttons</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">upgrade</span><span class="p">(</span><span class="nv">pack</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L111">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L9">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO8purchaseyACSS_tcACmF"></a>
+                    <a name="//apple_ref/swift/Element/purchase(pack:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO8purchaseyACSS_tcACmF">purchase(pack:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Purchase buttons</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">purchase</span><span class="p">(</span><span class="nv">pack</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L11">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO8feedbackyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/feedback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO8feedbackyA2CmF">feedback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Feedback button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">feedback</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO6reviewyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/review" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO6reviewyA2CmF">review</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Review button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">review</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO7restoreyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/restore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO7restoreyA2CmF">restore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restore button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">restore</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L18">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO5notesyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO5notesyA2CmF">notes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notes button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notes</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO20visitPhotographyTipsyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/visitPhotographyTips" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO20visitPhotographyTipsyA2CmF">visitPhotographyTips</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Visit PhotographyTips button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">visitPhotographyTips</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses8UIExtrasO11visitGithubyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/visitGithub" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses8UIExtrasO11visitGithubyA2CmF">visitGithub</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Visit Github button</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">visitGithub</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/screens/UIExtras.swift#L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

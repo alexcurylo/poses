@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppBackgroundURLSessionHandler Protocol Reference</title>
+    <title>TableCellExposing Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/AppBackgroundURLSessionHandler" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Protocol/TableCellExposing" class="dashAnchor"></a>
 
-    <a title="AppBackgroundURLSessionHandler Protocol Reference"></a>
+    <a title="TableCellExposing Protocol Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AppBackgroundURLSessionHandler Protocol Reference
+      TableCellExposing Protocol Reference
     </p>
 
     <div class="content-wrapper">
@@ -323,14 +323,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>AppBackgroundURLSessionHandler</h1>
+            <h1>TableCellExposing</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AppBackgroundURLSessionHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:5Poses10AppHandlerP">AppHandler</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">TableCellExposing</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Adopt to have background URL session notifications routed</p>
+            <p>Tagging protocol for table data sources</p>
 
           </div>
         </section>
@@ -342,9 +342,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF"></a>
-                    <a name="//apple_ref/swift/Method/application(_:handleEventsForBackgroundURLSession:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses30AppBackgroundURLSessionHandlerP11application_015handleEventsForcD0010completionE0ySo13UIApplicationC_SSyyctF">application(_:handleEventsForBackgroundURLSession:completionHandler:)</a>
+                    <a name="/s:5Poses17TableCellExposingP6expose4view4path4cellySo11UITableViewC_10Foundation9IndexPathVSo0ijC0CtF"></a>
+                    <a name="//apple_ref/swift/Method/expose(view:path:cell:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses17TableCellExposingP6expose4view4path4cellySo11UITableViewC_10Foundation9IndexPathVSo0ijC0CtF">expose(view:path:cell:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,14 +352,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>handleEventsForBackgroundURLSession</p>
+                        <p>Conventional call for exposing cell once created</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">handleEventsForBackgroundURLSession</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">expose</span><span class="p">(</span><span class="nv">view</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -370,36 +370,36 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>application</em>
+                                <em>view</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Application</p>
+                                  <p>Container</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>identifier</em>
+                                <em>path</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Identifier</p>
+                                  <p>Will be encoded in accessibility identifier</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>completionHandler</em>
+                                <em>cell</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Callback</p>
+                                  <p>Cell to expose</p>
                                 </div>
                               </td>
                             </tr>
@@ -407,7 +407,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/RoutingAppDelegate.swift#L111">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/testing/Exposable.swift#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
