@@ -5,6 +5,8 @@ import SwiftUI
 /// SwiftUI favorites tab
 struct FavoritesView: View, ServiceProvider {
 
+    @Environment(\.managedObjectContext) private var context
+
     /// :nodoc:
     var body: some View {
         ZStack {

@@ -15,7 +15,39 @@
 "tabFitPose" = "Fit Pose";
 "tabExtras" = "Extras";
 
-// Extras
+// categories
+
+"ATHLETIC" = "Athletic/Gymnastic";
+"CLOSEUP" = "Close-ups";
+"CRAWL" = "Crawling";
+"CROUCH" = "Crouching";
+"DANCE" = "Dance";
+"KNEELANOBJ" = "Kneeling leaning on object";
+"KNEELBENCH" = "Kneeling on bench/chair";
+"KNEELBOTH" = "Kneeling on both knees";
+"KNEELONE" = "Kneeling on one knee";
+"RECLINEAIR" = "Reclining - leg(s) in air";
+"RECLINEBENCH" = "Reclining on bench";
+"RECLINEBK" = "Reclining on floor on back";
+"RECLINEFT" = "Reclining on floor on front";
+"RECLINESIDE" = "Reclining on floor on side";
+"SEATBENCH" = "Seated on bench";
+"SEATCHAIR" = "Seated on chair";
+"SEATFLOOR" = "Seated on floor";
+"SEATLEGS" = "Seated on floor, leg(s) up";
+"SEATSTOOL" = "Seated on stool";
+"STANDBACK" = "Standing - back view";
+"STANDFRONT" = "Standing - frontal view";
+"STANDOBJECT" = "Standing - knee on object";
+"STANDSIDE" = "Standing - side view";
+"WITHPROPS" = "With props";
+
+// groups
+
+"groupFavorites" = "Favorites";
+"groupTrash" = "Trash (Hidden)";
+
+// extras
 
 "subscription" = "Library Subscription";
 "subscribe" = "Subscribe to 1500+ poses!";

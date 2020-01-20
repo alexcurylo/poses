@@ -11,6 +11,9 @@ protocol DataService {
 
     /// Write viewContext
     func save()
+
+    /// Populate database
+    func seed()
 }
 
 extension DataService {
@@ -69,6 +72,32 @@ class DataServiceImpl: DataService, ServiceProvider {
         }
         return container
     }()
+
+    func seed() {
+        let url = storeURL
+        guard !FileManager.default.fileExists(atPath: url.path),
+              let seed = R.file.posesModelSqlite() else {
+            log.verbose("no seeding needed: \(url)")
+            return
+        }
+
+        do {
+            try FileManager.default.copyItem(at: seed, to: url)
+            log.verbose("seeded model: \(url)")
+        } catch {
+            log.error("seeding model: \(error)")
+        }
+
+        // "remember to specify the rollback journaling mode..."
+        // Technical Note TN2350 Working with Default Data in Core Data Apps
+        // https://developer.apple.com/library/archive/technotes/tn2350/
+        // Notes for migrating to CloudKit+SwiftUI friendly revision
+        // swiftlint:disable line_length
+        // https://github.com/riywo/PreloadedPersistentContainer
+        // https://williamboles.me/progressive-core-data-migration/
+        // https://www.raywenderlich.com/7585-lightweight-migrations-in-core-data-tutorial
+        // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/Introduction.html
+    }
 }
 
 // MARK: - Private
@@ -95,32 +124,6 @@ private extension DataServiceImpl {
         // NSPersistentContainer.defaultDirectoryURL() // /Library/Application Support
         // PosesPro2 seeded to /Documents
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    }
-
-    func seed() {
-        let url = storeURL
-        guard !FileManager.default.fileExists(atPath: url.path),
-              let seed = R.file.posesModelSqlite() else {
-            log.verbose("no seeding needed: \(url)")
-            return
-        }
-
-        do {
-            try FileManager.default.copyItem(at: seed, to: url)
-            log.verbose("seeded model: \(url)")
-        } catch {
-            log.error("seeding model: \(error)")
-        }
-
-        // "remember to specify the rollback journaling mode..."
-        // Technical Note TN2350 Working with Default Data in Core Data Apps
-        // https://developer.apple.com/library/archive/technotes/tn2350/
-        // Notes for migrating to CloudKit+SwiftUI friendly revision
-        // swiftlint:disable line_length
-        // https://github.com/riywo/PreloadedPersistentContainer
-        // https://williamboles.me/progressive-core-data-migration/
-        // https://www.raywenderlich.com/7585-lightweight-migrations-in-core-data-tutorial
-        // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreDataVersioning/Articles/Introduction.html
     }
 
     func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {

@@ -43,7 +43,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         // set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         let appView = AppView()
-                .environment(\.managedObjectContext, data.viewContext)
+                      .environment(\.managedObjectContext, data.viewContext)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

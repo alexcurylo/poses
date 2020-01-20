@@ -3,21 +3,8 @@
 import CoreData
 import SwiftUI
 
-/// Categories row
- struct CategoryRow: View {
-
-    /// Category being displayed
-    var category: POSModelCategory
-
-    var body: some View {
-        Text(category.title)
-    }
-}
-
 /// SwiftUI categories tab
 struct CategoriesView: View, ServiceProvider {
-
-    //@Environment(\.managedObjectContext) private var context
 
     @FetchRequest(
         entity: POSModelCategory.entity(),
@@ -27,13 +14,16 @@ struct CategoriesView: View, ServiceProvider {
     ) private var categories: FetchedResults<POSModelCategory>
     // swiftlint:disable:previous let_var_whitespace
 
+    // Need to disable FR and \.managedObjectContext for previewing?
+    //private var categories: [GroupRowSample] = []
+
     /// :nodoc:
     var body: some View {
         NavigationView {
             List {
                 ForEach(categories) { category in
                     NavigationLink(destination: GalleryView()) {
-                        CategoryRow(category: category)
+                        GroupRowView(group: category)
                     }
                 }
             }
@@ -51,8 +41,15 @@ struct CategoriesView: View, ServiceProvider {
 struct CategoriesView_Previews: PreviewProvider {
 
     /// :nodoc:
+    static var moc: NSManagedObjectContext {
+        Services().data.viewContext
+    }
+
+    /// :nodoc:
     static var previews: some View {
         CategoriesView()
+        //.environment(\.managedObjectContext, moc)
+        //.onAppear { Services().data.seed() }
     }
 
     /// :nodoc:

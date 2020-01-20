@@ -99,6 +99,8 @@ enum CategoryKey: String, CaseIterable {
     var visible: String { "TODO" }
 }
 
+extension POSModelCategory: GroupRowModel {}
+
 extension POSModelCategory: EntityModel {
 
     /// EntityModel conformance
