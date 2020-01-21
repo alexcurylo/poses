@@ -17,6 +17,7 @@ enum Tab: Int, CaseIterable {
     /// SwiftUI view tag
     var tag: Int { rawValue }
 
+    #if !UITEST
     var title: String {
         switch self {
         case .favorites:
@@ -25,4 +26,5 @@ enum Tab: Int, CaseIterable {
             return String(self)
         }
     }
+    #endif
 }

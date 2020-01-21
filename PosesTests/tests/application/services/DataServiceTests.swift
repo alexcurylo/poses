@@ -74,7 +74,7 @@ final class DataServiceTests: TestCase {
         let poses = try moc.fetch(POSModelPose.request)
 
         // then
-        XCTAssertEqual(groups.count, 0)
+        XCTAssertEqual(groups.count, 2)
         XCTAssertEqual(poses.count, 99 * 12 + 191) // = 1379
     }
 }

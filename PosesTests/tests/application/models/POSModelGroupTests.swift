@@ -18,6 +18,6 @@ final class POSModelGroupTests: TestCase {
         // then
         XCTAssertNotNil(fetch)
         XCTAssertFalse(sut.isTrash)
-        XCTAssertEqual(sut.visible, "TODO")
+        XCTAssertEqual(sut.visible(in: service.viewContext), "0")
     }
 }

@@ -18,7 +18,7 @@ final class POSModelCategoryTests: TestCase {
         // then
         XCTAssertNotNil(fetch)
         XCTAssertEqual(sut.title, "test")
-        XCTAssertEqual(sut.visible, "TODO")
+        XCTAssertEqual(sut.visible(in: service.viewContext), "0")
     }
 
     func testSeed() throws {
