@@ -109,7 +109,7 @@ struct ExtrasView: View, ServiceProvider {
                     #endif
                 }
             }
-            .navigationBarTitle(String(Tab.extras))
+            .navigationBarTitle(Tab.extras.title)
         }
         .onAppear {
             self.report.screen(String(Tab.extras))

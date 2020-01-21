@@ -37,7 +37,12 @@ class DataServiceImpl: DataService, ServiceProvider {
 
     /// :nodoc:
     func save() {
-        _ = try? saveContext()
+        do {
+            try saveContext()
+        } catch {
+            let nserror = error as NSError
+            fatalError("saveContext error \(nserror), \(nserror.userInfo)")
+        }
     }
 
     // MARK: - Core Data stack
@@ -61,9 +66,10 @@ class DataServiceImpl: DataService, ServiceProvider {
 
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                fatalError("loadPersistentStores error \(error), \(error.userInfo)")
             }
 
+            self.validate(moc: container.viewContext)
             if let loaded = self.loaded {
                 DispatchQueue.main.async {
                     loaded(storeDescription, error)
@@ -103,6 +109,26 @@ class DataServiceImpl: DataService, ServiceProvider {
 // MARK: - Private
 
 private extension DataServiceImpl {
+
+    func validate(moc: NSManagedObjectContext) {
+        guard let groups = try? moc.count(for: POSModelGroup.request),
+              groups == 0 else { return }
+
+        let faves = POSModelGroup(context: moc)
+        faves.name = L.groupFavorites()
+        faves.order = 1
+
+        let trash = POSModelGroup(context: moc)
+        trash.name = L.groupTrash()
+        trash.order = Int32.max
+
+        do {
+            try moc.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("validate error \(nserror), \(nserror.userInfo)")
+        }
+    }
 
     var newBackgroundContext: NSManagedObjectContext {
         persistentContainer.newBackgroundContext()

@@ -15,6 +15,10 @@
 "tabFitPose" = "Fit Pose";
 "tabExtras" = "Extras";
 
+// screens
+
+"screenFavorites" = "Favorite Groups";
+
 // categories
 
 "ATHLETIC" = "Athletic/Gymnastic";

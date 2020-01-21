@@ -30,8 +30,10 @@ struct CategoriesView: View, ServiceProvider {
             .onAppear {
                 self.report.screen(String(Tab.categories))
             }
-            .navigationBarTitle(String(Tab.categories))
+            .navigationBarTitle(Tab.categories.title)
         }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        //.padding() // displays master on iPad portrait launch
         .animation(.default)
     }
 }

@@ -1,5 +1,6 @@
 // @copyright Trollwerks Inc.
 
+import CoreData
 import SwiftUI
 
 /// display provider
@@ -8,28 +9,54 @@ protocol GroupRowModel {
     /// Display title
     var title: String { get }
     /// Display count
-    var visible: String { get }
+    func visible(in moc: NSManagedObjectContext) -> String
 }
 
 /// Group row
  struct GroupRowView: View {
 
-    /// Group being displayed
-    var group: GroupRowModel
+    @Environment(\.managedObjectContext) private var moc
+
+    /// Rendering style
+    enum Style {
+
+        /// Editable/movable/deletable
+        case enabled
+        /// Trash, not editable/movable/deletable
+        case disabled
+    }
+
+    /// Displayed group
+    let group: GroupRowModel
+    /// Editable or not editable appearance
+    var style: Style = .enabled
+
+    private var titleColor: Color {
+        switch style {
+        case .enabled: return .primary
+        case .disabled: return .gray
+        }
+    }
+
+    private var badgeColor: Color {
+        switch style {
+        case .enabled: return Color(R.color.badge() ?? .gray)
+        case .disabled: return .gray
+        }
+    }
 
     var body: some View {
         HStack {
             Text(group.title)
+            .foregroundColor(titleColor)
             Spacer()
-            Text(" \(group.visible) ")
+            Text(" \(group.visible(in: moc)) ")
             .font(.system(.footnote, design: .monospaced))
             .bold()
             .foregroundColor(Color.white)
             .padding(2)
             .frame(minWidth: 40)
-            .background(Capsule().fill(Color(red: 0.530,
-                                             green: 0.600,
-                                             blue: 0.738)))
+            .background(Capsule().fill(badgeColor))
             .padding(.trailing, 6)
         }
     }
@@ -41,7 +68,8 @@ struct GroupRowSample: GroupRowModel, Identifiable {
 
     let id = UUID()
     let title = "Group Row Sample"
-    let visible = "99"
+
+    func visible(in moc: NSManagedObjectContext) -> String { "99" }
 }
 
 /// :nodoc:

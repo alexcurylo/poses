@@ -16,4 +16,13 @@ enum Tab: Int, CaseIterable {
 
     /// SwiftUI view tag
     var tag: Int { rawValue }
+
+    var title: String {
+        switch self {
+        case .favorites:
+            return L.screenFavorites()
+        default:
+            return String(self)
+        }
+    }
 }

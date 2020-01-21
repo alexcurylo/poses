@@ -89,17 +89,20 @@ enum CategoryKey: String, CaseIterable {
 }
 
 /// PosesModel entity
-@objc(POSModelCategory) public final class POSModelCategory: NSManagedObject {
+@objc(POSModelCategory) public final class POSModelCategory: NSManagedObject { }
+
+extension POSModelCategory: GroupRowModel {
 
     /// Display title
     var title: String { NSLocalizedString(key!, comment: "") }
     // swiftlint:disable:previous force_unwrapping
 
     /// Display count
-    var visible: String { "TODO" }
+    func visible(in moc: NSManagedObjectContext) -> String {
+        moc.count(template: "VisiblePosesInCategory",
+                  subs: ["keyed": id])
+    }
 }
-
-extension POSModelCategory: GroupRowModel {}
 
 extension POSModelCategory: EntityModel {
 
