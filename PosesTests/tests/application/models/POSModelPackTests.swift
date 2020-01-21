@@ -8,8 +8,10 @@ final class POSModelPackTests: TestCase {
 
     func testConstruction() throws {
         // given
-        let service = DataServiceImpl()
-        _ = POSModelPack(context: service.viewContext)
+        let moc = CoreDataStack.shared.moc
+        let sut = POSModelPack(context: moc)
+        defer { moc.delete(sut) }
+        sut.key = "test"
 
         // when
         let fetch: NSFetchRequest = POSModelPack.fetchRequest()
@@ -20,10 +22,9 @@ final class POSModelPackTests: TestCase {
 
     func testSeed() throws {
         // given
-        let sut = DataServiceImpl()
+        let moc = CoreDataStack.shared.moc
 
         // when
-        let moc = sut.viewContext
         let packs = try moc.fetch(POSModelPack.request)
 
         // then

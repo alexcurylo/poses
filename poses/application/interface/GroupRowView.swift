@@ -62,25 +62,23 @@ protocol GroupRowModel {
     }
 }
 
-#if DEBUG
-
-struct GroupRowSample: GroupRowModel, Identifiable {
-
-    let id = UUID()
-    let title = "Group Row Sample"
-
-    func visible(in moc: NSManagedObjectContext) -> String { "99" }
-}
-
 /// :nodoc:
 struct GroupRowView_Previews: PreviewProvider {
+
+    private struct Sample: GroupRowModel, Identifiable {
+
+        let id = UUID()
+        let title = "Group Row Sample"
+
+        func visible(in moc: NSManagedObjectContext) -> String { "99" }
+    }
 
     /// :nodoc:
     static var previews: some View {
         Group {
-            GroupRowView(group: GroupRowSample())
+            GroupRowView(group: Sample())
             .previewLayout(.fixed(width: 320, height: 44))
-            GroupRowView(group: GroupRowSample())
+            GroupRowView(group: Sample())
             .previewLayout(.fixed(width: 375, height: 44))
         }
     }
@@ -88,4 +86,3 @@ struct GroupRowView_Previews: PreviewProvider {
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
-#endif

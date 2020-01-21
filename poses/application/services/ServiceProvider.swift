@@ -1,6 +1,7 @@
 // @copyright Trollwerks Inc.
 
-import UIKit
+import CoreData
+import SwiftUI
 
 /// Provider of application-wide services
 protocol ServiceProvider {

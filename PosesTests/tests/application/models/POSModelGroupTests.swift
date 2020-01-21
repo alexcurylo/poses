@@ -8,8 +8,9 @@ final class POSModelGroupTests: TestCase {
 
     func testConstruction() throws {
         // given
-        let service = DataServiceImpl()
-        let sut = POSModelGroup(context: service.viewContext)
+        let moc = CoreDataStack.shared.moc
+        let sut = POSModelGroup(context: moc)
+        defer { moc.delete(sut) }
         sut.name = "not Trash"
 
         // when
@@ -18,6 +19,6 @@ final class POSModelGroupTests: TestCase {
         // then
         XCTAssertNotNil(fetch)
         XCTAssertFalse(sut.isTrash)
-        XCTAssertEqual(sut.visible(in: service.viewContext), "0")
+        XCTAssertEqual(sut.visible(in: moc), "0")
     }
 }

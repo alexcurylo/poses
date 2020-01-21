@@ -38,23 +38,15 @@ struct CategoriesView: View, ServiceProvider {
     }
 }
 
-#if DEBUG
 /// :nodoc:
 struct CategoriesView_Previews: PreviewProvider {
 
     /// :nodoc:
-    static var moc: NSManagedObjectContext {
-        Services().data.viewContext
-    }
-
-    /// :nodoc:
     static var previews: some View {
         CategoriesView()
-        //.environment(\.managedObjectContext, moc)
-        //.onAppear { Services().data.seed() }
+        .environment(\.managedObjectContext, CoreDataStack.shared.moc)
     }
 
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
-#endif

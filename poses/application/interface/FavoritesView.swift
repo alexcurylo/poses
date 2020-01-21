@@ -65,16 +65,15 @@ struct FavoritesView: View, ServiceProvider {
     }
 }
 
-#if DEBUG
 /// :nodoc:
 struct FavoritesView_Previews: PreviewProvider {
 
     /// :nodoc:
     static var previews: some View {
         FavoritesView()
+        .environment(\.managedObjectContext, CoreDataStack.shared.moc)
     }
 
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
-#endif

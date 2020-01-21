@@ -8,8 +8,9 @@ final class POSModelCategoryTests: TestCase {
 
     func testConstruction() throws {
         // given
-        let service = DataServiceImpl()
-        let sut = POSModelCategory(context: service.viewContext)
+        let moc = CoreDataStack.shared.moc
+        let sut = POSModelCategory(context: moc)
+        defer { moc.delete(sut) }
         sut.key = "test"
 
         // when
@@ -18,15 +19,14 @@ final class POSModelCategoryTests: TestCase {
         // then
         XCTAssertNotNil(fetch)
         XCTAssertEqual(sut.title, "test")
-        XCTAssertEqual(sut.visible(in: service.viewContext), "0")
+        XCTAssertEqual(sut.visible(in: moc), "0")
     }
 
     func testSeed() throws {
         // given
-        let sut = DataServiceImpl()
+        let moc = CoreDataStack.shared.moc
 
         // when
-        let moc = sut.viewContext
         let categories = try moc.fetch(POSModelCategory.request)
 
         // then

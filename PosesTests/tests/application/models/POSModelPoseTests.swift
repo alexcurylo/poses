@@ -8,8 +8,9 @@ final class POSModelPoseTests: TestCase {
 
     func testConstruction() throws {
         // given
-        let service = DataServiceImpl()
-        let sut = POSModelPose(context: service.viewContext)
+        let moc = CoreDataStack.shared.moc
+        let sut = POSModelPose(context: moc)
+        defer { moc.delete(sut) }
 
         // when
         let fetch: NSFetchRequest = POSModelPose.fetchRequest()

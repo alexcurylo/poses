@@ -57,19 +57,17 @@ struct AppView: View {
     }
 }
 
-#if DEBUG
 /// :nodoc:
 struct AppView_Previews: PreviewProvider {
 
     /// :nodoc:
     static var previews: some View {
         AppView()
-        //AppView().environment(\.colorScheme, .dark)
-        //AppView().environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
-        //NavigationView { AppView() }
+        .environment(\.managedObjectContext, CoreDataStack.shared.moc)
+        //.environment(\.colorScheme, .dark)
+        //.environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
     }
 
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
-#endif

@@ -96,6 +96,8 @@
 		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
 		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
+		FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
+		FAA2CB7D23D7B40000ED7B6C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
@@ -279,6 +281,8 @@
 		FAA0136523CB47750089EA76 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "POSModelCategory+CoreDataProperties.swift"; path = "Poses/application/models/POSModelCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2F49C923B2BA9200EAABC5 /* ApplicationServiceTests.swift */,
+				FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */,
 				8C11B99323A345BA00AFE1AE /* DataServiceTests.swift */,
 				8C11B99123A335D000AFE1AE /* LoggingServiceTests.swift */,
 				FAC2258023A64F3600BF3749 /* ReportingServiceTests.swift */,
@@ -540,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2F49C723B2BA7D00EAABC5 /* ApplicationService.swift */,
+				FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */,
 				FAFB16A9239F06BD004D314D /* DataService.swift */,
 				8CA9CDBB239DE47E00213558 /* LoggingService.swift */,
 				FAC2257C23A6261D00BF3749 /* ReportingService.swift */,
@@ -1135,6 +1141,7 @@
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				FA2F49D123B357F200EAABC5 /* Exposable.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
+				FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */,
 				FA42498823AE18860091A85B /* CategoriesView.swift in Sources */,
 				FAFB16AA239F06BD004D314D /* DataService.swift in Sources */,
 				8CA9CDBF239DE58400213558 /* Date+Formatting.swift in Sources */,
@@ -1172,6 +1179,7 @@
 				FA7CD1CA23A4611B00A1EFAF /* AppViewTests.swift in Sources */,
 				8C81399123A8764800871457 /* POSModelGroupTests.swift in Sources */,
 				8C1B45E6239F219F00C4FBEC /* TestCase.swift in Sources */,
+				FAA2CB7D23D7B40000ED7B6C /* CoreDataStackTests.swift in Sources */,
 				8CA9CDC9239DE6C400213558 /* UserDefaultsTests.swift in Sources */,
 				8C81399523A8766600871457 /* POSModelPoseTests.swift in Sources */,
 				FAC2258123A64F3600BF3749 /* ReportingServiceTests.swift in Sources */,

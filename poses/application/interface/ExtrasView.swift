@@ -171,16 +171,15 @@ struct ExtrasView: View, ServiceProvider {
     }
 }
 
-#if DEBUG
 /// :nodoc:
 struct ExtrasView_Previews: PreviewProvider {
 
     /// :nodoc:
     static var previews: some View {
         ExtrasView()
+        .environment(\.managedObjectContext, CoreDataStack.shared.moc)
     }
 
     /// :nodoc:
     static var platform: PreviewPlatform? { .iOS }
 }
-#endif
