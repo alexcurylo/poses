@@ -10,6 +10,8 @@ name: SFSafeSymbols, nameSpecified: , owner: piknotech, version: 1.1.1
 
 name: Siren, nameSpecified: , owner: ArtSabintsev, version: 5.2.3
 
+name: SwiftUI-Introspect, nameSpecified: , owner: siteline, version: 0.0.6
+
 name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.8.4
 
 add-version-numbers: true

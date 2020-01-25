@@ -1,5 +1,6 @@
 // @copyright Trollwerks Inc.
 
+#if canImport(MessageUI)
 import MessageUI
 import SwiftUI
 
@@ -67,3 +68,4 @@ struct MailView: UIViewControllerRepresentable, ServiceProvider {
     ) {
     }
 }
+#endif

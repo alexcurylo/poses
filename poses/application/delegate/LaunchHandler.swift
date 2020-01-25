@@ -1,6 +1,8 @@
 // @copyright Trollwerks Inc.
 
+#if canImport(Siren)
 import Siren
+#endif
 import SwiftyBeaver
 import UIKit
 
@@ -61,6 +63,7 @@ private extension LaunchHandler {
     }
 
     func configureUpgrades(force: Bool = false) {
+        #if canImport(Siren)
         let siren = Siren.shared
         if force {
             siren.rulesManager = RulesManager(
@@ -70,6 +73,7 @@ private extension LaunchHandler {
             siren.rulesManager = RulesManager(globalRules: .annoying)
         }
         siren.wail()
+        #endif
     }
 }
 

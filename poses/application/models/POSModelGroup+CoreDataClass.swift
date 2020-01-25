@@ -7,6 +7,25 @@ import CoreData
 
     /// Whether is special trash group
     var isTrash: Bool { name == L.groupTrash() }
+
+    func set(unique title: String) {
+        guard
+            !title.isEmpty,
+            title != name,
+            let moc = managedObjectContext
+        else { return }
+
+        var unique = title
+        var suffix = 2
+        while moc.exists(template: "Group",
+                         subs: ["named": unique]) {
+            unique = "\(title)\(suffix)"
+            suffix += 1
+        }
+
+        objectWillChange.send()
+        name = unique
+    }
 }
 
 extension POSModelGroup: GroupRowModel {

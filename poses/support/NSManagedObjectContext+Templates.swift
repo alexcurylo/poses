@@ -25,8 +25,31 @@ extension NSManagedObjectContext {
             return String(visible)
         } catch {
             let nserror = error as NSError
-            print("visible error \(nserror), \(nserror.userInfo)")
+            print("count error \(nserror), \(nserror.userInfo)")
             return ""
+        }
+    }
+
+    /// Returns whether count > 0 for fetch
+    /// - Parameters:
+    ///   - name: Template name
+    ///   - subs: Template substitutions
+    func exists(template name: String,
+                subs: [String: Any] = [:]) -> Bool {
+        guard let request = persistentStoreCoordinator?
+            .managedObjectModel
+            .fetchRequestFromTemplate(
+                withName: name,
+                substitutionVariables: subs) else { return false }
+
+        request.resultType = NSFetchRequestResultType.countResultType
+        do {
+            let visible = try count(for: request)
+            return visible > 0
+        } catch {
+            let nserror = error as NSError
+            print("exists error \(nserror), \(nserror.userInfo)")
+            return false
         }
     }
 }

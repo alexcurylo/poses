@@ -15,10 +15,6 @@
 "tabFitPose" = "Fit Pose";
 "tabExtras" = "Extras";
 
-// screens
-
-"screenFavorites" = "Favorite Groups";
-
 // categories
 
 "ATHLETIC" = "Athletic/Gymnastic";
@@ -46,10 +42,14 @@
 "STANDSIDE" = "Standing - side view";
 "WITHPROPS" = "With props";
 
-// groups
+// favorites
 
+"screenFavorites" = "Favorite Groups";
 "groupFavorites" = "Favorites";
 "groupTrash" = "Trash (Hidden)";
+"groupName" = "Name";
+"cancel" = "Cancel";
+"addGroup" = "Add group";
 
 // extras
 
@@ -68,7 +68,7 @@
 "visitPhotographyTips" = "Visit PhotographyTips.com";
 "visitGithub" = "Visit Github project";
 
-// Mail
+// mail
 
 "mailAddress" = "iphonesupport@photographytips.com";
 "mailSubject" = "%@ Feedback";

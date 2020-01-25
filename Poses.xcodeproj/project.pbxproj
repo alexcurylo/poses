@@ -99,6 +99,14 @@
 		FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
 		FAA2CB7D23D7B40000ED7B6C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
+		FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF854D23DA85E8005DCBA9 /* AddButton.swift */; };
+		FAAF854F23DA85E8005DCBA9 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF854D23DA85E8005DCBA9 /* AddButton.swift */; };
+		FAAF855223DBA32C005DCBA9 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FAAF855123DBA32C005DCBA9 /* Introspect */; };
+		FAAF855323DBC9E8005DCBA9 /* GroupRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91C5F123D65BEA0043A44E /* GroupRowView.swift */; };
+		FAAF855423DBC9F5005DCBA9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
+		FAAF855523DBCA04005DCBA9 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
+		FAAF855623DBCA25005DCBA9 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
+		FAAF855723DBCA25005DCBA9 /* NSManagedObjectContext+Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B3B6A23D6D7D60070A68D /* NSManagedObjectContext+Templates.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
@@ -287,6 +295,7 @@
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAB6A2723B54E4D0021666B /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		FAAF854D23DA85E8005DCBA9 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		FABCAF1723ADBE65005526BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -341,6 +350,7 @@
 				8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */,
 				FAC2257B23A6139D00BF3749 /* Security.framework in Frameworks */,
 				8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */,
+				FAAF855223DBA32C005DCBA9 /* Introspect in Frameworks */,
 				FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */,
 				FA42499123AE1AFF0091A85B /* SFSafeSymbols in Frameworks */,
 				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
@@ -573,6 +583,7 @@
 		FA7CD1C723A460ED00A1EFAF /* interface */ = {
 			isa = PBXGroup;
 			children = (
+				FAAF854D23DA85E8005DCBA9 /* AddButton.swift */,
 				FA8B537E2398F2B9009E8E1F /* AppView.swift */,
 				FA42498723AE18860091A85B /* CategoriesView.swift */,
 				FA42498D23AE19360091A85B /* ExtrasView.swift */,
@@ -816,6 +827,7 @@
 				FAC2258323A6E18F00BF3749 /* Nuke */,
 				FA42499023AE1AFF0091A85B /* SFSafeSymbols */,
 				FAB8E15B23C7DBF60053451A /* Siren */,
+				FAAF855123DBA32C005DCBA9 /* Introspect */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
@@ -925,6 +937,7 @@
 				FAC2258223A6E18F00BF3749 /* XCRemoteSwiftPackageReference "Nuke" */,
 				FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */,
+				FAAF855023DBA32C005DCBA9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -1161,6 +1174,7 @@
 				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */,
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
+				FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */,
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
@@ -1228,6 +1242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF855523DBCA04005DCBA9 /* EntityModel.swift in Sources */,
+				FAAF855723DBCA25005DCBA9 /* NSManagedObjectContext+Templates.swift in Sources */,
 				8C13EFFC23CC110A00449E3D /* POSModelCategory+CoreDataClass.swift in Sources */,
 				FAFC5AE023AEF93C0064B97A /* ProcessInfo+Launch.swift in Sources */,
 				FAFC5AFB23AEFA830064B97A /* Secrets.swift in Sources */,
@@ -1241,10 +1257,13 @@
 				FAFC5AFE23AEFAE00064B97A /* CategoriesView.swift in Sources */,
 				FAFC5AF423AEFA6C0064B97A /* LoggingService.swift in Sources */,
 				8C13EFF423CC110A00449E3D /* POSModelPack+CoreDataClass.swift in Sources */,
+				FAAF855323DBC9E8005DCBA9 /* GroupRowView.swift in Sources */,
 				FAFC5B0123AEFAE00064B97A /* FitPoseView.swift in Sources */,
 				FAFC5AE123AEF9480064B97A /* ServiceHandler.swift in Sources */,
+				FAAF855423DBC9F5005DCBA9 /* CoreDataStack.swift in Sources */,
 				8C13EFF823CC110A00449E3D /* POSModelPose+CoreDataClass.swift in Sources */,
 				FAFC5AFC23AEFABD0064B97A /* R.generated.swift in Sources */,
+				FAAF855623DBCA25005DCBA9 /* MailView.swift in Sources */,
 				FAFC5B0023AEFAE00064B97A /* FavoritesView.swift in Sources */,
 				FA2F49D223B357F200EAABC5 /* Exposable.swift in Sources */,
 				8C13EFFA23CC110A00449E3D /* POSModelPose+CoreDataProperties.swift in Sources */,
@@ -1252,6 +1271,7 @@
 				FAFC5ADD23AEF7A40064B97A /* RoutingAppDelegate.swift in Sources */,
 				FAFC5AFA23AEFA830064B97A /* Withable.swift in Sources */,
 				8C13F00023CC110A00449E3D /* POSModelGroup+CoreDataClass.swift in Sources */,
+				FAAF854F23DA85E8005DCBA9 /* AddButton.swift in Sources */,
 				FAFC5B0523AEFAE00064B97A /* Tab+Strings.swift in Sources */,
 				FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */,
 				FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */,
@@ -1458,6 +1478,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		FAAF855023DBA32C005DCBA9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
 		FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArtSabintsev/Siren";
@@ -1497,6 +1525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		FAAF855123DBA32C005DCBA9 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAAF855023DBA32C005DCBA9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 		FAB8E15B23C7DBF60053451A /* Siren */ = {
 			isa = XCSwiftPackageProductDependency;

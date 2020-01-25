@@ -49,6 +49,19 @@ final class CoreDataStack {
         }
         return container
     }()
+
+    /// Save all pending Core Data changes
+    func save(moc: NSManagedObjectContext? = nil) {
+        do {
+            let moc = moc ?? persistentContainer.viewContext
+            if moc.hasChanges {
+                try moc.save()
+            }
+        } catch {
+            let nserror = error as NSError
+            fatalError("saveContext error \(nserror), \(nserror.userInfo)")
+        }
+    }
 }
 
 // MARK: - Private
@@ -79,22 +92,6 @@ private extension CoreDataStack {
         // NSPersistentContainer.defaultDirectoryURL() // /Library/Application Support
         // PosesPro2 seeded to /Documents
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    }
-
-    func save() {
-        do {
-            try saveContext()
-        } catch {
-            let nserror = error as NSError
-            fatalError("saveContext error \(nserror), \(nserror.userInfo)")
-        }
-    }
-
-    func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {
-        let context = backgroundContext ?? persistentContainer.viewContext
-        if context.hasChanges {
-            try context.save()
-        }
     }
 
     func seed() {
