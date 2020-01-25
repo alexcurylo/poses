@@ -42,14 +42,19 @@ Requirements
 - [Mint](https://github.com/yonaskolb/mint) for tool dependency management
 - [SwiftLint](https://github.com/realm/SwiftLint) for opinionated coding style enforcement
 - [SwiftMockGeneratorForXcode](https://github.com/seanhenry/SwiftMockGeneratorForXcode) for generating mocks
-- [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) for logging
 
 ### Libraries:
 
+#### Swift Package Manager:
 - [Nuke](https://github.com/kean/Nuke) for networked image loading
 - [R.swift](https://github.com/mac-cain13/R.swift/) for typed resource identifiers
 - [SFSafeSymbols](https://github.com/piknotech/SFSafeSymbols) for statically typed SF Symbols 
 - [Siren](https://github.com/ArtSabintsev/Siren) for update notifications
+- [SwiftUI-Introspect](https://github.com/siteline/SwiftUI-Introspect) for UIKit implementation access
+- [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) for logging
+
+#### Development release _pending SPM .xcframework support:_
+- [Flurry](https://github.com/flurry/flurry-ios-sdk/issues/164) for analytics and crash reporting
 
 Usage
 -----

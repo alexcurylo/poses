@@ -16,4 +16,4 @@ name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.8.4
 
 add-version-numbers: true
 
-LicensePlist Version: 2.9.0
+LicensePlist Version: 2.12.0

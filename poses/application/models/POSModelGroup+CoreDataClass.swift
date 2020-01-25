@@ -8,6 +8,7 @@ import CoreData
     /// Whether is special trash group
     var isTrash: Bool { name == L.groupTrash() }
 
+    /// Add numeric suffix to title if required for uniqueness
     func set(unique title: String) {
         guard
             !title.isEmpty,

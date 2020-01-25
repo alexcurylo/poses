@@ -288,9 +288,9 @@
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA91C5F123D65BEA0043A44E /* GroupRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRowView.swift; sourceTree = "<group>"; };
+		FA9395CC23DCF7B300A1BC7E /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = Poses.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved; sourceTree = "<group>"; };
 		FAA0136523CB47750089EA76 /* EntityNamable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNamable.swift; sourceTree = "<group>"; };
 		FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
-		FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "POSModelCategory+CoreDataProperties.swift"; path = "Poses/application/models/POSModelCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTests.swift; sourceTree = "<group>"; };
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +464,7 @@
 				8C7AAF33239A119E0065F035 /* LICENSE.md */,
 				FAC2258823A6FCB000BF3749 /* license_plist.yml */,
 				8C7AAF39239A58100065F035 /* Mintfile */,
+				FA9395CC23DCF7B300A1BC7E /* Package.resolved */,
 				8C92C11223A718CA001714C5 /* Poses.entitlements */,
 				8C7AAF31239A119E0065F035 /* README.md */,
 				8C1B47F4239F3A2200C4FBEC /* Secrets.plist */,
@@ -623,7 +624,6 @@
 		FA8B536B2398F2B9009E8E1F = {
 			isa = PBXGroup;
 			children = (
-				FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */,
 				FA8B53762398F2B9009E8E1F /* Poses */,
 				8C7AAF2E239A0FCA0065F035 /* metadata */,
 				FA8B53902398F2BA009E8E1F /* PosesTests */,

@@ -18,6 +18,7 @@ enum Tab: Int, CaseIterable {
     var tag: Int { rawValue }
 
     #if !UITEST
+    /// Navigation bar title
     var title: String {
         switch self {
         case .favorites:

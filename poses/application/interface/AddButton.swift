@@ -5,6 +5,7 @@ import SwiftUI
 /// Button for toggling add form section visibility
 struct AddButton: View {
 
+    /// Trigger action type
     typealias Action = () -> Void
 
     private var isAdding: Bool

@@ -61,7 +61,7 @@ final class CoreDataStackTests: TestCase {
         let poses = try moc.fetch(POSModelPose.request)
 
         // then
-        XCTAssertEqual(groups.count, 2)
+        XCTAssertGreaterThanOrEqual(groups.count, 2)
         XCTAssertEqual(poses.count, 99 * 12 + 191) // = 1379
     }
 }
