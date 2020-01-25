@@ -97,10 +97,7 @@ enum PackKey: String, CaseIterable {
 @objc(POSModelPack) public final class POSModelPack: NSManagedObject {
 }
 
-extension POSModelPack: EntityModel {
-
-    /// EntityModel conformance
-    typealias Entity = POSModelPack
+extension POSModelPack: EntityNamable {
 
     /// name of entity in store
     static var entityName = "Pack"

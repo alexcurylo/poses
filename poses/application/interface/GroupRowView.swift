@@ -10,12 +10,18 @@ protocol GroupRowModel {
     var title: String { get }
     /// Display count
     func visible(in moc: NSManagedObjectContext) -> String
+
+    /// for debugging
+    var order: Int32 { get }
 }
 
 /// Group row
  struct GroupRowView: View {
 
     @Environment(\.managedObjectContext) private var moc
+
+    //@Environment(\.editMode) private var editMode
+    //private var isEditing: Bool { editMode?.wrappedValue == .active }
 
     /// Rendering style
     enum Style {
@@ -45,8 +51,26 @@ protocol GroupRowModel {
         }
     }
 
+    //@State private var renamed = "Whatever"
+
     var body: some View {
         HStack {
+            /*
+            if isEditing {
+                TextField(L.groupName(),
+                          text: $renamed,
+                          onCommit: rename)
+                .foregroundColor(titleColor)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .introspectTextField {
+                    $0.returnKeyType = .done
+                }
+            } else {
+                //Text("\(group.order). \(group.title)")
+                Text(group.title)
+                .foregroundColor(titleColor)
+            }
+            */
             Text(group.title)
             .foregroundColor(titleColor)
             Spacer()
@@ -60,6 +84,8 @@ protocol GroupRowModel {
             .padding(.trailing, 6)
         }
     }
+
+    //private func rename() { }
 }
 
 /// :nodoc:
@@ -69,6 +95,7 @@ struct GroupRowView_Previews: PreviewProvider {
 
         let id = UUID()
         let title = "Group Row Sample"
+        let order = Int32(1)
 
         func visible(in moc: NSManagedObjectContext) -> String { "99" }
     }

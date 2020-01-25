@@ -39,10 +39,7 @@ extension POSModelGroup: GroupRowModel {
     }
 }
 
-extension POSModelGroup: EntityModel {
-
-    /// EntityModel conformance
-    typealias Entity = POSModelGroup
+extension POSModelGroup: EntityNamable {
 
     /// name of entity in store
     static var entityName = "Group"
@@ -51,7 +48,6 @@ extension POSModelGroup: EntityModel {
 extension POSModelGroup: Identifiable {
 
     public var id: String {
-        // swiftlint:disable:next force_unwrapping
-        name!
+        name ?? "" // is called after delete, apparently
     }
 }

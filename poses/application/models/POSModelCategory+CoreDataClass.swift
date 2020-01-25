@@ -102,12 +102,12 @@ extension POSModelCategory: GroupRowModel {
         moc.count(template: "VisiblePosesInCategory",
                   subs: ["keyed": id])
     }
+
+    /// Placeholder, category is sorted by name
+    var order: Int32 { Int32(0) }
 }
 
-extension POSModelCategory: EntityModel {
-
-    /// EntityModel conformance
-    typealias Entity = POSModelCategory
+extension POSModelCategory: EntityNamable {
 
     /// name of entity in store
     static var entityName = "Category"

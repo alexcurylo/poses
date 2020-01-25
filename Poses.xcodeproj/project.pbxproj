@@ -93,7 +93,7 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
 		FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91C5F123D65BEA0043A44E /* GroupRowView.swift */; };
-		FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
+		FAA0136623CB47750089EA76 /* EntityNamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityNamable.swift */; };
 		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
@@ -104,9 +104,11 @@
 		FAAF855223DBA32C005DCBA9 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FAAF855123DBA32C005DCBA9 /* Introspect */; };
 		FAAF855323DBC9E8005DCBA9 /* GroupRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91C5F123D65BEA0043A44E /* GroupRowView.swift */; };
 		FAAF855423DBC9F5005DCBA9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
-		FAAF855523DBCA04005DCBA9 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityModel.swift */; };
+		FAAF855523DBCA04005DCBA9 /* EntityNamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityNamable.swift */; };
 		FAAF855623DBCA25005DCBA9 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAAF855723DBCA25005DCBA9 /* NSManagedObjectContext+Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B3B6A23D6D7D60070A68D /* NSManagedObjectContext+Templates.swift */; };
+		FAAF855923DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */; };
+		FAAF855A23DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */; };
 		FAB8E15C23C7DBF60053451A /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = FAB8E15B23C7DBF60053451A /* Siren */; };
 		FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
 		FAC2257923A612B200BF3749 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2257823A612B200BF3749 /* SystemConfiguration.framework */; };
@@ -286,7 +288,7 @@
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA91C5F123D65BEA0043A44E /* GroupRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRowView.swift; sourceTree = "<group>"; };
-		FAA0136523CB47750089EA76 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
+		FAA0136523CB47750089EA76 /* EntityNamable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNamable.swift; sourceTree = "<group>"; };
 		FAA0137523CB59240089EA76 /* PosesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PosesModel.xcdatamodel; sourceTree = "<group>"; };
 		FAA0139623CD1E3A0089EA76 /* POSModelCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "POSModelCategory+CoreDataProperties.swift"; path = "Poses/application/models/POSModelCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAB6A2723B54E4D0021666B /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		FAAF854D23DA85E8005DCBA9 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FetchedResults+Orderable.swift"; sourceTree = "<group>"; };
 		FABCAF1723ADBE65005526BC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		FAC2256C23A60D1600BF3749 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FAC2257623A6100C00BF3749 /* Poses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Poses-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -731,8 +734,9 @@
 			isa = PBXGroup;
 			children = (
 				8CA9CBAD239DD70200213558 /* Array+Type.swift */,
-				FAA0136523CB47750089EA76 /* EntityModel.swift */,
 				8CA9CDBE239DE58400213558 /* Date+Formatting.swift */,
+				FAA0136523CB47750089EA76 /* EntityNamable.swift */,
+				FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */,
 				FAAB6A2723B54E4D0021666B /* MailView.swift */,
 				8C2B3B6A23D6D7D60070A68D /* NSManagedObjectContext+Templates.swift */,
 				8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */,
@@ -1166,8 +1170,9 @@
 				FA8B537F2398F2B9009E8E1F /* AppView.swift in Sources */,
 				FA2F49C823B2BA7D00EAABC5 /* ApplicationService.swift in Sources */,
 				8C13F00123CC110A00449E3D /* POSModelGroup+CoreDataProperties.swift in Sources */,
-				FAA0136623CB47750089EA76 /* EntityModel.swift in Sources */,
+				FAA0136623CB47750089EA76 /* EntityNamable.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
+				FAAF855923DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FA42498A23AE19160091A85B /* FavoritesView.swift in Sources */,
 				8C13EFF523CC110A00449E3D /* POSModelPack+CoreDataProperties.swift in Sources */,
@@ -1242,7 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAF855523DBCA04005DCBA9 /* EntityModel.swift in Sources */,
+				FAAF855523DBCA04005DCBA9 /* EntityNamable.swift in Sources */,
 				FAAF855723DBCA25005DCBA9 /* NSManagedObjectContext+Templates.swift in Sources */,
 				8C13EFFC23CC110A00449E3D /* POSModelCategory+CoreDataClass.swift in Sources */,
 				FAFC5AE023AEF93C0064B97A /* ProcessInfo+Launch.swift in Sources */,
@@ -1275,6 +1280,7 @@
 				FAFC5B0523AEFAE00064B97A /* Tab+Strings.swift in Sources */,
 				FAFC5AF923AEFA830064B97A /* UserDefaults+TypeSafety.swift in Sources */,
 				FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */,
+				FAAF855A23DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */,
 				FAFC5AF723AEFA830064B97A /* Date+Formatting.swift in Sources */,
 				FA2F49D823B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFC5AF823AEFA830064B97A /* String+Formatting.swift in Sources */,

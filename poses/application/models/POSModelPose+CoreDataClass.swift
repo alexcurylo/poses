@@ -31,10 +31,7 @@ import CoreData
     }
 }
 
-extension POSModelPose: EntityModel {
-
-    /// EntityModel conformance
-    typealias Entity = POSModelPose
+extension POSModelPose: EntityNamable {
 
     /// name of entity in store
     static var entityName = "Pose"

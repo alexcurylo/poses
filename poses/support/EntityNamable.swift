@@ -4,16 +4,16 @@ import CoreData
 import Foundation
 
 /// Core Data conveniences
-protocol EntityModel {
+protocol EntityNamable {
 
     /// The entity this is extending
-    associatedtype Entity: NSManagedObject
+    associatedtype Entity: NSManagedObject = Self
 
     /// name of entity in store
     static var entityName: String { get }
 }
 
-extension EntityModel {
+extension EntityNamable {
 
     /// default name of entity in store, matching class
     static var entityName: String {

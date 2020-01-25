@@ -41,6 +41,7 @@ struct FavoritesView: View, ServiceProvider {
                         TextField(L.groupName(),
                                   text: $name,
                                   onCommit: add)
+                        .foregroundColor(.primary)
                         .introspectTextField {
                             $0.returnKeyType = .done
                             $0.becomeFirstResponder()
@@ -72,7 +73,8 @@ struct FavoritesView: View, ServiceProvider {
             )
             #endif
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        //.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
         .animation(.default)
     }
 
@@ -97,19 +99,34 @@ struct FavoritesView: View, ServiceProvider {
         data.save(moc: moc)
     }
 
-    /// unimplemented
-    func delete(indices: IndexSet) {
-        print("deleted")
-        //self.favorites.delete(at: indices, from: self.moc)
-        // OrderableManagedObjectProtocol
-        // unimplemented: items.delete(managedObjectContext)
+    private func delete(offsets: IndexSet) {
+        var deleted = Array(favorites)
+        deleted.remove(atOffsets: offsets)
+        let diff = deleted.difference(from: favorites)
+        for change in diff {
+            switch change {
+            case let .remove(_, element, _):
+                moc.delete(element)
+            case .insert:
+                log.error("An insert change to delete was surprising.")
+            }
+        }
+        for (index, item) in deleted.dropLast().enumerated() {
+            item.order = Int32(index + 1)
+        }
+
+        data.save(moc: moc)
     }
 
-    /// unimplemented
-    func move(indices: IndexSet, to: Int) {
-        print("move")
-        // OrderableManagedObjectProtocol
-        // unimplemented: items.move(managedObjectContext))
+    /// Move offsets and fix order
+    private func move(offsets: IndexSet, to offset: Int) {
+        var moved = Array(favorites)
+        moved.move(fromOffsets: offsets, toOffset: offset)
+        for (index, item) in moved.dropLast().enumerated() {
+            item.order = Int32(index + 1)
+        }
+
+        data.save(moc: moc)
     }
 
     /// unimplemented
