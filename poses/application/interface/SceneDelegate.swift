@@ -4,7 +4,7 @@ import SwiftUI
 import UIKit
 
 /// SceneDelegate declared in Info.plist
-final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     /// UIWindowSceneDelegate conformance
     var window: UIWindow?
@@ -42,12 +42,13 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         // Get the managed object context from the shared persistent container.
         // set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, data.viewContext)
+        let appView = AppView()
+            .environment(\.managedObjectContext, CoreDataStack.shared.moc)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: appView)
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -86,7 +87,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate, ServiceProvider {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
 
-        data.save()
+        // expect to save on change
+        //data.save()
     }
 
     // UIWindowSceneDelegate

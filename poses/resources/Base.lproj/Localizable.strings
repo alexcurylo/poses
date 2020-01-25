@@ -1,6 +1,74 @@
 // @copyright Trollwerks Inc.
 
+// globals
+
+"appStore" = "https://apps.apple.com/app/id357099619";
+"appVersion" = "Poses Professional %1$@(%2$@)";
+"photographyTips" = "https://www.photographytips.com/";
+"github" = "https://github.com/alexcurylo/poses";
+
 // tabs
 
-"tabFirst" = "First";
-"tabSecond" = "Second";
+"tabGallery" = "Gallery";
+"tabCategories" = "Categories";
+"tabFavorites" = "Favorites";
+"tabFitPose" = "Fit Pose";
+"tabExtras" = "Extras";
+
+// categories
+
+"ATHLETIC" = "Athletic/Gymnastic";
+"CLOSEUP" = "Close-ups";
+"CRAWL" = "Crawling";
+"CROUCH" = "Crouching";
+"DANCE" = "Dance";
+"KNEELANOBJ" = "Kneeling leaning on object";
+"KNEELBENCH" = "Kneeling on bench/chair";
+"KNEELBOTH" = "Kneeling on both knees";
+"KNEELONE" = "Kneeling on one knee";
+"RECLINEAIR" = "Reclining - leg(s) in air";
+"RECLINEBENCH" = "Reclining on bench";
+"RECLINEBK" = "Reclining on floor on back";
+"RECLINEFT" = "Reclining on floor on front";
+"RECLINESIDE" = "Reclining on floor on side";
+"SEATBENCH" = "Seated on bench";
+"SEATCHAIR" = "Seated on chair";
+"SEATFLOOR" = "Seated on floor";
+"SEATLEGS" = "Seated on floor, leg(s) up";
+"SEATSTOOL" = "Seated on stool";
+"STANDBACK" = "Standing - back view";
+"STANDFRONT" = "Standing - frontal view";
+"STANDOBJECT" = "Standing - knee on object";
+"STANDSIDE" = "Standing - side view";
+"WITHPROPS" = "With props";
+
+// favorites
+
+"screenFavorites" = "Favorite Groups";
+"groupFavorites" = "Favorites";
+"groupTrash" = "Trash (Hidden)";
+"groupName" = "Name";
+"cancel" = "Cancel";
+"addGroup" = "Add group";
+
+// extras
+
+"subscription" = "Library Subscription";
+"subscribe" = "Subscribe to 1500+ poses!";
+"subscribed" = "Subscription active!";
+"upgrades" = "Available Upgrades";
+"noUpgrades" = "No upgrades available";
+"packs" = "Purchaseable Pose Packs";
+"noPacks" = "All poses are purchased!";
+"support" = "Support";
+"feedback" = "Send Feedback";
+"review" = "Post A Review";
+"restore" = "Restore Purchases";
+"notes" = "Release Notes";
+"visitPhotographyTips" = "Visit PhotographyTips.com";
+"visitGithub" = "Visit Github project";
+
+// mail
+
+"mailAddress" = "iphonesupport@photographytips.com";
+"mailSubject" = "%@ Feedback";

@@ -6,44 +6,36 @@ import SwiftUI
 /// Provides stored data functionality
 protocol DataService {
 
-    /// viewContext
-    var viewContext: NSManagedObjectContext { get }
+    /// Save all pending Core Data changes
+    func save(moc: NSManagedObjectContext?)
+}
 
-    /// Write viewContext
-    func save()
+extension DataService {
+
+    /// Save all pending Core Data changes
+    func save(moc: NSManagedObjectContext? = nil) {
+        save(moc: moc)
+    }
+
+    /// Is the user subscribed?
+    var isSubscribed: Bool {
+        #if DEBUG
+        if let subscribed = ProcessInfo.setting(bool: .subscribed) {
+            return subscribed
+        }
+        #endif
+        return false
+    }
 }
 
 /// Production implementation of DataService
-final class DataServiceImpl: DataService, ServiceProvider {
+class DataServiceImpl: DataService, ServiceProvider {
+
+    private var stack: CoreDataStack { CoreDataStack.shared }
 
     /// :nodoc:
-    var viewContext: NSManagedObjectContext { persistentContainer.viewContext }
-
-    /// :nodoc:
-    func save() {
-        _ = try? saveContext()
-    }
-
-    // MARK: - Core Data stack
-
-    private lazy var persistentContainer: NSPersistentCloudKitContainer = {
-        let container = NSPersistentCloudKitContainer(name: "Poses")
-        container.loadPersistentStores { _, _ in
-            //self.log.verbose("Loaded \(storeDescription), error \(String(describing: error))")
-        }
-        return container
-    }()
-}
-
-// MARK: - Private
-
-private extension DataServiceImpl {
-
-    func saveContext() throws {
-        let context = persistentContainer.viewContext
-        //if context.hasChanges {
-            try context.save()
-        //}
+    func save(moc: NSManagedObjectContext?) {
+        stack.save(moc: moc)
     }
 }
 
@@ -52,11 +44,13 @@ private extension DataServiceImpl {
 #if DEBUG
 
 /// Stub for testing
-struct DataServiceStub: DataService {
+final class DataServiceStub: DataServiceImpl {
 
-    let viewContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    // for now, let UI tests run on production data store -
+    // ought to always be freshly seeded on CI
 
-    func save() { }
+    /// :nodoc:
+    override func save(moc: NSManagedObjectContext?) { }
 }
 
 #endif

@@ -20,6 +20,33 @@
         }
       },
       {
+        "package": "SFSafeSymbols",
+        "repositoryURL": "https://github.com/piknotech/SFSafeSymbols",
+        "state": {
+          "branch": null,
+          "revision": "318238d817cca9e932154bb6103866e266d0c65e",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "Siren",
+        "repositoryURL": "https://github.com/ArtSabintsev/Siren",
+        "state": {
+          "branch": null,
+          "revision": "70ad233b782104592fe90b066807a3930e218eb1",
+          "version": "5.2.3"
+        }
+      },
+      {
+        "package": "Introspect",
+        "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect",
+        "state": {
+          "branch": null,
+          "revision": "732316ac5957675eac2ed8ef9c0a5b95a353f9ff",
+          "version": "0.0.6"
+        }
+      },
+      {
         "package": "SwiftyBeaver",
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
         "state": {

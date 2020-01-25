@@ -21,4 +21,10 @@ final class DataServiceSpy: DataService {
         invokedSave = true
         invokedSaveCount += 1
     }
+    var invokedSeed = false
+    var invokedSeedCount = 0
+    func seed() {
+        invokedSeed = true
+        invokedSeedCount += 1
+    }
 }

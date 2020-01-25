@@ -1,5 +1,7 @@
 # Change Log
 
+Note: xcframework download from [thread](https://github.com/flurry/flurry-ios-sdk/issues/164)
+
 ## Version 10.x
 
 ### Version 10.1.0 - 12/02/2019

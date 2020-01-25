@@ -18,8 +18,8 @@ enum LaunchArgument: String {
 /// Setting keys that UI tests can pass on launch
 enum LaunchSettingKey: String {
 
-    /// Whether to allow full access
-    case fullAccess
+    /// Whether user is subscribed
+    case subscribed
     /// User name placeholder
     case userName
 }
@@ -28,15 +28,15 @@ enum LaunchSettingKey: String {
 enum LaunchSetting {
 
     /// Whether to allow full access
-    case fullAccess(Bool)
+    case subscribed(Bool)
     /// User name placeholder
     case userName(String)
 
     /// Conventionally a LaunchSettingKey case
     var key: String {
         switch self {
-        case .fullAccess:
-            return LaunchSettingKey.fullAccess.rawValue
+        case .subscribed:
+            return LaunchSettingKey.subscribed.rawValue
         case .userName:
             return LaunchSettingKey.userName.rawValue
         }
@@ -45,8 +45,8 @@ enum LaunchSetting {
     /// Encoding of setting value
     var value: String {
         switch self {
-        case .fullAccess(let fullAccess):
-            return "\(fullAccess)"
+        case .subscribed(let subscribed):
+            return "\(subscribed)"
         case .userName(let userName):
             return userName
         }
@@ -54,7 +54,7 @@ enum LaunchSetting {
 
     /// Construct setting for launch dictionary
     var setting: [String: String] {
-        return [key: value]
+        [key: value]
     }
 }
 
@@ -64,14 +64,14 @@ extension ProcessInfo {
     /// - Parameter argument: argument to look for
     /// - Returns: Whether found
     static func arguments(contain argument: LaunchArgument) -> Bool {
-        return processInfo.arguments.contains(argument.rawValue)
+        processInfo.arguments.contains(argument.rawValue)
     }
 
     /// String-extracting convenience
     /// - Parameter key: Key to look for
     /// - Returns: String value if found
     static func setting(string key: LaunchSettingKey) -> String? {
-        return processInfo.environment[key.rawValue]
+        processInfo.environment[key.rawValue]
     }
 
     /// Bool-extracting convenience
@@ -90,7 +90,7 @@ extension ProcessInfo {
         }
         //if arguments(contain: .disableWaitIdle) { _dispatchOnceSwizzleWaitIdle }
 
-        _ = ProcessInfo.setting(bool: .fullAccess)
+        _ = ProcessInfo.setting(bool: .subscribed)
         _ = ProcessInfo.setting(string: .userName)
     }
 

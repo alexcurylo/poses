@@ -26,6 +26,7 @@ extension ServiceHandler: AppLaunchHandler {
         // other services may log
         ServiceProviderInstances.logServiceInstance = SwiftyBeaverLoggingService()
 
+        ServiceProviderInstances.appServiceInstance = UIApplication.shared
         ServiceProviderInstances.dataServiceInstance = DataServiceImpl()
         ServiceProviderInstances.reportServiceInstance = FlurryReportingService()
 
@@ -42,7 +43,7 @@ extension ServiceHandler: AppLaunchHandler {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        return true
+        true
     }
 }
 
@@ -62,6 +63,7 @@ struct ServiceHandlerStub: AppLaunchHandler {
         // other services may log
         ServiceProviderInstances.logServiceInstance = ConsoleLoggingService()
 
+        ServiceProviderInstances.appServiceInstance = UIApplication.shared
         ServiceProviderInstances.dataServiceInstance = DataServiceStub()
         ServiceProviderInstances.reportServiceInstance = ReportingServiceStub()
 
@@ -74,7 +76,7 @@ struct ServiceHandlerStub: AppLaunchHandler {
         // swiftlint:disable:next discouraged_optional_collection
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        return true
+        true
     }
 }
 #endif

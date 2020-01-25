@@ -10,6 +10,7 @@ final class AppStoreSnapshotTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        continueAfterFailure = true
     }
 
     override func tearDown() {
@@ -20,9 +21,17 @@ final class AppStoreSnapshotTests: XCTestCase {
         launch(arguments: [.disableAnimations,
                            .disableWaitIdle,
                            .takingScreenshots],
-               settings: [.fullAccess(true),
+               settings: [.subscribed(true),
                           .userName("Snapshots")])
 
-        snapshot("01Launch")
+        snapshot("01Gallery")
+        Tab.categories.tap()
+        snapshot("02Categories")
+        Tab.favorites.tap()
+        snapshot("03Favorites")
+        Tab.fitPose.tap()
+        snapshot("04FitPose")
+        Tab.extras.tap()
+        snapshot("05Extras")
     }
 }

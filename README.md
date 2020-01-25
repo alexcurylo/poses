@@ -26,13 +26,13 @@ SwiftUI pose image catalog app engine for [Poses Professional 3.0](https://apps.
 Requirements
 ------------
 
-- Xcode 11.3 or later
-- iOS 13.0 or later
+- Xcode 11.3.1 or later
+- iOS 13.0, tvOS 13.0, macOS 15.0, or later
 
 ### Tools:
 
 - [Bundler](https://bundler.io/) for Ruby dependency management
-- [Codebeat]() for automated code review
+- [Codebeat](https://codebeat.co/projects/github-com-alexcurylo-poses-develop) for automated code review
 - [Codecov](https://codecov.io/gh/alexcurylo/poses) for test coverage statistics
 - [Fastlane](https://fastlane.tools) for release management
 - [Github Actions](https://github.com/alexcurylo/poses/actions?workflow=CI) for CI testing
@@ -42,11 +42,19 @@ Requirements
 - [Mint](https://github.com/yonaskolb/mint) for tool dependency management
 - [SwiftLint](https://github.com/realm/SwiftLint) for opinionated coding style enforcement
 - [SwiftMockGeneratorForXcode](https://github.com/seanhenry/SwiftMockGeneratorForXcode) for generating mocks
-- [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) for logging
 
 ### Libraries:
 
+#### Swift Package Manager:
+- [Nuke](https://github.com/kean/Nuke) for networked image loading
 - [R.swift](https://github.com/mac-cain13/R.swift/) for typed resource identifiers
+- [SFSafeSymbols](https://github.com/piknotech/SFSafeSymbols) for statically typed SF Symbols 
+- [Siren](https://github.com/ArtSabintsev/Siren) for update notifications
+- [SwiftUI-Introspect](https://github.com/siteline/SwiftUI-Introspect) for UIKit implementation access
+- [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) for logging
+
+#### Development release _pending SPM .xcframework support:_
+- [Flurry](https://github.com/flurry/flurry-ios-sdk/issues/164) for analytics and crash reporting
 
 Usage
 -----

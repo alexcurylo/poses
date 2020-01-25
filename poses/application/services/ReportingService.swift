@@ -33,18 +33,49 @@ protocol ReportingService: AnyObject {
 /// Reportable events
 enum AnalyticsEvent {
 
+    /// Post Review
+    case postReview
+    /// Restore Purchases
+    case restorePurchases
     /// Screen appearance
     case screen(name: String)
+    /// Send Feedback
+    case sendFeedback
+    /// Show Release Notes
+    case showReleaseNotes
+    /// Subscribe
+    case subscribe
+    /// Purchase
+    case purchase(pack: String)
+    /// Upgrade
+    case upgrade(pack: String)
+    /// Visit Github
+    case visitGithub
+    /// Visit PhotographyTips
+    case visitPhotographyTips
 
     fileprivate var parameters: [Parameter: Any] {
         switch self {
+        case .purchase(let pack),
+             .upgrade(let pack):
+            return [ .pack: pack ]
         case .screen(let name):
             return [ .name: name ]
+        case .postReview,
+             .restorePurchases,
+             .sendFeedback,
+             .showReleaseNotes,
+             .subscribe,
+             .visitGithub,
+             .visitPhotographyTips:
+            return [:]
         }
     }
 
     fileprivate enum Parameter: String {
+
         case name
+        case pack
     }
 }
 
@@ -104,18 +135,37 @@ private struct AnalyticsEventMapper {
 
     func eventName(for event: AnalyticsEvent) -> String {
         switch event {
+        case .postReview:
+            return "PostReview"
+        case .purchase:
+            return "Purchase"
+        case .restorePurchases:
+            return "RestorePurchases"
+        case .sendFeedback:
+            return "SendFeedback"
+        case .showReleaseNotes:
+            return "ShowReleaseNotes"
         case .screen:
             return "Screen"
+        case .subscribe:
+            return "Subscribe"
+        case .upgrade:
+            return "Upgrade"
+        case .visitGithub:
+            return "VisitGithub"
+        case .visitPhotographyTips:
+            return "VisitPhotographyTips"
         }
     }
 
     func parameters(for event: AnalyticsEvent) -> [String: Any] {
-        return event.parameters.mapKeys { parameterName(for: $0) }
+        event.parameters.mapKeys { parameterName(for: $0) }
     }
 
     func parameterName(for parameter: AnalyticsEvent.Parameter) -> String {
         switch parameter {
-        case .name:
+        case .name,
+             .pack:
             return parameter.rawValue
         }
     }

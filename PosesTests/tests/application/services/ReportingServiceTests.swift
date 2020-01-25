@@ -10,9 +10,11 @@ final class ReportingServiceTests: TestCase {
         let sut = FlurryReportingService()
 
         // when
-        sut.event(.screen(name: "test"))
-        sut.start(.screen(name: "test"))
-        sut.finish(.screen(name: "test"))
+        sut.event(.postReview)
+        sut.start(.restorePurchases)
+        sut.finish(.sendFeedback)
+        sut.event(.showReleaseNotes)
+        sut.event(.visitPhotographyTips)
         sut.screen("test")
         sut.breadcrumb("test")
         sut.error("test", id: "test", message: "test", params: [:])

@@ -1,14 +1,18 @@
 // @copyright Trollwerks Inc.
 
 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+CODE_SIGN_ENTITLEMENTS = Poses.entitlements
 CODE_SIGN_STYLE = Automatic
 DEVELOPMENT_ASSET_PATHS = "Poses/resources/Preview Content"
 DEVELOPMENT_TEAM = 556343DW3U
 ENABLE_PREVIEWS = YES
 INFOPLIST_FILE = Poses/resources/Info.plist
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
-LIBRARY_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Poses/sdks/flurry/Flurry
+LIBRARY_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Poses/sdks/flurry
 PRODUCT_BUNDLE_IDENTIFIER = com.trollwerks.posespro
 PRODUCT_NAME = Poses
 TARGETED_DEVICE_FAMILY = 1,2
 VERSIONING_SYSTEM = apple-generic
+DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES
+SUPPORTS_MACCATALYST = YES
+SWIFT_OBJC_BRIDGING_HEADER = Poses/sdks/Poses-Bridging-Header.h

@@ -1,0 +1,5 @@
+// @copyright Trollwerks Inc.
+
+#include "PosesTV-Shared.xcconfig"
+
+EXCLUDED_SOURCE_FILE_NAMES = "PosesTests/fixtures/*"
