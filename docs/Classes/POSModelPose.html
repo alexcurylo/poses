@@ -60,7 +60,10 @@
                 <a class="nav-group-task-link" href="../Classes/AppDelegate/Runtime.html">– Runtime</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/DataServiceImpl.html">DataServiceImpl</a>
+                <a class="nav-group-task-link" href="../Classes/CoreDataStack.html">CoreDataStack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:5Poses15DataServiceImplC">DataServiceImpl</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/s:5Poses15DataServiceStubC">DataServiceStub</a>
@@ -143,6 +146,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FetchedResults.html">FetchedResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions.html#/c:objc(cs)NSObject">NSObject</a>
@@ -234,7 +243,7 @@
                 <a class="nav-group-task-link" href="../Protocols/DataService.html">DataService</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/EntityModel.html">EntityModel</a>
+                <a class="nav-group-task-link" href="../Protocols/EntityNamable.html">EntityNamable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Exposable.html">Exposable</a>
@@ -243,7 +252,13 @@
                 <a class="nav-group-task-link" href="../Protocols/Exposing.html">Exposing</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/GroupRowModel.html">GroupRowModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/LoggingService.html">LoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Orderable.html">Orderable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ReportingService.html">ReportingService</a>
@@ -263,13 +278,13 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AddButton.html">AddButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs.html#/s:5Poses7AppViewV">AppView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs.html#/s:5Poses14CategoriesViewV">CategoriesView</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/CategoryRow.html">CategoryRow</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ConsoleLoggingService.html">ConsoleLoggingService</a>
@@ -285,6 +300,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs.html#/s:5Poses11GalleryViewV">GalleryView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GroupRowView.html">GroupRowView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GroupRowView/Style.html">– Style</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/LaunchHandler.html">LaunchHandler</a>
@@ -328,7 +349,7 @@
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@objc(POSModelPose)</span>
 <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">POSModelPose</span> <span class="p">:</span> <span class="kt">NSManagedObject</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">POSModelPose</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EntityModel.html">EntityModel</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">POSModelPose</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EntityNamable.html">EntityNamable</a></span></code></pre>
 
                 </div>
               </div>
@@ -527,36 +548,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses12POSModelPoseC6Entitya"></a>
-                    <a name="//apple_ref/swift/Alias/Entity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses12POSModelPoseC6Entitya">Entity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>EntityModel conformance</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">Entity</span> <span class="o">=</span> <span class="kt">POSModelPose</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/models/POSModelPose+CoreDataClass.swift#L37">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5Poses12POSModelPoseC10entityNameSSvpZ"></a>
                     <a name="//apple_ref/swift/Variable/entityName" class="dashAnchor"></a>
                     <a class="token" href="#/s:5Poses12POSModelPoseC10entityNameSSvpZ">entityName</a>
@@ -579,7 +570,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/models/POSModelPose+CoreDataClass.swift#L40">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/models/POSModelPose+CoreDataClass.swift#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -59,7 +59,10 @@
                 <a class="nav-group-task-link" href="Classes/AppDelegate/Runtime.html">– Runtime</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/DataServiceImpl.html">DataServiceImpl</a>
+                <a class="nav-group-task-link" href="Classes/CoreDataStack.html">CoreDataStack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:5Poses15DataServiceImplC">DataServiceImpl</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes.html#/s:5Poses15DataServiceStubC">DataServiceStub</a>
@@ -142,6 +145,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/FetchedResults.html">FetchedResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions.html#/c:objc(cs)NSObject">NSObject</a>
@@ -233,7 +242,7 @@
                 <a class="nav-group-task-link" href="Protocols/DataService.html">DataService</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/EntityModel.html">EntityModel</a>
+                <a class="nav-group-task-link" href="Protocols/EntityNamable.html">EntityNamable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Exposable.html">Exposable</a>
@@ -242,7 +251,13 @@
                 <a class="nav-group-task-link" href="Protocols/Exposing.html">Exposing</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/GroupRowModel.html">GroupRowModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/LoggingService.html">LoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Orderable.html">Orderable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ReportingService.html">ReportingService</a>
@@ -262,13 +277,13 @@
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AddButton.html">AddButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses7AppViewV">AppView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses14CategoriesViewV">CategoriesView</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/CategoryRow.html">CategoryRow</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ConsoleLoggingService.html">ConsoleLoggingService</a>
@@ -284,6 +299,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses11GalleryViewV">GalleryView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GroupRowView.html">GroupRowView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GroupRowView/Style.html">– Style</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/LaunchHandler.html">LaunchHandler</a>
@@ -365,15 +386,22 @@
 <li><a href="https://github.com/yonaskolb/mint">Mint</a> for tool dependency management</li>
 <li><a href="https://github.com/realm/SwiftLint">SwiftLint</a> for opinionated coding style enforcement</li>
 <li><a href="https://github.com/seanhenry/SwiftMockGeneratorForXcode">SwiftMockGeneratorForXcode</a> for generating mocks</li>
-<li><a href="https://github.com/SwiftyBeaver/SwiftyBeaver">SwiftyBeaver</a> for logging</li>
 </ul>
 <h3 id='libraries' class='heading'>Libraries:</h3>
+<h4 id='swift-package-manager' class='heading'>Swift Package Manager:</h4>
 
 <ul>
 <li><a href="https://github.com/kean/Nuke">Nuke</a> for networked image loading</li>
 <li><a href="https://github.com/mac-cain13/R.swift/">R.swift</a> for typed resource identifiers</li>
 <li><a href="https://github.com/piknotech/SFSafeSymbols">SFSafeSymbols</a> for statically typed SF Symbols</li>
 <li><a href="https://github.com/ArtSabintsev/Siren">Siren</a> for update notifications</li>
+<li><a href="https://github.com/siteline/SwiftUI-Introspect">SwiftUI-Introspect</a> for UIKit implementation access</li>
+<li><a href="https://github.com/SwiftyBeaver/SwiftyBeaver">SwiftyBeaver</a> for logging</li>
+</ul>
+<h4 id='development-release-em-pending-spm-xcframework-support-em' class='heading'>Development release <em>pending SPM .xcframework support:</em></h4>
+
+<ul>
+<li><a href="https://github.com/flurry/flurry-ios-sdk/issues/164">Flurry</a> for analytics and crash reporting</li>
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
 

@@ -60,7 +60,10 @@
                 <a class="nav-group-task-link" href="Classes/AppDelegate/Runtime.html">– Runtime</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/DataServiceImpl.html">DataServiceImpl</a>
+                <a class="nav-group-task-link" href="Classes/CoreDataStack.html">CoreDataStack</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:5Poses15DataServiceImplC">DataServiceImpl</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes.html#/s:5Poses15DataServiceStubC">DataServiceStub</a>
@@ -143,6 +146,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/DateFormatter.html">DateFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/FetchedResults.html">FetchedResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSManagedObjectContext.html">NSManagedObjectContext</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions.html#/c:objc(cs)NSObject">NSObject</a>
@@ -234,7 +243,7 @@
                 <a class="nav-group-task-link" href="Protocols/DataService.html">DataService</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/EntityModel.html">EntityModel</a>
+                <a class="nav-group-task-link" href="Protocols/EntityNamable.html">EntityNamable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Exposable.html">Exposable</a>
@@ -243,7 +252,13 @@
                 <a class="nav-group-task-link" href="Protocols/Exposing.html">Exposing</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/GroupRowModel.html">GroupRowModel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/LoggingService.html">LoggingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Orderable.html">Orderable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ReportingService.html">ReportingService</a>
@@ -263,13 +278,13 @@
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AddButton.html">AddButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses7AppViewV">AppView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses14CategoriesViewV">CategoriesView</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/CategoryRow.html">CategoryRow</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/ConsoleLoggingService.html">ConsoleLoggingService</a>
@@ -285,6 +300,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:5Poses11GalleryViewV">GalleryView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GroupRowView.html">GroupRowView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GroupRowView/Style.html">– Style</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/LaunchHandler.html">LaunchHandler</a>
@@ -333,6 +354,37 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses13GroupRowModelP"></a>
+                    <a name="//apple_ref/swift/Protocol/GroupRowModel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13GroupRowModelP">GroupRowModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>display provider</p>
+
+                        <a href="Protocols/GroupRowModel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">GroupRowModel</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/interface/GroupRowView.swift#L7-L16">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -390,7 +442,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/DataService.swift#L7-L14">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/DataService.swift#L7-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -483,7 +535,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/ServiceProvider.swift#L6-L16">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/ServiceProvider.swift#L7-L17">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -491,9 +543,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses11EntityModelP"></a>
-                    <a name="//apple_ref/swift/Protocol/EntityModel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses11EntityModelP">EntityModel</a>
+                    <a name="/s:5Poses13EntityNamableP"></a>
+                    <a name="//apple_ref/swift/Protocol/EntityNamable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13EntityNamableP">EntityNamable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -503,18 +555,49 @@
                       <div class="abstract">
                         <p>Core Data conveniences</p>
 
-                        <a href="Protocols/EntityModel.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/EntityNamable.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">EntityModel</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">EntityNamable</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/EntityModel.swift#L7-L14">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/EntityNamable.swift#L7-L14">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses9OrderableP"></a>
+                    <a name="//apple_ref/swift/Protocol/Orderable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses9OrderableP">Orderable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Something that exposes an order</p>
+
+                        <a href="Protocols/Orderable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Orderable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/support/FetchedResults+Orderable.swift#L7-L11">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Runtime Enumeration Reference</title>
+    <title>Style Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/Runtime" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/Style" class="dashAnchor"></a>
 
-    <a title="Runtime Enumeration Reference"></a>
+    <a title="Style Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../../index.html">Poses Reference</a>
       <img class="carat" src="../../img/carat.png" />
-      Runtime Enumeration Reference
+      Style Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -344,14 +344,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Runtime</h1>
+            <h1>Style</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Runtime</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Style</span></code></pre>
 
                 </div>
               </div>
-            <p>Runtime environments our app delegate recognizes</p>
+            <p>Rendering style</p>
 
           </div>
         </section>
@@ -363,9 +363,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses11AppDelegateC7RuntimeO10productionyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/production" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses11AppDelegateC7RuntimeO10productionyA2EmF">production</a>
+                    <a name="/s:5Poses12GroupRowViewV5StyleO7enabledyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/enabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses12GroupRowViewV5StyleO7enabledyA2EmF">enabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -373,19 +373,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Active user input</p>
+                        <p>Editable/movable/deletable</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">production</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">enabled</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L11">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/interface/GroupRowView.swift#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -393,9 +393,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses11AppDelegateC7RuntimeO9uiTestingyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/uiTesting" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses11AppDelegateC7RuntimeO9uiTestingyA2EmF">uiTesting</a>
+                    <a name="/s:5Poses12GroupRowViewV5StyleO8disabledyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/disabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses12GroupRowViewV5StyleO8disabledyA2EmF">disabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -403,49 +403,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Executing UI tests</p>
+                        <p>Trash, not editable/movable/deletable</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">uiTesting</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">disabled</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L13">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5Poses11AppDelegateC7RuntimeO11unitTestingyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/unitTesting" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses11AppDelegateC7RuntimeO11unitTestingyA2EmF">unitTesting</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Executing unit tests</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unitTesting</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/AppDelegate.swift#L15">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/interface/GroupRowView.swift#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

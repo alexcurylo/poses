@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ServiceHandler Structure Reference</title>
+    <title>CoreDataStack Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Struct/ServiceHandler" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/CoreDataStack" class="dashAnchor"></a>
 
-    <a title="ServiceHandler Structure Reference"></a>
+    <a title="CoreDataStack Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Poses Reference</a>
       <img class="carat" src="../img/carat.png" />
-      ServiceHandler Structure Reference
+      CoreDataStack Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -344,15 +344,14 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>ServiceHandler</h1>
+            <h1>CoreDataStack</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">ServiceHandler</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:5Poses10AppHandlerP">AppHandler</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ServiceHandler</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AppLaunchHandler.html">AppLaunchHandler</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kt">CoreDataStack</span></code></pre>
 
                 </div>
               </div>
-            <p>Stub for startup construction</p>
+            <p>Core Data wrapper</p>
 
           </div>
         </section>
@@ -364,9 +363,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses14ServiceHandlerV8servicesACSgvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/services" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses14ServiceHandlerV8servicesACSgvpZ">services</a>
+                    <a name="/s:5Poses13CoreDataStackC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13CoreDataStackC6sharedACvpZ">shared</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -374,19 +373,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Global accessor</p>
+                        <p>Exposed as singleton for SwiftUI .managedObjectContext</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">services</span><span class="p">:</span> <span class="kt">ServiceHandler</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">CoreDataStack</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/ServiceHandler.swift#L9-L11">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/CoreDataStack.swift#L9">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -394,9 +393,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses14ServiceHandlerV11application_30willFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtF"></a>
-                    <a name="//apple_ref/swift/Method/application(_:willFinishLaunchingWithOptions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses14ServiceHandlerV11application_30willFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtF">application(_:willFinishLaunchingWithOptions:)</a>
+                    <a name="/s:5Poses13CoreDataStackC6loadedySo28NSPersistentStoreDescriptionC_s5Error_pSgtcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/loaded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13CoreDataStackC6loadedySo28NSPersistentStoreDescriptionC_s5Error_pSgtcSgvp">loaded</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -404,58 +403,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>willFinishLaunchingWithOptions handler</p>
+                        <p>Setup completion handler</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
-    <span class="c1">// swiftlint:disable:next discouraged_optional_collection</span>
-    <span class="n">willFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">loaded</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSPersistentStoreDescription</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>application</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>UIApplication</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>launchOptions</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Options</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Success</p>
-                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/ServiceHandler.swift#L21-L34">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/CoreDataStack.swift#L12">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -463,9 +423,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5Poses14ServiceHandlerV11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtF"></a>
-                    <a name="//apple_ref/swift/Method/application(_:didFinishLaunchingWithOptions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5Poses14ServiceHandlerV11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtF">application(_:didFinishLaunchingWithOptions:)</a>
+                    <a name="/s:5Poses13CoreDataStackC3mocSo22NSManagedObjectContextCvp"></a>
+                    <a name="//apple_ref/swift/Property/moc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13CoreDataStackC3mocSo22NSManagedObjectContextCvp">moc</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -473,58 +433,79 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>didFinishLaunching handler</p>
+                        <p>Main thread managed object contecxt</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span>
-    <span class="c1">// swiftlint:disable:next discouraged_optional_collection</span>
-    <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">moc</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>application</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>UIApplication</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>launchOptions</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Options</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/CoreDataStack.swift#L15-L17">Show on GitHub</a>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Success</p>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses13CoreDataStackC3momSo20NSManagedObjectModelCvp"></a>
+                    <a name="//apple_ref/swift/Property/mom" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13CoreDataStackC3momSo20NSManagedObjectModelCvp">mom</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access to model for tests</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mom</span><span class="p">:</span> <span class="kt">NSManagedObjectModel</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/delegate/ServiceHandler.swift#L41-L47">Show on GitHub</a>
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/CoreDataStack.swift#L20-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5Poses13CoreDataStackC4save3mocySo22NSManagedObjectContextCSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/save(moc:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5Poses13CoreDataStackC4save3mocySo22NSManagedObjectContextCSg_tF">save(moc:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Save all pending Core Data changes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="nv">moc</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexcurylo/poses/tree/master/Poses/application/services/CoreDataStack.swift#L54-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
