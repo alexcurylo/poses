@@ -19,18 +19,18 @@ extension Exposable {
 
     // Assign accessibility identifier to item
     // - Parameter item: Thing to expose
-    //func expose(item: UIAccessibilityIdentification?) {
-        //item?.accessibilityIdentifier = identifier
-    //}
+    // func expose(item: UIAccessibilityIdentification?) {
+        // item?.accessibilityIdentifier = identifier
+    // }
 }
 
 extension UIAccessibilityIdentification {
 
     // Assign accessibility identifier to ourselves
     // - Parameter exposable: Identifier provider
-    //func expose(as exposable: Exposable?) {
-        //accessibilityIdentifier = exposable?.identifier
-    //}
+    // func expose(as exposable: Exposable?) {
+        // accessibilityIdentifier = exposable?.identifier
+    // }
 }
 
 /// Tagging protocol for view controllers

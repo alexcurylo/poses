@@ -8,10 +8,10 @@ final class UserDefaultsTests: TestCase {
     func testCodable() throws {
         // given
         struct Test: Codable, Equatable {
-            let a: Int
-            let b: String
+            let int: Int
+            let string: String
         }
-        let expected = Test(a: 1, b: "test")
+        let expected = Test(int: 1, string: "test")
         let sut = UserDefaults()
 
         // when
@@ -55,7 +55,7 @@ final class UserDefaultsTests: TestCase {
         let colorKey = StringKey("test.color")
         let expectedColor = UIColor.white
         let defaults = [stringKey: expectedString,
-                        colorKey: expectedColor] as [StringKey: Any]
+                        colorKey: expectedColor, ] as [StringKey: Any]
 
         // when
         sut.register(defaults: defaults)

@@ -188,7 +188,6 @@ private extension Dictionary {
 #if DEBUG
 
 /// Stub for testing
-final class ReportingServiceStub: FlurryReportingService {
-}
+final class ReportingServiceStub: FlurryReportingService { }
 
 #endif

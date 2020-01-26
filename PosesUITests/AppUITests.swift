@@ -6,6 +6,7 @@ final class AppUITests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+
         continueAfterFailure = false
     }
 

@@ -14,10 +14,12 @@ extension Tab: LosslessStringConvertible {
 extension Tab: CustomStringConvertible {
 
     var description: String {
-        [ L.tabGallery(),
-          L.tabCategories(),
-          L.tabFavorites(),
-          L.tabFitPose(),
-          L.tabExtras() ][rawValue]
+        [
+            L.tabGallery(),
+            L.tabCategories(),
+            L.tabFavorites(),
+            L.tabFitPose(),
+            L.tabExtras(),
+        ][rawValue]
     }
 }

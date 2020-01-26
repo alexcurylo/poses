@@ -354,7 +354,7 @@ private class MockRoutingAppDelegate: RoutingAppDelegate {
         MockAppRestorationHandler(),
         MockAppContinuityHandler(),
         MockAppCloudKitHandler(),
-        MockAppSceneSessionHandler()
+        MockAppSceneSessionHandler(),
     ]
 
     override var handlers: RoutingAppDelegate.Handlers {

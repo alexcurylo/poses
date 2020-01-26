@@ -88,7 +88,7 @@ extension ProcessInfo {
         if arguments(contain: .disableAnimations) {
             UIView.setAnimationsEnabled(false)
         }
-        //if arguments(contain: .disableWaitIdle) { _dispatchOnceSwizzleWaitIdle }
+        // if arguments(contain: .disableWaitIdle) { _dispatchOnceSwizzleWaitIdle }
 
         _ = ProcessInfo.setting(bool: .subscribed)
         _ = ProcessInfo.setting(string: .userName)

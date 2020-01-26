@@ -20,8 +20,8 @@ protocol GroupRowModel {
 
     @Environment(\.managedObjectContext) private var moc
 
-    //@Environment(\.editMode) private var editMode
-    //private var isEditing: Bool { editMode?.wrappedValue == .active }
+    // @Environment(\.editMode) private var editMode
+    // private var isEditing: Bool { editMode?.wrappedValue == .active }
 
     /// Rendering style
     enum Style {
@@ -66,7 +66,7 @@ protocol GroupRowModel {
                     $0.returnKeyType = .done
                 }
             } else {
-                //Text("\(group.order). \(group.title)")
+                // Text("\(group.order). \(group.title)")
                 Text(group.title)
                 .foregroundColor(titleColor)
             }
@@ -85,7 +85,7 @@ protocol GroupRowModel {
         }
     }
 
-    //private func rename() { }
+    // private func rename() { }
 }
 
 /// :nodoc:

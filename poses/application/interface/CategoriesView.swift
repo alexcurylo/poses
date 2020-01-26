@@ -9,13 +9,13 @@ struct CategoriesView: View, ServiceProvider {
     @FetchRequest(
         entity: POSModelCategory.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \POSModelCategory.key,
-                                           ascending: true)],
+                                           ascending: true), ],
         animation: .default
     ) private var categories: FetchedResults<POSModelCategory>
     // swiftlint:disable:previous let_var_whitespace
 
     // Need to disable FR and \.managedObjectContext for previewing?
-    //private var categories: [GroupRowSample] = []
+    // private var categories: [GroupRowSample] = []
 
     /// :nodoc:
     var body: some View {
