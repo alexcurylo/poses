@@ -51,6 +51,11 @@
 "cancel" = "Cancel";
 "addGroup" = "Add group";
 
+// fit pose
+
+"instructions" = "drag to move\npinch to resize and rotate";
+"start" = "Start Camera";
+
 // extras
 
 "subscription" = "Library Subscription";
