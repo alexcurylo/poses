@@ -77,7 +77,7 @@ struct FitPoseView_Previews: PreviewProvider {
 private extension View {
 
     func introspectColor(customize: @escaping (UIView) -> Void) -> some View {
-        inject(IntrospectionView(
+        inject(UIKitIntrospectionView(
             selector: {
                 Introspect.findViewHost(from: $0)?.superview?.subviews.first
             },
