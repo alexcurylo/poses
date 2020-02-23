@@ -8,9 +8,10 @@ import SwiftUI
 /// SwiftUI fit pose tab
 struct FitPoseView: View, ServiceProvider {
 
-    @State private var viewfinder: UIView?
-    @State private var isShowingControls = false
+    @State private var preview: UIView?
     @State private var isMarchingAnts = false
+    @State private var isShowingPreview = false
+    @State private var isShowingError = false
 
     /// :nodoc:
     var body: some View {
@@ -36,13 +37,19 @@ struct FitPoseView: View, ServiceProvider {
                                     .speed(2))
                 Button(action: start) {
                     Text(L.start())
-                        .font(.headline)
-                        .padding()
+                    .font(.headline)
+                    .padding()
                 }
             }
         }
         .onAppear(perform: appear)
+        .onDisappear(perform: disappear)
         .animation(.default)
+        .alert(isPresented: $isShowingError) {
+            Alert(title: Text(L.error()),
+                  message: Text(L.noCamera()),
+                  dismissButton: .default(Text(L.ok())))
+        }
     }
 }
 
@@ -53,12 +60,26 @@ private extension FitPoseView {
         isMarchingAnts.toggle()
     }
 
+    func disappear() {
+        if isShowingPreview {
+            preview?.removePreview()
+            isShowingPreview = false
+        }
+        isMarchingAnts = false
+    }
+
     func found(view: UIView) {
-        viewfinder = view
+        preview = view
     }
 
     func start() {
-        isShowingControls = true
+        do {
+            try preview?.showPreview()
+            isShowingPreview = true
+            isMarchingAnts = false
+        } catch {
+            isShowingError = true
+        }
     }
 }
 
