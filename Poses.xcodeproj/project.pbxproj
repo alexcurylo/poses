@@ -85,6 +85,7 @@
 		FA7A49DF24029ED600F1DD9D /* NSObject+Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */; };
 		FA7A49E424029F0200F1DD9D /* CALayer+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */; };
 		FA7A49E62402A26C00F1DD9D /* AVCaptureSession+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */; };
+		FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E72403308500F1DD9D /* Injectable.swift */; };
 		FA7CD1CA23A4611B00A1EFAF /* AppViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */; };
 		FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */; };
 		FA7CD1CE23A4668A00A1EFAF /* ServiceHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */; };
@@ -278,6 +279,7 @@
 		FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayer.swift; sourceTree = "<group>"; };
 		FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Named.swift"; sourceTree = "<group>"; };
 		FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Photo.swift"; sourceTree = "<group>"; };
+		FA7A49E72403308500F1DD9D /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewTests.swift; sourceTree = "<group>"; };
 		FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandlerTests.swift; sourceTree = "<group>"; };
 		FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandlerTests.swift; sourceTree = "<group>"; };
@@ -760,6 +762,7 @@
 				8CA9CDBE239DE58400213558 /* Date+Formatting.swift */,
 				FAA0136523CB47750089EA76 /* EntityNamable.swift */,
 				FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */,
+				FA7A49E72403308500F1DD9D /* Injectable.swift */,
 				FAAB6A2723B54E4D0021666B /* MailView.swift */,
 				8C2B3B6A23D6D7D60070A68D /* NSManagedObjectContext+Templates.swift */,
 				8CA9CBA6239DD55400213558 /* RoutingAppDelegate.swift */,
@@ -1208,6 +1211,7 @@
 				FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */,
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
 				FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */,
+				FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */,
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
