@@ -86,6 +86,7 @@
 		FA7A49E424029F0200F1DD9D /* CALayer+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */; };
 		FA7A49E62402A26C00F1DD9D /* AVCaptureSession+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */; };
 		FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E72403308500F1DD9D /* Injectable.swift */; };
+		FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */; };
 		FA7CD1CA23A4611B00A1EFAF /* AppViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */; };
 		FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */; };
 		FA7CD1CE23A4668A00A1EFAF /* ServiceHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */; };
@@ -280,6 +281,7 @@
 		FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Named.swift"; sourceTree = "<group>"; };
 		FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Photo.swift"; sourceTree = "<group>"; };
 		FA7A49E72403308500F1DD9D /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Switch.swift"; sourceTree = "<group>"; };
 		FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewTests.swift; sourceTree = "<group>"; };
 		FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandlerTests.swift; sourceTree = "<group>"; };
 		FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandlerTests.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 		FA9395CD23DE6A6800A1BC7E /* camera */ = {
 			isa = PBXGroup;
 			children = (
+				FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */,
 				FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */,
 				FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */,
 				FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */,
@@ -1203,6 +1206,7 @@
 				FAA0136623CB47750089EA76 /* EntityNamable.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FAAF855923DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */,
+				FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Switch.swift in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FA7A49C82402855A00F1DD9D /* UIView+Preview.swift in Sources */,
 				FA42498A23AE19160091A85B /* FavoritesView.swift in Sources */,

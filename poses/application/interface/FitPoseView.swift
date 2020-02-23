@@ -78,6 +78,7 @@ private extension FitPoseView {
             isShowingPreview = true
             isMarchingAnts = false
         } catch {
+            log.error("start camera: \(error)")
             isShowingError = true
         }
     }
