@@ -813,12 +813,12 @@
 			buildConfigurationList = FA8B53A12398F2BA009E8E1F /* Build configuration list for PBXNativeTarget "Poses" */;
 			buildPhases = (
 				FAECA218239CF09E0028AE3A /* Generate R.generated.swift */,
+				FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */,
 				FA8B53702398F2B9009E8E1F /* Sources */,
 				FA8B53712398F2B9009E8E1F /* Frameworks */,
 				8C7AAF3C239A5C1A0065F035 /* SwiftLint */,
 				FA8B53722398F2B9009E8E1F /* Resources */,
 				8C1B47FA239F431B00C4FBEC /* Copy Secrets */,
-				FAC2258723A6F1C600BF3749 /* Generate Acknowledgements */,
 			);
 			buildRules = (
 			);
