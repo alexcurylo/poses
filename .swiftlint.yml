@@ -155,10 +155,21 @@ identifier_name:
     warning: 60
     error: 80
   excluded:
+    - 'r'
+    - 'g'
+    - 'b'
+    - 'a'
     - 'x'
     - 'y'
+    - 'as'
     - 'at'
+    - 'dx'
+    - 'dy'
     - 'id'
+    - 'in'
+    - 'km'
+    - 'no'
+    - 'ok'
     - 'to'
     - 'vc'
 
