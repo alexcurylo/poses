@@ -9,8 +9,8 @@ import SwiftUI
 struct FitPoseView: View, ServiceProvider {
 
     @State private var preview: UIView?
-    @State private var isMarchingAnts = false
-    @State private var isShowingPreview = false
+    @State private var isAnimating = false
+    @State private var isPreviewing = false
     @State private var isShowingError = false
 
     /// :nodoc:
@@ -26,19 +26,27 @@ struct FitPoseView: View, ServiceProvider {
                 .padding()
                 Rectangle() // Image placeholder
                 .stroke(Color.gray,
-                        style: StrokeStyle(lineWidth: 2,
-                                           lineCap: .butt,
-                                           lineJoin: .round,
-                                           dash: [10, 10],
-                                           dashPhase: isMarchingAnts ? 0 : 40))
+                        style: antsStroke)
                 .padding()
-                .animation(Animation.linear(duration: 1)
-                                    .repeatForever(autoreverses: false)
-                                    .speed(2))
-                Button(action: start) {
-                    Text(L.start())
-                    .font(.headline)
-                    .padding()
+                .animation(antsAnimation)
+                if isPreviewing {
+                    Button(action: capturePhoto) {
+                        Circle()
+                        .fill(Color.white)
+                        .frame(width: 80, height: 80)
+                        .overlay(
+                            Circle().stroke(Color.black,
+                                            lineWidth: 3)
+                                    .frame(width: 60, height: 60)
+                        )
+                        .padding()
+                    }
+                } else {
+                    Button(action: toggle) {
+                        Text(L.start())
+                        .font(.headline)
+                        .padding()
+                    }
                 }
             }
         }
@@ -55,31 +63,81 @@ struct FitPoseView: View, ServiceProvider {
 
 private extension FitPoseView {
 
+    var antsStroke: StrokeStyle {
+        isPreviewing ? StrokeStyle(lineWidth: 0,
+                                   lineCap: .butt,
+                                   lineJoin: .round,
+                                   dash: [10, 10],
+                                   dashPhase: 0)
+                     : StrokeStyle(lineWidth: 2,
+                                   lineCap: .butt,
+                                   lineJoin: .round,
+                                   dash: [10, 10],
+                                   dashPhase: isAnimating ? 0 : 40)
+    }
+
+    var antsAnimation: Animation? {
+        isPreviewing ? nil
+                     : Animation.linear(duration: 1)
+                                .repeatForever(autoreverses: false)
+                                .speed(2)
+    }
+
     func appear() {
         report.screen(String(Tab.fitPose))
-        isMarchingAnts.toggle()
+        isAnimating.toggle()
     }
 
     func disappear() {
-        if isShowingPreview {
-            preview?.removePreview()
-            isShowingPreview = false
-        }
-        isMarchingAnts = false
+        hidePreview()
+        isAnimating = false
     }
 
     func found(view: UIView) {
         preview = view
     }
 
+    func toggle() {
+        isPreviewing ? stop() : start()
+    }
+
     func start() {
         do {
             try preview?.showPreview()
-            isShowingPreview = true
-            isMarchingAnts = false
+            showControls()
         } catch {
+            if UIApplication.isSimulator {
+                return showControls()
+            }
             log.error("start camera: \(error)")
             isShowingError = true
+        }
+    }
+
+    func showControls() {
+        isPreviewing = true
+        isAnimating = false
+    }
+
+    func stop() {
+        hidePreview()
+        isAnimating.toggle()
+    }
+
+    func hidePreview() {
+        if isPreviewing {
+            preview?.removePreview()
+            isPreviewing = false
+        }
+    }
+
+    func capturePhoto() {
+        // TO DO: countdown state here
+
+        preview?.capturePhoto { camera, capturedImage, error in
+            camera.restartPreview()
+            // TO DO: handle capturedImage and error
+            _ = (capturedImage, error)
         }
     }
 }

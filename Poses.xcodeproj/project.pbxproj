@@ -80,13 +80,15 @@
 		FA42499523AE2ED20091A85B /* Tab+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499423AE2ED20091A85B /* Tab+Strings.swift */; };
 		FA42499723AE2F2D0091A85B /* Tab+UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499623AE2F2D0091A85B /* Tab+UITest.swift */; };
 		FA4249A223AEC0000091A85B /* Flurry.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA42499A23AEBC940091A85B /* Flurry.xcframework */; };
+		FA54947F2415DF34008E7A18 /* FocusLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54947E2415DF34008E7A18 /* FocusLayer.swift */; };
+		FA5494812415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */; };
 		FA7A49C82402855A00F1DD9D /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */; };
 		FA7A49D2240298F800F1DD9D /* PreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */; };
 		FA7A49DF24029ED600F1DD9D /* NSObject+Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */; };
 		FA7A49E424029F0200F1DD9D /* CALayer+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */; };
 		FA7A49E62402A26C00F1DD9D /* AVCaptureSession+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */; };
 		FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49E72403308500F1DD9D /* Injectable.swift */; };
-		FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */; };
+		FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Camera.swift */; };
 		FA7CD1CA23A4611B00A1EFAF /* AppViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */; };
 		FA7CD1CC23A4667C00A1EFAF /* LaunchHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */; };
 		FA7CD1CE23A4668A00A1EFAF /* ServiceHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */; };
@@ -276,12 +278,14 @@
 		FA42499423AE2ED20091A85B /* Tab+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+Strings.swift"; sourceTree = "<group>"; };
 		FA42499623AE2F2D0091A85B /* Tab+UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+UITest.swift"; sourceTree = "<group>"; };
 		FA42499A23AEBC940091A85B /* Flurry.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Flurry.xcframework; sourceTree = "<group>"; };
+		FA54947E2415DF34008E7A18 /* FocusLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLayer.swift; sourceTree = "<group>"; };
+		FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoPreviewLayer+Photo.swift"; sourceTree = "<group>"; };
 		FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayer.swift; sourceTree = "<group>"; };
 		FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Named.swift"; sourceTree = "<group>"; };
 		FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Photo.swift"; sourceTree = "<group>"; };
 		FA7A49E72403308500F1DD9D /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
-		FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Switch.swift"; sourceTree = "<group>"; };
+		FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Camera.swift"; sourceTree = "<group>"; };
 		FA7CD1C923A4611B00A1EFAF /* AppViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewTests.swift; sourceTree = "<group>"; };
 		FA7CD1CB23A4667C00A1EFAF /* LaunchHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchHandlerTests.swift; sourceTree = "<group>"; };
 		FA7CD1CD23A4668A00A1EFAF /* ServiceHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandlerTests.swift; sourceTree = "<group>"; };
@@ -703,9 +707,11 @@
 		FA9395CD23DE6A6800A1BC7E /* camera */ = {
 			isa = PBXGroup;
 			children = (
-				FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Switch.swift */,
+				FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Camera.swift */,
 				FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */,
+				FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */,
 				FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */,
+				FA54947E2415DF34008E7A18 /* FocusLayer.swift */,
 				FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */,
 				FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */,
 				FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */,
@@ -1206,16 +1212,18 @@
 				FAA0136623CB47750089EA76 /* EntityNamable.swift in Sources */,
 				FAD49966239BA7640030CB8E /* UIApplication+Environment.swift in Sources */,
 				FAAF855923DC07F6005DCBA9 /* FetchedResults+Orderable.swift in Sources */,
-				FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Switch.swift in Sources */,
+				FA7A49F1240334D900F1DD9D /* AVCaptureDevice+Camera.swift in Sources */,
 				FAECA21E239CF8F80028AE3A /* String+Formatting.swift in Sources */,
 				FA7A49C82402855A00F1DD9D /* UIView+Preview.swift in Sources */,
 				FA42498A23AE19160091A85B /* FavoritesView.swift in Sources */,
 				8C13EFF523CC110A00449E3D /* POSModelPack+CoreDataProperties.swift in Sources */,
+				FA54947F2415DF34008E7A18 /* FocusLayer.swift in Sources */,
 				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */,
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
 				FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */,
 				FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */,
+				FA5494812415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift in Sources */,
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,
