@@ -34,6 +34,12 @@ extension UIView {
             object: nil)
     }
 
+    /// Switch back and front cameras
+    func switchCamera() throws {
+        removeFocus()
+        try unwrap(previewLayer?.session).switchCamera()
+    }
+
     /// Remove camera preview layer
     func removePreview() {
         gestureRecognizerOfType(CameraPincher.self)?.removeFromView()

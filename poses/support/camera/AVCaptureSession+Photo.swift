@@ -18,13 +18,13 @@ extension AVCaptureSession {
     }
 
     /// Switch back and front cameras
-    func switchCamera() {
+    func switchCamera() throws {
         var position = AVCaptureDevice.Position.unspecified
         if let input = inputs.first as? AVCaptureDeviceInput {
             position = input.device.position
             removeInput(input)
         }
-        try? add(camera: position.opposite())
+        try add(camera: position.opposite())
     }
 }
 

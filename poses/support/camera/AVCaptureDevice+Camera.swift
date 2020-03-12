@@ -17,6 +17,11 @@ extension AVCaptureDevice.Position {
 
 extension AVCaptureDevice {
 
+    /// Can device switch cameras?
+    class var canSwitch: Bool {
+        camera(at: .back) != nil && camera(at: .front) != nil
+    }
+
     /// Returns  camera at position if available
     /// - Parameter position: Position to check
     class func camera(at position: Position) -> AVCaptureDevice? {

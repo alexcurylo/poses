@@ -3,6 +3,7 @@
 #if canImport(Introspect)
 import Introspect
 #endif
+import AVFoundation
 import SwiftUI
 
 /// SwiftUI fit pose tab
@@ -13,8 +14,7 @@ struct FitPoseView: View, ServiceProvider {
     @State private var isPreviewing = false
     @State private var isShowingError = false
     @State private var remaining = 0
-
-    private var shutterCountdown = 0
+    @State private var shutterCountdown = 0
 
     /// :nodoc:
     var body: some View {
@@ -22,6 +22,18 @@ struct FitPoseView: View, ServiceProvider {
             Color.white.introspectColor(customize: found(view:))
             VStack { // swiftlint:disable:this closure_body_length
                 if isPreviewing {
+                    HStack {
+                        Image(systemSymbol: .bolt) // fill slash
+                        Spacer()
+                        CountdownButton(countdown: $shutterCountdown)
+                        Spacer()
+                        if AVCaptureDevice.canSwitch {
+                            Button(action: switchCamera) {
+                                Image(systemSymbol: .cameraRotate)
+                            }
+                        }
+                    }
+                    .padding()
                     Rectangle() // Image placeholder
                     .padding()
                     Button(action: shutterRelease) {
@@ -142,6 +154,15 @@ private extension FitPoseView {
         if isPreviewing {
             preview?.removePreview()
             isPreviewing = false
+        }
+    }
+
+    func switchCamera() {
+        do {
+            try preview?.switchCamera()
+        } catch {
+            log.error("switch camera: \(error)")
+            isShowingError = true
         }
     }
 
