@@ -12,25 +12,19 @@ struct FitPoseView: View, ServiceProvider {
     @State private var isAnimating = false
     @State private var isPreviewing = false
     @State private var isShowingError = false
+    @State private var remaining = 0
+
+    private var shutterCountdown = 0
 
     /// :nodoc:
     var body: some View {
         ZStack { // swiftlint:disable:this closure_body_length
             Color.white.introspectColor(customize: found(view:))
             VStack { // swiftlint:disable:this closure_body_length
-                Text(L.instructions())
-                .font(.subheadline)
-                .italic()
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
-                .padding()
-                Rectangle() // Image placeholder
-                .stroke(Color.gray,
-                        style: antsStroke)
-                .padding()
-                .animation(antsAnimation)
                 if isPreviewing {
-                    Button(action: capturePhoto) {
+                    Rectangle() // Image placeholder
+                    .padding()
+                    Button(action: shutterRelease) {
                         Circle()
                         .fill(Color.white)
                         .frame(width: 80, height: 80)
@@ -42,12 +36,32 @@ struct FitPoseView: View, ServiceProvider {
                         .padding()
                     }
                 } else {
-                    Button(action: toggle) {
-                        Text(L.start())
-                        .font(.headline)
-                        .padding()
+                    Text(L.instructions())
+                    .font(.subheadline)
+                    .italic()
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    Rectangle() // Image placeholder
+                    .stroke(Color.gray,
+                            style: antsStroke)
+                    .padding()
+                    .animation(antsAnimation)
+                    if remaining == 0 {
+                        Button(action: toggle) {
+                            Text(L.start())
+                            .font(.headline)
+                            .padding()
+                        }
                     }
                 }
+            }
+            if remaining > 0 {
+                Text(String(remaining))
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundColor(.white)
+                .shadow(color: .gray, radius: 2, x: 2, y: 2)
             }
         }
         .onAppear(perform: appear)
@@ -131,9 +145,23 @@ private extension FitPoseView {
         }
     }
 
-    func capturePhoto() {
-        // TO DO: countdown state here
+    func shutterRelease() {
+        remaining = shutterCountdown
+        countdown()
+    }
 
+    func countdown() {
+        if remaining > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.remaining -= 1
+                self.countdown()
+            }
+        } else {
+            capturePhoto()
+        }
+    }
+
+    func capturePhoto() {
         preview?.capturePhoto { camera, capturedImage, error in
             camera.restartPreview()
             // TO DO: handle capturedImage and error
