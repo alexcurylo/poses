@@ -20,10 +20,32 @@ extension UIView {
         let previewLayer = PreviewLayer(session: session)
         layer.insert(background: previewLayer,
                      name: PreviewLayer.name)
+
+        addGestureRecognizer(CameraPincher(target: self,
+                                           action: #selector(pinchZoom)))
+        addGestureRecognizer(CameraTapper(target: self,
+                                          action: #selector(tapFocus)))
+        device?.change(monitoring: true)
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(removeFocus),
+            name: .AVCaptureDeviceSubjectAreaDidChange,
+            object: nil)
     }
 
     /// Remove camera preview layer
     func removePreview() {
+        gestureRecognizerOfType(CameraPincher.self)?.removeFromView()
+        gestureRecognizerOfType(CameraTapper.self)?.removeFromView()
+
+        focusLayer?.removeFromSuperlayer()
+
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name.AVCaptureDeviceSubjectAreaDidChange,
+            object: nil)
+
         previewLayer?.removeFromSuperlayer()
     }
 
@@ -52,10 +74,61 @@ extension UIView {
         }
     }
 
+    /// Show focus image
+    /// - Parameter focus: Center
+    @objc func show(focus: CGPoint) {
+        focusLayer?.removeFromSuperlayer()
+        let focusLayer = FocusLayer(center: focus)
+        previewLayer?.addSublayer(focusLayer)
+    }
+
     /// Remove focus image and function
     @objc func removeFocus() {
         focusLayer?.removeFromSuperlayer()
         device?.removeFocus()
+    }
+
+    /// Handle pinch to Zoom
+    /// - Parameter sender: Recognizer
+    @objc func pinchZoom(_ sender: UIPinchGestureRecognizer) {
+        enum Zoom {
+            static var initial: CGFloat = 1
+        }
+
+        if let device = device {
+            if sender.state == .began {
+                Zoom.initial = device.videoZoomFactor
+            }
+            device.change(zoom: sender.scale * Zoom.initial)
+        }
+    }
+
+    /// Handle tap to focus
+    /// - Parameter sender: Recognizer
+    @objc func tapFocus(_ sender: UITapGestureRecognizer) {
+        let focus = sender.location(in: self)
+
+        if let device = device {
+            if !device.isFocusPointOfInterestSupported && !device.isExposurePointOfInterestSupported {
+                return
+            }
+
+            let local = CGPoint(
+                x: (focus.y - bounds.minY) / bounds.height,
+                y: 1 - (focus.x - bounds.minX) / bounds.width)
+            device.change(interest: local)
+            show(focus: focus)
+        } else if UIApplication.isSimulator {
+            show(focus: focus)
+        }
+    }
+}
+
+extension UIColor {
+
+    /// Color for preview images and controls
+    class var previewYellow: UIColor {
+        UIColor(red: 1, green: 0.8, blue: 0.2, alpha: 1)
     }
 }
 

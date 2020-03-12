@@ -107,6 +107,7 @@
 		FAA0137723CB59310089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
 		FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7A23D79FA600ED7B6C /* CoreDataStack.swift */; };
 		FAA2CB7D23D7B40000ED7B6C /* CoreDataStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CB7C23D7B40000ED7B6C /* CoreDataStackTests.swift */; };
+		FAAA237D2419A00A00D5AEE7 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA237C2419A00A00D5AEE7 /* UIView+GestureRecognizer.swift */; };
 		FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB6A2723B54E4D0021666B /* MailView.swift */; };
 		FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF854D23DA85E8005DCBA9 /* AddButton.swift */; };
 		FAAF854F23DA85E8005DCBA9 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF854D23DA85E8005DCBA9 /* AddButton.swift */; };
@@ -313,6 +314,7 @@
 		FAA3224F23AED4C300749385 /* Poses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA3225B23AED4C400749385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA3225D23AED4C400749385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAA237C2419A00A00D5AEE7 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
 		FAAB6A2723B54E4D0021666B /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		FAAF854D23DA85E8005DCBA9 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		FAAF855823DC07F6005DCBA9 /* FetchedResults+Orderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FetchedResults+Orderable.swift"; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				FA54947E2415DF34008E7A18 /* FocusLayer.swift */,
 				FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */,
 				FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */,
+				FAAA237C2419A00A00D5AEE7 /* UIView+GestureRecognizer.swift */,
 				FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */,
 			);
 			path = camera;
@@ -1194,6 +1197,7 @@
 				FAC2257D23A6261D00BF3749 /* ReportingService.swift in Sources */,
 				8CA9CDC7239DE6BA00213558 /* UserDefaults+TypeSafety.swift in Sources */,
 				FA2F49D123B357F200EAABC5 /* Exposable.swift in Sources */,
+				FAAA237D2419A00A00D5AEE7 /* UIView+GestureRecognizer.swift in Sources */,
 				8CA9CDC3239DE5F900213558 /* Withable.swift in Sources */,
 				FA7A49E424029F0200F1DD9D /* CALayer+Named.swift in Sources */,
 				FAA2CB7B23D79FA600ED7B6C /* CoreDataStack.swift in Sources */,

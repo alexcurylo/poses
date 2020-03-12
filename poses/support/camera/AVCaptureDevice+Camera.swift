@@ -40,10 +40,9 @@ extension AVCaptureDevice {
             change(interest: center)
         }
     }
-}
 
-private extension AVCaptureDevice {
-
+    /// Change camera POI
+    /// - Parameter point: POI
     func change(interest point: CGPoint) {
         configure {
             if isFocusPointOfInterestSupported {
@@ -56,6 +55,30 @@ private extension AVCaptureDevice {
             }
         }
     }
+
+    /// Change camera zoom
+    /// - Parameter zoom: Requested factor
+    func change(zoom factor: CGFloat) {
+        let actual = min(max(factor, 1), 4)
+        if videoZoomFactor != actual {
+            configure {
+                videoZoomFactor = actual
+            }
+        }
+    }
+
+    /// Change camera change monitoring
+    /// - Parameter enabled: Enabled state
+    func change(monitoring enabled: Bool) {
+        if isSubjectAreaChangeMonitoringEnabled != enabled {
+            configure {
+                isSubjectAreaChangeMonitoringEnabled = enabled
+            }
+        }
+    }
+}
+
+private extension AVCaptureDevice {
 
     func configure(configuration: () -> Void) {
         do {

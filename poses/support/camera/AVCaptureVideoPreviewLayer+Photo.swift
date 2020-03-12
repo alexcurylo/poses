@@ -17,7 +17,7 @@ extension AVCaptureVideoPreviewLayer {
 
         if let photoOutput = photoOutput {
             let settings = AVCapturePhotoSettings()
-            // TO DO: set flash here
+            // TO DO: set flash here, figure out why throws exception
             photoOutput.capturePhoto(with: settings,
                                      delegate: self)
         } else {
