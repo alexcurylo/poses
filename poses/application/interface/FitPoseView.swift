@@ -15,6 +15,7 @@ struct FitPoseView: View, ServiceProvider {
     @State private var isShowingError = false
     @State private var remaining = 0
     @State private var shutterCountdown = 0
+    @State private var flash: AVCaptureDevice.FlashMode = .off
 
     /// :nodoc:
     var body: some View {
@@ -23,7 +24,7 @@ struct FitPoseView: View, ServiceProvider {
             VStack { // swiftlint:disable:this closure_body_length
                 if isPreviewing {
                     HStack {
-                        Image(systemSymbol: .bolt) // fill slash
+                        FlashButton(flash: $flash)
                         Spacer()
                         CountdownButton(countdown: $shutterCountdown)
                         Spacer()

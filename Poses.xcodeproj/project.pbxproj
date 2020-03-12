@@ -102,6 +102,7 @@
 		FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */; };
 		FA8B539D2398F2BA009E8E1F /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B539C2398F2BA009E8E1F /* AppUITests.swift */; };
 		FA911730241A07B300B330AA /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91172F241A07B300B330AA /* CountdownButton.swift */; };
+		FA911732241AEC0E00B330AA /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA911731241AEC0E00B330AA /* FlashButton.swift */; };
 		FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91C5F123D65BEA0043A44E /* GroupRowView.swift */; };
 		FAA0136623CB47750089EA76 /* EntityNamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0136523CB47750089EA76 /* EntityNamable.swift */; };
 		FAA0137623CB59300089EA76 /* PosesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA0137423CB59240089EA76 /* PosesModel.xcdatamodeld */; };
@@ -307,6 +308,7 @@
 		FA8B539C2398F2BA009E8E1F /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		FA8B539E2398F2BA009E8E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA91172F241A07B300B330AA /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
+		FA911731241AEC0E00B330AA /* FlashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
 		FA91C5F123D65BEA0043A44E /* GroupRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRowView.swift; sourceTree = "<group>"; };
 		FA9395CC23DCF7B300A1BC7E /* Package.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; name = Package.resolved; path = Poses.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved; sourceTree = "<group>"; };
 		FAA0136523CB47750089EA76 /* EntityNamable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNamable.swift; sourceTree = "<group>"; };
@@ -615,6 +617,7 @@
 				FA91172F241A07B300B330AA /* CountdownButton.swift */,
 				FA42498D23AE19360091A85B /* ExtrasView.swift */,
 				FA42498923AE19160091A85B /* FavoritesView.swift */,
+				FA911731241AEC0E00B330AA /* FlashButton.swift */,
 				FA42498B23AE19240091A85B /* FitPoseView.swift */,
 				FABCAF1723ADBE65005526BC /* GalleryView.swift */,
 				FA91C5F123D65BEA0043A44E /* GroupRowView.swift */,
@@ -1209,6 +1212,7 @@
 				8CA9CDBF239DE58400213558 /* Date+Formatting.swift in Sources */,
 				FABCAF1823ADBE65005526BC /* GalleryView.swift in Sources */,
 				8C13EFF923CC110A00449E3D /* POSModelPose+CoreDataProperties.swift in Sources */,
+				FA911732241AEC0E00B330AA /* FlashButton.swift in Sources */,
 				FA2F49D623B3583600EAABC5 /* UIExtras.swift in Sources */,
 				FAFB16A8239F05F9004D314D /* ServiceProvider.swift in Sources */,
 				FA42498E23AE19360091A85B /* ExtrasView.swift in Sources */,

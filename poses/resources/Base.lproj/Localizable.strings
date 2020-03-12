@@ -61,6 +61,9 @@
 "instructions" = "drag to move\npinch to resize and rotate";
 "start" = "Start Camera";
 "noCamera" = "The camera could not be started.";
+"auto" = "Auto";
+"off" = "Off";
+"on" = "On";
 
 // extras
 

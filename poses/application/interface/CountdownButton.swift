@@ -39,8 +39,6 @@ private extension CountdownButton {
 /// :nodoc:
 struct CountdownButton_Previews: PreviewProvider {
 
-    @State private var countdown = 0
-
     /// :nodoc:
     static var previews: some View {
         PreviewWrapper()
