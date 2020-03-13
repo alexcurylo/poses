@@ -2,6 +2,7 @@
 
 import SwiftUI
 
+/// Button for toggling countdown time
 struct CountdownButton: View {
 
     /// Binding to owner's countdown state

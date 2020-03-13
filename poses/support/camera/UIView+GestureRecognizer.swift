@@ -30,6 +30,7 @@ extension UIGestureRecognizer {
 /// Tap recognizer that avoids controls
 class EmptyTapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDelegate {
 
+    /// :nodoc:
     override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
 
@@ -48,7 +49,7 @@ class EmptyTapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDele
 }
 
 /// Tagging class for locating camera tapper
-class CameraTapper: EmptyTapGestureRecognizer {}
+final class CameraTapper: EmptyTapGestureRecognizer {}
 
 /// Tagging class for locating camera pincher
-class CameraPincher: UIPinchGestureRecognizer {}
+final class CameraPincher: UIPinchGestureRecognizer {}

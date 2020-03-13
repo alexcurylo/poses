@@ -81,7 +81,6 @@
 		FA42499723AE2F2D0091A85B /* Tab+UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42499623AE2F2D0091A85B /* Tab+UITest.swift */; };
 		FA4249A223AEC0000091A85B /* Flurry.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA42499A23AEBC940091A85B /* Flurry.xcframework */; };
 		FA54947F2415DF34008E7A18 /* FocusLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54947E2415DF34008E7A18 /* FocusLayer.swift */; };
-		FA5494812415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */; };
 		FA7A49C82402855A00F1DD9D /* UIView+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */; };
 		FA7A49D2240298F800F1DD9D /* PreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */; };
 		FA7A49DF24029ED600F1DD9D /* NSObject+Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */; };
@@ -282,7 +281,6 @@
 		FA42499623AE2F2D0091A85B /* Tab+UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+UITest.swift"; sourceTree = "<group>"; };
 		FA42499A23AEBC940091A85B /* Flurry.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Flurry.xcframework; sourceTree = "<group>"; };
 		FA54947E2415DF34008E7A18 /* FocusLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLayer.swift; sourceTree = "<group>"; };
-		FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoPreviewLayer+Photo.swift"; sourceTree = "<group>"; };
 		FA7A49C72402855A00F1DD9D /* UIView+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Preview.swift"; sourceTree = "<group>"; };
 		FA7A49D1240298F800F1DD9D /* PreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayer.swift; sourceTree = "<group>"; };
 		FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Named.swift"; sourceTree = "<group>"; };
@@ -717,7 +715,6 @@
 			children = (
 				FA7A49F0240334D900F1DD9D /* AVCaptureDevice+Camera.swift */,
 				FA7A49E52402A26C00F1DD9D /* AVCaptureSession+Photo.swift */,
-				FA5494802415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift */,
 				FA7A49E324029F0200F1DD9D /* CALayer+Named.swift */,
 				FA54947E2415DF34008E7A18 /* FocusLayer.swift */,
 				FADA7BBC23E0EBB500591A82 /* NSObject+Notify.swift */,
@@ -1235,7 +1232,6 @@
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
 				FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */,
 				FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */,
-				FA5494812415E141008E7A18 /* AVCaptureVideoPreviewLayer+Photo.swift in Sources */,
 				8C13EFFD23CC110A00449E3D /* POSModelCategory+CoreDataProperties.swift in Sources */,
 				FAAB6A2823B54E4D0021666B /* MailView.swift in Sources */,
 				8CA9CBA7239DD55400213558 /* RoutingAppDelegate.swift in Sources */,

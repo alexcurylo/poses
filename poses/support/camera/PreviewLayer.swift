@@ -8,6 +8,11 @@ final class PreviewLayer: AVCaptureVideoPreviewLayer {
     /// name for locating layer
     static let name = String(describing: PreviewLayer.self)
 
+    /// Capture completion type
+    typealias Completion = (Result<UIImage, Error>) -> Void
+
+    private var then: Completion?
+
     /// :nodoc:
     override init(session: AVCaptureSession) {
         super.init(session: session)
@@ -28,6 +33,25 @@ final class PreviewLayer: AVCaptureVideoPreviewLayer {
 
         setup()
     }
+
+    /// Capture photo from preview layer
+    /// - Parameters:
+    ///   - flash: Flash mode for settings
+    ///   - then: Action when capture complete
+    func capture(
+        photo flash: AVCaptureDevice.FlashMode,
+        then: @escaping Completion
+    ) {
+        guard let photoOutput = photoOutput else {
+            return then(.failure("missing photoOutput"))
+        }
+
+        self.then = then
+        let settings = AVCapturePhotoSettings()
+        settings.flashMode = flash
+        photoOutput.capturePhoto(with: settings,
+                                 delegate: self)
+     }
 }
 
 private extension PreviewLayer {
@@ -53,5 +77,41 @@ private extension PreviewLayer {
         }
 
         connection.videoOrientation = captureOrientation
+    }
+
+    var photoOutput: AVCapturePhotoOutput? {
+        if let session = session {
+            for videoOutput in session.outputs {
+                if let imageOutput = videoOutput as? AVCapturePhotoOutput {
+                    return imageOutput
+                }
+            }
+        }
+        return nil
+    }
+}
+
+extension PreviewLayer: AVCapturePhotoCaptureDelegate {
+
+    public func photoOutput(
+        _ output: AVCapturePhotoOutput,
+        didFinishProcessingPhoto photo: AVCapturePhoto,
+        error: Error?
+    ) {
+        if let error = error {
+            then?(.failure(error))
+        } else if let data = photo.fileDataRepresentation(),
+            let provider = CGDataProvider(data: data as CFData),
+            let cgImage = CGImage(jpegDataProviderSource: provider,
+                                  decode: nil,
+                                  shouldInterpolate: true,
+                                  intent: .defaultIntent) {
+            let image = UIImage(cgImage: cgImage)
+            then?(.success(image))
+        } else {
+            then?(.failure("failed to create UIImage"))
+        }
+
+        then = nil
     }
 }

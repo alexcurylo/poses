@@ -8,6 +8,8 @@ final class FocusLayer: CAShapeLayer {
     /// name for locating layer
     static let name = String(describing: FocusLayer.self)
 
+    /// Initalize around a point
+    /// - Parameter center: focus box center
     convenience init(center: CGPoint) {
         self.init()
 
@@ -25,6 +27,7 @@ final class FocusLayer: CAShapeLayer {
         }
     }
 
+    /// :nodoc:
     override func action(forKey event: String) -> CAAction? {
         switch event {
         case "path":

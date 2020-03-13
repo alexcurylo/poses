@@ -12,10 +12,11 @@ struct FitPoseView: View, ServiceProvider {
     @State private var preview: UIView?
     @State private var isAnimating = false
     @State private var isPreviewing = false
-    @State private var isShowingError = false
     @State private var remaining = 0
     @State private var shutterCountdown = 0
     @State private var flash: AVCaptureDevice.FlashMode = .off
+    @State private var isShowingError = false
+    @State private var errorMessage = ""
 
     /// :nodoc:
     var body: some View {
@@ -82,7 +83,7 @@ struct FitPoseView: View, ServiceProvider {
         .animation(.default)
         .alert(isPresented: $isShowingError) {
             Alert(title: Text(L.error()),
-                  message: Text(L.noCamera()),
+                  message: Text(errorMessage),
                   dismissButton: .default(Text(L.ok())))
         }
     }
@@ -124,6 +125,11 @@ private extension FitPoseView {
         preview = view
     }
 
+    func show(error message: String) {
+        errorMessage = message
+        isShowingError = true
+    }
+
     func toggle() {
         isPreviewing ? stop() : start()
     }
@@ -137,7 +143,7 @@ private extension FitPoseView {
                 return showControls()
             }
             log.error("start camera: \(error)")
-            isShowingError = true
+            show(error: L.failStart())
         }
     }
 
@@ -163,7 +169,7 @@ private extension FitPoseView {
             try preview?.switchCamera()
         } catch {
             log.error("switch camera: \(error)")
-            isShowingError = true
+            show(error: L.failSwitch())
         }
     }
 
@@ -184,10 +190,19 @@ private extension FitPoseView {
     }
 
     func capturePhoto() {
-        preview?.capturePhoto { camera, capturedImage, error in
-            camera.restartPreview()
-            // TO DO: handle capturedImage and error
-            _ = (capturedImage, error)
+        preview?.capture(photo: flash) { result in
+            self.preview?.restartPreview()
+            switch result {
+            case .success(let image):
+                UIImageWriteToSavedPhotosAlbum(
+                    image,
+                    nil, // self,
+                    nil, // #selector(self.image(_:didFinishSavingWithError:contextInfo:)),
+                    nil)
+            case .failure(let error):
+                self.log.error("capture photo: \(error)")
+                self.show(error: L.failCapture())
+            }
         }
     }
 }

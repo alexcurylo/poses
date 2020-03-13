@@ -4,6 +4,7 @@ import AVFoundation
 import SFSafeSymbols
 import SwiftUI
 
+/// Button for toggling flash state
 struct FlashButton: View {
 
     /// Binding to owner's flash state

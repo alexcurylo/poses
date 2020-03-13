@@ -60,7 +60,9 @@
 
 "instructions" = "drag to move\npinch to resize and rotate";
 "start" = "Start Camera";
-"noCamera" = "The camera could not be started.";
+"failStart" = "The camera could not be started.";
+"failSwitch" = "The camera could not be started.";
+"failCapture" = "Could not capture a photo.";
 "auto" = "Auto";
 "off" = "Off";
 "on" = "On";

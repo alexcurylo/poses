@@ -5,8 +5,8 @@ import AVFoundation
 extension UIView {
 
     /// Camera preview layer if present
-    var previewLayer: AVCaptureVideoPreviewLayer? {
-        layer.sublayer(named: PreviewLayer.name) as? AVCaptureVideoPreviewLayer
+    var previewLayer: PreviewLayer? {
+        layer.sublayer(named: PreviewLayer.name) as? PreviewLayer
     }
 
     /// Camera focus layer if present
@@ -64,9 +64,11 @@ extension UIView {
 
     /// Capture photo from preview layer
     /// - Parameters:
+    ///   - flash: Flash mode for settings
     ///   - then: Action when capture complete
-    func capturePhoto(
-        then: @escaping ((UIView, UIImage?, NSError?) -> Void)
+    func capture(
+        photo flash: AVCaptureDevice.FlashMode,
+        then: @escaping ((Result<UIImage, Error>) -> Void)
     ) {
         guard let previewLayer = previewLayer else { return }
 
@@ -74,9 +76,9 @@ extension UIView {
         UIView.animate(withDuration: 1) { self.alpha = 1 }
 
         previewLayer.connection?.isEnabled = false
-        previewLayer.capturePhoto { capturedImage, error in
+        previewLayer.capture(photo: flash) { result in
             previewLayer.session?.stopRunning()
-            then(self, capturedImage, error)
+            then(result)
         }
     }
 
