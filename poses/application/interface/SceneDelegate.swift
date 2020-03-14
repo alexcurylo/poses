@@ -88,11 +88,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // expect to save on change
-        //data.save()
+        // data.save()
     }
 
     // UIWindowSceneDelegate
-    //func windowScene(didUpdate previousCoordinateSpace...)
+    // func windowScene(didUpdate previousCoordinateSpace...)
     // func windowScene(performActionFor shortcutItem...)
     // func windowScene(userDidAcceptCloudKitShareWith...)
 

@@ -43,8 +43,8 @@ extension FetchedResults where Result: Orderable {
             moc.perform {
                 var arr = Array(self)
                 arr.move(fromOffsets: offset, toOffset: destination)
-                for i in 0..<arr.count {
-                    arr[i].order = Int32(i)
+                for index in 0..<arr.count {
+                    arr[index].order = Int32(index)
                 }
                 try? moc.save()
             }

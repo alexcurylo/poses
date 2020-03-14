@@ -28,7 +28,7 @@ final class CoreDataStackTests: TestCase {
             POSModelCategory.entityName,
             POSModelGroup.entityName,
             POSModelPack.entityName,
-            POSModelPose.entityName
+            POSModelPose.entityName,
         ])
         let sut = CoreDataStack()
         let loadedLibrary = expectation(description: "loadedLibrary")

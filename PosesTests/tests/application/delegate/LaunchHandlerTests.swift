@@ -27,7 +27,7 @@ final class LaunchHandlerTests: TestCase {
         // given
         let settings: [LaunchSetting] = [
             .subscribed(true),
-            .userName("test")
+            .userName("test"),
         ]
 
         // then

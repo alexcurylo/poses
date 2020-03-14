@@ -24,7 +24,7 @@ final class CoreDataStack {
     private let modelName = "PosesModel"
 
     private lazy var persistentContainer: NSPersistentContainer = {
-        //let container = NSPersistentCloudKitContainer(name: "PosesCKModel")
+        // let container = NSPersistentCloudKitContainer(name: "PosesCKModel")
         let container = NSPersistentContainer(name: modelName)
 
         seed()
@@ -98,22 +98,21 @@ private extension CoreDataStack {
         let url = storeURL
         guard !FileManager.default.fileExists(atPath: url.path),
               let seed = R.file.posesModelSqlite() else {
-            //log.verbose("no seeding needed: \(url)")
+            // log.verbose("no seeding needed: \(url)")
             return
         }
 
         do {
             try FileManager.default.copyItem(at: seed, to: url)
-            //log.verbose("seeded model: \(url)")
+            // log.verbose("seeded model: \(url)")
         } catch {
-            //log.error("seeding model: \(error)")
+            // log.error("seeding model: \(error)")
         }
 
         // "remember to specify the rollback journaling mode..."
         // Technical Note TN2350 Working with Default Data in Core Data Apps
         // https://developer.apple.com/library/archive/technotes/tn2350/
         // Notes for migrating to CloudKit+SwiftUI friendly revision
-        // swiftlint:disable line_length
         // https://github.com/riywo/PreloadedPersistentContainer
         // https://williamboles.me/progressive-core-data-migration/
         // https://www.raywenderlich.com/7585-lightweight-migrations-in-core-data-tutorial

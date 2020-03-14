@@ -10,6 +10,7 @@ final class AppStoreSnapshotTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+
         continueAfterFailure = true
     }
 
@@ -20,9 +21,9 @@ final class AppStoreSnapshotTests: XCTestCase {
     func testAppStoreSnapshots() {
         launch(arguments: [.disableAnimations,
                            .disableWaitIdle,
-                           .takingScreenshots],
+                           .takingScreenshots, ],
                settings: [.subscribed(true),
-                          .userName("Snapshots")])
+                          .userName("Snapshots"), ])
 
         snapshot("01Gallery")
         Tab.categories.tap()

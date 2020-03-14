@@ -12,10 +12,12 @@ struct GalleryView: View, ServiceProvider {
             Text(String(Tab.gallery))
                 .font(.title)
         }
-        .onAppear {
-            self.report.screen(String(Tab.gallery))
-        }
+        .onAppear(perform: appear)
         .animation(.default)
+    }
+
+    private func appear() {
+        report.screen(String(Tab.gallery))
     }
 }
 

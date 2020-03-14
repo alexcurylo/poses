@@ -4,5 +4,4 @@ import CoreData
 @testable import Poses
 import XCTest
 
-final class DataServiceTests: TestCase {
-}
+final class DataServiceTests: TestCase { }

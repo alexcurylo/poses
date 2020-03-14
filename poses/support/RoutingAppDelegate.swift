@@ -13,6 +13,7 @@ protocol AppHandler { }
 
 /// Adopt to have launch notifications routed
 protocol AppLaunchHandler: AppHandler {
+
     /// willFinishLaunchingWithOptions
     /// - Parameters:
     ///   - application: Application
@@ -33,6 +34,7 @@ protocol AppLaunchHandler: AppHandler {
 
 /// Adopt to have state notifications routed
 protocol AppStateHandler: AppHandler {
+
     /// Enter foreground handler
     /// - Parameter application: Application
     func applicationWillEnterForeground(_ application: UIApplication)
@@ -52,6 +54,7 @@ protocol AppStateHandler: AppHandler {
 
 /// Adopt to have open URL notifications routed
 protocol AppOpenURLHandler: AppHandler {
+
     /// Open URL handler
     /// - Parameters:
     ///   - app: Application
@@ -65,6 +68,7 @@ protocol AppOpenURLHandler: AppHandler {
 
 /// Adopt to have memory warning notifications routed
 protocol AppMemoryHandler: AppHandler {
+
     /// Memory warning handler
     /// - Parameter application: Application
     func applicationDidReceiveMemoryWarning(_ application: UIApplication)
@@ -72,6 +76,7 @@ protocol AppMemoryHandler: AppHandler {
 
 /// Adopt to have time change notifications routed
 protocol AppTimeChangeHandler: AppHandler {
+
     /// App time change handler
     /// - Parameter application: Application
     func applicationSignificantTimeChange(_ application: UIApplication)
@@ -79,6 +84,7 @@ protocol AppTimeChangeHandler: AppHandler {
 
 /// Adopt to have remote notifications routed
 protocol AppNotificationsHandler: AppHandler {
+
     /// didRegisterForRemoteNotificationsWithDeviceToken
     /// - Parameters:
     ///   - application: Application
@@ -103,6 +109,7 @@ protocol AppNotificationsHandler: AppHandler {
 
 /// Adopt to have background URL session notifications routed
 protocol AppBackgroundURLSessionHandler: AppHandler {
+
     /// handleEventsForBackgroundURLSession
     /// - Parameters:
     ///   - application: Application
@@ -116,6 +123,7 @@ protocol AppBackgroundURLSessionHandler: AppHandler {
 #if os(iOS)
 /// Adopt to have shortcut notifications routed
 protocol AppShortcutHandler: AppHandler {
+
     /// performActionFor shortcutItem
     /// - Parameters:
     ///   - application: Application
@@ -129,6 +137,7 @@ protocol AppShortcutHandler: AppHandler {
 
 /// Adopt to have watch notifications routed
 protocol AppWatchHandler: AppHandler {
+
     /// handleWatchKitExtensionRequest
     /// - Parameters:
     ///   - application: Application
@@ -143,6 +152,7 @@ protocol AppWatchHandler: AppHandler {
 
 /// Adopt to have health notifications routed
 protocol AppHealthHandler: AppHandler {
+
     /// applicationShouldRequestHealthAuthorization
     /// - Parameter application: Application
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication)
@@ -151,6 +161,7 @@ protocol AppHealthHandler: AppHandler {
 #if canImport(Intents)
 /// Adopt to have Siri notifications routed
 protocol AppSiriHandler: AppHandler {
+
     /// handle intent
     /// - Parameters:
     ///   - application: Application
@@ -164,6 +175,7 @@ protocol AppSiriHandler: AppHandler {
 
 /// Adopt to have data notifications routed
 protocol AppContentHandler: AppHandler {
+
     /// applicationProtectedDataWillBecomeUnavailable
     /// - Parameter application: Application
     func applicationProtectedDataWillBecomeUnavailable(_ application: UIApplication)
@@ -174,6 +186,7 @@ protocol AppContentHandler: AppHandler {
 
 /// Adopt to have extension notifications routed
 protocol AppExtensionHandler: AppHandler {
+
     /// shouldAllowExtensionPointIdentifier
     /// - Parameters:
     ///   - application: Application
@@ -186,6 +199,7 @@ protocol AppExtensionHandler: AppHandler {
 
 /// Adopt to have restoration notifications routed
 protocol AppRestorationHandler: AppHandler {
+
     /// viewControllerWithRestorationIdentifierPath
     /// - Parameters:
     ///   - application: Application
@@ -239,6 +253,7 @@ protocol AppRestorationHandler: AppHandler {
 
 /// Adopt to have continuity notifications routed
 protocol AppContinuityHandler: AppHandler {
+
     /// willContinueUserActivityWithType
     /// - Parameters:
     ///   - application: Application
@@ -274,6 +289,7 @@ protocol AppContinuityHandler: AppHandler {
 
 /// Adopt to have CloudKit notifications routed
 protocol AppCloudKitHandler: AppHandler {
+
     /// userDidAcceptCloudKitShareWith
     /// - Parameters:
     ///   - application: Application
@@ -284,6 +300,7 @@ protocol AppCloudKitHandler: AppHandler {
 
 /// Adopt to have UISceneSession notifications routed
 protocol AppSceneSessionHandler: AppHandler {
+
     /// configurationForConnecting
     /// - Parameters:
     ///   - application: Application
@@ -337,7 +354,7 @@ extension RoutingAppDelegate {
     ///   - launchOptions: Launch options
     /// - Returns: Success
     func application(_ application: UIApplication,
-                     // swiftlint:disable:next discouraged_optional_collection line_length
+                     // swiftlint:disable:next discouraged_optional_collection
                      willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         handlers.of(type: AppLaunchHandler.self)
                 .map { $0.application(application,
@@ -352,7 +369,7 @@ extension RoutingAppDelegate {
     ///   - launchOptions: Launch options
     /// - Returns: Success
     func application(_ application: UIApplication,
-                     // swiftlint:disable:next discouraged_optional_collection line_length
+                     // swiftlint:disable:next discouraged_optional_collection
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         handlers.of(type: AppLaunchHandler.self)
                 .map { $0.application(application,

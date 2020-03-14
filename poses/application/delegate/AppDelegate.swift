@@ -40,13 +40,13 @@ import UIKit
         case .production:
             return [
                 ServiceHandler(),
-                LaunchHandler()
+                LaunchHandler(),
             ]
         case .uiTesting:
             #if DEBUG
             return [
                 ServiceHandlerStub(),
-                LaunchHandler()
+                LaunchHandler(),
             ]
             #else
             return []

@@ -34,9 +34,11 @@ struct StringKey: Hashable, RawRepresentable, ExpressibleByStringLiteral {
 
     /// Settings keys we expect to find in Info.plist
     static var infoDictionarySettingsKeys: [StringKey] {
-        [.appVersion,
-         .appBuild,
-         .copyright]
+        [
+            .appVersion,
+            .appBuild,
+            .copyright,
+        ]
     }
 
     /// Settings key value from Info.plist

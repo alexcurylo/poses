@@ -21,7 +21,7 @@ final class AppDelegateTests: TestCase {
         // given
         let expected = [
             String(describing: ServiceHandler.self),
-            String(describing: LaunchHandler.self)
+            String(describing: LaunchHandler.self),
         ]
 
         // when
@@ -36,7 +36,7 @@ final class AppDelegateTests: TestCase {
         // given
         let expected = [
             String(describing: ServiceHandlerStub.self),
-            String(describing: LaunchHandler.self)
+            String(describing: LaunchHandler.self),
         ]
 
         // when

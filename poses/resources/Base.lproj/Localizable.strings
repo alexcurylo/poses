@@ -7,6 +7,12 @@
 "photographyTips" = "https://www.photographytips.com/";
 "github" = "https://github.com/alexcurylo/poses";
 
+// alerts
+
+"ok" = "OK";
+"cancel" = "Cancel";
+"error" = "Error";
+
 // tabs
 
 "tabGallery" = "Gallery";
@@ -48,8 +54,18 @@
 "groupFavorites" = "Favorites";
 "groupTrash" = "Trash (Hidden)";
 "groupName" = "Name";
-"cancel" = "Cancel";
 "addGroup" = "Add group";
+
+// fit pose
+
+"instructions" = "drag to move\npinch to resize and rotate";
+"start" = "Start Camera";
+"failStart" = "The camera could not be started.";
+"failSwitch" = "The camera could not be started.";
+"failCapture" = "Could not capture a photo.";
+"auto" = "Auto";
+"off" = "Off";
+"on" = "On";
 
 // extras
 

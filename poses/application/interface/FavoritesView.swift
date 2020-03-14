@@ -13,7 +13,7 @@ struct FavoritesView: View, ServiceProvider {
     @FetchRequest(
         entity: POSModelGroup.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \POSModelGroup.order,
-                                           ascending: true)],
+                                           ascending: true), ],
         animation: .default
     ) private var favorites: FetchedResults<POSModelGroup>
     // swiftlint:disable:previous let_var_whitespace
@@ -130,7 +130,7 @@ struct FavoritesView: View, ServiceProvider {
     }
 
     /// unimplemented
-    //func rename() {}
+    // func rename() {}
 }
 
 /// :nodoc:
