@@ -40,6 +40,7 @@
 		8C81399323A8765A00871457 /* POSModelPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399223A8765A00871457 /* POSModelPackTests.swift */; };
 		8C81399523A8766600871457 /* POSModelPoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399423A8766600871457 /* POSModelPoseTests.swift */; };
 		8C8A6409241E0CFF003D3BD3 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8A6408241E0CFF003D3BD3 /* Grid */; };
+		8C8A6411241ED831003D3BD3 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A6410241ED831003D3BD3 /* ThumbnailView.swift */; };
 		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
 		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
 		8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11523A7197C001714C5 /* CloudKit.framework */; };
@@ -195,7 +196,6 @@
 		FAFC5AFE23AEFAE00064B97A /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498723AE18860091A85B /* CategoriesView.swift */; };
 		FAFC5AFF23AEFAE00064B97A /* ExtrasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498D23AE19360091A85B /* ExtrasView.swift */; };
 		FAFC5B0023AEFAE00064B97A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498923AE19160091A85B /* FavoritesView.swift */; };
-		FAFC5B0123AEFAE00064B97A /* FitPoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42498B23AE19240091A85B /* FitPoseView.swift */; };
 		FAFC5B0223AEFAE00064B97A /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCAF1723ADBE65005526BC /* GalleryView.swift */; };
 		FAFC5B0323AEFAE00064B97A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */; };
 		FAFC5B0423AEFAE00064B97A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6E408623A9A94C00C5C73A /* Tab.swift */; };
@@ -261,6 +261,7 @@
 		8C81399023A8764800871457 /* POSModelGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSModelGroupTests.swift; sourceTree = "<group>"; };
 		8C81399223A8765A00871457 /* POSModelPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSModelPackTests.swift; sourceTree = "<group>"; };
 		8C81399423A8766600871457 /* POSModelPoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSModelPoseTests.swift; sourceTree = "<group>"; };
+		8C8A6410241ED831003D3BD3 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		8C92C10D23A714AE001714C5 /* PosesModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PosesModel.sqlite; sourceTree = "<group>"; };
 		8C92C11223A718CA001714C5 /* Poses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poses.entitlements; sourceTree = "<group>"; };
 		8C92C11323A7194D001714C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -540,6 +541,62 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		8C8A640A241E29CE003D3BD3 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				FA8B537E2398F2B9009E8E1F /* AppView.swift */,
+				FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */,
+				8C6E408623A9A94C00C5C73A /* Tab.swift */,
+				FA42499423AE2ED20091A85B /* Tab+Strings.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		8C8A640B241E29FF003D3BD3 /* gallery */ = {
+			isa = PBXGroup;
+			children = (
+				FABCAF1723ADBE65005526BC /* GalleryView.swift */,
+				8C8A6410241ED831003D3BD3 /* ThumbnailView.swift */,
+			);
+			path = gallery;
+			sourceTree = "<group>";
+		};
+		8C8A640C241E2A0E003D3BD3 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF854D23DA85E8005DCBA9 /* AddButton.swift */,
+				FA42498723AE18860091A85B /* CategoriesView.swift */,
+				FA91C5F123D65BEA0043A44E /* GroupRowView.swift */,
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
+		8C8A640D241E2A15003D3BD3 /* favorites */ = {
+			isa = PBXGroup;
+			children = (
+				FA42498923AE19160091A85B /* FavoritesView.swift */,
+			);
+			path = favorites;
+			sourceTree = "<group>";
+		};
+		8C8A640E241E2A1D003D3BD3 /* fitpose */ = {
+			isa = PBXGroup;
+			children = (
+				FA91172F241A07B300B330AA /* CountdownButton.swift */,
+				FA42498B23AE19240091A85B /* FitPoseView.swift */,
+				FA911731241AEC0E00B330AA /* FlashButton.swift */,
+			);
+			path = fitpose;
+			sourceTree = "<group>";
+		};
+		8C8A640F241E2A25003D3BD3 /* extras */ = {
+			isa = PBXGroup;
+			children = (
+				FA42498D23AE19360091A85B /* ExtrasView.swift */,
+			);
+			path = extras;
+			sourceTree = "<group>";
+		};
 		8C92C10C23A7141A001714C5 /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,19 +730,12 @@
 		FA7CD1C723A460ED00A1EFAF /* interface */ = {
 			isa = PBXGroup;
 			children = (
-				FAAF854D23DA85E8005DCBA9 /* AddButton.swift */,
-				FA8B537E2398F2B9009E8E1F /* AppView.swift */,
-				FA42498723AE18860091A85B /* CategoriesView.swift */,
-				FA91172F241A07B300B330AA /* CountdownButton.swift */,
-				FA42498D23AE19360091A85B /* ExtrasView.swift */,
-				FA42498923AE19160091A85B /* FavoritesView.swift */,
-				FA911731241AEC0E00B330AA /* FlashButton.swift */,
-				FA42498B23AE19240091A85B /* FitPoseView.swift */,
-				FABCAF1723ADBE65005526BC /* GalleryView.swift */,
-				FA91C5F123D65BEA0043A44E /* GroupRowView.swift */,
-				FA8B53792398F2B9009E8E1F /* SceneDelegate.swift */,
-				8C6E408623A9A94C00C5C73A /* Tab.swift */,
-				FA42499423AE2ED20091A85B /* Tab+Strings.swift */,
+				8C8A640A241E29CE003D3BD3 /* app */,
+				8C8A640B241E29FF003D3BD3 /* gallery */,
+				8C8A640C241E2A0E003D3BD3 /* categories */,
+				8C8A640D241E2A15003D3BD3 /* favorites */,
+				8C8A640E241E2A1D003D3BD3 /* fitpose */,
+				8C8A640F241E2A25003D3BD3 /* extras */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -1305,6 +1355,7 @@
 				FAFB16A6239F05E4004D314D /* ServiceHandler.swift in Sources */,
 				FA91C5F223D65BEA0043A44E /* GroupRowView.swift in Sources */,
 				FA42498C23AE19240091A85B /* FitPoseView.swift in Sources */,
+				8C8A6411241ED831003D3BD3 /* ThumbnailView.swift in Sources */,
 				FAAF854E23DA85E8005DCBA9 /* AddButton.swift in Sources */,
 				FA7A49E82403308500F1DD9D /* Injectable.swift in Sources */,
 				FA1B6750241D83CD00EC316C /* Uppercased.swift in Sources */,
@@ -1399,7 +1450,6 @@
 				FAFC5AF423AEFA6C0064B97A /* LoggingService.swift in Sources */,
 				8C13EFF423CC110A00449E3D /* POSModelPack+CoreDataClass.swift in Sources */,
 				FAAF855323DBC9E8005DCBA9 /* GroupRowView.swift in Sources */,
-				FAFC5B0123AEFAE00064B97A /* FitPoseView.swift in Sources */,
 				FAFC5AE123AEF9480064B97A /* ServiceHandler.swift in Sources */,
 				FAAF855423DBC9F5005DCBA9 /* CoreDataStack.swift in Sources */,
 				8C13EFF823CC110A00449E3D /* POSModelPose+CoreDataClass.swift in Sources */,

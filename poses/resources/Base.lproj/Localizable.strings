@@ -48,6 +48,10 @@
 "STANDSIDE" = "Standing - side view";
 "WITHPROPS" = "With props";
 
+// gallery
+
+"screenGallery" = "Gallery (%i poses)";
+
 // favorites
 
 "screenFavorites" = "Favorite Groups";

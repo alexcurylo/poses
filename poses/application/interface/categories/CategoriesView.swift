@@ -27,14 +27,19 @@ struct CategoriesView: View, ServiceProvider {
                     }
                 }
             }
-            .onAppear {
-                self.report.screen(String(Tab.categories))
-            }
+            .onAppear(perform: appear)
             .navigationBarTitle(Tab.categories.title)
         }
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
         //.padding() // displays master on iPad portrait launch
         .animation(.default)
+    }
+}
+
+private extension CategoriesView {
+
+    private func appear() {
+        report.screen(String(Tab.categories))
     }
 }
 
