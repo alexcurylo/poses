@@ -39,6 +39,7 @@
 		8C81399123A8764800871457 /* POSModelGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399023A8764800871457 /* POSModelGroupTests.swift */; };
 		8C81399323A8765A00871457 /* POSModelPackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399223A8765A00871457 /* POSModelPackTests.swift */; };
 		8C81399523A8766600871457 /* POSModelPoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399423A8766600871457 /* POSModelPoseTests.swift */; };
+		8C8A6409241E0CFF003D3BD3 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8A6408241E0CFF003D3BD3 /* Grid */; };
 		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
 		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
 		8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11523A7197C001714C5 /* CloudKit.framework */; };
@@ -413,6 +414,7 @@
 				FAC2258423A6E18F00BF3749 /* Nuke in Frameworks */,
 				FAD49963239BA4340030CB8E /* SwiftyBeaver in Frameworks */,
 				FAB8E15C23C7DBF60053451A /* Siren in Frameworks */,
+				8C8A6409241E0CFF003D3BD3 /* Grid in Frameworks */,
 				FAECA217239CF07A0028AE3A /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -937,6 +939,7 @@
 				FA42499023AE1AFF0091A85B /* SFSafeSymbols */,
 				FAB8E15B23C7DBF60053451A /* Siren */,
 				FAAF855123DBA32C005DCBA9 /* Introspect */,
+				8C8A6408241E0CFF003D3BD3 /* Grid */,
 			);
 			productName = poses;
 			productReference = FA8B53742398F2B9009E8E1F /* Poses.app */;
@@ -1047,6 +1050,7 @@
 				FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				FAB8E15A23C7DBF60053451A /* XCRemoteSwiftPackageReference "Siren" */,
 				FAAF855023DBA32C005DCBA9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				8C8A6407241E0CFF003D3BD3 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
 			);
 			productRefGroup = FA8B53752398F2B9009E8E1F /* Products */;
 			projectDirPath = "";
@@ -1608,6 +1612,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8C8A6407241E0CFF003D3BD3 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-grid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/piknotech/SFSafeSymbols";
@@ -1659,6 +1671,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8C8A6408241E0CFF003D3BD3 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C8A6407241E0CFF003D3BD3 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			productName = Grid;
+		};
 		FA42499023AE1AFF0091A85B /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA42498F23AE1AFF0091A85B /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;

@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Grid",
+        "repositoryURL": "https://github.com/spacenation/swiftui-grid",
+        "state": {
+          "branch": null,
+          "revision": "978cc2eae7ced4a4d3cf9b6728503edc62a2969f",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "Introspect",
         "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect",
         "state": {
