@@ -3,35 +3,31 @@
 import SwiftUI
 
 /// ThumbnailView view model
-struct Thumbnail: Identifiable {
+private struct Thumbnail: Identifiable {
 
-    let number: Int
-    let id = UUID()
-    let color: Color = .red
+    let pose: POSModelPose
+
+    var id: Int32 { pose.id }
+    var title: String { String(pose.number) }
 }
 
 /// View in a gallery grid
 struct ThumbnailView: View {
 
     /// View model
-    let thumbnail: Thumbnail
-
-    private let title: String
-    private let color: Color
+    private let thumbnail: Thumbnail
 
     /// :nodoc:
-    init(thumbnail: Thumbnail) {
-        self.thumbnail = thumbnail
-        title = String(thumbnail.number)
-        color = thumbnail.color
+    init(pose: POSModelPose) {
+        self.thumbnail = Thumbnail(pose: pose)
     }
 
     /// :nodoc:
     var body: some View {
         ZStack(alignment: .init(horizontal: .center, vertical: .center)) {
             Rectangle()
-                .foregroundColor(color)
-            Text(title)
+                .foregroundColor(.red)
+            Text(thumbnail.title)
                 .font(.title)
                 .foregroundColor(.white)
                 .opacity(0.5)
@@ -49,6 +45,6 @@ struct ThumbnailView_Previews: PreviewProvider {
 
     /// :nodoc:
     static var previews: some View {
-        ThumbnailView(thumbnail: Thumbnail(number: 1))
+        ThumbnailView(pose: POSModelPose())
     }
 }

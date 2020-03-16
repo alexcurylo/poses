@@ -34,17 +34,17 @@ extension UIApplication {
         ProcessInfo.arguments(contain: .takingScreenshots)
     }
 
-    /// Executing in test enviroment?
+    /// Executing in test environment?
     static var isTesting: Bool {
         isUITesting || isUnitTesting
     }
 
-    /// Executing in UI test enviroment?
+    /// Executing in UI test environment?
     static var isUITesting: Bool {
         ProcessInfo.arguments(contain: .uiTesting)
     }
 
-    /// Executing in unit test enviroment?
+    /// Executing in unit test environment?
     static var isUnitTesting: Bool {
         NSClassFromString("XCTestCase") != nil
     }

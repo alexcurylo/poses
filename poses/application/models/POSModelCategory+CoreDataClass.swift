@@ -99,8 +99,8 @@ extension POSModelCategory: GroupRowModel {
 
     /// Display count
     func visible(in moc: NSManagedObjectContext) -> String {
-        moc.count(template: "VisiblePosesInCategory",
-                  subs: ["keyed": id])
+        String(moc.count(template: "VisiblePosesInCategory",
+                         subs: ["keyed": id]))
     }
 
     /// Placeholder, category is sorted by name
@@ -120,6 +120,6 @@ extension POSModelCategory: Identifiable {
         // could use objectID.uriRepresentation().absoluteString,
         // but it's mutable on first save/non-lightweight migration
         // swiftlint:disable:next force_unwrapping
-        return key!
+        key!
     }
 }

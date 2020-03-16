@@ -36,3 +36,8 @@ extension POSModelPose: EntityNamable {
     /// name of entity in store
     static var entityName = "Pose"
 }
+
+extension POSModelPose: Identifiable {
+
+    public var id: Int32 { number }
+}

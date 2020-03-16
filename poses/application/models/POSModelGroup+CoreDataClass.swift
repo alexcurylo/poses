@@ -35,8 +35,8 @@ extension POSModelGroup: GroupRowModel {
 
     /// Display count
     func visible(in moc: NSManagedObjectContext) -> String {
-        moc.count(template: "VisiblePosesInGroup",
-                  subs: ["named": id])
+        String(moc.count(template: "VisiblePosesInGroup",
+                         subs: ["named": id]))
     }
 }
 

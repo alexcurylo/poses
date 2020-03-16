@@ -93,6 +93,7 @@ private extension PreviewLayer {
 
 extension PreviewLayer: AVCapturePhotoCaptureDelegate {
 
+    /// :nodoc:
     public func photoOutput(
         _ output: AVCapturePhotoOutput,
         didFinishProcessingPhoto photo: AVCapturePhoto,
