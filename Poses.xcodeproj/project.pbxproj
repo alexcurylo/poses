@@ -41,6 +41,8 @@
 		8C81399523A8766600871457 /* POSModelPoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81399423A8766600871457 /* POSModelPoseTests.swift */; };
 		8C8A6409241E0CFF003D3BD3 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8A6408241E0CFF003D3BD3 /* Grid */; };
 		8C8A6411241ED831003D3BD3 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A6410241ED831003D3BD3 /* ThumbnailView.swift */; };
+		8C8A6416241F0B1A003D3BD3 /* jpng in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A6415241F0B1A003D3BD3 /* jpng */; };
+		8C8A6417241F0B1A003D3BD3 /* jpng in Resources */ = {isa = PBXBuildFile; fileRef = 8C8A6415241F0B1A003D3BD3 /* jpng */; };
 		8C92C10E23A714AE001714C5 /* PosesModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8C92C10D23A714AE001714C5 /* PosesModel.sqlite */; };
 		8C92C11423A7194D001714C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11323A7194D001714C5 /* StoreKit.framework */; };
 		8C92C11623A7197C001714C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C92C11523A7197C001714C5 /* CloudKit.framework */; };
@@ -262,6 +264,7 @@
 		8C81399223A8765A00871457 /* POSModelPackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSModelPackTests.swift; sourceTree = "<group>"; };
 		8C81399423A8766600871457 /* POSModelPoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSModelPoseTests.swift; sourceTree = "<group>"; };
 		8C8A6410241ED831003D3BD3 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		8C8A6415241F0B1A003D3BD3 /* jpng */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jpng; sourceTree = "<group>"; };
 		8C92C10D23A714AE001714C5 /* PosesModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PosesModel.sqlite; sourceTree = "<group>"; };
 		8C92C11223A718CA001714C5 /* Poses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Poses.entitlements; sourceTree = "<group>"; };
 		8C92C11323A7194D001714C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -492,6 +495,7 @@
 			children = (
 				FA8B53802398F2BA009E8E1F /* Assets.xcassets */,
 				FA8B53882398F2BA009E8E1F /* Info.plist */,
+				8C8A6415241F0B1A003D3BD3 /* jpng */,
 				8CA57FEF23A3115100A3B6B4 /* InfoPlist.strings */,
 				FA8B53852398F2BA009E8E1F /* LaunchScreen.storyboard */,
 				FAECA212239CEF340028AE3A /* Localizable.strings */,
@@ -1120,6 +1124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8B53872398F2BA009E8E1F /* LaunchScreen.storyboard in Resources */,
+				8C8A6416241F0B1A003D3BD3 /* jpng in Resources */,
 				FAECA214239CEF340028AE3A /* Localizable.strings in Resources */,
 				FA8B53842398F2BA009E8E1F /* Preview Assets.xcassets in Resources */,
 				FA8B53812398F2BA009E8E1F /* Assets.xcassets in Resources */,
@@ -1151,6 +1156,7 @@
 				FAFC5AD823AEE1890064B97A /* Localizable.strings in Resources */,
 				FAFC5AD723AEE17A0064B97A /* InfoPlist.strings in Resources */,
 				FAFC5B0F23AEFC5F0064B97A /* Preview Assets.xcassets in Resources */,
+				8C8A6417241F0B1A003D3BD3 /* jpng in Resources */,
 				FAFC5ADA23AEE3160064B97A /* LaunchScreen.storyboard in Resources */,
 				FAFC5B3323AF06690064B97A /* Assets.xcassets in Resources */,
 				FAFC5ADB23AEF70F0064B97A /* Assets.xcassets in Resources */,
