@@ -16,11 +16,11 @@ import CoreData
         NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     }
 
-    /// Display image
-    var image: UIImage { UIImage() }
+    /// Display image -- loaded as opaque JPEG
+    var image: UIImage? { nil }
 
-    /// Display overlay
-    var overlay: UIImage { UIImage() }
+    /// Fit Pose overlay -- loaded with transparency
+    var overlay: UIImage? { nil }
 
     /// Fetch poses
     func fetchVisiblePoseObjects(

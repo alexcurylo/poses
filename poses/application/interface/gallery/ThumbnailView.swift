@@ -8,7 +8,7 @@ private struct Thumbnail: Identifiable {
     let pose: POSModelPose
 
     var id: Int32 { pose.id }
-    var title: String { String(pose.number) }
+    var image: UIImage? { pose.image }
 }
 
 /// View in a gallery grid
@@ -24,19 +24,22 @@ struct ThumbnailView: View {
 
     /// :nodoc:
     var body: some View {
-        ZStack(alignment: .init(horizontal: .center, vertical: .center)) {
-            Rectangle()
-                .foregroundColor(.red)
-            Text(thumbnail.title)
-                .font(.title)
-                .foregroundColor(.white)
-                .opacity(0.5)
+        ZStack {
+            Rectangle().foregroundColor(.gray).opacity(0.25)
+            Image(uiImage: image)
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .strokeBorder(Color.white.opacity(0.3), lineWidth: 4)
-        )
-        .cornerRadius(16)
+    }
+}
+
+private extension ThumbnailView {
+
+    var image: UIImage {
+        thumbnail.image ?? placeholder
+    }
+
+    var placeholder: UIImage {
+        // swiftlint:disable:next force_unwrapping
+         R.image.photographytips()!
     }
 }
 
