@@ -18,7 +18,8 @@ struct GalleryView: View, ServiceProvider {
 
     private let style = ModularGridStyle(.vertical,
                                          columns: .min(135),
-                                         rows: .min(135))
+                                         rows: .min(135),
+                                         spacing: 1)
 
     /// :nodoc:
     var body: some View {

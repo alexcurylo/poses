@@ -25,8 +25,9 @@ struct ThumbnailView: View {
     /// :nodoc:
     var body: some View {
         ZStack {
-            Rectangle().foregroundColor(.gray).opacity(0.25)
             Image(uiImage: image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
         }
     }
 }
