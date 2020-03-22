@@ -1219,7 +1219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    mint run LicensePlist license-plist --add-version-numbers --output-path $PRODUCT_NAME/resources/Settings.bundle\nfi\n";
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    mint run LicensePlist license-plist --add-version-numbers --fail-if-missing-license --output-path $PRODUCT_NAME/resources/Settings.bundle\nfi\n";
 		};
 		FAECA218239CF09E0028AE3A /* Generate R.generated.swift */ = {
 			isa = PBXShellScriptBuildPhase;
