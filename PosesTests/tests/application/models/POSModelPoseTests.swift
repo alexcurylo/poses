@@ -9,7 +9,10 @@ final class POSModelPoseTests: TestCase {
     func testConstruction() throws {
         // given
         let moc = CoreDataStack.shared.moc
-        let sut = POSModelPose(context: moc)
+        let sut = POSModelPose(context: moc).with {
+            $0.number = 1105
+            $0.embedded = true
+        }
         defer { moc.delete(sut) }
 
         // when
@@ -21,10 +24,8 @@ final class POSModelPoseTests: TestCase {
         // then
         XCTAssertNotNil(fetch)
         XCTAssertNotNil(result)
-        XCTAssertEqual(POSModelPose.poseCacheFolder, "TODO")
-        XCTAssertEqual(sut.filename, "TODO")
         XCTAssertNotNil(sut.editingMOC)
         XCTAssertNotNil(sut.image)
-        XCTAssertNotNil(sut.overlay)
+        XCTAssertNil(sut.overlay)
     }
 }
