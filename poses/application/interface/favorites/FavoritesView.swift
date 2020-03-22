@@ -50,14 +50,14 @@ struct FavoritesView: View, ServiceProvider {
                 }
                 Section {
                     ForEach(enabled) { favorite in
-                        NavigationLink(destination: GalleryView()) {
+                        NavigationLink(destination: GalleryView(request: .group(favorite))) {
                             GroupRowView(group: favorite)
                         }
                     }
                     .onDelete(perform: withAnimation { delete })
                     .onMove(perform: withAnimation { move })
                     ForEach(disabled) { trash in
-                        NavigationLink(destination: GalleryView()) {
+                        NavigationLink(destination: GalleryView(request: .group(trash))) {
                             GroupRowView(group: trash,
                                          style: .disabled)
                         }

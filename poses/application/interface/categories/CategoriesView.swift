@@ -22,7 +22,7 @@ struct CategoriesView: View, ServiceProvider {
         NavigationView {
             List {
                 ForEach(categories) { category in
-                    NavigationLink(destination: GalleryView()) {
+                    NavigationLink(destination: GalleryView(request: .category(category))) {
                         GroupRowView(group: category)
                     }
                 }
@@ -30,7 +30,8 @@ struct CategoriesView: View, ServiceProvider {
             .onAppear(perform: appear)
             .navigationBarTitle(Tab.categories.title)
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
+        //.navigationViewStyle(DoubleColumnNavigationViewStyle())
         //.padding() // displays master on iPad portrait launch
         .animation(.default)
     }

@@ -12,7 +12,7 @@ struct AppView: View {
     var body: some View {
         // swiftlint:disable:next closure_body_length
         TabView(selection: $selection) {
-            GalleryView()
+            GalleryView(request: .visible)
                 .tabItem {
                     VStack {
                         Image(systemSymbol: .photoOnRectangle)
