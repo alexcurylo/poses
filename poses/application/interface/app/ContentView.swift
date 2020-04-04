@@ -4,7 +4,7 @@ import SFSafeSymbols
 import SwiftUI
 
 /// SwiftUI application tab controller
-struct AppView: View {
+struct ContentView: View {
 
     @State private var selection = 0
 
@@ -58,11 +58,11 @@ struct AppView: View {
 }
 
 /// :nodoc:
-struct AppView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
 
     /// :nodoc:
     static var previews: some View {
-        AppView()
+        ContentView()
         .environment(\.managedObjectContext, CoreDataStack.shared.moc)
         //.environment(\.colorScheme, .dark)
         //.environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
