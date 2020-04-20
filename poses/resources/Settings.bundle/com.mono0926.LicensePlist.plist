@@ -20,6 +20,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/LicensePlist</string>
+			<key>Title</key>
+			<string>LicensePlist (2.15.1)</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/Nuke</string>
 			<key>Title</key>
 			<string>Nuke (8.4.1)</string>
@@ -28,17 +36,9 @@
 		</dict>
 		<dict>
 			<key>File</key>
-			<string>com.mono0926.LicensePlist/R.swift.Library</string>
-			<key>Title</key>
-			<string>R.swift.Library (5.1.0)</string>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-		</dict>
-		<dict>
-			<key>File</key>
 			<string>com.mono0926.LicensePlist/SFSafeSymbols</string>
 			<key>Title</key>
-			<string>SFSafeSymbols (1.1.1)</string>
+			<string>SFSafeSymbols (1.2.0)</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -52,9 +52,17 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/SwiftLint</string>
+			<key>Title</key>
+			<string>SwiftLint (0.39.2)</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/swiftui-grid</string>
 			<key>Title</key>
-			<string>swiftui-grid (1.0.0)</string>
+			<string>swiftui-grid (1.0.4)</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>
@@ -70,7 +78,7 @@
 			<key>File</key>
 			<string>com.mono0926.LicensePlist/SwiftyBeaver</string>
 			<key>Title</key>
-			<string>SwiftyBeaver (1.8.4)</string>
+			<string>SwiftyBeaver (1.9.1)</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

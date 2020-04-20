@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/piknotech/SFSafeSymbols",
         "state": {
           "branch": null,
-          "revision": "318238d817cca9e932154bb6103866e266d0c65e",
-          "version": "1.1.1"
+          "revision": "31a99db357f2b839a18ab598c4aa87a741bd6009",
+          "version": "1.2.0"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/spacenation/swiftui-grid",
         "state": {
           "branch": null,
-          "revision": "978cc2eae7ced4a4d3cf9b6728503edc62a2969f",
-          "version": "1.0.0"
+          "revision": "a3441f80bd01029507bc19e463e7c7208ffcf3f9",
+          "version": "1.0.4"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
         "state": {
           "branch": null,
-          "revision": "2f2b7ac0b675e9d0ac696758f15bbff97eb65a31",
-          "version": "1.8.4"
+          "revision": "e0fb3a74cb993d7dcf1e56734cdc98ad6e6d8176",
+          "version": "1.9.1"
         }
       }
     ]

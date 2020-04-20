@@ -2,20 +2,24 @@ name: flurry-ios-sdk, nameSpecified: , owner: flurry, version: 10.1.0
 
 name: flurry-ios-sdk, nameSpecified: , owner: flurry, version: 10.1.0
 
+name: LicensePlist, nameSpecified: , owner: mono0926, version: 2.15.1
+
+name: SwiftLint, nameSpecified: , owner: realm, version: 0.39.2
+
+name: flurry-ios-sdk, nameSpecified: , owner: flurry, version: 10.1.0
+
 name: Nuke, nameSpecified: , owner: kean, version: 8.4.1
 
-name: R.swift.Library, nameSpecified: , owner: mac-cain13, version: 5.1.0
-
-name: SFSafeSymbols, nameSpecified: , owner: piknotech, version: 1.1.1
+name: SFSafeSymbols, nameSpecified: , owner: piknotech, version: 1.2.0
 
 name: Siren, nameSpecified: , owner: ArtSabintsev, version: 5.4.0
 
-name: swiftui-grid, nameSpecified: , owner: spacenation, version: 1.0.0
+name: swiftui-grid, nameSpecified: , owner: spacenation, version: 1.0.4
 
 name: SwiftUI-Introspect, nameSpecified: , owner: siteline, version: 0.1.0
 
-name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.8.4
+name: SwiftyBeaver, nameSpecified: , owner: SwiftyBeaver, version: 1.9.1
 
 add-version-numbers: true
 
-LicensePlist Version: 2.14.0
+LicensePlist Version: 2.15.0

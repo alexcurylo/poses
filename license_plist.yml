@@ -20,7 +20,8 @@ github:
   #  file: "dummy_license.txt"
 
 # Specify libraries to be excluded.
-#exclude:
+exclude:
+  - /R.swift.*/
   #- /^Core.*$/ # Support regex sandwiched by `/`
 
 # Specify libraries' names to be renamed.
